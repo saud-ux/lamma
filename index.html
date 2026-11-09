@@ -1347,7 +1347,7 @@ const ACT = {
   previewMode(d, t) { S.previewMode = d.v; t.parentElement.dataset.i = d.v === "2d" ? 1 : 0; t.parentElement.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", String(b === t))); applyProductPreviewMode(); sfx("select"); },
   downloadNow() { downloadDraftNow("png"); },
   downloadNowPdf() { downloadDraftNow("pdf"); },
-  async addCart() { await flyToCart(el("pv").querySelector("svg"), { id: nextId++, ...S.draft }); },
+  async addCart() { const stage = el("productStage") || el("pv"); const art0 = el("pv")?.querySelector("svg") || (() => { const h = document.createElement("div"); h.innerHTML = art(S.draft.pid, S.draft.text, S.draft.pal || S.occ); return h.firstElementChild; })(); await flyToCart(stage || art0, { id: nextId++, ...S.draft }, stage ? art0 : null); },
   async addIdea(d, t) {
     if (!S.idea.trim()) { toast("اكتب فكرتك أول"); A(el("f-free"), [{ transform: "translateX(0)" }, { transform: "translateX(-9px)", offset: .25 }, { transform: "translateX(9px)", offset: .6 }, { transform: "translateX(0)" }], { k: .9, ease: "ease-out", fill: "none" }); return; }
     const holder = document.createElement("div"); holder.innerHTML = art("box", "فكرتك", S.occ);
