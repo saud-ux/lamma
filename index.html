@@ -1857,7 +1857,7 @@ function applyProductPreviewMode() {
   const stage = el("productStage"); if (!stage || !S.draft) return;
   const flat = (S.previewMode === "2d");
   stage.classList.toggle("flat", flat);
-  if (flat) { const node = document.createElement("div"); node.innerHTML = art(S.draft.pid, S.draft.text, S.draft.pal || S.occ); const svg = node.firstElementChild.outerHTML; const b64 = btoa(unescape(encodeURIComponent(svg))); stage.style.setProperty("--flatArt", `url("data:image/svg+xml;base64,${b64}")`); }
+  if (flat) { const node = document.createElement("div"); node.innerHTML = art(S.draft.pid, S.draft.text, S.draft.pal || S.occ); const svgEl = node.firstElementChild; svgEl.setAttribute("xmlns", "http://www.w3.org/2000/svg"); const svg = svgEl.outerHTML.replace(/var\(--font\)/g, "'Baloo Bhaijaan 2','Cairo',sans-serif"); const b64 = btoa(unescape(encodeURIComponent(svg))); stage.style.setProperty("--flatArt", `url("data:image/svg+xml;base64,${b64}")`); }
 }
 async function downloadDraftNow(kind) {
   if (!S.draft) return;
