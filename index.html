@@ -1583,13 +1583,26 @@ async function mountProduct(opts) {
   return (opts.item.pid === "cup") ? mountCup(opts) : mountProcedural(opts);
 }
 function updateProductTexture() {
-  if (!V || V.kind !== "procedural") return;
+  if (!V) return;
   const draft = S.draft; if (!draft) return;
   const item = { text: draft.text, pid: draft.pid, pal: draft.pal, tagline: draft.tagline };
-  const fresh = productCanvas(V.pid, item, V.occ);
-  V.sourceCanvas.width = fresh.width; V.sourceCanvas.height = fresh.height;
-  V.sourceCanvas.getContext("2d").drawImage(fresh, 0, 0);
-  V.texture.needsUpdate = true;
+  if (V.kind === "procedural") {
+    const fresh = productCanvas(V.pid, item, V.occ || S.occ);
+    V.sourceCanvas.width = fresh.width; V.sourceCanvas.height = fresh.height;
+    V.sourceCanvas.getContext("2d").drawImage(fresh, 0, 0);
+    V.texture.needsUpdate = true;
+    return;
+  }
+  // Cup: rebuild the design canvas and swap the texture on the wall mesh.
+  if (!V.wall || !V.wall.material) return;
+  const fresh = designCanvas(item, V.occ || S.occ, 1);
+  const tex = new V.THREE.CanvasTexture(fresh);
+  tex.flipY = false; tex.colorSpace = V.THREE.SRGBColorSpace;
+  if (V.renderer && V.renderer.capabilities) tex.anisotropy = V.renderer.capabilities.getMaxAnisotropy();
+  const old = V.wall.material.map;
+  V.wall.material.map = tex;
+  V.wall.material.needsUpdate = true;
+  if (old && old.dispose) old.dispose();
 }
 
 async function mountCup({ canvasId, stageId, statusId, item, occ, version, intro }) {
@@ -1628,7 +1641,7 @@ async function mountCup({ canvasId, stageId, statusId, item, occ, version, intro
     frame(true);
     const resize = new ResizeObserver(() => frame(false)); resize.observe(stage);
     cup.updateMatrixWorld(true);
-    V = { THREE, renderer, scene, camera, controls, cup, wall, shell, resize, sprites: new Map(), pops: [], fly: null, intro: intro === false ? null : newIntro() };
+    V = { THREE, renderer, scene, camera, controls, cup, wall, shell, resize, sprites: new Map(), pops: [], fly: null, intro: intro === false ? null : newIntro(), occ, kind: "cup" };
     controls.enabled = S.mode === "view";
     controls.addEventListener("start", () => { if (V) V.fly = null; clearInk(); S.selected = null; renderNotes(); });
     renderer.setAnimationLoop((now) => { if (!V) return; stepViewer(now); controls.update(); renderer.render(scene, camera); });
