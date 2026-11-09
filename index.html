@@ -1,4 +1,4 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light}body{margin:0}[hidden]{display:none!important}#app{box-sizing:border-box;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}#toast,.ping{top:calc(10px + env(safe-area-inset-top))!important}#nav.peek{bottom:env(safe-area-inset-bottom)!important}</style></head><body><style>.demo-btn{display:none!important}.warn,.note-demo{display:none!important}.strip .idea-card{flex:0 0 150px}.idea-big{height:220px}.editor-head{display:flex;align-items:center;justify-content:space-between;gap:10px}.editor-head h2{flex:1;min-width:0}.editor-tagline{font-size:14px;color:var(--muted);font-weight:500}.custom-cta{display:flex;align-items:center;gap:12px;width:100%;min-height:80px;padding:12px 14px;box-sizing:border-box;border:2px solid var(--primary);background:var(--bg);color:var(--primary);border-radius:var(--r);text-align:start}.custom-cta>svg:first-child{animation:nudge 1.1s ease-in-out infinite}.custom-cta span{flex:1;min-width:0;display:flex;flex-direction:column;line-height:1.3}.custom-cta b{font-size:18px;font-weight:800;color:var(--ink)}.custom-cta small{font-size:13px;color:var(--muted)}</style><script>addEventListener('DOMContentLoaded',()=>{let t=0;new MutationObserver(()=>{const b=document.querySelector('.act-card .demo-btn:not([data-auto])');if(!b)return;b.dataset.auto='1';clearTimeout(t);t=setTimeout(()=>{if(document.body.contains(b))b.click();},2400);}).observe(document.body,{childList:true,subtree:true});});</script><title>لمّة</title>
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light}body{margin:0}[hidden]{display:none!important}#app{box-sizing:border-box;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}#toast,.ping{top:calc(10px + env(safe-area-inset-top))!important}#nav.peek{bottom:env(safe-area-inset-bottom)!important}</style></head><body><style>.demo-btn{display:none!important}.warn,.note-demo{display:none!important}</style><script>addEventListener('DOMContentLoaded',()=>{let t=0;new MutationObserver(()=>{const b=document.querySelector('.act-card .demo-btn:not([data-auto])');if(!b)return;b.dataset.auto='1';clearTimeout(t);t=setTimeout(()=>{if(document.body.contains(b))b.click();},2400);}).observe(document.body,{childList:true,subtree:true});});</script><title>لمّة</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -385,11 +385,6 @@ const IDEAS = [
   {id:"e1",occ:"eid",name:"برتقالي",pid:"cup",text:"عيدكم مبارك",desc:"فوانيس دافية ونقوش بسيطة.",pal:{paper:"#FDF0EC",ink:"#A63522",a:"#F6CDBF",b:"#FFE0A0",c:"#BFE3E3"}},
   {id:"e2",occ:"eid",name:"كحلي",pid:"sticker",text:"رمضان كريم",desc:"كحلي وهلال ذهبي.",pal:{paper:"#1C2B4A",ink:"#F2CE7E",a:"#2E4168",b:"#27385C",c:"#F2CE7E"}},
   {id:"e3",occ:"eid",name:"بني",pid:"box",text:"حياكم",desc:"ألوان القهوة والتمر لضيافة العيد.",pal:{paper:"#F6EEE3",ink:"#6B4423",a:"#E3D0B8",b:"#EEE0CC",c:"#C9A36A"}},
-  {id:"b4",occ:"baby",name:"زهري هادي",pid:"invite",text:"سلمى",desc:"زهري هادي مع ذهبي خفيف للدعوات.",pal:{paper:"#FCEFF4",ink:"#8E1F4F",a:"#F7CFDD",b:"#FBE6D4",c:"#EFD9A7"}},
-  {id:"w4",occ:"wed",name:"ذهبي فاخر",pid:"box",text:"حياكم",desc:"ذهبي فاخر على خلفية كريمية لعلب الضيافة.",pal:{paper:"#FBF4E2",ink:"#8A6A2B",a:"#E5CFA0",b:"#F3E6C4",c:"#D9B76A"}},
-  {id:"g4",occ:"grad",name:"ذهبي على كحلي",pid:"bottle",text:"ألف مبروك",desc:"كحلي فخم مع ذهبي، مناسب لحفلات التخرج.",pal:{paper:"#1E2A44",ink:"#E7C77A",a:"#31436B",b:"#2A3A5E",c:"#E7C77A"}},
-  {id:"d4",occ:"bday",name:"مرح بألوان",pid:"sticker",text:"نورة",desc:"ألوان مرحة لحفلة يوم الميلاد.",pal:{paper:"#FFF7E3",ink:"#8E1F4F",a:"#F7C9D9",b:"#BFE3E3",c:"#FFE0A0"}},
-  {id:"e4",occ:"eid",name:"أخضر وذهبي",pid:"cup",text:"عيدكم مبارك",desc:"أخضر عميق مع ذهبي لكاسات العيد.",pal:{paper:"#1F3A2C",ink:"#E7C77A",a:"#2E5240",b:"#264637",c:"#E7C77A"}},
 ];
 const ideaById = (id) => IDEAS.find((idea) => idea.id === id);
 const LEAD = { calm: 7, rush: 3 };
@@ -449,31 +444,6 @@ const LAB = [
   {k:"sound",title:"الأصوات",help:"إذا الآيفون على الصامت ممكن ما تسمعها.",try:"اضغط حدث وتشوفه مع صوته",opts:[["big","للأحداث الكبيرة",1],["all","مع كل ضغطة"],["none","بدون"]],scene:evScene,extra:evChips,run:() => labStory(["tap", "select", "add", "success", "party"], playSoundEvent)},
   {k:"soundKind",title:"نوع الصوت",help:"إذا الآيفون على الصامت ممكن ما تسمعها.",try:"اضغط حدث وتشوفه مع صوته",opts:[["soft","ناعم",1],["bells","أجراس"],["game","ألعاب"]],scene:evScene,extra:evChips,run:() => labStory(["add", "success", "party"], playSoundEvent)},
 ];
-async function editTemplate(id) {
-  S.templateId = id; const idea = ideaById(id); S.draft = { text: idea.text, tagline: OCC[idea.occ].line, pid: idea.pid, pal: idea.pal, occ: idea.occ };
-  openSheet(`
-    <div class="editor-head"><h2>${esc(idea.name)}</h2><span class="tag">${OCC[idea.occ].label}</span></div>
-    <div class="idea-big" id="tpv">${art(idea.pid, S.draft.text, idea.pal)}</div>
-    <p class="editor-tagline" id="ttag">${esc(S.draft.tagline)}</p>
-    <div class="field"><label for="f-tname">الاسم</label><input class="input" id="f-tname" data-bind="tname" value="${esc(S.draft.text)}" maxlength="24" autocomplete="off"></div>
-    <div class="field"><label for="f-tsub">السطر اللي تحت (اختياري)</label><input class="input" id="f-tsub" data-bind="tsub" value="${esc(S.draft.tagline)}" maxlength="30" autocomplete="off" placeholder="مثل: ${esc(OCC[idea.occ].line)}"></div>
-    <button type="button" class="btn" data-act="downloadTpl">حمّل تصميمك الآن</button>
-    <button type="button" class="custom-cta" data-act="goCustom">${I("pen", 28)}<span><b>تبغاه تصميم خاص فيك؟</b><small>فريقنا يصممه لك من فكرتك</small></span>${I("next")}</button>
-  `);
-}
-function downloadTemplateNow() {
-  const idea = ideaById(S.templateId), item = { text: S.draft.text, pid: idea.pid, pal: idea.pal, tagline: S.draft.tagline };
-  const canvas = designCanvas(item, idea.occ, 1);
-  const name = (S.draft.text || "lamma").replace(/[\\/:*?"<>|]/g, "");
-  canvas.toBlob((blob) => {
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement("a");
-    link.href = url; link.download = `لمّة-${name}.png`;
-    document.body.appendChild(link); link.click(); link.remove();
-    setTimeout(() => URL.revokeObjectURL(url), 1000);
-  }, "image/png");
-  closeSheet(); toast("انحمل تصميمك"); celebrate(1, idea.occ); sfx("success");
-}
 function fxDefaults() {
   const out = {};
   for (const m of LAB) if (m.k !== "motion") out[m.k] = m.multi ? m.opts.map((o) => o[0]) : (m.opts.find((o) => o[2]) || m.opts[0])[0];
@@ -1043,13 +1013,13 @@ function designCanvas(item, occ, version) {
   g.fillStyle = o.paper; g.fillRect(0, 0, w, h);
   for (const [x, y, r, color] of [[34,40,20,o.a],[212,46,24,o.b],[74,86,13,o.c],[172,84,12,o.a],[60,20,8,o.c],[190,14,7,o.a]]) { g.fillStyle = color; g.beginPath(); g.arc(x * s, y * s, r * s, 0, Math.PI * 2); g.fill(); }
   g.direction = "rtl"; g.textAlign = "center"; g.textBaseline = "middle"; g.fillStyle = o.ink;
-  g.font = `700 ${9 * s}px "${font}"`; g.fillText(item.tagline !== undefined ? item.tagline : o.line, CUP.W / 2 * s, 20 * s);
+  g.font = `700 ${9 * s}px "${font}"`; g.fillText(o.line, CUP.W / 2 * s, 20 * s);
   let size = 27 * s * (version > 1 ? 1.14 : 1);
   g.font = `800 ${size}px "${font}"`;
   const label = item.text || "تصميمك", width = g.measureText(label).width, limit = 120 * s;
   if (width > limit) { size *= limit / width; g.font = `800 ${size}px "${font}"`; }
   g.fillText(label, CUP.W / 2 * s, 46 * s);
-
+  g.font = `500 ${6.5 * s}px "${font}"`; g.fillText("تصميم تجريبي", CUP.W / 2 * s, 72 * s);
   return canvas;
 }
 
@@ -1119,7 +1089,7 @@ const productCircle = (pid) => `<button type="button" class="circle" data-act="o
 
 const packBanner = () => `<button type="button" class="banner" data-act="openPack">${I("gift", 36)}<span><b>بكج مناسبتك كامل</b><small>كوب وقارورة وستيكر وعلبة ودعوة بتصميم واحد</small></span>${I("next")}</button>`;
 const ideaCard = (idea) => `<button type="button" class="idea-card" data-act="ideaOpen" data-v="${idea.id}">${art(idea.pid, idea.text, idea.pal)}<b>${idea.name}</b><span class="tag">${OCC[idea.occ].label}</span></button>`;
-const ideaStrip = () => `<div class="row-head"><h2>أفكار جاهزة</h2><button type="button" class="link" data-act="openGallery">شوف الكل</button></div><div class="strip">${Object.keys(OCC).map((occ) => ideaCard(IDEAS.find((idea) => idea.occ === occ))).join("")}</div><button type="button" class="custom-cta" data-act="idea">${I("pen", 28)}<span><b>صمم لي تصميم خاص</b><small>فريقنا يصممه لك من فكرتك أنت</small></span>${I("next")}</button>`;
+const ideaStrip = () => `<div class="row-head"><h2>أفكار جاهزة</h2><button type="button" class="link" data-act="openGallery">شوف الكل</button></div><div class="strip">${Object.keys(OCC).map((occ) => ideaCard(IDEAS.find((idea) => idea.occ === occ))).join("")}</div>`;
 const galleryCards = () => IDEAS.filter((idea) => S.galOcc === "all" || idea.occ === S.galOcc).map(ideaCard).join("");
 const eventsInOrder = () => [...S.events].sort((a, b) => a.date.localeCompare(b.date));
 function nextEventBanner() {
@@ -1174,7 +1144,7 @@ function saveToLibrary(o) {
 function eventSheet() { const e = S.newEv; return `<h2>أضف مناسبة</h2><div class="field"><label for="f-ev">اسم المناسبة</label><input class="input" id="f-ev" data-bind="evName" value="${esc(e.name)}" maxlength="30" autocomplete="off" placeholder="مثل: يوم ميلاد ليان"></div><div class="group"><span class="label">نوعها</span><div class="chips">${Object.entries(OCC).map(([key, o]) => `<button type="button" class="chip" aria-pressed="${e.occ === key}" data-act="evOcc" data-v="${key}">${o.label}</button>`).join("")}</div></div><div class="group"><span class="label">متى؟</span><div id="cal">${calHTML()}</div></div><div class="sheet-foot"><button type="button" class="btn" data-act="saveEvent">احفظها</button><button type="button" class="btn ghost" data-act="closeSheet">رجوع</button></div>`; }
 
 const SCREENS = {
-  gallery: () => `${backBar("أفكار جاهزة")}<p class="sub">عشرون تصميم جاهز. اختر، غيّر الاسم، وحمّله فوراً.</p><div class="chips">${[["all", "الكل"], ...Object.entries(OCC).map(([key, o]) => [key, o.label])].map(([key, label]) => `<button type="button" class="chip" aria-pressed="${S.galOcc === key}" data-act="galOcc" data-v="${key}">${label}</button>`).join("")}</div><div class="grid-p" id="galGrid">${galleryCards()}</div>`,
+  gallery: () => `${backBar("أفكار جاهزة")}<p class="sub">اختر فكرة تعجبك، وفريقنا يصممها باسمك</p><div class="chips">${[["all", "الكل"], ...Object.entries(OCC).map(([key, o]) => [key, o.label])].map(([key, label]) => `<button type="button" class="chip" aria-pressed="${S.galOcc === key}" data-act="galOcc" data-v="${key}">${label}</button>`).join("")}</div><div class="grid-p" id="galGrid">${galleryCards()}</div>`,
   package: () => { const p = S.pack; return `${backBar("بكج مناسبتك كامل")}<p class="sub">كل القطع بتصميم واحد وهوية وحدة. شيل اللي ما تبغاه.</p><div class="chips">${Object.entries(OCC).map(([key, o]) => `<button type="button" class="chip" aria-pressed="${S.occ === key}" data-act="packOcc" data-v="${key}">${o.label}</button>`).join("")}</div><div class="field"><label for="f-pack">وش تبغى ينكتب عليه؟</label><input class="input" id="f-pack" data-bind="packText" value="${esc(p.text)}" maxlength="24" autocomplete="off"></div><div class="pack-grid">${PACK.map((pid) => `<button type="button" class="pack-card" aria-pressed="${!p.off[pid]}" data-act="packToggle" data-v="${pid}"><span class="pa">${art(pid, p.text, S.occ)}</span><b>${PROD[pid].name}</b><i class="pk">${I("check", 16)}</i></button>`).join("")}</div><button type="button" class="btn" data-act="addPack">أضف البكج للسلة</button>`; },
   library: () => `${backBar("مناسباتي")}<p class="sub">مناسباتك وتصاميمك في مكان واحد، ونذكرك قبلها بشهر.</p>${eventsInOrder().map(libEventRow).join("")}<button type="button" class="dashed" data-act="addEvent">أضف مناسبة</button><h2>تصاميمك</h2>${S.saved.length ? `<div class="lib-designs">${S.saved.map(libDesign).join("")}</div>` : '<p class="small">أول تصميم تعتمده ينحفظ هنا تلقائيًا.</p>'}${S.events.length || S.saved.length ? "" : '<button type="button" class="demo-btn" data-act="libExample">في التجربة: أضف أمثلة</button>'}<button type="button" class="demo-btn" data-act="libPing">في التجربة: ورني شكل التذكير</button>`,
   home: () => `<div class="amb"><i></i><i></i><i></i><i></i></div>${topBar()}${nextEventBanner()}<div><h1>وش مناسبتك؟</h1><p class="sub">اختر، وفريقنا يصمم لك</p></div>
@@ -1303,9 +1273,7 @@ const ACT = {
   },
   openGallery() { go("gallery"); },
   galOcc(d, t) { S.galOcc = d.v; pickChip(t); const grid = el("galGrid"); grid.innerHTML = galleryCards(); fxEnter(grid, ".idea-card"); },
-  ideaOpen(d) { editTemplate(d.v); },
-  downloadTpl() { downloadTemplateNow(); },
-  goCustom() { closeSheet(); S.ideaPid = ideaById(S.templateId).pid; S.occ = ideaById(S.templateId).occ; go("idea"); },
+  ideaOpen(d) { const idea = ideaById(d.v); openSheet(`<div class="idea-big">${art(idea.pid, idea.text, idea.pal)}</div><h2>${idea.name}</h2><p class="sub">${idea.desc}</p><button type="button" class="btn" data-act="useIdea" data-v="${idea.id}">أبغى زي هذا</button><button type="button" class="btn ghost" data-act="closeSheet">رجوع</button>`); A(sheet.querySelector(".idea-big svg"), [{ transform: "scale(.6) rotate(-6deg)" }, { transform: "none" }], { delay: M().ms * .4 }); },
   useIdea(d) { const idea = ideaById(d.v), sizes = PROD[idea.pid].sizes; S.occ = idea.occ; S.draft = { pid: idea.pid, size: sizes[Math.min(1, sizes.length - 1)], text: idea.text, idea: `${idea.name}: ${idea.desc}`, pal: idea.pal }; closeSheet(); go("product"); },
   openPack() { S.pack = S.pack || { text: "ليان", off: {} }; go("package"); },
   packOcc(d, t) { S.occ = d.v; pickChip(t); packArts(true); },
@@ -1420,9 +1388,6 @@ document.addEventListener("input", (event) => {
   const key = event.target.dataset.bind;
   if (!key) return;
   if (key === "free") { S.idea = event.target.value; return; }
-  if (key === "tname") { S.draft.text = event.target.value; const pv = el("tpv"); if (pv) { pv.innerHTML = art(S.draft.pid, S.draft.text, S.draft.pal); fxType(pv); } sfx("tap"); return; }
-  if (key === "tsub") { S.draft.tagline = event.target.value; const tag = el("ttag"); if (tag) tag.textContent = event.target.value; return; }
-
   if (key === "evName") { S.newEv.name = event.target.value; return; }
   if (key === "packText") { S.pack.text = event.target.value; packArts(false); document.querySelectorAll(".pack-card .pa").forEach(fxType); sfx("tap"); return; }
   if (key === "lab") { labToken++; const pv = el("labPv"); pv.innerHTML = art("cup", event.target.value, S.labOcc); fxType(pv); sfx("tap"); return; }
