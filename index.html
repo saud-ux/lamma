@@ -370,7 +370,7 @@ const PROD = {
 const PACK = ["cup", "bottle", "sticker", "box", "invite"];
 const PACK_MIN = 3, PACK_OFF = .15;
 const IDEAS = [
-  {id:"b1",occ:"baby",name:"وردي",pid:"cup",text:"ليان",desc:"ألوان وردية وعاجية، وخط عربي ناعم، وورود صغيرة حول الاسم.",pal:{paper:"#FDF1F5",ink:"#A33A63",a:"#F7C9D9",b:"#FBE6D4",c:"#EFD9A7"}},
+  {id:"b1",occ:"baby",name:"وردي",pid:"cup",text:"سعود",desc:"ألوان وردية وعاجية، وخط عربي ناعم، وورود صغيرة حول الاسم.",pal:{paper:"#FDF1F5",ink:"#A33A63",a:"#F7C9D9",b:"#FBE6D4",c:"#EFD9A7"}},
   {id:"b2",occ:"baby",name:"أزرق",pid:"sticker",text:"سلطان",desc:"سما زرقا وغيوم بيضا ونجوم صغيرة حول الاسم.",pal:{paper:"#EAF4FB",ink:"#2C6A94",a:"#BFDDF1",b:"#DCE9F5",c:"#FFE3A1"}},
   {id:"b3",occ:"baby",name:"ذهبي",pid:"box",text:"جود",desc:"خلفية كريمية ولمسات ذهبية هادية بخط أنيق.",pal:{paper:"#FFF8EC",ink:"#8A6A2B",a:"#EAD7AC",b:"#F6E9D2",c:"#D9B76A"}},
   {id:"w1",occ:"wed",name:"ذهبي",pid:"cup",text:"سارة وفهد",desc:"عاجي فخم مع ذهبي، والاسمين بخط ثلث.",pal:{paper:"#FBF6EA",ink:"#8A6A2B",a:"#EFE3C8",b:"#F7EFDC",c:"#D9B76A"}},
@@ -418,7 +418,7 @@ const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
 const LAB = [
   {k:"nameIn",title:"كيف يظهر الاسم أول ما يفتح التطبيق",help:"اللمعة تجي بعدها في كل الطرق، وبعدها الأيقونات من ورا الاسم.",try:"اضغط أي طريقة وتشتغل",opts:[["pop","ينبثق (الحالي)"],["jelly","جيلي يتمطط",1],["popBack","ينبثق بارتداد قوي"],["popSoft","ينبثق ناعم"],["wobble","ينبثق ويتمايل"],["heart","ينبثق وينبض"],["bubble","فقاعة تنفجر"],["balloon","ينتفخ مثل البالون"],["jellyWide","جيلي عريض"],["jellyTall","جيلي طويل"],["jellyDrop","قطرة جيلي تنزل"],["gum","يتمدد مثل العلك"]],scene:() => '<div id="nameStage"></div>',extra:() => '<button type="button" class="btn gold" data-act="nameFull">شوفها كاملة مثل فتح التطبيق</button>',run:() => { S.choices.fx.splash = "popshine"; storeChoices(); playNameIn(); }},
   {k:"motion",title:"قوة الحركات في التطبيق كله",help:"تأثر على سرعة وارتداد كل الحركات.",try:"اضغط أي بلاطة",opts:[["soft","ناعمة"],["playful","مرحة",1],["party","احتفالية جدًا"],["fast","سريعة"]],scene:() => miniTiles(),run:() => { fxEnter(el("labStage"), ".mt button"); sfx("whoosh"); }},
-  {k:"addCart",title:"لما تضيف منتج للسلة",help:"",try:"اضغط الكوب",opts:[["fly","يطير للسلة",1],["drop","ينزل فيها"],["burst","انفجار نجوم"],["card","بطاقة تأكيد"],["spiral","يلف ويدخل"]],scene:() => `<button type="button" class="lab-art btnish" id="labArt" data-act="labReplay" aria-label="أضف للسلة" style="margin-bottom:56px">${art("cup","ليان",S.labOcc)}</button><div class="lab-bag" id="labBag">${I("bag",24)}<span class="lab-badge" id="labBadge">٠</span></div>`,run:demoAdd},
+  {k:"addCart",title:"لما تضيف منتج للسلة",help:"",try:"اضغط الكوب",opts:[["fly","يطير للسلة",1],["drop","ينزل فيها"],["burst","انفجار نجوم"],["card","بطاقة تأكيد"],["spiral","يلف ويدخل"]],scene:() => `<button type="button" class="lab-art btnish" id="labArt" data-act="labReplay" aria-label="أضف للسلة" style="margin-bottom:56px">${art("cup","سعود",S.labOcc)}</button><div class="lab-bag" id="labBag">${I("bag",24)}<span class="lab-badge" id="labBadge">٠</span></div>`,run:demoAdd},
   {k:"press",title:"لما تضغط أي زر",help:"",try:"اضغط الأزرار",opts:[["both","موجة وضغطة",1],["squish","ينضغط ويرجع"],["ripple","موجة لون"],["pop","ينتفخ"],["jelly","جيلي"]],scene:() => `<div class="lab-stack" style="width:230px"><button type="button" class="btn" id="labBtn">اضغطني</button><button type="button" class="btn ghost">وهذا بعد</button></div>`,run:() => { const b = el("labBtn"), r = b.getBoundingClientRect(); fxPress(b, r.left + r.width / 2, r.top + r.height / 2); sfx("tap"); }},
   {k:"chip",title:"لما تختار من الخيارات",help:"مثل اختيار المقاس أو المناسبة.",try:"اضغط أي خيار",opts:[["fill","اللون يتعبى",1],["bounce","يقفز"],["check","علامة صح"],["wiggle","يهتز فرحان"]],scene:() => `<div class="chips" id="labChips" style="justify-content:center">${["٨ أونص","١٢ أونص","١٦ أونص"].map((t, i) => `<button type="button" class="chip" aria-pressed="${i === 0}" data-act="labDemoChip">${t}</button>`).join("")}</div>`,run:() => { const list = [...el("labChips").children], cur = list.findIndex((b) => b.getAttribute("aria-pressed") === "true"); pickChip(list[(cur + 1) % list.length]); }},
   {k:"nav",title:"الشريط اللي تحت",help:"",try:"اضغط الأيقونات",opts:[["bubble","فقاعة تتنقل",1],["hop","الأيقونة تقفز"],["spin","الأيقونة تلف"],["glow","تكبر وتضوي"]],scene:() => `<div class="mini-nav" id="labNav"><span class="nav-bub"></span>${[["home","الرئيسية"],["grid","المنتجات"],["list","طلباتي"]].map(([ic, t], i) => `<button type="button" data-act="labNavTap" ${i === 0 ? 'aria-current="page"' : ""}>${I(ic)}${t}</button>`).join("")}</div>`,mount:async () => placeBubble(el("labNav")),run:demoNav},
@@ -438,7 +438,7 @@ const LAB = [
   {k:"payOk",title:"لما ينجح الدفع",help:"في التجربة الدفع وهمي.",try:"اضغط الزر",opts:[["check","علامة صح تنرسم",1],["rings","دوائر تنفتح"],["stamp","ختم"]],scene:() => `<div class="lab-stack"><div id="labOk" style="min-height:124px;display:flex;align-items:center"></div><button type="button" class="btn" style="width:190px;min-height:44px" data-act="labReplay">ادفع (تجربة)</button></div>`,run:demoPay},
   {k:"productIn",title:"لما يفتح الكوب للمراجعة",help:"هذا الكوب الحقيقي.",try:"دوّره بإصبعك",dark:1,opts:[["spin","يلف لفة كاملة",1],["rise","يطلع ويكبر"],["sway","يتمايل"]],scene:cupScene,mount:(id) => labCup(id),run:() => { if (V) V.intro = newIntro(); sfx("whoosh"); }},
   {k:"pin",title:"لما تحط ملاحظة على التصميم",help:"",try:"اضغط أي مكان على الكوب",dark:1,opts:[["drop","الدبوس ينزل ويرتد",1],["ripple","موجة من مكان اللمس"],["grow","ينمو"]],scene:cupScene,mount:(id) => labCup(id).then(labPinTaps),run:demoPin},
-  {k:"ink",title:"لما ترسم على التصميم",help:"مكان الرسم يبقى ثابت، والتأثير شكل بس.",try:"ارسم بإصبعك",opts:[["glow","خط يضوي",1],["spark","شرار مع القلم"],["rainbow","ألوان قوس قزح"]],scene:() => `<div class="lab-art">${art("cup","ليان",S.labOcc)}</div><canvas id="ink" style="pointer-events:auto;touch-action:none"></canvas>`,mount:async () => { sizeInk(el("labStage")); labInkDraw(); },run:demoInk},
+  {k:"ink",title:"لما ترسم على التصميم",help:"مكان الرسم يبقى ثابت، والتأثير شكل بس.",try:"ارسم بإصبعك",opts:[["glow","خط يضوي",1],["spark","شرار مع القلم"],["rainbow","ألوان قوس قزح"]],scene:() => `<div class="lab-art">${art("cup","سعود",S.labOcc)}</div><canvas id="ink" style="pointer-events:auto;touch-action:none"></canvas>`,mount:async () => { sizeInk(el("labStage")); labInkDraw(); },run:demoInk},
   {k:"celebrateStyle",title:"شكل الاحتفال",help:"",try:"اضغط أي مناسبة",opts:[["theme","حسب المناسبة",1],["confetti","قصاصات"],["fireworks","ألعاب نارية"],["balloons","بالونات"],["stars","نجوم"]],scene:() => `<div class="chips" style="justify-content:center;padding:10px">${Object.entries(OCC).map(([key, o]) => `<button type="button" class="chip" aria-pressed="${S.labOcc === key}" data-act="labOcc" data-v="${key}">${o.label}</button>`).join("")}</div>`,run:() => { celebrate(1, S.labOcc); sfx("party"); }},
   {k:"celebrateAt",title:"وين يطلع الاحتفال",help:"تقدر تختار أكثر من وحدة.",try:"اضغط تحت وتشوف الحدث",multi:1,opts:[["cart","الإضافة للسلة"],["pay","تأكيد الدفع"],["ready","جاهزية التصميم"],["approve","الاعتماد والملفات"]],scene:evScene,run:(v) => v ? playCelebrate(v) : labStory(["cart", "pay", "ready", "approve"], playCelebrate)},
   {k:"sound",title:"الأصوات",help:"إذا الآيفون على الصامت ممكن ما تسمعها.",try:"اضغط حدث وتشوفه مع صوته",opts:[["big","للأحداث الكبيرة",1],["all","مع كل ضغطة"],["none","بدون"]],scene:evScene,extra:evChips,run:() => labStory(["tap", "select", "add", "success", "party"], playSoundEvent)},
@@ -845,7 +845,7 @@ const EV = {
     await fxSwap(old, neu, "forward", [48, 60]); old.remove(); await wait(260);
   },
   async add(area) {
-    area.innerHTML = `<div class="lab-art sm" style="margin-bottom:54px">${art("cup", "ليان", S.labOcc)}</div><div class="lab-bag">${I("bag", 24)}<span class="lab-badge">٠</span></div>`;
+    area.innerHTML = `<div class="lab-art sm" style="margin-bottom:54px">${art("cup", "سعود", S.labOcc)}</div><div class="lab-bag">${I("bag", 24)}<span class="lab-badge">٠</span></div>`;
     const cup0 = area.querySelector("svg"), bag = area.querySelector(".lab-bag"), badge = area.querySelector(".lab-badge"); await wait(220); if (!cup0.isConnected) return;
     await fxAddCart(cup0, () => bag, () => { badge.textContent = ar(1); fxBadge(badge); }); await wait(380);
   },
@@ -947,7 +947,7 @@ async function labRemoveRow(row) {
   if (id === labScene && el("labRows")) { host.innerHTML = labRowsHTML(); fxEnter(host, ".item"); }
 }
 async function demoType() {
-  const token = labToken, word = "ليان";
+  const token = labToken, word = "سعود";
   for (let i = 1; i <= word.length; i++) { const pv = el("labPv"), field = el("labName"); if (token !== labToken || !pv) return; if (field) field.value = word.slice(0, i); pv.innerHTML = art("cup", word.slice(0, i), S.labOcc); fxType(pv); sfx("tap"); await wait(Math.max(190, M().ms * .7)); }
 }
 function dropPin(clientX, clientY, clear) {
@@ -976,7 +976,7 @@ async function demoInk() {
 }
 async function labCup(id) {
   S.mode = "view";
-  await mountCup({ canvasId: "labGl", stageId: "labStage", statusId: "labStatus", item: { text: "ليان" }, occ: S.labOcc, version: 1, intro: false });
+  await mountCup({ canvasId: "labGl", stageId: "labStage", statusId: "labStatus", item: { text: "سعود" }, occ: S.labOcc, version: 1, intro: false });
   if (id !== labScene && V && S.route !== "review") disposeViewer();
 }
 function stopLab() { labScene++; labToken++; }
@@ -1141,7 +1141,7 @@ function saveToLibrary(o) {
   S.saved.unshift({ no: o.no, occ: o.occ, items: o.items.map((item) => ({ ...item })) });
   if (realDate(o.eventDate) && daysTo(o.eventDate) >= 0 && !S.events.some((ev) => ev.date === o.eventDate && ev.occ === o.occ)) { const name = o.items.find((item) => item.text)?.text; S.events.push({ id: nextId++, name: `${OCC[o.occ].label}${name ? ` ${name}` : ""}`, occ: o.occ, date: o.eventDate, bell: true }); }
 }
-function eventSheet() { const e = S.newEv; return `<h2>أضف مناسبة</h2><div class="field"><label for="f-ev">اسم المناسبة</label><input class="input" id="f-ev" data-bind="evName" value="${esc(e.name)}" maxlength="30" autocomplete="off" placeholder="مثل: يوم ميلاد ليان"></div><div class="group"><span class="label">نوعها</span><div class="chips">${Object.entries(OCC).map(([key, o]) => `<button type="button" class="chip" aria-pressed="${e.occ === key}" data-act="evOcc" data-v="${key}">${o.label}</button>`).join("")}</div></div><div class="group"><span class="label">متى؟</span><div id="cal">${calHTML()}</div></div><div class="sheet-foot"><button type="button" class="btn" data-act="saveEvent">احفظها</button><button type="button" class="btn ghost" data-act="closeSheet">رجوع</button></div>`; }
+function eventSheet() { const e = S.newEv; return `<h2>أضف مناسبة</h2><div class="field"><label for="f-ev">اسم المناسبة</label><input class="input" id="f-ev" data-bind="evName" value="${esc(e.name)}" maxlength="30" autocomplete="off" placeholder="مثل: يوم ميلاد سعود"></div><div class="group"><span class="label">نوعها</span><div class="chips">${Object.entries(OCC).map(([key, o]) => `<button type="button" class="chip" aria-pressed="${e.occ === key}" data-act="evOcc" data-v="${key}">${o.label}</button>`).join("")}</div></div><div class="group"><span class="label">متى؟</span><div id="cal">${calHTML()}</div></div><div class="sheet-foot"><button type="button" class="btn" data-act="saveEvent">احفظها</button><button type="button" class="btn ghost" data-act="closeSheet">رجوع</button></div>`; }
 
 const SCREENS = {
   gallery: () => `${backBar("أفكار جاهزة")}<p class="sub">اختر فكرة تعجبك، وفريقنا يصممها باسمك</p><div class="chips">${[["all", "الكل"], ...Object.entries(OCC).map(([key, o]) => [key, o.label])].map(([key, label]) => `<button type="button" class="chip" aria-pressed="${S.galOcc === key}" data-act="galOcc" data-v="${key}">${label}</button>`).join("")}</div><div class="grid-p" id="galGrid">${galleryCards()}</div>`,
@@ -1155,7 +1155,7 @@ const SCREENS = {
   catalog: () => `${topBar()}<div><h1>وش تبغى نصمم لك؟</h1><p class="sub" id="catSub">لمناسبة: ${OCC[S.occ].label}</p></div>
     <div class="chips">${Object.entries(OCC).map(([key, o]) => `<button type="button" class="chip" aria-pressed="${S.occ === key}" data-act="setOcc" data-v="${key}">${o.label}</button>`).join("")}</div>
     ${packBanner()}
-    <div class="grid-p">${["cup","bottle","sticker","box"].map((pid) => `<button type="button" class="card-p" data-act="openProduct" data-v="${pid}">${art(pid, "ليان", S.occ)}<b>${PROD[pid].name}</b>${PROD[pid].has3d ? '<span class="tag">تدوّره بثلاثي الأبعاد</span>' : '<span class="small">معاينة بالصور</span>'}</button>`).join("")}</div>
+    <div class="grid-p">${["cup","bottle","sticker","box"].map((pid) => `<button type="button" class="card-p" data-act="openProduct" data-v="${pid}">${art(pid, "سعود", S.occ)}<b>${PROD[pid].name}</b>${PROD[pid].has3d ? '<span class="tag">تدوّره بثلاثي الأبعاد</span>' : '<span class="small">معاينة بالصور</span>'}</button>`).join("")}</div>
     <button type="button" class="dashed" data-act="idea">منتجك مو موجود؟ قلنا</button>`,
   product: () => { const d = S.draft, p = PROD[d.pid]; return `${backBar(p.name)}<div class="hero-art" id="pv">${art(d.pid, d.text, d.pal || S.occ)}</div>
     <p class="small">${p.has3d ? "تقدر تدوّره بإصبعك بعد ما نصممه" : "المعاينة ثلاثية الأبعاد غير متاحة لهذا المنتج حاليًا، وتراجعه بصور واضحة"}</p>
@@ -1163,7 +1163,7 @@ const SCREENS = {
     <div class="field"><label for="f-text">وش تبغى ينكتب عليه؟</label><input class="input" id="f-text" data-bind="text" value="${esc(d.text)}" maxlength="24" autocomplete="off"></div>
     <div class="field"><label for="f-idea">صف لنا التصميم اللي في بالك</label><textarea class="input" id="f-idea" data-bind="idea" rows="2" placeholder="مثل: ألوان وردية وعاجية، وخط عربي أنيق">${esc(d.idea)}</textarea></div>
     <button type="button" class="btn" data-act="addCart">أضف للسلة</button>`; },
-  idea: () => `${backBar("قلنا فكرتك")}<div class="field"><label for="f-free">صف لنا التصميم اللي في بالك</label><textarea class="input" id="f-free" data-bind="free" rows="4" placeholder="أبغى ثيم استقبال مولودة بألوان وردي وعاجي، مع اسم ليان وخط ناعم">${esc(S.idea)}</textarea></div><div class="group"><span class="label">على أي منتج؟</span><div class="chips">${[["custom","ساعدوني في اختيار المنتج"],["cup","كوب"],["bottle","قارورة"],["sticker","ستيكر"],["box","علبة أو كيس"]].map(([pid, label]) => `<button type="button" class="chip" aria-pressed="${S.ideaPid === pid}" data-act="ideaPid" data-v="${pid}">${label}</button>`).join("")}</div></div><p class="small">تقدر تضيف صور وأمثلة لاحقًا. ما تحتاج تعرف تصمم.</p><button type="button" class="btn" data-act="addIdea">أضف للسلة</button>`,
+  idea: () => `${backBar("قلنا فكرتك")}<div class="field"><label for="f-free">صف لنا التصميم اللي في بالك</label><textarea class="input" id="f-free" data-bind="free" rows="4" placeholder="أبغى ثيم استقبال مولودة بألوان وردي وعاجي، مع اسم سعود وخط ناعم">${esc(S.idea)}</textarea></div><div class="group"><span class="label">على أي منتج؟</span><div class="chips">${[["custom","ساعدوني في اختيار المنتج"],["cup","كوب"],["bottle","قارورة"],["sticker","ستيكر"],["box","علبة أو كيس"]].map(([pid, label]) => `<button type="button" class="chip" aria-pressed="${S.ideaPid === pid}" data-act="ideaPid" data-v="${pid}">${label}</button>`).join("")}</div></div><p class="small">تقدر تضيف صور وأمثلة لاحقًا. ما تحتاج تعرف تصمم.</p><button type="button" class="btn" data-act="addIdea">أضف للسلة</button>`,
   cart: () => { if (!S.cart.length) return `${topBar()}<div class="empty"><span class="bub">${I("bag", 44)}</span><h2>سلتك فاضية</h2><p class="sub">اختر منتج، ونصمم لك كل شي بهوية واحدة</p><button type="button" class="btn" data-tab="catalog">اختر منتجك</button></div>`;
     return `${topBar()}<div><h1>سلتك</h1><p class="sub">${OCC[S.occ].label}، ${countLabel(S.cart.length)}${S.cart.length > 1 ? " بتصميم واحد" : ""}</p></div>
     ${S.cart.map((item) => `<div class="item"><span class="bub">${I(PROD[item.pid].icon, 30)}</span><span class="tx"><b>${PROD[item.pid].name}</b><span>${item.pack ? "من البكج، " : ""}${itemLine(item)}</span></span><button type="button" class="x-btn" aria-label="احذف ${PROD[item.pid].name}" data-act="removeCart" data-v="${item.id}">${I("x")}</button></div>`).join("")}
@@ -1275,7 +1275,7 @@ const ACT = {
   galOcc(d, t) { S.galOcc = d.v; pickChip(t); const grid = el("galGrid"); grid.innerHTML = galleryCards(); fxEnter(grid, ".idea-card"); },
   ideaOpen(d) { const idea = ideaById(d.v); openSheet(`<div class="idea-big">${art(idea.pid, idea.text, idea.pal)}</div><h2>${idea.name}</h2><p class="sub">${idea.desc}</p><button type="button" class="btn" data-act="useIdea" data-v="${idea.id}">أبغى زي هذا</button><button type="button" class="btn ghost" data-act="closeSheet">رجوع</button>`); A(sheet.querySelector(".idea-big svg"), [{ transform: "scale(.6) rotate(-6deg)" }, { transform: "none" }], { delay: M().ms * .4 }); },
   useIdea(d) { const idea = ideaById(d.v), sizes = PROD[idea.pid].sizes; S.occ = idea.occ; S.draft = { pid: idea.pid, size: sizes[Math.min(1, sizes.length - 1)], text: idea.text, idea: `${idea.name}: ${idea.desc}`, pal: idea.pal }; closeSheet(); go("product"); },
-  openPack() { S.pack = S.pack || { text: "ليان", off: {} }; go("package"); },
+  openPack() { S.pack = S.pack || { text: "سعود", off: {} }; go("package"); },
   packOcc(d, t) { S.occ = d.v; pickChip(t); packArts(true); },
   packToggle(d, t) {
     const on = !S.pack.off[d.v];
@@ -1298,17 +1298,17 @@ const ACT = {
   },
   libBell(d, t) { const ev = S.events.find((item) => String(item.id) === d.v); ev.bell = !ev.bell; t.setAttribute("aria-pressed", String(ev.bell)); const a = M().amp; A(t, [{ transform: "rotate(0)" }, { transform: `rotate(${-18 * a}deg)`, offset: .25 }, { transform: `rotate(${15 * a}deg)`, offset: .55 }, { transform: "rotate(0)" }], { k: 1.2, ease: "ease-out", fill: "none" }); sfx("select"); toast(ev.bell ? "نذكرك قبلها بشهر" : "وقفنا التذكير"); },
   libReorder(d) { const entry = S.saved.find((item) => String(item.no) === d.v); S.occ = entry.occ; S.cart.push(...entry.items.map((item) => ({ ...item, id: nextId++ }))); tab("cart"); fxBadge(el("badge")); sfx("add"); toast("رجع تصميمك للسلة"); },
-  libExample() { const plus = (n) => { const day = today0(); day.setDate(day.getDate() + n); return isoOf(day); }; S.events.push({ id: nextId++, name: "يوم ميلاد ليان", occ: "bday", date: plus(25), bell: true }, { id: nextId++, name: "تخرج فهد", occ: "grad", date: plus(120), bell: true }); S.saved.unshift({ no: 1001, occ: "baby", items: [{ id: nextId++, pid: "cup", size: "١٢ أونص", text: "ليان", idea: "" }] }); keepScroll(() => render("still")); fxEnter(view.querySelector(".screen:not(.leaving)"), ".item,.lib-designs"); sfx("add"); },
+  libExample() { const plus = (n) => { const day = today0(); day.setDate(day.getDate() + n); return isoOf(day); }; S.events.push({ id: nextId++, name: "يوم ميلاد سعود", occ: "bday", date: plus(25), bell: true }, { id: nextId++, name: "تخرج فهد", occ: "grad", date: plus(120), bell: true }); S.saved.unshift({ no: 1001, occ: "baby", items: [{ id: nextId++, pid: "cup", size: "١٢ أونص", text: "سعود", idea: "" }] }); keepScroll(() => render("still")); fxEnter(view.querySelector(".screen:not(.leaving)"), ".item,.lib-designs"); sfx("add"); },
   async libPing() {
     document.querySelector(".ping")?.remove();
-    const ev = eventsInOrder().find((item) => item.bell && daysTo(item.date) >= 0), n = ev ? daysTo(ev.date) : 30, name = ev ? ev.name : "يوم ميلاد ليان", node = document.createElement("div");
+    const ev = eventsInOrder().find((item) => item.bell && daysTo(item.date) >= 0), n = ev ? daysTo(ev.date) : 30, name = ev ? ev.name : "يوم ميلاد سعود", node = document.createElement("div");
     node.className = "ping"; node.innerHTML = `<span class="bub">${I("bell", 22)}</span><span><b>${esc(S.choices.name)}</b>${leftText(n)} على ${esc(name)}. نجهز لها تصميم؟</span>`; el("app").appendChild(node);
     sfx("success"); await A(node, [{ transform: "translateY(-160%)" }, { transform: "none" }], { fill: "both" }); await wait(3200); if (!node.isConnected) return; await A(node, [{ opacity: 1, transform: "none" }, { opacity: 0, transform: "translateY(-60%)" }], { k: .7, ease: "ease-in", fill: "both" }); node.remove();
   },
   pickOcc(d) { S.occ = d.v; go("catalog"); },
-  setOcc(d, t) { S.occ = d.v; pickChip(t); el("catSub").textContent = `لمناسبة: ${OCC[S.occ].label}`; document.querySelectorAll(".card-p").forEach((card, i) => { card.querySelector("svg").outerHTML = art(card.dataset.v, "ليان", S.occ); A(card.querySelector("svg"), [{ transform: "scale(.5)", opacity: 0 }, { transform: "none", opacity: 1 }], { delay: i * 55 }); }); },
+  setOcc(d, t) { S.occ = d.v; pickChip(t); el("catSub").textContent = `لمناسبة: ${OCC[S.occ].label}`; document.querySelectorAll(".card-p").forEach((card, i) => { card.querySelector("svg").outerHTML = art(card.dataset.v, "سعود", S.occ); A(card.querySelector("svg"), [{ transform: "scale(.5)", opacity: 0 }, { transform: "none", opacity: 1 }], { delay: i * 55 }); }); },
   idea() { go("idea"); },
-  openProduct(d) { const sizes = PROD[d.v].sizes; S.draft = { pid: d.v, size: sizes[Math.min(1, sizes.length - 1)], text: "ليان", idea: "" }; go("product"); },
+  openProduct(d) { const sizes = PROD[d.v].sizes; S.draft = { pid: d.v, size: sizes[Math.min(1, sizes.length - 1)], text: "سعود", idea: "" }; go("product"); },
   size(d, t) { S.draft.size = d.v; pickChip(t); fxType(el("pv")); },
   async addCart() { await flyToCart(el("pv").querySelector("svg"), { id: nextId++, ...S.draft }); },
   async addIdea(d, t) {
@@ -1445,7 +1445,7 @@ async function mountCup({ canvasId, stageId, statusId, item, occ, version, intro
   const token = ++viewerToken, status = el(statusId);
   try {
     const font = FONT_NAME[S.choices.font];
-    await Promise.all([document.fonts.load(`800 100px "${font}"`, "ليان"), document.fonts.load(`700 100px "${font}"`, "مرحبا")]);
+    await Promise.all([document.fonts.load(`800 100px "${font}"`, "سعود"), document.fonts.load(`700 100px "${font}"`, "مرحبا")]);
     const { THREE, GLTFLoader, OrbitControls } = await loadThree();
     if (token !== viewerToken) return false;
     const canvas = el(canvasId), stage = el(stageId);
