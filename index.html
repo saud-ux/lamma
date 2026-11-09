@@ -1,4 +1,4 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light}body{margin:0}[hidden]{display:none!important}#app{box-sizing:border-box;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}#toast,.ping{top:calc(10px + env(safe-area-inset-top))!important}#nav.peek{bottom:env(safe-area-inset-bottom)!important}</style><script>document.addEventListener('click',function(e){var b=e.target.closest('[data-act="requestQuote"]');if(!b)return;e.stopPropagation();e.preventDefault();var t=document.getElementById('toast');if(t){t.textContent='الطلب قريبًا، للحين نسخة عرض';t.classList.add('on');setTimeout(function(){t.classList.remove('on')},2800)}},true);</script></head><body><style>.demo-btn{display:none!important}.warn,.note-demo{display:none!important}</style><script>addEventListener('DOMContentLoaded',()=>{let t=0;new MutationObserver(()=>{const b=document.querySelector('.act-card .demo-btn:not([data-auto])');if(!b)return;b.dataset.auto='1';clearTimeout(t);t=setTimeout(()=>{if(document.body.contains(b))b.click();},2400);}).observe(document.body,{childList:true,subtree:true});});</script><title>لمّة</title>
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light}body{margin:0}[hidden]{display:none!important}#app{box-sizing:border-box;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}#toast,.ping{top:calc(10px + env(safe-area-inset-top))!important}#nav.peek{bottom:env(safe-area-inset-bottom)!important}</style><script>document.addEventListener('click',function(e){var b=e.target.closest('[data-act="requestQuote"]');if(!b)return;e.stopPropagation();e.preventDefault();var t=document.getElementById('toast');if(t){t.textContent='الطلب قريبًا، للحين نسخة عرض';t.classList.add('on');setTimeout(function(){t.classList.remove('on')},2800)}},true);</script></head><body><style>.demo-btn{display:none!important}.warn,.note-demo{display:none!important}.strip .idea-card{flex:0 0 150px}.idea-big{height:220px}.editor-head{display:flex;align-items:center;justify-content:space-between;gap:10px}.editor-head h2{flex:1;min-width:0}.editor-tagline{font-size:14px;color:var(--muted);font-weight:500}.custom-cta{display:flex;align-items:center;gap:12px;width:100%;min-height:80px;padding:12px 14px;box-sizing:border-box;border:2px solid var(--primary);background:var(--bg);color:var(--primary);border-radius:var(--r);text-align:start}.custom-cta>svg:first-child{animation:nudge 1.1s ease-in-out infinite}.custom-cta span{flex:1;min-width:0;display:flex;flex-direction:column;line-height:1.3}.custom-cta b{font-size:18px;font-weight:800;color:var(--ink)}.custom-cta small{font-size:13px;color:var(--muted)}</style><script>addEventListener('DOMContentLoaded',()=>{let t=0;new MutationObserver(()=>{const b=document.querySelector('.act-card .demo-btn:not([data-auto])');if(!b)return;b.dataset.auto='1';clearTimeout(t);t=setTimeout(()=>{if(document.body.contains(b))b.click();},2400);}).observe(document.body,{childList:true,subtree:true});});</script><script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script><title>لمّة</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -361,10 +361,10 @@ const OCC = {
 };
 const PROD = {
   cup:{name:"كوب قهوة ورقي",short:"أكواب",icon:"cup",sizes:["٨ أونص","١٢ أونص","١٦ أونص","ما أعرف"],has3d:true,price:120},
-  bottle:{name:"قارورة ماء بملصق",short:"قوارير",icon:"bottle",sizes:["٣٣٠ مل","٦٠٠ مل","ما أعرف"],has3d:false,price:90},
-  sticker:{name:"ستيكر",short:"ستيكرات",icon:"sticker",sizes:["٥ سم","٧ سم","١٠ سم","ما أعرف"],has3d:false,price:60},
-  box:{name:"علبة أو كيس",short:"علب",icon:"box",sizes:["علبة صغيرة","علبة وسط","كيس ورقي","ما أعرف"],has3d:false,price:140},
-  invite:{name:"دعوة رقمية",short:"دعوات",icon:"file",sizes:["للجوال"],has3d:false,price:80},
+  bottle:{name:"قارورة ماء بملصق",short:"قوارير",icon:"bottle",sizes:["٣٣٠ مل","٦٠٠ مل","ما أعرف"],has3d:true,price:90},
+  sticker:{name:"ستيكر",short:"ستيكرات",icon:"sticker",sizes:["٥ سم","٧ سم","١٠ سم","ما أعرف"],has3d:true,price:60},
+  box:{name:"علبة أو كيس",short:"علب",icon:"box",sizes:["علبة صغيرة","علبة وسط","كيس ورقي","ما أعرف"],has3d:true,price:140},
+  invite:{name:"دعوة رقمية",short:"دعوات",icon:"file",sizes:["للجوال"],has3d:true,price:80},
   custom:{name:"منتج نساعدك تختاره",short:"غيرها",icon:"box",sizes:["ما أعرف"],has3d:false,price:150},
 };
 const PACK = ["cup", "bottle", "sticker", "box", "invite"];
@@ -385,6 +385,11 @@ const IDEAS = [
   {id:"e1",occ:"eid",name:"برتقالي",pid:"cup",text:"عيدكم مبارك",desc:"فوانيس دافية ونقوش بسيطة.",pal:{paper:"#FDF0EC",ink:"#A63522",a:"#F6CDBF",b:"#FFE0A0",c:"#BFE3E3"}},
   {id:"e2",occ:"eid",name:"كحلي",pid:"sticker",text:"رمضان كريم",desc:"كحلي وهلال ذهبي.",pal:{paper:"#1C2B4A",ink:"#F2CE7E",a:"#2E4168",b:"#27385C",c:"#F2CE7E"}},
   {id:"e3",occ:"eid",name:"بني",pid:"box",text:"حياكم",desc:"ألوان القهوة والتمر لضيافة العيد.",pal:{paper:"#F6EEE3",ink:"#6B4423",a:"#E3D0B8",b:"#EEE0CC",c:"#C9A36A"}},
+  {id:"b4",occ:"baby",name:"زهري هادي",pid:"invite",text:"سلمى",desc:"زهري هادي مع ذهبي خفيف للدعوات.",pal:{paper:"#FCEFF4",ink:"#8E1F4F",a:"#F7CFDD",b:"#FBE6D4",c:"#EFD9A7"}},
+  {id:"w4",occ:"wed",name:"ذهبي فاخر",pid:"box",text:"حياكم",desc:"ذهبي فاخر على خلفية كريمية لعلب الضيافة.",pal:{paper:"#FBF4E2",ink:"#8A6A2B",a:"#E5CFA0",b:"#F3E6C4",c:"#D9B76A"}},
+  {id:"g4",occ:"grad",name:"ذهبي على كحلي",pid:"bottle",text:"ألف مبروك",desc:"كحلي فخم مع ذهبي، مناسب لحفلات التخرج.",pal:{paper:"#1E2A44",ink:"#E7C77A",a:"#31436B",b:"#2A3A5E",c:"#E7C77A"}},
+  {id:"d4",occ:"bday",name:"مرح بألوان",pid:"sticker",text:"نورة",desc:"ألوان مرحة لحفلة يوم الميلاد.",pal:{paper:"#FFF7E3",ink:"#8E1F4F",a:"#F7C9D9",b:"#BFE3E3",c:"#FFE0A0"}},
+  {id:"e4",occ:"eid",name:"أخضر وذهبي",pid:"cup",text:"عيدكم مبارك",desc:"أخضر عميق مع ذهبي لكاسات العيد.",pal:{paper:"#1F3A2C",ink:"#E7C77A",a:"#2E5240",b:"#264637",c:"#E7C77A"}},
 ];
 const ideaById = (id) => IDEAS.find((idea) => idea.id === id);
 const LEAD = { calm: 7, rush: 3 };
@@ -444,6 +449,31 @@ const LAB = [
   {k:"sound",title:"الأصوات",help:"إذا الآيفون على الصامت ممكن ما تسمعها.",try:"اضغط حدث وتشوفه مع صوته",opts:[["big","للأحداث الكبيرة",1],["all","مع كل ضغطة"],["none","بدون"]],scene:evScene,extra:evChips,run:() => labStory(["tap", "select", "add", "success", "party"], playSoundEvent)},
   {k:"soundKind",title:"نوع الصوت",help:"إذا الآيفون على الصامت ممكن ما تسمعها.",try:"اضغط حدث وتشوفه مع صوته",opts:[["soft","ناعم",1],["bells","أجراس"],["game","ألعاب"]],scene:evScene,extra:evChips,run:() => labStory(["add", "success", "party"], playSoundEvent)},
 ];
+async function editTemplate(id) {
+  S.templateId = id; const idea = ideaById(id); S.draft = { text: idea.text, tagline: OCC[idea.occ].line, pid: idea.pid, pal: idea.pal, occ: idea.occ };
+  openSheet(`
+    <div class="editor-head"><h2>${esc(idea.name)}</h2><span class="tag">${OCC[idea.occ].label}</span></div>
+    <div class="idea-big" id="tpv">${art(idea.pid, S.draft.text, idea.pal)}</div>
+    <p class="editor-tagline" id="ttag">${esc(S.draft.tagline)}</p>
+    <div class="field"><label for="f-tname">الاسم</label><input class="input" id="f-tname" data-bind="tname" value="${esc(S.draft.text)}" maxlength="24" autocomplete="off"></div>
+    <div class="field"><label for="f-tsub">السطر اللي تحت (اختياري)</label><input class="input" id="f-tsub" data-bind="tsub" value="${esc(S.draft.tagline)}" maxlength="30" autocomplete="off" placeholder="مثل: ${esc(OCC[idea.occ].line)}"></div>
+    <button type="button" class="btn" data-act="downloadTpl">حمّل تصميمك الآن</button>
+    <button type="button" class="custom-cta" data-act="goCustom">${I("pen", 28)}<span><b>تبغاه تصميم خاص فيك؟</b><small>فريقنا يصممه لك من فكرتك</small></span>${I("next")}</button>
+  `);
+}
+function downloadTemplateNow() {
+  const idea = ideaById(S.templateId), item = { text: S.draft.text, pid: idea.pid, pal: idea.pal, tagline: S.draft.tagline };
+  const canvas = designCanvas(item, idea.occ, 1);
+  const name = (S.draft.text || "lamma").replace(/[\\/:*?"<>|]/g, "");
+  canvas.toBlob((blob) => {
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url; link.download = `لمّة-${name}.png`;
+    document.body.appendChild(link); link.click(); link.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  }, "image/png");
+  closeSheet(); toast("انحمل تصميمك"); celebrate(1, idea.occ); sfx("success");
+}
 function fxDefaults() {
   const out = {};
   for (const m of LAB) if (m.k !== "motion") out[m.k] = m.multi ? m.opts.map((o) => o[0]) : (m.opts.find((o) => o[2]) || m.opts[0])[0];
@@ -1013,13 +1043,13 @@ function designCanvas(item, occ, version) {
   g.fillStyle = o.paper; g.fillRect(0, 0, w, h);
   for (const [x, y, r, color] of [[34,40,20,o.a],[212,46,24,o.b],[74,86,13,o.c],[172,84,12,o.a],[60,20,8,o.c],[190,14,7,o.a]]) { g.fillStyle = color; g.beginPath(); g.arc(x * s, y * s, r * s, 0, Math.PI * 2); g.fill(); }
   g.direction = "rtl"; g.textAlign = "center"; g.textBaseline = "middle"; g.fillStyle = o.ink;
-  g.font = `700 ${9 * s}px "${font}"`; g.fillText(o.line, CUP.W / 2 * s, 20 * s);
+  g.font = `700 ${9 * s}px "${font}"`; g.fillText(item.tagline !== undefined ? item.tagline : o.line, CUP.W / 2 * s, 20 * s);
   let size = 27 * s * (version > 1 ? 1.14 : 1);
   g.font = `800 ${size}px "${font}"`;
   const label = item.text || "تصميمك", width = g.measureText(label).width, limit = 120 * s;
   if (width > limit) { size *= limit / width; g.font = `800 ${size}px "${font}"`; }
   g.fillText(label, CUP.W / 2 * s, 46 * s);
-  g.font = `500 ${6.5 * s}px "${font}"`; g.fillText("تصميم تجريبي", CUP.W / 2 * s, 72 * s);
+
   return canvas;
 }
 
@@ -1058,6 +1088,7 @@ function afterRender(direction) {
   if (S.route === "order" && direction !== "still") fxTimeline(root.querySelector(".steps"), 0);
   if (S.route === "quote") fxTotal(el("totalV"), S.order.total);
   if (S.route === "lab") renderLab();
+  if (S.route === "product") { startProductViewer(); applyProductPreviewMode(); }
   return root;
 }
 function render(direction = "forward") {
@@ -1089,7 +1120,7 @@ const productCircle = (pid) => `<button type="button" class="circle" data-act="o
 
 const packBanner = () => `<button type="button" class="banner" data-act="openPack">${I("gift", 36)}<span><b>بكج مناسبتك كامل</b><small>كوب وقارورة وستيكر وعلبة ودعوة بتصميم واحد</small></span>${I("next")}</button>`;
 const ideaCard = (idea) => `<button type="button" class="idea-card" data-act="ideaOpen" data-v="${idea.id}">${art(idea.pid, idea.text, idea.pal)}<b>${idea.name}</b><span class="tag">${OCC[idea.occ].label}</span></button>`;
-const ideaStrip = () => `<div class="row-head"><h2>أفكار جاهزة</h2><button type="button" class="link" data-act="openGallery">شوف الكل</button></div><div class="strip">${Object.keys(OCC).map((occ) => ideaCard(IDEAS.find((idea) => idea.occ === occ))).join("")}</div>`;
+const ideaStrip = () => `<div class="row-head"><h2>أفكار جاهزة</h2><button type="button" class="link" data-act="openGallery">شوف الكل</button></div><div class="strip">${Object.keys(OCC).map((occ) => ideaCard(IDEAS.find((idea) => idea.occ === occ))).join("")}</div><button type="button" class="custom-cta" data-act="idea">${I("pen", 28)}<span><b>صمم لي تصميم خاص</b><small>فريقنا يصممه لك من فكرتك أنت</small></span>${I("next")}</button>`;
 const galleryCards = () => IDEAS.filter((idea) => S.galOcc === "all" || idea.occ === S.galOcc).map(ideaCard).join("");
 const eventsInOrder = () => [...S.events].sort((a, b) => a.date.localeCompare(b.date));
 function nextEventBanner() {
@@ -1144,7 +1175,7 @@ function saveToLibrary(o) {
 function eventSheet() { const e = S.newEv; return `<h2>أضف مناسبة</h2><div class="field"><label for="f-ev">اسم المناسبة</label><input class="input" id="f-ev" data-bind="evName" value="${esc(e.name)}" maxlength="30" autocomplete="off" placeholder="مثل: يوم ميلاد سعود"></div><div class="group"><span class="label">نوعها</span><div class="chips">${Object.entries(OCC).map(([key, o]) => `<button type="button" class="chip" aria-pressed="${e.occ === key}" data-act="evOcc" data-v="${key}">${o.label}</button>`).join("")}</div></div><div class="group"><span class="label">متى؟</span><div id="cal">${calHTML()}</div></div><div class="sheet-foot"><button type="button" class="btn" data-act="saveEvent">احفظها</button><button type="button" class="btn ghost" data-act="closeSheet">رجوع</button></div>`; }
 
 const SCREENS = {
-  gallery: () => `${backBar("أفكار جاهزة")}<p class="sub">اختر فكرة تعجبك، وفريقنا يصممها باسمك</p><div class="chips">${[["all", "الكل"], ...Object.entries(OCC).map(([key, o]) => [key, o.label])].map(([key, label]) => `<button type="button" class="chip" aria-pressed="${S.galOcc === key}" data-act="galOcc" data-v="${key}">${label}</button>`).join("")}</div><div class="grid-p" id="galGrid">${galleryCards()}</div>`,
+  gallery: () => `${backBar("أفكار جاهزة")}<p class="sub">عشرون تصميم جاهز. اختر، غيّر الاسم، وحمّله فوراً.</p><div class="chips">${[["all", "الكل"], ...Object.entries(OCC).map(([key, o]) => [key, o.label])].map(([key, label]) => `<button type="button" class="chip" aria-pressed="${S.galOcc === key}" data-act="galOcc" data-v="${key}">${label}</button>`).join("")}</div><div class="grid-p" id="galGrid">${galleryCards()}</div>`,
   package: () => { const p = S.pack; return `${backBar("بكج مناسبتك كامل")}<p class="sub">كل القطع بتصميم واحد وهوية وحدة. شيل اللي ما تبغاه.</p><div class="chips">${Object.entries(OCC).map(([key, o]) => `<button type="button" class="chip" aria-pressed="${S.occ === key}" data-act="packOcc" data-v="${key}">${o.label}</button>`).join("")}</div><div class="field"><label for="f-pack">وش تبغى ينكتب عليه؟</label><input class="input" id="f-pack" data-bind="packText" value="${esc(p.text)}" maxlength="24" autocomplete="off"></div><div class="pack-grid">${PACK.map((pid) => `<button type="button" class="pack-card" aria-pressed="${!p.off[pid]}" data-act="packToggle" data-v="${pid}"><span class="pa">${art(pid, p.text, S.occ)}</span><b>${PROD[pid].name}</b><i class="pk">${I("check", 16)}</i></button>`).join("")}</div><button type="button" class="btn" data-act="addPack">أضف البكج للسلة</button>`; },
   library: () => `${backBar("مناسباتي")}<p class="sub">مناسباتك وتصاميمك في مكان واحد، ونذكرك قبلها بشهر.</p>${eventsInOrder().map(libEventRow).join("")}<button type="button" class="dashed" data-act="addEvent">أضف مناسبة</button><h2>تصاميمك</h2>${S.saved.length ? `<div class="lib-designs">${S.saved.map(libDesign).join("")}</div>` : '<p class="small">أول تصميم تعتمده ينحفظ هنا تلقائيًا.</p>'}${S.events.length || S.saved.length ? "" : '<button type="button" class="demo-btn" data-act="libExample">في التجربة: أضف أمثلة</button>'}<button type="button" class="demo-btn" data-act="libPing">في التجربة: ورني شكل التذكير</button>`,
   home: () => `<div class="amb"><i></i><i></i><i></i><i></i></div>${topBar()}${nextEventBanner()}<div><h1>وش مناسبتك؟</h1><p class="sub">اختر، وفريقنا يصمم لك</p></div>
@@ -1157,18 +1188,19 @@ const SCREENS = {
     ${packBanner()}
     <div class="grid-p">${["cup","bottle","sticker","box"].map((pid) => `<button type="button" class="card-p" data-act="openProduct" data-v="${pid}">${art(pid, "سعود", S.occ)}<b>${PROD[pid].name}</b>${PROD[pid].has3d ? '<span class="tag">تدوّره بثلاثي الأبعاد</span>' : '<span class="small">معاينة بالصور</span>'}</button>`).join("")}</div>
     <button type="button" class="dashed" data-act="idea">منتجك مو موجود؟ قلنا</button>`,
-  product: () => { const d = S.draft, p = PROD[d.pid]; return `${backBar(p.name)}<div class="hero-art" id="pv">${art(d.pid, d.text, d.pal || S.occ)}</div>
-    <p class="small">${p.has3d ? "تقدر تدوّره بإصبعك بعد ما نصممه" : "المعاينة ثلاثية الأبعاد غير متاحة لهذا المنتج حاليًا، وتراجعه بصور واضحة"}</p>
+  product: () => { const d = S.draft, p = PROD[d.pid]; return `${backBar(p.name)}
+    <div class="stage product-stage" id="productStage"><canvas id="productGl"></canvas><div id="productStatus"><div class="spin"></div><span>جارٍ تجهيز المنتج…</span></div></div>
+    <div class="seg" data-i="${S.previewMode === '2d' ? 1 : 0}"><i class="thumb"></i>${[['3d','ثلاثي الأبعاد'],['2d','صور']].map(([v,l])=>`<button type="button" aria-pressed="${(S.previewMode||'3d')===v}" data-act="previewMode" data-v="${v}">${l}</button>`).join("")}</div>
     <div class="group"><span class="label">تعرف مقاس المنتج؟</span><div class="chips">${p.sizes.map((size) => `<button type="button" class="chip" aria-pressed="${d.size === size}" data-act="size" data-v="${esc(size)}">${size}</button>`).join("")}</div></div>
     <div class="field"><label for="f-text">وش تبغى ينكتب عليه؟</label><input class="input" id="f-text" data-bind="text" value="${esc(d.text)}" maxlength="24" autocomplete="off"></div>
-    <div class="field"><label for="f-idea">صف لنا التصميم اللي في بالك</label><textarea class="input" id="f-idea" data-bind="idea" rows="2" placeholder="مثل: ألوان وردية وعاجية، وخط عربي أنيق">${esc(d.idea)}</textarea></div>
-    <button type="button" class="btn" data-act="addCart">أضف للسلة</button>`; },
+    <div class="field"><label for="f-sub">السطر اللي تحت (اختياري)</label><input class="input" id="f-sub" data-bind="sub" value="${esc(d.tagline || '')}" maxlength="30" autocomplete="off" placeholder="مثل: ${esc(OCC[S.occ].line)}"></div>
+    <div class="row2"><button type="button" class="btn" data-act="downloadNow">حمّل التصميم الآن</button><button type="button" class="btn ghost" data-act="addCart">أضف للسلة</button></div>`; },
   idea: () => `${backBar("قلنا فكرتك")}<div class="field"><label for="f-free">صف لنا التصميم اللي في بالك</label><textarea class="input" id="f-free" data-bind="free" rows="4" placeholder="أبغى ثيم استقبال مولودة بألوان وردي وعاجي، مع اسم سعود وخط ناعم">${esc(S.idea)}</textarea></div><div class="group"><span class="label">على أي منتج؟</span><div class="chips">${[["custom","ساعدوني في اختيار المنتج"],["cup","كوب"],["bottle","قارورة"],["sticker","ستيكر"],["box","علبة أو كيس"]].map(([pid, label]) => `<button type="button" class="chip" aria-pressed="${S.ideaPid === pid}" data-act="ideaPid" data-v="${pid}">${label}</button>`).join("")}</div></div><p class="small">تقدر تضيف صور وأمثلة لاحقًا. ما تحتاج تعرف تصمم.</p><button type="button" class="btn" data-act="addIdea">أضف للسلة</button>`,
   cart: () => { if (!S.cart.length) return `${topBar()}<div class="empty"><span class="bub">${I("bag", 44)}</span><h2>سلتك فاضية</h2><p class="sub">اختر منتج، ونصمم لك كل شي بهوية واحدة</p><button type="button" class="btn" data-tab="catalog">اختر منتجك</button></div>`;
     return `${topBar()}<div><h1>سلتك</h1><p class="sub">${OCC[S.occ].label}، ${countLabel(S.cart.length)}${S.cart.length > 1 ? " بتصميم واحد" : ""}</p></div>
     ${S.cart.map((item) => `<div class="item"><span class="bub">${I(PROD[item.pid].icon, 30)}</span><span class="tx"><b>${PROD[item.pid].name}</b><span>${item.pack ? "من البكج، " : ""}${itemLine(item)}</span></span><button type="button" class="x-btn" aria-label="احذف ${PROD[item.pid].name}" data-act="removeCart" data-v="${item.id}">${I("x")}</button></div>`).join("")}
     <button type="button" class="dashed" data-tab="catalog">أضف منتج ثاني</button>
-    <div class="group"><span class="label">متى مناسبتك؟</span>${whenBlock()}</div>
+    
     <button type="button" class="btn" data-act="requestQuote">اطلب عرض سعر</button>`; },
   orders: () => { if (!S.orders.length) return `${topBar()}<div class="empty"><span class="bub">${I("list", 44)}</span><h2>ما عندك طلبات للحين</h2><p class="sub">أول طلب لك يظهر هنا مع حالته</p><button type="button" class="btn" data-tab="catalog">ابدأ طلب</button></div>`;
     return `${topBar()}<h1>طلباتي</h1>${S.orders.map((o) => `<button type="button" class="item" style="border:0;width:100%;text-align:start" data-act="openOrder" data-v="${o.no}"><span class="bub">${I("list", 28)}</span><span class="tx"><b>طلب ${ar(o.no)}</b><span>${STEPS[STAGE_INDEX[o.stage]]}، ${countLabel(o.items.length)}${realDate(o.eventDate) && daysTo(o.eventDate) >= 0 ? `، ${leftText(daysTo(o.eventDate))}` : ""}</span></span></button>`).join("")}`; },
@@ -1273,7 +1305,9 @@ const ACT = {
   },
   openGallery() { go("gallery"); },
   galOcc(d, t) { S.galOcc = d.v; pickChip(t); const grid = el("galGrid"); grid.innerHTML = galleryCards(); fxEnter(grid, ".idea-card"); },
-  ideaOpen(d) { const idea = ideaById(d.v); openSheet(`<div class="idea-big">${art(idea.pid, idea.text, idea.pal)}</div><h2>${idea.name}</h2><p class="sub">${idea.desc}</p><button type="button" class="btn" data-act="useIdea" data-v="${idea.id}">أبغى زي هذا</button><button type="button" class="btn ghost" data-act="closeSheet">رجوع</button>`); A(sheet.querySelector(".idea-big svg"), [{ transform: "scale(.6) rotate(-6deg)" }, { transform: "none" }], { delay: M().ms * .4 }); },
+  ideaOpen(d) { editTemplate(d.v); },
+  downloadTpl() { downloadTemplateNow(); },
+  goCustom() { closeSheet(); S.ideaPid = ideaById(S.templateId).pid; S.occ = ideaById(S.templateId).occ; go("idea"); },
   useIdea(d) { const idea = ideaById(d.v), sizes = PROD[idea.pid].sizes; S.occ = idea.occ; S.draft = { pid: idea.pid, size: sizes[Math.min(1, sizes.length - 1)], text: idea.text, idea: `${idea.name}: ${idea.desc}`, pal: idea.pal }; closeSheet(); go("product"); },
   openPack() { S.pack = S.pack || { text: "سعود", off: {} }; go("package"); },
   packOcc(d, t) { S.occ = d.v; pickChip(t); packArts(true); },
@@ -1308,8 +1342,11 @@ const ACT = {
   pickOcc(d) { S.occ = d.v; go("catalog"); },
   setOcc(d, t) { S.occ = d.v; pickChip(t); el("catSub").textContent = `لمناسبة: ${OCC[S.occ].label}`; document.querySelectorAll(".card-p").forEach((card, i) => { card.querySelector("svg").outerHTML = art(card.dataset.v, "سعود", S.occ); A(card.querySelector("svg"), [{ transform: "scale(.5)", opacity: 0 }, { transform: "none", opacity: 1 }], { delay: i * 55 }); }); },
   idea() { go("idea"); },
-  openProduct(d) { const sizes = PROD[d.v].sizes; S.draft = { pid: d.v, size: sizes[Math.min(1, sizes.length - 1)], text: "سعود", idea: "" }; go("product"); },
-  size(d, t) { S.draft.size = d.v; pickChip(t); fxType(el("pv")); },
+  openProduct(d) { const sizes = PROD[d.v].sizes; S.draft = { pid: d.v, size: sizes[Math.min(1, sizes.length - 1)], text: "سعود", idea: "", tagline: OCC[S.occ].line }; S.previewMode = "3d"; go("product"); },
+  size(d, t) { S.draft.size = d.v; pickChip(t); const pv = el("pv"); if (pv) fxType(pv); },
+  previewMode(d, t) { S.previewMode = d.v; t.parentElement.dataset.i = d.v === "2d" ? 1 : 0; t.parentElement.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", String(b === t))); applyProductPreviewMode(); sfx("select"); },
+  downloadNow() { downloadDraftNow("png"); },
+  downloadNowPdf() { downloadDraftNow("pdf"); },
   async addCart() { await flyToCart(el("pv").querySelector("svg"), { id: nextId++, ...S.draft }); },
   async addIdea(d, t) {
     if (!S.idea.trim()) { toast("اكتب فكرتك أول"); A(el("f-free"), [{ transform: "translateX(0)" }, { transform: "translateX(-9px)", offset: .25 }, { transform: "translateX(9px)", offset: .6 }, { transform: "translateX(0)" }], { k: .9, ease: "ease-out", fill: "none" }); return; }
@@ -1319,7 +1356,7 @@ const ACT = {
     await flyToCart(t, item, holder.firstElementChild);
   },
   async removeCart(d, t) { S.busy = true; sfx("remove"); await fxRemove(t.closest(".item")); S.cart = S.cart.filter((item) => String(item.id) !== d.v); S.busy = false; if (S.cart.length) redraw(); else render("forward"); const bag = el("bag"), badge = el("badge"); if (bag) fxGulp(bag); if (badge) fxBadge(badge); },
-  requestQuote() { if (!S.eventDate) { toast("قل لنا متى مناسبتك أول"); ACT.openCal(); return; } if (S.signed) { submitOrder(); return; } openSheet(`<h2>نحتاج حساب عشان نرسل طلبك</h2><p class="sub">في التجربة ما تدخل أي بيانات.</p><button type="button" class="btn" data-act="signIn">أدخل بحساب تجريبي</button><button type="button" class="btn ghost" data-act="closeSheet">رجوع</button>`); },
+  requestQuote() {  if (S.signed) { submitOrder(); return; } openSheet(`<h2>نحتاج حساب عشان نرسل طلبك</h2><p class="sub">في التجربة ما تدخل أي بيانات.</p><button type="button" class="btn" data-act="signIn">أدخل بحساب تجريبي</button><button type="button" class="btn ghost" data-act="closeSheet">رجوع</button>`); },
   signIn() { S.signed = true; closeSheet(); submitOrder(); },
   openOrder(d) { S.order = S.orders.find((o) => String(o.no) === d.v); go("order"); },
   advance(d) { const o = S.order, from = STAGE_INDEX[o.stage]; o.stage = d.v; if (d.v === "review") { o.version = 1; S.viewVersion = 1; toast("تصميمك جاهز للمراجعة"); if (at("ready")) celebrate(.8, o.occ); sfx("success"); } else { toast("وصلك عرض السعر"); sfx("select"); } orderChanged(from); },
@@ -1388,6 +1425,12 @@ document.addEventListener("input", (event) => {
   const key = event.target.dataset.bind;
   if (!key) return;
   if (key === "free") { S.idea = event.target.value; return; }
+  if (key === "sub") { if (S.draft) S.draft.tagline = event.target.value; updateProductTexture(); return; }
+  if (key === "text" && S.route === "product") { if (S.draft) S.draft.text = event.target.value; updateProductTexture(); const pv = el("pv"); if (pv) { pv.innerHTML = art(S.draft.pid, S.draft.text, S.draft.pal || S.occ); fxType(pv); } sfx("tap"); return; }
+
+  if (key === "tname") { S.draft.text = event.target.value; const pv = el("tpv"); if (pv) { pv.innerHTML = art(S.draft.pid, S.draft.text, S.draft.pal); fxType(pv); } sfx("tap"); return; }
+  if (key === "tsub") { S.draft.tagline = event.target.value; const tag = el("ttag"); if (tag) tag.textContent = event.target.value; return; }
+
   if (key === "evName") { S.newEv.name = event.target.value; return; }
   if (key === "packText") { S.pack.text = event.target.value; packArts(false); document.querySelectorAll(".pack-card .pa").forEach(fxType); sfx("tap"); return; }
   if (key === "lab") { labToken++; const pv = el("labPv"); pv.innerHTML = art("cup", event.target.value, S.labOcc); fxType(pv); sfx("tap"); return; }
@@ -1441,6 +1484,114 @@ function stepViewer(now) {
     return t < 1;
   });
 }
+const PRODUCT_CANVAS = { bottle: {w:1024,h:512}, sticker:{w:768,h:768}, box:{w:1024,h:768}, invite:{w:640,h:960} };
+function productCanvas(pid, item, occ) {
+  const o = { ...OCC[occ], ...(item.pal || {}) }, font = FONT_NAME[S.choices.font];
+  const size = PRODUCT_CANVAS[pid] || PRODUCT_CANVAS.bottle;
+  const c = document.createElement("canvas"); c.width = size.w; c.height = size.h;
+  const g = c.getContext("2d");
+  g.fillStyle = o.paper; g.fillRect(0, 0, size.w, size.h);
+  for (const [cx, cy, cr, col] of [[.18,.2,.1,o.a],[.84,.78,.09,o.b],[.3,.82,.05,o.c],[.75,.18,.06,o.a]]) {
+    g.fillStyle = col; g.beginPath(); g.arc(size.w * cx, size.h * cy, size.h * cr, 0, 6.29); g.fill();
+  }
+  g.direction = "rtl"; g.textAlign = "center"; g.textBaseline = "middle"; g.fillStyle = o.ink;
+  g.font = `700 ${Math.round(size.h * .07)}px "${font}"`;
+  g.fillText(item.tagline !== undefined ? item.tagline : o.line, size.w / 2, size.h * .18);
+  let nameSize = size.h * .22; g.font = `800 ${nameSize}px "${font}"`;
+  const label = item.text || "تصميمك", width = g.measureText(label).width, cap = size.w * .78;
+  if (width > cap) { nameSize *= cap / width; g.font = `800 ${Math.round(nameSize)}px "${font}"`; }
+  g.fillText(label, size.w / 2, size.h * .5);
+  return c;
+}
+function makeProductMesh(THREE, pid, texture) {
+  const body = new THREE.MeshStandardMaterial({ map: texture, metalness: .05, roughness: .55 });
+  const white = new THREE.MeshStandardMaterial({ color: 0xf6f3ee, metalness: .05, roughness: .6 });
+  const group = new THREE.Group();
+  if (pid === "bottle") {
+    body.side = THREE.DoubleSide;
+    const bottle = new THREE.Mesh(new THREE.CylinderGeometry(0.03, 0.028, 0.14, 48, 1, false), white);
+    const label = new THREE.Mesh(new THREE.CylinderGeometry(0.0305, 0.0305, 0.065, 48, 1, true), body);
+    label.position.y = -0.01;
+    const shoulder = new THREE.Mesh(new THREE.CylinderGeometry(0.018, 0.03, 0.03, 32), white); shoulder.position.y = 0.085;
+    const neck = new THREE.Mesh(new THREE.CylinderGeometry(0.014, 0.018, 0.022, 32), white); neck.position.y = 0.109;
+    const cap = new THREE.Mesh(new THREE.CylinderGeometry(0.016, 0.016, 0.014, 32), new THREE.MeshStandardMaterial({ color: 0x334, roughness: .4 })); cap.position.y = 0.127;
+    group.add(bottle, label, shoulder, neck, cap);
+    return { group, framing: { radius: 0.085, center: new THREE.Vector3(0, 0.02, 0) } };
+  }
+  if (pid === "sticker") {
+    const disc = new THREE.Mesh(new THREE.CylinderGeometry(0.06, 0.06, 0.004, 64), body);
+    disc.rotation.x = Math.PI / 2;
+    group.add(disc);
+    return { group, framing: { radius: 0.07, center: new THREE.Vector3(0, 0, 0) } };
+  }
+  if (pid === "box") {
+    const plain = white, face = body;
+    const box = new THREE.Mesh(new THREE.BoxGeometry(0.11, 0.09, 0.075), [plain, plain, plain, plain, face, plain]);
+    group.add(box);
+    return { group, framing: { radius: 0.09, center: new THREE.Vector3(0, 0, 0) } };
+  }
+  // invite: a flat card
+  const card = new THREE.Mesh(new THREE.PlaneGeometry(0.08, 0.12), body);
+  group.add(card);
+  return { group, framing: { radius: 0.08, center: new THREE.Vector3(0, 0, 0) } };
+}
+async function mountProcedural({ canvasId, stageId, statusId, item, occ, version }) {
+  const token = ++viewerToken, status = el(statusId);
+  try {
+    const font = FONT_NAME[S.choices.font];
+    await Promise.all([document.fonts.load(`800 100px "${font}"`, "سعود"), document.fonts.load(`700 100px "${font}"`, "مرحبا")]);
+    const { THREE, OrbitControls } = await loadThree();
+    if (token !== viewerToken) return false;
+    const canvas = el(canvasId), stage = el(stageId);
+    if (!canvas || !stage) return false;
+    const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    const scene = new THREE.Scene();
+    scene.add(new THREE.HemisphereLight(0xffffff, 0x8a9492, 2.6));
+    const sun = new THREE.DirectionalLight(0xffffff, 1.4); sun.position.set(0.2, 0.4, 0.5); scene.add(sun);
+    const camera = new THREE.PerspectiveCamera(35, 1, 0.01, 10);
+    const controls = new OrbitControls(camera, canvas);
+    controls.enableDamping = true; controls.enablePan = false; controls.minDistance = 0.08; controls.maxDistance = 1.2;
+    const sourceCanvas = productCanvas(item.pid, item, occ);
+    const texture = new THREE.CanvasTexture(sourceCanvas);
+    texture.colorSpace = THREE.SRGBColorSpace; texture.anisotropy = renderer.capabilities.getMaxAnisotropy();
+    const { group, framing } = makeProductMesh(THREE, item.pid, texture);
+    scene.add(group);
+    const frame = (reset) => {
+      const w = Math.max(1, stage.clientWidth), h = Math.max(1, stage.clientHeight);
+      renderer.setSize(w, h, false); camera.aspect = w / h; camera.updateProjectionMatrix();
+      if (reset) {
+        const v = THREE.MathUtils.degToRad(camera.fov) / 2, horizontal = Math.atan(Math.tan(v) * camera.aspect);
+        const distance = framing.radius / Math.min(Math.sin(v), Math.sin(horizontal)) * 1.4;
+        camera.position.set(0, framing.center.y + distance * 0.18, distance);
+        controls.target.copy(framing.center); controls.update();
+      }
+    };
+    frame(true);
+    const resize = new ResizeObserver(() => frame(false)); resize.observe(stage);
+    V = { THREE, renderer, scene, camera, controls, cup: group, wall: group.children[0], shell: group.children[0], resize, sprites: new Map(), pops: [], fly: null, intro: null, texture, sourceCanvas, kind: "procedural", pid: item.pid, occ };
+    renderer.setAnimationLoop(() => { if (!V) return; controls.update(); renderer.render(scene, camera); });
+    if (status) status.hidden = true;
+    return true;
+  } catch (error) {
+    if (token !== viewerToken) return false;
+    if (status) status.textContent = "المعاينة ثلاثية الأبعاد ما اشتغلت هنا.";
+    return false;
+  }
+}
+async function mountProduct(opts) {
+  return (opts.item.pid === "cup") ? mountCup(opts) : mountProcedural(opts);
+}
+function updateProductTexture() {
+  if (!V || V.kind !== "procedural") return;
+  const draft = S.draft; if (!draft) return;
+  const item = { text: draft.text, pid: draft.pid, pal: draft.pal, tagline: draft.tagline };
+  const fresh = productCanvas(V.pid, item, V.occ);
+  V.sourceCanvas.width = fresh.width; V.sourceCanvas.height = fresh.height;
+  V.sourceCanvas.getContext("2d").drawImage(fresh, 0, 0);
+  V.texture.needsUpdate = true;
+}
+
 async function mountCup({ canvasId, stageId, statusId, item, occ, version, intro }) {
   const token = ++viewerToken, status = el(statusId);
   try {
@@ -1628,5 +1779,49 @@ applyChoices();
 const firstScreen = render("still");
 restoreSavedChoices();
 fxSplash(() => fxEnter(firstScreen));
+
+
+async function startProductViewer() {
+  const stage = el("productStage"); if (!stage || !S.draft) return;
+  const item = { text: S.draft.text, pid: S.draft.pid, pal: S.draft.pal, tagline: S.draft.tagline };
+  await mountProduct({ canvasId: "productGl", stageId: "productStage", statusId: "productStatus", item, occ: S.occ, version: 1 });
+}
+function applyProductPreviewMode() {
+  const stage = el("productStage"); if (!stage || !S.draft) return;
+  const flat = (S.previewMode === "2d");
+  stage.classList.toggle("flat", flat);
+  if (flat) { const node = document.createElement("div"); node.innerHTML = art(S.draft.pid, S.draft.text, S.draft.pal || S.occ); const svg = node.firstElementChild.outerHTML; stage.style.setProperty("--flatArt", `url("data:image/svg+xml;utf8,${encodeURIComponent(svg)}")`); }
+}
+async function downloadDraftNow(kind) {
+  if (!S.draft) return;
+  const occ = S.occ, item = { text: S.draft.text, pid: S.draft.pid, pal: S.draft.pal, tagline: S.draft.tagline };
+  const canvas = (item.pid === "cup") ? designCanvas(item, occ, 1) : productCanvas(item.pid, item, occ);
+  const safe = (S.draft.text || "lamma").replace(/[\\/:*?"<>|]/g, "");
+  if (kind === "pdf") {
+    const run = async () => {
+      if (!window.jspdf) { toast("جاري تحضير الـPDF…"); await new Promise((r) => setTimeout(r, 400)); if (!window.jspdf) { toast("ما قدرت أجهّز الـPDF، جرّب PNG"); return; } }
+      const { jsPDF } = window.jspdf;
+      const landscape = canvas.width >= canvas.height;
+      const pdf = new jsPDF({ unit: "mm", format: "a4", orientation: landscape ? "landscape" : "portrait" });
+      const pageW = pdf.internal.pageSize.getWidth(), pageH = pdf.internal.pageSize.getHeight();
+      const scale = Math.min((pageW - 20) / canvas.width, (pageH - 20) / canvas.height);
+      const w = canvas.width * scale, h = canvas.height * scale;
+      pdf.addImage(canvas.toDataURL("image/png"), "PNG", (pageW - w) / 2, (pageH - h) / 2, w, h);
+      pdf.save(`لمّة-${safe}.pdf`);
+      toast("انحمل الـPDF"); sfx("success");
+    };
+    run();
+    return;
+  }
+  canvas.toBlob((blob) => {
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url; link.download = `لمّة-${safe}.png`;
+    document.body.appendChild(link); link.click(); link.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+    toast("انحمل تصميمك"); celebrate(.7, occ); sfx("success");
+  }, "image/png");
+}
+
 </script>
 </body></html>
