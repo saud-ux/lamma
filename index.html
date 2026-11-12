@@ -1,8 +1,9 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light}body{margin:0}[hidden]{display:none!important}#app{box-sizing:border-box;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}#toast,.ping{top:calc(10px + env(safe-area-inset-top))!important}#nav.peek{bottom:env(safe-area-inset-bottom)!important}</style><script>document.addEventListener('click',function(e){var b=e.target.closest('[data-act="requestQuote"]');if(!b)return;e.stopPropagation();e.preventDefault();var t=document.getElementById('toast');if(t){t.textContent='الطلب قريبًا، للحين نسخة عرض';t.classList.add('on');setTimeout(function(){t.classList.remove('on')},2800)}},true);</script></head><body><style>.demo-btn{display:none!important}.warn,.note-demo{display:none!important}.strip .idea-card{flex:0 0 150px}.idea-big{height:220px}.editor-head{display:flex;align-items:center;justify-content:space-between;gap:10px}.editor-head h2{flex:1;min-width:0}.editor-tagline{font-size:14px;color:var(--muted);font-weight:500}.custom-cta{display:flex;align-items:center;gap:12px;width:100%;min-height:80px;padding:12px 14px;box-sizing:border-box;border:2px solid var(--primary);background:var(--bg);color:var(--primary);border-radius:var(--r);text-align:start}.custom-cta>svg:first-child{animation:nudge 1.1s ease-in-out infinite}.custom-cta span{flex:1;min-width:0;display:flex;flex-direction:column;line-height:1.3}.custom-cta b{font-size:18px;font-weight:800;color:var(--ink)}.custom-cta small{font-size:13px;color:var(--muted)}</style><script>addEventListener('DOMContentLoaded',()=>{let t=0;new MutationObserver(()=>{const b=document.querySelector('.act-card .demo-btn:not([data-auto])');if(!b)return;b.dataset.auto='1';clearTimeout(t);t=setTimeout(()=>{if(document.body.contains(b))b.click();},2400);}).observe(document.body,{childList:true,subtree:true});});</script><script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script><title>لمّة</title>
+<style>:root{color-scheme:light}body{margin:0}[hidden]{display:none!important}#app{box-sizing:border-box}</style>
+<style>.demo-btn{display:none!important}.warn,.note-demo{display:none!important}.strip .idea-wrap{flex:0 0 150px}.idea-big{height:220px}.editor-head{display:flex;align-items:center;justify-content:space-between;gap:10px}.editor-head h2{flex:1;min-width:0}.editor-tagline{font-size:14px;color:var(--muted);font-weight:500}.custom-cta{display:flex;align-items:center;gap:12px;width:100%;min-height:80px;padding:12px 14px;box-sizing:border-box;border:2px solid var(--primary);background:var(--bg);color:var(--primary);border-radius:var(--r);text-align:start}.custom-cta>svg:first-child{animation:nudge 1.1s ease-in-out infinite}.custom-cta span{flex:1;min-width:0;display:flex;flex-direction:column;line-height:1.3}.custom-cta b{font-size:18px;font-weight:800;color:var(--ink)}.custom-cta small{font-size:13px;color:var(--muted)}</style><script>addEventListener('DOMContentLoaded',()=>{let t=0;new MutationObserver(()=>{const b=document.querySelector('.act-card .demo-btn:not([data-auto])');if(!b)return;b.dataset.auto='1';clearTimeout(t);t=setTimeout(()=>{if(document.body.contains(b))b.click();},2400);}).observe(document.body,{childList:true,subtree:true});});</script><script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script><title>لمّة تجربة البيع</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@500;700;800&family=Cairo:wght@500;700;900&family=Tajawal:wght@500;700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@500;700;800&family=Cairo:wght@500;700;900&family=Tajawal:wght@500;700;800&family=Aref+Ruqaa:wght@400;700&family=Amiri:wght@400;700&family=Cormorant+Garamond:wght@500;700&family=Pinyon+Script&display=swap">
 <style>
 /* Layout: a phone-width app. One scrolling screen above a bottom bar, with sheets that rise over it and an effects layer on top. */
 :root{
@@ -317,7 +318,124 @@ h2{font-size:19px;line-height:1.3;font-weight:700}
 @keyframes dotPulse{0%,100%{box-shadow:0 0 0 0 var(--gold)}50%{box-shadow:0 0 0 9px rgba(255,182,39,.28)}}
 </style>
 
-<style>.product-stage{height:300px;margin-bottom:6px;border-radius:var(--r);background:linear-gradient(140deg,var(--primary-soft) 0%,#FBF4EE 100%);overflow:hidden;position:relative}#productStatus{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:var(--primary);font-weight:700}#productGl{width:100%;height:100%;display:block;touch-action:none}.product-stage.flat #productGl{display:none}.product-stage.flat::after{content:'';position:absolute;inset:0;background-image:var(--flatArt);background-size:contain;background-repeat:no-repeat;background-position:center}.seg{position:relative;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px;padding:4px;background:var(--primary-soft);border-radius:var(--pill)}.seg .thumb{position:absolute;top:4px;bottom:4px;inset-inline-start:4px;width:calc(50% - 6px);background:var(--primary);border-radius:var(--pill);transition:transform var(--dur) var(--ease)}.seg[data-i="1"] .thumb{transform:translateX(calc(-100% - 4px))}.seg button{position:relative;z-index:1;min-height:46px;border:0;background:none;border-radius:var(--pill);font-size:17px;transition:color var(--dur) ease;color:var(--ink)}.seg button[aria-pressed="true"]{color:var(--on-primary);font-weight:700}</style><style>.idea-images{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 10px}.idea-img{position:relative;width:76px;height:76px;border-radius:14px;overflow:hidden;background:var(--primary-soft);flex:none}.idea-img img{width:100%;height:100%;object-fit:cover;display:block}.idea-img-rm{position:absolute;top:3px;inset-inline-end:3px;width:22px;height:22px;border:0;border-radius:50%;background:rgba(42,22,32,.72);color:#fff;font-size:13px;line-height:1;display:flex;align-items:center;justify-content:center;padding:0;cursor:pointer}.idea-images:empty{display:none}.dashed .ic{display:inline-block;vertical-align:middle;margin-inline-end:4px}</style><div id="app" dir="rtl" lang="ar">
+<style>.s-product .product-stage{position:sticky;top:-6px;z-index:4;margin-top:-6px;transition:height var(--dur) ease}.s-product.scrolled .product-stage{height:160px}.s-product.scrolled .seg{height:0;overflow:hidden;padding:0;margin-top:-10px;opacity:0;pointer-events:none;transition:all var(--dur) ease}.s-product .seg{transition:all var(--dur) ease}.product-stage{height:300px;margin-bottom:6px;border-radius:var(--r);background:linear-gradient(140deg,var(--primary-soft) 0%,#FBF4EE 100%);overflow:hidden;position:relative}#productStatus{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:var(--primary);font-weight:700}#productGl{width:100%;height:100%;display:block;touch-action:none}.product-stage.flat #productGl{display:none}.product-stage.flat::after{content:'';position:absolute;inset:0;background-image:var(--flatArt);background-size:contain;background-repeat:no-repeat;background-position:center}.seg{position:relative;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px;padding:4px;background:var(--primary-soft);border-radius:var(--pill)}.seg .thumb{position:absolute;top:4px;bottom:4px;inset-inline-start:4px;width:calc(50% - 6px);background:var(--primary);border-radius:var(--pill);transition:transform var(--dur) var(--ease)}.seg[data-i="1"] .thumb{transform:translateX(calc(-100% - 4px))}.seg button{position:relative;z-index:1;min-height:46px;border:0;background:none;border-radius:var(--pill);font-size:17px;transition:color var(--dur) ease;color:var(--ink)}.seg button[aria-pressed="true"]{color:var(--on-primary);font-weight:700}</style><style>.idea-images{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 10px}.idea-img{position:relative;width:76px;height:76px;border-radius:14px;overflow:hidden;background:var(--primary-soft);flex:none}.idea-img img{width:100%;height:100%;object-fit:cover;display:block}.idea-img-rm{position:absolute;top:3px;inset-inline-end:3px;width:22px;height:22px;border:0;border-radius:50%;background:rgba(42,22,32,.72);color:#fff;font-size:13px;line-height:1;display:flex;align-items:center;justify-content:center;padding:0;cursor:pointer}.idea-images:empty{display:none}.dashed .ic{display:inline-block;vertical-align:middle;margin-inline-end:4px}</style><style>.idea-wrap{position:relative;display:flex;min-width:0}
+.idea-wrap .idea-card{flex:1;width:100%}
+.heart{position:absolute;bottom:4px;inset-inline-end:2px;width:44px;height:44px;flex:none;display:flex;align-items:center;justify-content:center;padding:0;border:0;border-radius:50%;background:none;color:var(--muted)}
+.editor-head .heart{position:static;background:var(--primary-soft)}
+.heart[aria-pressed="true"]{color:var(--coral)}
+.heart[aria-pressed="true"] svg{fill:currentColor}
+.search{position:relative;flex:none}
+.search .input{padding-inline-start:48px}
+.search>svg{position:absolute;inset-inline-start:15px;top:50%;margin-top:-11px;color:var(--muted);pointer-events:none}
+.none{grid-column:1/-1;text-align:center;padding-block:30px}
+.item .pr{flex:none;font-size:17px;font-weight:800;color:var(--primary);font-variant-numeric:tabular-nums}
+.methods{display:flex;flex-direction:column;gap:8px}
+.method{display:flex;align-items:center;gap:12px;width:100%;min-height:62px;box-sizing:border-box;padding:8px 14px;border:2px solid var(--line);border-radius:var(--r);background:var(--bg);text-align:start;font-size:17px;transition:border-color var(--dur) ease,background var(--dur) ease}
+.method[aria-checked="true"]{border-color:var(--primary);background:var(--primary-soft)}
+.method[disabled]{color:var(--muted);cursor:default}
+.method .rd{width:22px;height:22px;flex:none;box-sizing:border-box;border:2px solid var(--muted);border-radius:50%}
+.method[aria-checked="true"] .rd{border:7px solid var(--primary)}
+.method[disabled] .rd{border-color:var(--line)}
+.method .tx{flex:1;min-width:0;display:flex;flex-direction:column;line-height:1.3}
+.method .tx b{font-weight:700}
+.method small{font-size:13px;color:var(--muted)}
+.soon{flex:none;padding:2px 10px;border-radius:999px;background:var(--line);color:var(--muted);font-size:13px;font-weight:700}
+.coupon{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px}
+.coupon.three{grid-template-columns:minmax(0,1fr) 76px auto}
+.coupon .btn{width:auto;min-height:52px;padding:0 20px;font-size:17px}
+.card{display:flex;flex-direction:column;gap:10px;padding:14px;border-radius:var(--r);background:var(--primary-soft)}
+.kv{font-size:16px}
+.kv dt{color:var(--muted)}
+.done{flex:1;padding-block:24px}
+.done .ok-p{stroke-dasharray:none}
+.btn .ic{flex:none}
+a.btn{text-decoration:none}
+.link{align-self:center}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.stats div{display:flex;flex-direction:column;align-items:center;padding:10px 4px;border-radius:var(--r);background:var(--primary-soft);line-height:1.3;text-align:center}
+.stats b{font-size:24px;font-weight:800;color:var(--primary);font-variant-numeric:tabular-nums}
+.stats span{font-size:13px;color:var(--muted)}
+.dot-a{width:12px;height:12px;flex:none;margin-inline-end:10px;border-radius:50%;background:var(--gold)}
+.fb{display:flex;flex-direction:column;gap:6px;padding-inline-start:20px;list-style:decimal;font-size:16px}
+.act-card .field label{font-size:16px}
+.act-card .input{background-color:var(--bg)}
+.act-card .total{border:0;padding:0}
+.idea-img.big{width:120px;height:120px}
+.chips.scroll{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin-inline:-18px;padding-inline:18px;flex:none}
+.chips.scroll::-webkit-scrollbar{display:none}
+.chips.scroll .chip{flex:none}
+.chips.minor .chip{min-height:40px;font-size:15px;background:var(--bg);box-shadow:inset 0 0 0 2px var(--line)}
+.chips.minor .chip[aria-pressed="true"]{background:var(--ink);color:#fff;box-shadow:none}
+.circles{grid-template-columns:repeat(5,minmax(0,1fr))}
+.circle{font-size:14px}
+.search-go{display:flex;align-items:center;gap:10px;width:100%;min-height:52px;box-sizing:border-box;padding:0 16px;border:0;border-radius:var(--pill);background:var(--primary-soft);color:var(--muted);font-size:17px;text-align:start;flex:none}
+.bar h1{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.bar .heart{position:static;background:var(--primary-soft)}
+.cta-bar{position:sticky;bottom:0;z-index:3;display:flex;align-items:center;gap:14px;margin:auto -18px -24px;padding:10px 18px 14px;background:var(--bg);border-top:1px solid var(--line);flex:none}
+.cta-bar .btn{flex:1;width:auto}
+.cta-price{display:flex;flex-direction:column;line-height:1.2;flex:none;min-width:86px}
+.cta-price small{font-size:13px;color:var(--muted)}
+.cta-price b{font-size:22px;font-weight:800;color:var(--primary);font-variant-numeric:tabular-nums;white-space:nowrap}
+.flow{display:flex;align-items:center;gap:6px;flex:none;font-size:14px;color:var(--muted)}
+.flow li{display:flex;align-items:center;gap:6px;flex:none}
+.flow li+li::before{content:"";width:26px;height:2px;border-radius:1px;background:var(--line)}
+.flow li.done+li::before,.flow li.done::before{background:var(--primary)}
+.flow i{width:24px;height:24px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:var(--line);color:var(--muted);font-style:normal;font-size:13px;font-weight:700}
+.flow .done i{background:var(--primary);color:var(--on-primary)}
+.flow .now{color:var(--ink);font-weight:700}
+.flow .now i{background:var(--gold);color:var(--ink)}
+.th{width:56px;height:64px;flex:none;display:flex;align-items:center;justify-content:center;background:var(--bg);border-radius:14px;overflow:hidden}
+.th img{width:100%;height:100%;object-fit:cover;display:block}
+.idea-wrap .idea-card{padding-bottom:12px}
+.idea-card .tag{padding-inline:26px}
+.idea-card img.dimg,.idea-card img.pimg{max-height:150px;max-width:100%;width:auto;height:auto;display:block}
+.th img.pimg{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;display:block;margin:auto}
+.done-arts .th img.pimg{max-height:88px}
+.product-stage.flat::after{inset:14px;filter:drop-shadow(0 6px 14px rgba(42,22,32,.2))}
+.pill-s{flex:none;margin-inline-end:8px;padding:3px 10px;border-radius:999px;background:var(--bg);color:var(--primary);font-size:13px;font-weight:700;white-space:nowrap}
+.pill-s.ok{background:var(--teal);color:#fff}
+.pill-s.act{background:var(--gold);color:var(--ink)}
+.done-arts{display:flex;justify-content:center;gap:8px;flex-wrap:wrap}
+.done-arts .th{width:76px;height:88px;background:var(--primary-soft)}
+
+.me{display:flex;align-items:center;gap:14px;padding:14px;border-radius:var(--r);background:var(--primary);color:var(--on-primary)}
+.me .av{width:60px;height:60px;flex:none;display:flex;align-items:center;justify-content:center;border-radius:50%;background:rgba(255,255,255,.18);font-size:28px;font-weight:800}
+.me .tx{display:flex;flex-direction:column;line-height:1.35;min-width:0}
+.me b{font-size:21px;font-weight:800;overflow-wrap:anywhere}
+.me span{font-size:15px;opacity:.85}
+button.stat{border:0;font:inherit;color:inherit}
+.stats .stat{display:flex;flex-direction:column;align-items:center;padding:10px 4px;border-radius:var(--r);background:var(--primary-soft);line-height:1.3}
+.copy-n{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.copy-n b{font-size:20px;font-variant-numeric:tabular-nums;user-select:all;-webkit-user-select:all}
+.row3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.row3 .btn{min-height:48px;font-size:16px;gap:4px;background:var(--bg)}
+.fx-clone img{width:100%;height:100%;object-fit:cover;border-radius:8px;display:block}
+.sws{display:flex;gap:10px;overflow-x:auto;scrollbar-width:none;margin-inline:-18px;padding:4px 18px;flex:none}
+.sws::-webkit-scrollbar{display:none}
+.sw{width:46px;height:46px;flex:none;padding:0;border:0;border-radius:50%;box-shadow:inset 0 0 0 2px var(--line);display:flex;align-items:center;justify-content:center}
+.sw i{width:18px;height:18px;border-radius:50%}
+.sw[aria-pressed="true"]{box-shadow:0 0 0 3px var(--bg),0 0 0 6px var(--primary)}
+.pack-card .pa{display:flex;align-items:center;justify-content:center;height:150px;width:100%}
+.pack-card img.pimg{max-height:150px;max-width:100%;width:auto;height:auto;display:block}
+.pack-card small{color:var(--primary);font-weight:700}
+.item .edit{flex:1;min-width:0;display:flex;align-items:center;gap:12px;border:0;background:none;padding:0;text-align:start;font:inherit;color:inherit}
+.msgs{display:flex;flex-direction:column;gap:8px;flex:1}
+.msg{max-width:82%;padding:10px 14px;border-radius:18px;font-size:16px;line-height:1.45;overflow-wrap:anywhere;background:var(--primary-soft);align-self:flex-start}
+.msg.me{background:var(--primary);color:var(--on-primary);align-self:flex-end}
+.msg small{display:block;font-size:12px;opacity:.7}
+.say{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px}
+.say .btn{width:auto;min-height:52px;padding:0 20px;font-size:17px}
+.cta-bar.say{display:grid}
+.stars{display:flex;justify-content:center;gap:4px}
+.star{width:48px;height:48px;padding:0;border:0;background:none;color:var(--line);display:flex;align-items:center;justify-content:center}
+.star[aria-pressed="true"]{color:var(--gold)}
+.star svg{fill:currentColor;stroke:none}
+.stars.sm{justify-content:flex-start;gap:0}
+.stars.sm .star{width:24px;height:24px}
+.rank{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 14px;font-size:16px}
+.rank dd{font-weight:700;font-variant-numeric:tabular-nums}
+.hid{opacity:.4;filter:grayscale(1)}
+.n-badge{min-width:22px;height:22px;padding:0 6px;display:inline-flex;align-items:center;justify-content:center;border-radius:11px;background:var(--gold);color:var(--ink);font-size:13px;font-weight:800}</style><div id="app" dir="rtl" lang="ar">
   <main id="view"></main>
   <nav id="nav" aria-label="التنقل"></nav>
   <div id="scrim" data-act="closeSheet"></div>
@@ -406,6 +524,17 @@ const IDEAS = [
   {id:"e2",occ:"eid",name:"كحلي",pid:"sticker",text:"سعود",desc:"كحلي وهلال ذهبي.",pal:{paper:"#1C2B4A",ink:"#F2CE7E",a:"#2E4168",b:"#27385C",c:"#F2CE7E"}},
   {id:"e3",occ:"eid",name:"بني",pid:"box",text:"سعود",desc:"ألوان القهوة والتمر لضيافة العيد.",pal:{paper:"#F6EEE3",ink:"#6B4423",a:"#E3D0B8",b:"#EEE0CC",c:"#C9A36A"}},
 ];
+/* Colours the owner asked for: gold, gold with green, blue and quiet neutrals. Each occasion gets all seven. */
+const TONES = [
+  ["ذهبي", { paper:"#FBF4E2", ink:"#8A6A2B", a:"#E5CFA0", b:"#F3E6C4", c:"#D9B76A" }],
+  ["ذهبي مع أخضر", { paper:"#1F3A2C", ink:"#E7C77A", a:"#2E5240", b:"#3F6B52", c:"#E7C77A" }],
+  ["أزرق", { paper:"#EAF2FA", ink:"#27518A", a:"#BCD0EC", b:"#D9E6F5", c:"#C9A968" }],
+  ["أخضر", { paper:"#F0F3E6", ink:"#3F5A3A", a:"#CFDDB8", b:"#E3EAD2", c:"#C9A968" }],
+  ["كحلي مع ذهبي", { paper:"#1E2A44", ink:"#E7C77A", a:"#31436B", b:"#2A3A5E", c:"#E7C77A" }],
+  ["بيج", { paper:"#F4EADB", ink:"#6B4423", a:"#D9C3A0", b:"#EADBC3", c:"#C9A36A" }],
+  ["أبيض مع ذهبي", { paper:"#FFFFFF", ink:"#8A6A2B", a:"#EADFC4", b:"#DCE8F2", c:"#D9B76A" }],
+];
+{ const seen = {}, order = Object.keys(OCC); for (const idea of IDEAS) { const n = seen[idea.occ] = (seen[idea.occ] ?? -1) + 1, [name, pal] = TONES[(n + order.indexOf(idea.occ)) % TONES.length]; idea.name = name; idea.pal = pal; idea.desc = `${name} ${OCC[idea.occ].label}`; } }
 const ideaById = (id) => IDEAS.find((idea) => idea.id === id);
 const LEAD = { calm: 7, rush: 3 };
 const LOCALE = "ar-SA-u-ca-gregory-nu-arab";
@@ -464,31 +593,6 @@ const LAB = [
   {k:"sound",title:"الأصوات",help:"إذا الآيفون على الصامت ممكن ما تسمعها.",try:"اضغط حدث وتشوفه مع صوته",opts:[["big","للأحداث الكبيرة",1],["all","مع كل ضغطة"],["none","بدون"]],scene:evScene,extra:evChips,run:() => labStory(["tap", "select", "add", "success", "party"], playSoundEvent)},
   {k:"soundKind",title:"نوع الصوت",help:"إذا الآيفون على الصامت ممكن ما تسمعها.",try:"اضغط حدث وتشوفه مع صوته",opts:[["soft","ناعم",1],["bells","أجراس"],["game","ألعاب"]],scene:evScene,extra:evChips,run:() => labStory(["add", "success", "party"], playSoundEvent)},
 ];
-async function editTemplate(id) {
-  S.templateId = id; const idea = ideaById(id); S.draft = { text: idea.text, tagline: OCC[idea.occ].line, pid: idea.pid, pal: idea.pal, occ: idea.occ };
-  openSheet(`
-    <div class="editor-head"><h2>${esc(idea.name)}</h2><span class="tag">${OCC[idea.occ].label}</span></div>
-    <div class="idea-big" id="tpv">${art(idea.pid, S.draft.text, idea.pal)}</div>
-    <p class="editor-tagline" id="ttag">${esc(S.draft.tagline)}</p>
-    <div class="field"><label for="f-tname">الاسم</label><input class="input" id="f-tname" data-bind="tname" value="${esc(S.draft.text)}" maxlength="24" autocomplete="off"></div>
-    <div class="field"><label for="f-tsub">السطر اللي تحت (اختياري)</label><input class="input" id="f-tsub" data-bind="tsub" value="${esc(S.draft.tagline)}" maxlength="30" autocomplete="off" placeholder="مثل: ${esc(OCC[idea.occ].line)}"></div>
-    <button type="button" class="btn" data-act="downloadTpl">حمّل تصميمك الآن</button>
-    <button type="button" class="custom-cta" data-act="goCustom">${I("pen", 28)}<span><b>تبغاه تصميم خاص فيك؟</b><small>فريقنا يصممه لك من فكرتك</small></span>${I("next")}</button>
-  `);
-}
-function downloadTemplateNow() {
-  const idea = ideaById(S.templateId), item = { text: S.draft.text, pid: idea.pid, pal: idea.pal, tagline: S.draft.tagline };
-  const canvas = designCanvas(item, idea.occ, 1);
-  const name = (S.draft.text || "lamma").replace(/[\\/:*?"<>|]/g, "");
-  canvas.toBlob((blob) => {
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement("a");
-    link.href = url; link.download = `لمّة-${name}.png`;
-    document.body.appendChild(link); link.click(); link.remove();
-    setTimeout(() => URL.revokeObjectURL(url), 1000);
-  }, "image/png");
-  closeSheet(); toast("انحمل تصميمك"); celebrate(1, idea.occ); sfx("success");
-}
 function fxDefaults() {
   const out = {};
   for (const m of LAB) if (m.k !== "motion") out[m.k] = m.multi ? m.opts.map((o) => o[0]) : (m.opts.find((o) => o[2]) || m.opts[0])[0];
@@ -1090,22 +1194,7 @@ function art(pid, text, occ, version = 1) {
   return `<svg viewBox="0 0 160 190" role="img" aria-label="معاينة العلبة"><path d="M16 60h128v116H16z" style="fill:${o.paper}"/><path d="M8 34h144v30H8z" style="fill:${o.a}"/>${decoSvg(deco,[16,70,144,170],o)}<text x="80" y="128" style="${type}">${t}</text></svg>`;
 }
 
-function designCanvas(item, occ, version) {
-  const font = FONT_NAME[S.choices.font], o = { ...OCC[occ], ...(item.pal || {}) }, w = 2048, s = w / CUP.W, h = Math.round(CUP.H * s);
-  const canvas = document.createElement("canvas"); canvas.width = w; canvas.height = h;
-  const g = canvas.getContext("2d");
-  g.fillStyle = o.paper; g.fillRect(0, 0, w, h);
-  for (const [x, y, r, color] of [[34,40,20,o.a],[212,46,24,o.b],[74,86,13,o.c],[172,84,12,o.a],[60,20,8,o.c],[190,14,7,o.a]]) { g.fillStyle = color; g.beginPath(); g.arc(x * s, y * s, r * s, 0, Math.PI * 2); g.fill(); }
-  g.direction = "rtl"; g.textAlign = "center"; g.textBaseline = "middle"; g.fillStyle = o.ink;
-  g.font = `700 ${9 * s}px "${font}"`; g.fillText(item.tagline !== undefined ? item.tagline : o.line, CUP.W / 2 * s, 20 * s);
-  let size = 27 * s * (version > 1 ? 1.14 : 1);
-  g.font = `800 ${size}px "${font}"`;
-  const label = item.text || "تصميمك", width = g.measureText(label).width, limit = 120 * s;
-  if (width > limit) { size *= limit / width; g.font = `800 ${size}px "${font}"`; }
-  g.fillText(label, CUP.W / 2 * s, 46 * s);
-
-  return canvas;
-}
+function designCanvas(item, occ) { const w = 2048; return drawDesign(w, Math.round(CUP.H * w / CUP.W), item, occ); }
 
 const view = el("view"), nav = el("nav"), sheet = el("sheet"), scrim = el("scrim"), toastEl = el("toast");
 let toastTimer = 0, sheetToken = 0, navLast = null, bubLast = null;
@@ -1122,12 +1211,12 @@ function closeSheet() {
   if (a) a.finished.then(done, done); else done();
 }
 
-const TABS = ["home", "catalog", "cart", "orders", "account"];
+const TABS = ["home", "gallery", "cart", "orders", "account"];
 function renderNav() {
   nav.hidden = !TABS.includes(S.route) && !nav.classList.contains("peek");
   const count = S.cart.length;
   const b = (route, icon, label) => `<button type="button" data-tab="${route}" ${S.route === route ? 'aria-current="page"' : ""}>${I(icon)}${label}</button>`;
-  nav.innerHTML = '<span class="nav-bub"></span>' + b("home","home","الرئيسية") + b("catalog","grid","المنتجات") + `<button type="button" class="bag" data-tab="cart" aria-label="السلة، ${countLabel(count)}" ${S.route === "cart" ? 'aria-current="page"' : ""}><i id="bag">${I("bag",26)}${count ? `<span id="badge">${ar(count)}</span>` : ""}</i>السلة</button>` + b("orders","list","طلباتي") + b("account","user","حسابي");
+  nav.innerHTML = '<span class="nav-bub"></span>' + b("home","home","الرئيسية") + b("gallery","grid","التصاميم") + `<button type="button" class="bag" data-tab="cart" aria-label="السلة، ${countLabel(count)}" ${S.route === "cart" ? 'aria-current="page"' : ""}><i id="bag">${I("bag",26)}${count ? `<span id="badge">${ar(count)}</span>` : ""}</i>السلة</button>` + b("orders","list","طلباتي") + b("account","user","حسابي");
   if (nav.hidden) return;
   const active = nav.querySelector('[aria-current="page"]');
   if (!active) { placeBubble(nav); return; }
@@ -1136,13 +1225,14 @@ function renderNav() {
   if (changed) fxNavIcon(active);
   navLast = S.route;
 }
+function watchProductScroll() { const screen = view.querySelector(".s-product:not(.leaving)"); if (!screen) return; const onScroll = () => { if (screen.scrollTop > 40) screen.classList.add("scrolled"); else screen.classList.remove("scrolled"); }; screen.addEventListener("scroll", onScroll, { passive: true }); }
 function afterRender(direction) {
   const root = view.querySelector(".screen:not(.leaving)");
   if (S.route === "review") initReview();
   if (S.route === "order" && direction !== "still") fxTimeline(root.querySelector(".steps"), 0);
   if (S.route === "quote") fxTotal(el("totalV"), S.order.total);
   if (S.route === "lab") renderLab();
-  if (S.route === "product") { startProductViewer(); applyProductPreviewMode(); }
+  if (S.route === "product") { startProductViewer(); applyProductPreviewMode(); watchProductScroll(); }
   return root;
 }
 function render(direction = "forward") {
@@ -1159,7 +1249,7 @@ function render(direction = "forward") {
     if (old) old.remove();
     view.appendChild(screen);
   }
-  renderNav();
+  renderNav(); saveLocal();
   if (direction !== "still") fxEnter(screen);
   return afterRender(direction);
 }
@@ -1173,9 +1263,6 @@ const backBar = (title) => `<header class="bar"><button type="button" class="ico
 const productCircle = (pid) => `<button type="button" class="circle" data-act="openProduct" data-v="${pid}"><span>${I(PROD[pid].icon, 28)}</span>${PROD[pid].short}</button>`;
 
 const packBanner = () => `<button type="button" class="banner" data-act="openPack">${I("gift", 36)}<span><b>بكج مناسبتك كامل</b><small>كوب وقارورة وستيكر وعلبة ودعوة بتصميم واحد</small></span>${I("next")}</button>`;
-const ideaCard = (idea) => `<button type="button" class="idea-card" data-act="ideaOpen" data-v="${idea.id}">${art(idea.pid, idea.text, idea.pal)}<b>${idea.name}</b><span class="tag">${OCC[idea.occ].label}</span></button>`;
-const ideaStrip = () => `<div class="row-head"><h2>أفكار جاهزة</h2><button type="button" class="link" data-act="openGallery">شوف الكل</button></div><div class="strip">${Object.keys(OCC).map((occ) => ideaCard(IDEAS.find((idea) => idea.occ === occ))).join("")}</div><button type="button" class="custom-cta" data-act="idea">${I("pen", 28)}<span><b>صمم لي تصميم خاص</b><small>فريقنا يصممه لك من فكرتك أنت</small></span>${I("next")}</button>`;
-const galleryCards = () => IDEAS.filter((idea) => S.galOcc === "all" || idea.occ === S.galOcc).map(ideaCard).join("");
 const eventsInOrder = () => [...S.events].sort((a, b) => a.date.localeCompare(b.date));
 function nextEventBanner() {
   const ev = eventsInOrder().find((item) => daysTo(item.date) >= 0 && daysTo(item.date) <= 90);
@@ -1217,8 +1304,6 @@ function setEventDate(iso) {
   sfx("select");
 }
 const packOn = () => PACK.filter((pid) => !S.pack.off[pid]);
-const packLine = () => `${countLabel(packOn().length)} بتصميم واحد. خصم البكج ${ar(PACK_OFF * 100)}٪ يظهر في عرض السعر (مثال).`;
-function packArts(pop) { document.querySelectorAll(".pack-card").forEach((card, i) => { const holder = card.querySelector(".pa"); holder.innerHTML = art(card.dataset.v, S.pack.text, S.occ); if (pop) fxPop(holder.firstElementChild, i * 55); }); }
 function libEventRow(ev) { const n = daysTo(ev.date); return `<div class="item" data-ev="${ev.id}"><span class="bub">${I(OCC[ev.occ].icon, 30)}</span><span class="tx"><b>${esc(ev.name)}</b><span>${fmtDate(ev.date)}، ${leftText(n)}</span></span><button type="button" class="bell" aria-pressed="${ev.bell}" aria-label="ذكرني قبل ${esc(ev.name)}" data-act="libBell" data-v="${ev.id}">${I("bell", 26)}</button></div>`; }
 function libDesign(entry) { const item = entry.items[0]; return `<div class="idea-card">${art(item.pid, item.text || "تصميمك", item.pal || entry.occ)}<b>${OCC[entry.occ].label}</b><span class="small">${countLabel(entry.items.length)}</span><button type="button" class="link" data-act="libReorder" data-v="${entry.no}">اطلبه مرة ثانية</button></div>`; }
 function saveToLibrary(o) {
@@ -1229,54 +1314,9 @@ function saveToLibrary(o) {
 function eventSheet() { const e = S.newEv; return `<h2>أضف مناسبة</h2><div class="field"><label for="f-ev">اسم المناسبة</label><input class="input" id="f-ev" data-bind="evName" value="${esc(e.name)}" maxlength="30" autocomplete="off" placeholder="مثل: يوم ميلاد سعود"></div><div class="group"><span class="label">نوعها</span><div class="chips">${Object.entries(OCC).map(([key, o]) => `<button type="button" class="chip" aria-pressed="${e.occ === key}" data-act="evOcc" data-v="${key}">${o.label}</button>`).join("")}</div></div><div class="group"><span class="label">متى؟</span><div id="cal">${calHTML()}</div></div><div class="sheet-foot"><button type="button" class="btn" data-act="saveEvent">احفظها</button><button type="button" class="btn ghost" data-act="closeSheet">رجوع</button></div>`; }
 
 const SCREENS = {
-  gallery: () => `${backBar("أفكار جاهزة")}<p class="sub">خمسة وثلاثون تصميم جاهز بزخارف مختلفة. اختر، غيّر الاسم، وحمّله.</p><div class="chips">${[["all", "الكل"], ...Object.entries(OCC).map(([key, o]) => [key, o.label])].map(([key, label]) => `<button type="button" class="chip" aria-pressed="${S.galOcc === key}" data-act="galOcc" data-v="${key}">${label}</button>`).join("")}</div><div class="grid-p" id="galGrid">${galleryCards()}</div>`,
   package: () => { const p = S.pack; return `${backBar("بكج مناسبتك كامل")}<p class="sub">كل القطع بتصميم واحد وهوية وحدة. شيل اللي ما تبغاه.</p><div class="chips">${Object.entries(OCC).map(([key, o]) => `<button type="button" class="chip" aria-pressed="${S.occ === key}" data-act="packOcc" data-v="${key}">${o.label}</button>`).join("")}</div><div class="field"><label for="f-pack">وش تبغى ينكتب عليه؟</label><input class="input" id="f-pack" data-bind="packText" value="${esc(p.text)}" maxlength="24" autocomplete="off"></div><div class="pack-grid">${PACK.map((pid) => `<button type="button" class="pack-card" aria-pressed="${!p.off[pid]}" data-act="packToggle" data-v="${pid}"><span class="pa">${art(pid, p.text, S.occ)}</span><b>${PROD[pid].name}</b><i class="pk">${I("check", 16)}</i></button>`).join("")}</div><button type="button" class="btn" data-act="addPack">أضف البكج للسلة</button>`; },
   library: () => `${backBar("مناسباتي")}<p class="sub">مناسباتك وتصاميمك في مكان واحد، ونذكرك قبلها بشهر.</p>${eventsInOrder().map(libEventRow).join("")}<button type="button" class="dashed" data-act="addEvent">أضف مناسبة</button><h2>تصاميمك</h2>${S.saved.length ? `<div class="lib-designs">${S.saved.map(libDesign).join("")}</div>` : '<p class="small">أول تصميم تعتمده ينحفظ هنا تلقائيًا.</p>'}${S.events.length || S.saved.length ? "" : '<button type="button" class="demo-btn" data-act="libExample">في التجربة: أضف أمثلة</button>'}<button type="button" class="demo-btn" data-act="libPing">في التجربة: ورني شكل التذكير</button>`,
-  home: () => `<div class="amb"><i></i><i></i><i></i><i></i></div>${topBar()}${nextEventBanner()}<div><h1>وش مناسبتك؟</h1><p class="sub">اختر، وفريقنا يصمم لك</p></div>
-    <div class="tiles">${Object.entries(OCC).map(([key, o], i) => `<button type="button" class="tile" style="--i:${i};background:${o.bg};color:${o.fg}" data-act="pickOcc" data-v="${key}">${I(o.icon, 40)}<span>${o.label}</span></button>`).join("")}<button type="button" class="tile tile-idea" style="--i:5" data-act="idea">${I("plus", 40)}<span>قلنا فكرتك</span></button></div>
-    ${packBanner()}${ideaStrip()}
-    <div class="circles">${["cup","bottle","sticker","box"].map(productCircle).join("")}</div>
-    `,
-  catalog: () => `${topBar()}<div><h1>وش تبغى نصمم لك؟</h1><p class="sub" id="catSub">لمناسبة: ${OCC[S.occ].label}</p></div>
-    <div class="chips">${Object.entries(OCC).map(([key, o]) => `<button type="button" class="chip" aria-pressed="${S.occ === key}" data-act="setOcc" data-v="${key}">${o.label}</button>`).join("")}</div>
-    ${packBanner()}
-    <div class="grid-p">${["cup","bottle","sticker","box"].map((pid) => `<button type="button" class="card-p" data-act="openProduct" data-v="${pid}">${art(pid, "سعود", S.occ)}<b>${PROD[pid].name}</b>${PROD[pid].has3d ? '<span class="tag">تدوّره بثلاثي الأبعاد</span>' : '<span class="small">معاينة بالصور</span>'}</button>`).join("")}</div>
-    <button type="button" class="dashed" data-act="idea">منتجك مو موجود؟ قلنا</button>`,
-  product: () => { const d = S.draft, p = PROD[d.pid]; return `${backBar(p.name)}
-    <div class="stage product-stage" id="productStage"><canvas id="productGl"></canvas><div id="productStatus"><div class="spin"></div><span>جارٍ تجهيز المنتج…</span></div></div>
-    <div class="seg" data-i="${S.previewMode === '2d' ? 1 : 0}"><i class="thumb"></i>${[['3d','ثلاثي الأبعاد'],['2d','صور']].map(([v,l])=>`<button type="button" aria-pressed="${(S.previewMode||'3d')===v}" data-act="previewMode" data-v="${v}">${l}</button>`).join("")}</div>
-    <div class="group"><span class="label">تعرف مقاس المنتج؟</span><div class="chips">${p.sizes.map((size) => `<button type="button" class="chip" aria-pressed="${d.size === size}" data-act="size" data-v="${esc(size)}">${size}</button>`).join("")}</div></div>
-    <div class="field"><label for="f-text">وش تبغى ينكتب عليه؟</label><input class="input" id="f-text" data-bind="text" value="${esc(d.text)}" maxlength="24" autocomplete="off"></div>
-    <div class="field"><label for="f-sub">السطر اللي تحت (اختياري)</label><input class="input" id="f-sub" data-bind="sub" value="${esc(d.tagline || '')}" maxlength="30" autocomplete="off" placeholder="مثل: ${esc(OCC[S.occ].line)}"></div>
-    <button type="button" class="btn" data-act="addCart">أضف للسلة</button>`; },
-  idea: () => `${backBar("قلنا فكرتك")}<div class="field"><label for="f-free">صف لنا التصميم اللي في بالك</label><textarea class="input" id="f-free" data-bind="free" rows="4" placeholder="أبغى ثيم استقبال مولودة بألوان وردي وعاجي، مع اسم سعود وخط ناعم">${esc(S.idea)}</textarea></div><div class="group"><span class="label">على أي منتج؟</span><div class="chips">${[["custom","ساعدوني في اختيار المنتج"],["cup","كوب"],["bottle","قارورة"],["sticker","ستيكر"],["box","علبة أو كيس"]].map(([pid, label]) => `<button type="button" class="chip" aria-pressed="${S.ideaPid === pid}" data-act="ideaPid" data-v="${pid}">${label}</button>`).join("")}</div></div><div class="group"><span class="label">صور تلهمنا (اختياري)</span><div class="idea-images" id="ideaImages">${(S.ideaImages||[]).map((img,i)=>`<div class="idea-img"><img src="${img.url}" alt=""><button type="button" class="idea-img-rm" data-act="ideaRemoveImage" data-v="${i}" aria-label="احذف الصورة">✕</button></div>`).join("")}</div><button type="button" class="dashed" onclick="document.getElementById('f-images').click()">${I("plus",20)} أضف صورة</button><input type="file" id="f-images" accept="image/*" multiple hidden></div><p class="small">ما تحتاج تعرف تصمم.</p><button type="button" class="btn" data-act="addIdea">أضف للسلة</button>`,
-  cart: () => { if (!S.cart.length) return `${topBar()}<div class="empty"><span class="bub">${I("bag", 44)}</span><h2>سلتك فاضية</h2><p class="sub">اختر منتج، ونصمم لك كل شي بهوية واحدة</p><button type="button" class="btn" data-tab="catalog">اختر منتجك</button></div>`;
-    return `${topBar()}<div><h1>سلتك</h1><p class="sub">${OCC[S.occ].label}، ${countLabel(S.cart.length)}${S.cart.length > 1 ? " بتصميم واحد" : ""}</p></div>
-    ${S.cart.map((item) => `<div class="item"><span class="bub">${I(PROD[item.pid].icon, 30)}</span><span class="tx"><b>${PROD[item.pid].name}</b><span>${item.pack ? "من البكج، " : ""}${itemLine(item)}</span></span><button type="button" class="x-btn" aria-label="احذف ${PROD[item.pid].name}" data-act="removeCart" data-v="${item.id}">${I("x")}</button></div>`).join("")}
-    <button type="button" class="dashed" data-tab="catalog">أضف منتج ثاني</button>
-    
-    <button type="button" class="btn" data-act="requestQuote">اطلب عرض سعر</button>`; },
-  orders: () => { if (!S.orders.length) return `${topBar()}<div class="empty"><span class="bub">${I("list", 44)}</span><h2>ما عندك طلبات للحين</h2><p class="sub">أول طلب لك يظهر هنا مع حالته</p><button type="button" class="btn" data-tab="catalog">ابدأ طلب</button></div>`;
-    return `${topBar()}<h1>طلباتي</h1>${S.orders.map((o) => `<button type="button" class="item" style="border:0;width:100%;text-align:start" data-act="openOrder" data-v="${o.no}"><span class="bub">${I("list", 28)}</span><span class="tx"><b>طلب ${ar(o.no)}</b><span>${STEPS[STAGE_INDEX[o.stage]]}، ${countLabel(o.items.length)}${realDate(o.eventDate) && daysTo(o.eventDate) >= 0 ? `، ${leftText(daysTo(o.eventDate))}` : ""}</span></span></button>`).join("")}`; },
-  order: () => { const o = S.order, now = STAGE_INDEX[o.stage];
-    const wait0 = `<div class="loader-row">${loaderHTML()}</div>`;
-    const cards = {
-      pricing:`<b>وصلتنا فكرتك!</b><p class="sub">بنراجع التفاصيل ونرسل لك عرض السعر داخل التطبيق.</p>${wait0}<button type="button" class="demo-btn" data-act="advance" data-v="quote">في التجربة: خلّ الفريق يرسل العرض الحين</button>`,
-      quote:`<b>عرض السعر جاهز</b><p class="sub">راجع التفاصيل قبل الموافقة. يبدأ التصميم بعد تأكيد الدفع.</p><button type="button" class="btn" data-act="toQuote">شوف العرض</button>`,
-      designing:`<b>فريقنا يصمم لك</b><p class="sub">نعلمك أول ما تكون النسخة جاهزة لمراجعتك.</p>${wait0}<button type="button" class="demo-btn" data-act="advance" data-v="review">في التجربة: خلّ المصمم ينشر النسخة الحين</button>`,
-      revising:`<b>المصمم يشتغل على ملاحظاتك</b><p class="sub">النسخة الجديدة توصلك هنا.</p>${wait0}<button type="button" class="demo-btn" data-act="newVersion">في التجربة: خلّ المصمم ينشر النسخة الجديدة</button>`,
-      review:`<b>تصميمك جاهز للمراجعة</b><p class="sub">دوّره، وحط ملاحظاتك عليه بإصبعك.</p><button type="button" class="btn" data-act="toReview">عاين التصميم</button>`,
-      qa:`<b>يتم الآن فحص ملف الطباعة وتجهيز الصور</b><div class="scan"><i></i></div><p class="sub">ثواني ويوصلك.</p>`,
-      delivered:`<b>ملفاتك جاهزة</b><p class="sub">PDF للطباعة وPNG وJPG للمعاينة. وانحفظ تصميمك في مناسباتي.</p><button type="button" class="btn" data-act="toFiles">شوف ملفاتك</button><button type="button" class="btn ghost" data-act="openLib">افتح مناسباتي</button>`,
-    };
-    return `${backBar(`طلب ${ar(o.no)}`)}${realDate(o.eventDate) && daysTo(o.eventDate) >= 0 ? `<p class="count-line">${I("cal", 20)}${leftText(daysTo(o.eventDate))} على مناسبتك، ${fmtDate(o.eventDate)}</p>` : ""}<div class="act-card">${cards[o.stage]}</div><ol class="steps">${STEPS.map((step, i) => stepRow(step, i, now, STEPS.length)).join("")}</ol>`; },
-  quote: () => { const o = S.order, lines = o.items.map((item) => [PROD[item.pid].name, PROD[item.pid].price]); const setup = 100, sum = lines.reduce((total, line) => total + line[1], setup), packItems = o.items.filter((item) => item.pack), packOff = packItems.length >= PACK_MIN ? Math.round(packItems.reduce((total, item) => total + PROD[item.pid].price, 0) * PACK_OFF) : 0, rush = o.speed === "مستعجل" ? Math.round((sum - packOff) * .3) : 0;
-    o.total = sum - packOff + rush;
-    return `${backBar("عرض السعر")}
-    <dl class="lines"><dt>تأسيس التصميم الموحد</dt><dd>${ar(setup)} ر.س</dd>${lines.map(([name, price]) => `<dt>${name}</dt><dd>${ar(price)} ر.س</dd>`).join("")}${packOff ? `<dt>خصم البكج (${ar(PACK_OFF * 100)}٪)</dt><dd>− ${ar(packOff)} ر.س</dd>` : ""}${rush ? `<dt>رسوم الاستعجال</dt><dd>${ar(rush)} ر.س</dd>` : ""}<dt class="total">المجموع</dt><dd class="total" id="totalV">${ar(o.total)} ر.س</dd></dl>
-    <p class="sub">يشمل التصميم وملفات PDF وPNG وJPG، والتعديلات ضمن فكرة الطلب.</p><p class="small">العرض صالح ٣ أيام (مثال).</p>
-    <button type="button" class="btn" data-act="toPay">قبول العرض</button><div class="row2"><button type="button" class="btn ghost" data-act="demoNote" data-v="في التطبيق الحقيقي تفتح محادثة مع الفريق.">استفسار</button><button type="button" class="btn ghost" data-act="demoNote" data-v="في التطبيق الحقيقي يتسكر الطلب بعد رفضك.">رفض</button></div>`; },
-  pay: () => `${backBar("الدفع")}<dl class="lines"><dt>طلب ${ar(S.order.no)}</dt><dd>${ar(S.order.total)} ر.س</dd></dl><button type="button" class="btn" data-act="pay">أكّد الدفع التجريبي</button>`,
+  idea: () => `${backBar("قلنا فكرتك")}<div class="field"><label for="f-free">صف لنا التصميم اللي في بالك</label><textarea class="input" id="f-free" data-bind="free" rows="4" placeholder="أبغى ثيم استقبال مولودة بألوان وردي وعاجي، مع اسم سعود وخط ناعم">${esc(S.idea)}</textarea></div><div class="group"><span class="label">على أي منتج؟</span><div class="chips">${[["custom","ساعدوني في اختيار المنتج"],["cup","كوب"],["bottle","قارورة"],["sticker","ستيكر"],["box","علبة أو كيس"]].map(([pid, label]) => `<button type="button" class="chip" aria-pressed="${S.ideaPid === pid}" data-act="ideaPid" data-v="${pid}">${label}</button>`).join("")}</div></div><div class="group"><span class="label">صور تلهمنا (اختياري)</span><div class="idea-images" id="ideaImages">${(S.ideaImages||[]).map((img,i)=>`<div class="idea-img"><img src="${img.url}" alt=""><button type="button" class="idea-img-rm" data-act="ideaRemoveImage" data-v="${i}" aria-label="احذف الصورة">✕</button></div>`).join("")}</div><button type="button" class="dashed" onclick="document.getElementById('f-images').click()">${I("plus",20)} أضف صورة</button><input type="file" id="f-images" accept="image/*" multiple hidden></div><p class="small">ما تحتاج تعرف تصمم. نرسل لك عرض السعر، وتأكّد الطلب بعد ما توافق عليه.</p><button type="button" class="btn" data-act="sendIdea">أرسل طلبك</button>`,
   review: () => { const o = S.order, item = o.items[S.reviewItem], p = PROD[item.pid];
     return `<header class="bar"><button type="button" class="icon-btn" data-act="back" aria-label="رجوع">${I("back")}</button><div><h1>${p.name}</h1><span style="font-size:15px">النسخة ${ar(S.viewVersion)}${S.viewVersion === o.version ? "، جاهزة لمراجعتك" : "، نسخة قديمة"}</span></div></header>
     <div class="stage" id="stage">${p.has3d ? `<canvas id="gl"></canvas><div id="status3d">${loaderHTML()}<span>جارٍ تجهيز الكوب…</span></div>` : `<div id="art2d"><div style="position:relative;height:82%;display:flex;align-items:center" id="art2d-box">${art(item.pid, item.text || "تصميمك", item.pal || o.occ, S.viewVersion)}</div></div>`}<canvas id="ink"></canvas>
@@ -1285,8 +1325,6 @@ const SCREENS = {
     <div class="panel">${o.items.length > 1 ? `<div class="chips">${o.items.map((entry, i) => `<button type="button" class="chip" aria-pressed="${i === S.reviewItem}" data-act="pickItem" data-v="${i}">${PROD[entry.pid].short}</button>`).join("")}</div>` : ""}
       ${o.version > 1 ? `<div class="chips">${Array.from({ length: o.version }, (_, i) => i + 1).map((v) => `<button type="button" class="chip" aria-pressed="${v === S.viewVersion}" data-act="viewVersion" data-v="${v}">النسخة ${ar(v)}</button>`).join("")}</div>` : ""}
       <div class="notes" id="notes"></div><div class="row2"><button type="button" class="btn ghost" id="sendBtn" data-act="sendEdits">أرسل التعديلات</button><button type="button" class="btn" data-act="approve">اعتماد التصميم</button></div></div>`; },
-  files: () => { const o = S.order; return `${backBar("ملفاتك")}<p class="sub">ملفاتك جاهزة: PDF للطباعة وPNG وJPG للمعاينة.</p>${o.items.map((item) => `<div class="group"><span class="label">${PROD[item.pid].name}</span>${["PDF للطباعة","PNG للمعاينة","JPG للمعاينة"].map((name) => `<button type="button" class="item" style="border:0;width:100%;text-align:start" data-act="demoNote" data-v="في التطبيق الحقيقي ينزل ملفك من هنا."><span class="bub">${I("file", 26)}</span><span class="tx"><b>${name}</b></span></button>`).join("")}</div>`).join("")}<button type="button" class="btn ghost" data-act="restart">ابدأ طلب جديد</button>`; },
-  account: () => `${topBar()}<h1>حسابي</h1><p class="sub">${S.signed ? "حساب تجريبي" : "ما دخلت بعد، وتقدر تتصفح بدون حساب"}</p><button type="button" class="btn" data-act="openLib">مناسباتي</button><button type="button" class="btn ghost" data-act="restart">ابدأ التجربة من جديد</button>`,
   lab: () => `<header class="bar"><button type="button" class="icon-btn" data-act="back" aria-label="رجوع">${I("back")}</button><h1 style="flex:1">غرفة الحركات</h1><button type="button" class="pill-btn" data-act="labList">كل الحركات</button></header><div id="labBody"></div><div class="lab-foot"><button type="button" class="icon-btn" data-act="labPrev" aria-label="السابقة">${I("back")}</button><button type="button" class="btn gold" data-act="saveChoices">اعتمد اختياراتي</button><button type="button" class="btn" id="labNext" data-act="labNext">التالية</button></div>`,
 };
 
@@ -1358,23 +1396,12 @@ const ACT = {
     if (daysTo(d.v) < LEAD.rush) { fxShake(t); toast(`ما يلحق. نحتاج ${ar(LEAD.rush)} أيام على الأقل`); sfx("remove"); return; }
     el("cal").querySelectorAll(".cal-d").forEach((b) => b.setAttribute("aria-pressed", String(b === t))); fxPop(t); S.busy = true; await wait(M().ms * .7); S.busy = false; setEventDate(d.v);
   },
-  openGallery() { go("gallery"); },
-  galOcc(d, t) { S.galOcc = d.v; pickChip(t); const grid = el("galGrid"); grid.innerHTML = galleryCards(); fxEnter(grid, ".idea-card"); },
-  ideaOpen(d) { editTemplate(d.v); },
-  downloadTpl() { downloadTemplateNow(); },
-  goCustom() { closeSheet(); S.ideaPid = ideaById(S.templateId).pid; S.occ = ideaById(S.templateId).occ; go("idea"); },
-  useIdea(d) { const idea = ideaById(d.v), sizes = PROD[idea.pid].sizes; S.occ = idea.occ; S.draft = { pid: idea.pid, size: sizes[Math.min(1, sizes.length - 1)], text: idea.text, idea: `${idea.name}: ${idea.desc}`, pal: idea.pal }; closeSheet(); go("product"); },
   openPack() { S.pack = S.pack || { text: "سعود", off: {} }; go("package"); },
   packOcc(d, t) { S.occ = d.v; pickChip(t); packArts(true); },
   packToggle(d, t) {
     const on = !S.pack.off[d.v];
     if (on && packOn().length <= PACK_MIN) { fxShake(t); toast(`البكج أقل شي ${ar(PACK_MIN)} قطع`); return; }
     S.pack.off[d.v] = on; t.setAttribute("aria-pressed", String(!on)); fxPop(t.querySelector(".pa")); sfx("select"); el("packCount").textContent = packLine();
-  },
-  async addPack() {
-    const list = packOn().map((pid) => { const sizes = PROD[pid].sizes; return { id: nextId++, pid, size: sizes[Math.min(1, sizes.length - 1)], text: S.pack.text, idea: "", pack: true }; });
-    const cards = [...document.querySelectorAll('.pack-card[aria-pressed="true"] svg')];
-    await cartFlight(() => Promise.all(list.map((item, i) => wait(i * 130).then(() => fxAddCart(cards[i], () => el("bag"), () => { S.cart.push(item); renderNav(); fxBadge(el("badge")); })))));
   },
   openLib() { closeSheet(); go("library"); },
   addEvent() { S.newEv = { name: "", occ: S.occ, date: null }; startCal("free", null); openSheet(eventSheet()); },
@@ -1394,39 +1421,12 @@ const ACT = {
     node.className = "ping"; node.innerHTML = `<span class="bub">${I("bell", 22)}</span><span><b>${esc(S.choices.name)}</b>${leftText(n)} على ${esc(name)}. نجهز لها تصميم؟</span>`; el("app").appendChild(node);
     sfx("success"); await A(node, [{ transform: "translateY(-160%)" }, { transform: "none" }], { fill: "both" }); await wait(3200); if (!node.isConnected) return; await A(node, [{ opacity: 1, transform: "none" }, { opacity: 0, transform: "translateY(-60%)" }], { k: .7, ease: "ease-in", fill: "both" }); node.remove();
   },
-  pickOcc(d) { S.occ = d.v; go("catalog"); },
-  setOcc(d, t) { S.occ = d.v; pickChip(t); el("catSub").textContent = `لمناسبة: ${OCC[S.occ].label}`; document.querySelectorAll(".card-p").forEach((card, i) => { card.querySelector("svg").outerHTML = art(card.dataset.v, "سعود", S.occ); A(card.querySelector("svg"), [{ transform: "scale(.5)", opacity: 0 }, { transform: "none", opacity: 1 }], { delay: i * 55 }); }); },
-  idea() { go("idea"); },
-  openProduct(d) { const sizes = PROD[d.v].sizes; S.draft = { pid: d.v, size: sizes[Math.min(1, sizes.length - 1)], text: "سعود", idea: "", tagline: OCC[S.occ].line }; S.previewMode = "3d"; go("product"); },
   size(d, t) { S.draft.size = d.v; pickChip(t); const pv = el("pv"); if (pv) fxType(pv); },
   previewMode(d, t) { S.previewMode = d.v; t.parentElement.dataset.i = d.v === "2d" ? 1 : 0; t.parentElement.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", String(b === t))); applyProductPreviewMode(); sfx("select"); },
-  downloadNow() { downloadDraftNow("png"); },
-  downloadNowPdf() { downloadDraftNow("pdf"); },
-  async addCart() { const stage = el("productStage") || el("pv"); const art0 = el("pv")?.querySelector("svg") || (() => { const h = document.createElement("div"); h.innerHTML = art(S.draft.pid, S.draft.text, S.draft.pal || S.occ); return h.firstElementChild; })(); await flyToCart(stage || art0, { id: nextId++, ...S.draft }, stage ? art0 : null); },
-  async addIdea(d, t) {
-    if (!S.idea.trim()) { toast("اكتب فكرتك أول"); A(el("f-free"), [{ transform: "translateX(0)" }, { transform: "translateX(-9px)", offset: .25 }, { transform: "translateX(9px)", offset: .6 }, { transform: "translateX(0)" }], { k: .9, ease: "ease-out", fill: "none" }); return; }
-    const holder = document.createElement("div"); holder.innerHTML = art("box", "فكرتك", S.occ);
-    const item = { id: nextId++, pid: S.ideaPid, size: "ما أعرف", text: "", idea: S.idea };
-    S.idea = ""; S.ideaPid = "custom";
-    await flyToCart(t, item, holder.firstElementChild);
-  },
   async removeCart(d, t) { S.busy = true; sfx("remove"); await fxRemove(t.closest(".item")); S.cart = S.cart.filter((item) => String(item.id) !== d.v); S.busy = false; if (S.cart.length) redraw(); else render("forward"); const bag = el("bag"), badge = el("badge"); if (bag) fxGulp(bag); if (badge) fxBadge(badge); },
-  requestQuote() {  if (S.signed) { submitOrder(); return; } openSheet(`<h2>نحتاج حساب عشان نرسل طلبك</h2><p class="sub">في التجربة ما تدخل أي بيانات.</p><button type="button" class="btn" data-act="signIn">أدخل بحساب تجريبي</button><button type="button" class="btn ghost" data-act="closeSheet">رجوع</button>`); },
-  signIn() { S.signed = true; closeSheet(); submitOrder(); },
   openOrder(d) { S.order = S.orders.find((o) => String(o.no) === d.v); go("order"); },
-  advance(d) { const o = S.order, from = STAGE_INDEX[o.stage]; o.stage = d.v; if (d.v === "review") { o.version = 1; S.viewVersion = 1; toast("تصميمك جاهز للمراجعة"); if (at("ready")) celebrate(.8, o.occ); sfx("success"); } else { toast("وصلك عرض السعر"); sfx("select"); } orderChanged(from); },
-  toQuote() { go("quote"); }, toPay() { go("pay"); },
   demoNote(d, t) { toast(d.v); const bub = t.querySelector(".bub"); if (bub) A(bub, [{ transform: "translateY(0)" }, { transform: "translateY(-10px)", offset: .4 }, { transform: "translateY(0)" }], { fill: "none", ease: "ease-out" }); },
-  async pay() {
-    S.busy = true;
-    const o = S.order, overlay = document.createElement("div"); overlay.id = "busy"; overlay.innerHTML = `${loaderHTML()}<p>نجري التحقق من عملية الدفع. لا تعيد الدفع قبل ظهور النتيجة أو التواصل مع الدعم.</p>`; el("app").appendChild(overlay);
-    A(overlay, [{ opacity: 0 }, { opacity: 1 }], { k: .6, ease: "ease-out" });
-    await wait(1300);
-    overlay.innerHTML = `${successHTML()}<p>تم تأكيد الدفع التجريبي</p>`; fxPayOk(overlay); sfx("success"); if (at("pay")) celebrate(1, o.occ);
-    await wait(Math.max(1000, M().ms * 2.6));
-    await A(overlay, [{ opacity: 1 }, { opacity: 0 }], { k: .6, ease: "ease-in", fill: "both" });
-    overlay.remove(); o.stage = "designing"; S.hist = [["orders", null]]; S.route = "order"; S.busy = false; render("forward");
-  },
+  toQuote() { go("quote"); },
   toReview() { S.reviewItem = 0; S.viewVersion = S.order.version; go("review"); },
   pickItem(d) { disposeViewer(); S.reviewItem = Number(d.v); render("still"); pressedChipFx(`[data-act="pickItem"][data-v="${d.v}"]`); },
   viewVersion(d) { S.viewVersion = Number(d.v); disposeViewer(); render("still"); pressedChipFx(`[data-act="viewVersion"][data-v="${d.v}"]`); },
@@ -1439,13 +1439,12 @@ const ACT = {
     const o = S.order; if (!allNotes().length) { toast("حط ملاحظة أول، أو اعتمد التصميم"); return; }
     S.busy = true;
     await Promise.all([...document.querySelectorAll("#notes button.note")].map((row, i) => A(row, [{ transform: "none", opacity: 1 }, { transform: "translateY(-70px) scale(.7)", opacity: 0 }], { delay: i * 70, fill: "both", k: .8, ease: "ease-in" })));
-    sfx("success"); o.stage = "revising"; S.hist = [["orders", null]]; S.busy = false; disposeViewer(); S.route = "order"; render("forward"); toast("وصلت ملاحظاتك للفريق");
+    sfx("success"); commit(o, { stage: "revising", feedback: feedbackOf(o) }); S.hist = [["orders", null]]; S.busy = false; disposeViewer(); S.route = "order"; render("forward"); toast("وصلت ملاحظاتك للفريق");
   },
-  newVersion() { const o = S.order, from = STAGE_INDEX[o.stage]; o.items.forEach((_, i) => { o.done[i] = [...(o.done[i] || []), ...(o.notes[i] || [])]; o.notes[i] = []; }); o.version += 1; S.viewVersion = o.version; o.stage = "review"; orderChanged(from); toast("تصميمك جاهز للمراجعة"); if (at("ready")) celebrate(.8, o.occ); sfx("success"); },
+  newVersion() { const o = S.order, from = STAGE_INDEX[o.stage]; o.items.forEach((_, i) => { o.done[i] = [...(o.done[i] || []), ...(o.notes[i] || [])]; o.notes[i] = []; }); S.viewVersion = o.version + 1; commit(o, { version: o.version + 1, stage: "review" }); orderChanged(from); toast("تصميمك جاهز للمراجعة"); if (at("ready")) celebrate(.8, o.occ); sfx("success"); },
   approve() { const o = S.order; if (!isCurrent()) { toast("افتح أحدث نسخة قبل الاعتماد"); return; } const unsent = allNotes().length; openSheet(`<h2>أنت على وشك اعتماد النسخة النهائية</h2><p class="sub">تأكد من الأسماء والمقاسات والمحتوى.</p>${unsent ? `<p class="warn">عندك ${unsent === 1 ? "ملاحظة ما أرسلتها" : `${ar(unsent)} ملاحظات ما أرسلتها`}. إذا اعتمدت الحين ما راح تتنفذ.</p>` : ""}${o.items.map((item) => `<div class="item"><span class="bub">${I(PROD[item.pid].icon, 28)}</span><span class="tx"><b>${PROD[item.pid].name}</b><span>النسخة ${ar(o.version)}، ${item.size === "ما أعرف" ? "المقاس المتفق عليه" : esc(item.size)}، ${item.text ? `«${esc(item.text)}»` : "حسب فكرتك"}</span></span></div>`).join("")}<button type="button" class="btn" data-act="confirmApprove">اعتماد التصميم</button><button type="button" class="btn ghost" data-act="closeSheet">رجوع</button>`); },
-  confirmApprove() { const o = S.order; closeSheet(); disposeViewer(); o.stage = "qa"; S.hist = [["orders", null]]; S.route = "order"; render("forward"); if (at("approve")) celebrate(1.2, o.occ); sfx("party"); setTimeout(() => { if (o.stage !== "qa") return; const from = STAGE_INDEX.qa; o.stage = "delivered"; saveToLibrary(o); if (S.route === "order" && S.order === o) orderChanged(from); toast("ملفاتك جاهزة"); if (at("approve")) celebrate(.6, o.occ); sfx("success"); }, 2000); },
+  confirmApprove() { const o = S.order; closeSheet(); disposeViewer(); o.stage = "qa"; S.hist = [["orders", null]]; S.route = "order"; render("forward"); if (at("approve")) celebrate(1.2, o.occ); sfx("party"); setTimeout(() => { if (o.stage !== "qa") return; const from = STAGE_INDEX.qa; commit(o, { stage: "delivered" }); saveToLibrary(o); if (S.route === "order" && S.order === o) orderChanged(from); toast("ملفاتك جاهزة"); if (at("approve")) celebrate(.6, o.occ); sfx("success"); }, 2000); },
   toFiles() { go("files"); },
-  restart() { S.cart = []; S.orders = []; S.order = null; S.signed = false; S.speed = "عادي"; S.eventDate = null; S.pack = null; S.galOcc = "all"; S.events = []; S.saved = []; S.occ = "baby"; S.idea = ""; S.ideaPid = "custom"; S.draft = null; S.hist = []; tab("home"); toast("بدأت التجربة من جديد"); },
 };
 function pressedChipFx(selector) { const chip = document.querySelector(selector); if (chip) fxChip(chip); sfx("select"); }
 function orderChanged(from) { render("still"); const root = view.querySelector(".screen:not(.leaving)"); fxStage(root.querySelector(".act-card")); fxTimeline(root.querySelector(".steps"), Math.max(0, from)); }
@@ -1459,7 +1458,837 @@ async function cartFlight(run) {
   await wait(M().ms * .8 + 120);
   nav.classList.remove("peek"); S.hist = []; S.route = "cart"; S.arg = null; S.busy = false; render("forward"); toast("انضاف للسلة");
 }
-function submitOrder() { S.order = { no: 1042 + S.orders.length, items: S.cart.map((item) => ({ ...item })), stage: "pricing", version: 1, speed: S.speed, eventDate: S.eventDate, occ: S.occ, notes: {}, done: {} }; S.orders.unshift(S.order); S.cart = []; S.eventDate = null; S.speed = "عادي"; S.hist = [["orders", null]]; S.route = "order"; S.arg = null; render("forward"); }
+/* Template artwork. Four original card styles drawn on a canvas: a floral wallpaper with a cartouche,
+   an announcement with a carousel, a ribbon with a cake, and an embossed frame. The same drawing
+   serves the preview, the 3D texture and the downloaded files. */
+const CARD_FONT = { ar: "Aref Ruqaa", naskh: "Amiri", latin: "Cormorant Garamond", script: "Pinyon Script" };
+const CAPTION = { baby: ["Welcome Baby", "نبشّركم بقدوم"], wed: ["Save the Date", "بكل الحب ندعوكم"], grad: ["Graduate", "بكل فخر"], bday: ["Happy Birthday", "يوم ميلاد سعيد"], eid: ["Happy Eid", "كل عام وأنتم بخير"] };
+const STYLE_OF = { baby: ["announce", "floral"], wed: ["emboss", "floral"], grad: ["emboss", "ribbon"], bday: ["ribbon", "floral"], eid: ["floral", "emboss"] };
+function hashOf(text) { let h = 2166136261; for (const c of String(text)) { h ^= c.codePointAt(0); h = Math.imul(h, 16777619); } return h >>> 0; }
+function rng(seed) { let a = seed || 1; return () => { a = a + 0x6D2B79F5 | 0; let t = Math.imul(a ^ a >>> 15, 1 | a); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+const rgbOf = (color) => { const text = String(color); if (text.startsWith("rgb")) return text.match(/\d+/g).slice(0, 3).map(Number); const n = parseInt(text.slice(1, 7), 16) || 0; return [n >> 16 & 255, n >> 8 & 255, n & 255]; };
+const mix = (a, b, t) => { const x = rgbOf(a), y = rgbOf(b); return `rgb(${x.map((v, i) => Math.round(v + (y[i] - v) * t)).join(",")})`; };
+const isDark = (hex) => { const [r, g, b] = rgbOf(hex); return r * .3 + g * .59 + b * .11 < 110; };
+const styleOf = (occ, pal) => { const pair = STYLE_OF[occ] || STYLE_OF.eid; return pair[pal && hashOf(pal.paper + pal.ink) % 3 === 0 ? 1 : 0]; };
+function stretch(name, n) { const cs = [...String(name).trim()], solo = "اأإآدذرزوؤءةى", letter = /[ء-ي]/; for (let i = cs.length - 2; i >= 0; i--) if (letter.test(cs[i]) && letter.test(cs[i + 1]) && !solo.includes(cs[i])) { cs.splice(i + 1, 0, "ـ".repeat(n)); break; } return cs.join(""); }
+
+function grain(g, w, h, paper, seed) { const r = rng(seed), n = Math.round(w * h / 700), dark = isDark(paper), k = Math.max(1, w / 900); for (let i = 0; i < n; i++) { g.fillStyle = r() < .5 ? (dark ? "rgba(255,255,255,.05)" : "rgba(255,255,255,.4)") : (dark ? "rgba(0,0,0,.14)" : "rgba(120,100,70,.07)"); g.fillRect(r() * w, r() * h, (1 + r() * 1.6) * k, (1 + r() * 1.6) * k); } }
+function leaf(g, x, y, len, ang, fill) { g.save(); g.translate(x, y); g.rotate(ang); g.beginPath(); g.moveTo(0, 0); g.quadraticCurveTo(len * .5, -len * .3, len, 0); g.quadraticCurveTo(len * .5, len * .3, 0, 0); g.fillStyle = fill; g.fill(); g.restore(); }
+function bloom(g, x, y, r, n, fill, heart) { g.save(); g.translate(x, y); for (let i = 0; i < n; i++) { g.rotate(Math.PI * 2 / n); g.beginPath(); g.ellipse(0, -r * .58, r * .3, r * .5, 0, 0, 7); g.fillStyle = fill; g.fill(); } g.beginPath(); g.arc(0, 0, r * .2, 0, 7); g.fillStyle = heart; g.fill(); g.restore(); }
+function sprig(g, x, y, len, ang, green, fill, heart) {
+  g.save(); g.translate(x, y); g.rotate(ang); g.strokeStyle = green; g.lineWidth = Math.max(1, len * .02); g.lineCap = "round";
+  g.beginPath(); g.moveTo(0, 0); g.quadraticCurveTo(len * .14, -len * .5, 0, -len); g.stroke();
+  for (let i = 1; i <= 4; i++) { const t = i / 5, px = 2 * t * (1 - t) * len * .14, py = -2 * t * (1 - t) * len * .5 - t * t * len; leaf(g, px, py, len * .22, -Math.PI / 2 + (i % 2 ? 1 : -1) * 1.05, green); }
+  bloom(g, 0, -len, len * .2, 6, fill, heart); g.restore();
+}
+function sparkle(g, x, y, r, color) { g.beginPath(); for (let i = 0; i < 8; i++) { const a = i * Math.PI / 4, rr = i % 2 ? r * .22 : r; g.lineTo(x + Math.cos(a) * rr, y + Math.sin(a) * rr); } g.closePath(); g.fillStyle = color; g.fill(); }
+function bow(g, x, y, s, color) {
+  const dark = mix(color, "#000000", .3), light = mix(color, "#ffffff", .18);
+  g.save(); g.translate(x, y); g.scale(s, s);
+  for (const d of [-1, 1]) { g.beginPath(); g.moveTo(d * 2, 4); g.bezierCurveTo(d * 14, 34, d * 30, 62, d * 22, 112); g.lineTo(d * 33, 100); g.lineTo(d * 43, 116); g.bezierCurveTo(d * 48, 66, d * 30, 30, d * 10, 2); g.closePath(); g.fillStyle = d < 0 ? dark : mix(color, "#000000", .16); g.fill(); }
+  for (const d of [-1, 1]) { g.beginPath(); g.moveTo(0, 0); g.bezierCurveTo(d * 18, -36, d * 64, -38, d * 66, -6); g.bezierCurveTo(d * 66, 24, d * 22, 20, 0, 5); g.closePath(); g.fillStyle = color; g.fill(); g.beginPath(); g.moveTo(0, 1); g.bezierCurveTo(d * 20, -13, d * 44, -14, d * 57, -5); g.bezierCurveTo(d * 40, 5, d * 18, 7, 0, 4); g.closePath(); g.fillStyle = dark; g.globalAlpha = .55; g.fill(); g.globalAlpha = 1; }
+  g.beginPath(); g.ellipse(0, 2, 8, 10, 0, 0, 7); g.fillStyle = light; g.fill(); g.restore();
+}
+function cake(g, cx, baseY, s, ink, accent, fill) {
+  g.save(); g.translate(cx, baseY); g.scale(s, s); g.strokeStyle = ink; g.fillStyle = fill; g.lineWidth = 1.5; g.lineJoin = "round"; g.lineCap = "round";
+  g.beginPath(); g.moveTo(-9, -20); g.quadraticCurveTo(-5, -8, -24, 0); g.lineTo(24, 0); g.quadraticCurveTo(5, -8, 9, -20); g.closePath(); g.fill(); g.stroke();
+  g.beginPath(); g.ellipse(0, -20, 56, 5, 0, 0, 7); g.fill(); g.stroke();
+  const tier = (x, y, w, h) => { g.beginPath(); g.roundRect(x, y, w, h, 7); g.fill(); g.stroke(); g.beginPath(); g.moveTo(x, y + 9); const n = Math.round(w / 13), step = w / n; for (let i = 0; i < n; i++) g.quadraticCurveTo(x + step * (i + .5), y + 9 + (i % 2 ? 12 : 7), x + step * (i + 1), y + 9); g.stroke(); };
+  tier(-46, -62, 92, 40); tier(-32, -96, 64, 34);
+  for (const x of [-9, 9]) { g.beginPath(); g.rect(x - 2, -120, 4, 24); g.fill(); g.stroke(); g.beginPath(); g.moveTo(x, -132); g.quadraticCurveTo(x + 4, -125, x, -121); g.quadraticCurveTo(x - 4, -125, x, -132); g.stroke(); g.restore(); bow(g, cx + x * s, baseY - 99 * s, s * .13, accent); g.save(); g.translate(cx, baseY); g.scale(s, s); g.strokeStyle = ink; g.fillStyle = fill; g.lineWidth = 1.5; }
+  g.restore();
+}
+function candlestick(g, cx, baseY, s, ink, accent, fill) {
+  g.save(); g.translate(cx, baseY); g.scale(s, s); g.strokeStyle = ink; g.fillStyle = fill; g.lineWidth = 1.5; g.lineJoin = "round";
+  g.beginPath(); g.moveTo(-12, 0); g.lineTo(12, 0); g.quadraticCurveTo(4, -6, 5, -22); g.quadraticCurveTo(10, -30, 4, -36); g.lineTo(-4, -36); g.quadraticCurveTo(-10, -30, -5, -22); g.quadraticCurveTo(-4, -6, -12, 0); g.closePath(); g.fill(); g.stroke();
+  g.beginPath(); g.rect(-2.5, -92, 5, 56); g.fill(); g.stroke(); g.beginPath(); g.moveTo(0, -106); g.quadraticCurveTo(5, -98, 0, -93); g.quadraticCurveTo(-5, -98, 0, -106); g.stroke(); g.restore();
+  bow(g, cx, baseY - 38 * s, s * .2, accent);
+}
+function balloon(g, x, y, r, P, ink) {
+  g.save(); g.translate(x, y); g.lineWidth = Math.max(1, r * .035); g.strokeStyle = ink;
+  g.beginPath(); g.moveTo(-r * .5, r * .86); g.lineTo(-r * .2, r * 1.45); g.moveTo(r * .5, r * .86); g.lineTo(r * .2, r * 1.45); g.stroke();
+  g.beginPath(); g.arc(0, 0, r, 0, 7); g.fillStyle = mix(P.paper, "#ffffff", .5); g.fill(); g.save(); g.clip();
+  g.fillStyle = P.b; g.fillRect(-r, -r * .2, r * 2, r * .4); g.fillStyle = P.a; g.fillRect(-r, -r, r * 2, r * .32); g.fillStyle = P.c; g.fillRect(-r, r * .62, r * 2, r * .4); g.restore();
+  for (const k of [.36, .72]) { g.beginPath(); g.ellipse(0, 0, r * k, r, 0, 0, 7); g.stroke(); } g.beginPath(); g.arc(0, 0, r, 0, 7); g.stroke();
+  g.beginPath(); g.roundRect(-r * .24, r * 1.45, r * .48, r * .34, r * .05); g.fillStyle = P.c; g.fill(); g.stroke(); g.restore();
+}
+function carousel(g, cx, baseY, s, P, ink) {
+  const soft = mix(P.paper, "#ffffff", .55);
+  g.save(); g.translate(cx, baseY); g.scale(s, s); g.strokeStyle = ink; g.lineWidth = 1.3; g.lineJoin = "round";
+  g.beginPath(); g.roundRect(-94, -14, 188, 14, 4); g.fillStyle = P.a; g.fill(); g.stroke(); g.beginPath(); g.roundRect(-86, -24, 172, 10, 3); g.fillStyle = P.b; g.fill(); g.stroke();
+  for (const x of [-72, -36, 0, 36, 72]) { g.beginPath(); g.moveTo(x, -24); g.lineTo(x, -112); g.stroke(); }
+  [[-54, -66, P.c], [-18, -52, P.a], [18, -70, P.b], [54, -54, P.c]].forEach(([x, y, tone], i) => { g.beginPath(); g.moveTo(x, -112); g.lineTo(x, y - 9); g.stroke(); if (i % 2) { g.beginPath(); g.arc(x, y, 9, .6, 5.2); g.arc(x + 5, y - 2, 7, 4.7, 1.1, true); g.closePath(); g.fillStyle = tone; g.fill(); g.stroke(); } else { sparkle(g, x, y, 11, tone); g.stroke(); } });
+  for (let i = 0; i < 12; i++) { g.beginPath(); g.arc(-88 + i * 16, -110, 8, 0, Math.PI); g.fillStyle = i % 2 ? P.a : P.b; g.fill(); g.stroke(); }
+  g.beginPath(); g.rect(-98, -126, 196, 16); g.fillStyle = soft; g.fill(); g.stroke();
+  for (let i = 0; i < 8; i++) { g.beginPath(); g.moveTo(0, -190); g.lineTo(-100 + i * 25, -126); g.lineTo(-75 + i * 25, -126); g.closePath(); g.fillStyle = i % 2 ? soft : P.a; g.fill(); g.stroke(); }
+  g.beginPath(); g.arc(0, -193, 5, 0, 7); g.fillStyle = P.c; g.fill(); g.stroke(); g.restore();
+}
+function cartouchePath(g, cx, cy, w, h) {
+  const a = w / 2, b = h / 2, n = h * .15, p = w * .09, pts = [], q = (p0, c, p1) => { for (let i = 1; i <= 8; i++) { const t = i / 8, m = 1 - t; pts.push([m * m * p0[0] + 2 * m * t * c[0] + t * t * p1[0], m * m * p0[1] + 2 * m * t * c[1] + t * t * p1[1]]); } };
+  pts.push([0, -b]); q([0, -b], [a * .1, -b + n], [a * .24, -b + n]); pts.push([a - p, -b + n]); q([a - p, -b + n], [a - p * .25, -b + n], [a - p * .25, -b + n + p * .55]); q([a - p * .25, -b + n + p * .55], [a, -b + n + p * .55], [a, -b + n + p * 1.3]); pts.push([a, 0]);
+  const all = [...pts, ...pts.slice(0, -1).reverse().map(([x, y]) => [x, -y]), ...pts.slice(1).map(([x, y]) => [-x, -y]), ...pts.slice(1, -1).reverse().map(([x, y]) => [-x, y])];
+  g.beginPath(); all.forEach(([x, y], i) => i ? g.lineTo(cx + x, cy + y) : g.moveTo(cx + x, cy + y)); g.closePath();
+}
+function emboss(g, draw, lw, paper) {
+  const dark = isDark(paper); g.lineCap = "round"; g.lineJoin = "round"; g.lineWidth = lw;
+  for (const [d, color] of [[lw * .8, dark ? "rgba(0,0,0,.55)" : "rgba(96,74,44,.3)"], [-lw * .8, dark ? "rgba(255,255,255,.25)" : "rgba(255,255,255,.95)"]]) { g.save(); g.translate(d, d); g.strokeStyle = color; draw(); g.restore(); }
+  g.strokeStyle = mix(paper, "#ffffff", dark ? .1 : .3); draw();
+}
+function tulip(g, x, y, s, ang) { g.save(); g.translate(x, y); g.rotate(ang); g.scale(s, s); g.beginPath(); g.moveTo(0, 0); g.bezierCurveTo(-16, -6, -15, -26, -3, -34); g.bezierCurveTo(-2, -24, 2, -24, 3, -34); g.bezierCurveTo(15, -26, 16, -6, 0, 0); g.moveTo(0, -4); g.lineTo(0, -24); g.moveTo(0, 0); g.quadraticCurveTo(-14, 10, -22, 2); g.quadraticCurveTo(-12, 0, 0, 0); g.quadraticCurveTo(14, 10, 22, 2); g.quadraticCurveTo(12, 0, 0, 0); g.restore(); g.stroke(); }
+function words(g, text, x, y, size, font, weight, color, maxW, o = {}) {
+  g.save(); g.direction = o.ltr ? "ltr" : "rtl"; g.textAlign = o.align || "center"; g.textBaseline = "middle";
+  try { g.letterSpacing = `${o.space || 0}px`; } catch { /* older browsers draw it unspaced */ }
+  const face = (s) => `${weight} ${s}px "${font}", "${CARD_FONT.naskh}", "${FONT_NAME[S.choices.font]}", serif`;
+  let s = size; g.font = face(s); const wide = g.measureText(text).width; if (maxW && wide > maxW) { s *= maxW / wide; g.font = face(s); }
+  g.fillStyle = color; g.fillText(text, x, y); g.restore();
+}
+
+const CARD_STYLE = {
+  floral(g, w, h, P, F, seed) {
+    const u = Math.min(w, h) / 100, soft = mix(P.paper, "#ffffff", isDark(P.paper) ? .07 : .45), green = mix("#7C9A74", P.paper, .2), tones = [P.a, P.b, P.c], cell = u * 21, cols = Math.ceil(w / 2 / cell) + 1, rows = Math.ceil(h / cell) + 1;
+    g.fillStyle = P.paper; g.fillRect(0, 0, w, h);
+    for (const flip of [false, true]) {
+      g.save(); if (flip) { g.translate(w, 0); g.scale(-1, 1); } const r = rng(seed);
+      for (let j = 0; j < rows; j++) for (let i = 0; i < cols; i++) {
+        const x = w / 2 - (i + (j % 2 ? .5 : 0)) * cell - cell * .14, y = j * cell + cell * .35, tone = tones[(i + j) % 3], k = .82 + r() * .36, kind = (i + j * 2) % 3;
+        if (kind === 0) { sprig(g, x, y + cell * .32, cell * .52 * k, -.3, green, tone, P.c); sprig(g, x, y + cell * .32, cell * .38 * k, .75, green, tones[(i + j + 1) % 3], P.c); }
+        else if (kind === 1) { leaf(g, x, y, cell * .3, 2.5, green); leaf(g, x, y, cell * .3, .6, green); bloom(g, x, y, cell * .2 * k, 7, tone, P.c); bloom(g, x, y, cell * .1 * k, 5, soft, tone); }
+        else { for (let f = -3; f <= 3; f++) leaf(g, x, y + cell * .3, cell * (.44 - Math.abs(f) * .05) * k, -Math.PI / 2 + f * .36, mix(green, P.paper, .25)); bloom(g, x, y + cell * .32, cell * .09, 5, tone, P.c); sprig(g, x, y - cell * .12, cell * .26 * k, 0, green, tones[(i + j + 2) % 3], P.c); }
+      }
+      g.restore();
+    }
+    const cw = Math.min(w * .9, h * 1.5), ch = Math.min(cw * .52, h * .56), cx = w / 2, cy = h / 2;
+    cartouchePath(g, cx, cy, cw, ch); g.fillStyle = soft; g.fill(); g.lineJoin = "round"; g.strokeStyle = mix(P.a, P.ink, .12); g.lineWidth = u * 1.5; g.stroke();
+    cartouchePath(g, cx, cy, cw * .9, ch * .8); g.strokeStyle = P.ink; g.globalAlpha = .3; g.lineWidth = Math.max(1, u * .25); g.stroke(); g.globalAlpha = 1;
+    words(g, F.line, cx, cy - ch * .23, ch * .1, CARD_FONT.naskh, 400, P.ink, cw * .56);
+    words(g, F.name, cx, cy + ch * .01, ch * .3, F.face || CARD_FONT.ar, 700, P.ink, cw * .62);
+    if (F.extra) words(g, F.extra, cx, cy + ch * .25, ch * .08, CARD_FONT.naskh, 400, P.ink, cw * .6); else words(g, F.cap[0], cx, cy + ch * .25, ch * .075, CARD_FONT.latin, 500, P.ink, cw * .5, { ltr: true, space: ch * .03 });
+  },
+  announce(g, w, h, P, F, seed) {
+    const u = Math.min(w, h) / 100, dark = isDark(P.paper), ink = mix(P.ink, P.paper, .25), land = w > h * 1.2;
+    g.fillStyle = dark ? P.paper : mix(P.paper, "#ffffff", .72); g.fillRect(0, 0, w, h); grain(g, w, h, P.paper, seed);
+    if (land) { carousel(g, w * .14, h * .96, h * .72 / 190, P, ink); balloon(g, w * .88, h * .3, h * .16, P, ink); balloon(g, w * .74, h * .7, h * .09, P, ink); }
+    else { carousel(g, w * .5, h * .975, Math.min(w * .84 / 200, h * .4 / 190), P, ink); balloon(g, w * .84, h * .09, u * 8.5, P, ink); balloon(g, w * .12, h * .52, u * 6, P, ink); }
+    const cx = w / 2, top = land ? h * .2 : h * .16, gap = land ? h * .27 : u * 15;
+    words(g, F.cap[1], cx, top, u * (land ? 9 : 6), CARD_FONT.naskh, 400, P.ink, w * (land ? .44 : .6));
+    words(g, F.name, cx, top + gap, u * (land ? 26 : 17), F.face || CARD_FONT.ar, 700, P.ink, w * (land ? .46 : .78));
+    words(g, F.line, cx, top + gap * 1.95, u * (land ? 9 : 6), CARD_FONT.naskh, 400, P.ink, w * (land ? .44 : .7));
+    if (F.extra) words(g, F.extra, cx, top + gap * 2.6, u * (land ? 7 : 4.6), CARD_FONT.naskh, 400, P.ink, w * (land ? .44 : .7));
+  },
+  ribbon(g, w, h, P, F, seed) {
+    const u = Math.min(w, h) / 100, land = w > h * 1.2, fill = mix(P.paper, "#ffffff", isDark(P.paper) ? .08 : .4), ink = mix(P.ink, P.paper, .2);
+    g.fillStyle = P.paper; g.fillRect(0, 0, w, h); grain(g, w, h, P.paper, seed);
+    bow(g, w - u * 17, u * 11, u * (land ? .26 : .3) * (h > w * 1.2 ? 1.15 : 1), P.ink);
+    if (land) { cake(g, w * .13, h * .93, h * .6 / 135, ink, P.ink, fill); candlestick(g, w * .26, h * .93, h * .5 / 135, ink, P.ink, fill); }
+    else { const s = Math.min(w * .36 / 100, h * .26 / 135), y = h * .955; cake(g, w * .5, y, s, ink, P.ink, fill); candlestick(g, w * .16, y, s * .85, ink, P.ink, fill); candlestick(g, w * .84, y, s * .85, ink, P.ink, fill); sparkle(g, w * .3, y - 60 * s, u * 2, ink); sparkle(g, w * .72, y - 34 * s, u * 1.6, ink); }
+    sparkle(g, u * 9, u * (land ? 8 : 9), u * 1.8, ink);
+    words(g, F.cap[0], land ? w * .5 : u * 11, land ? h * .17 : u * 17, u * (land ? 13 : 9), CARD_FONT.script, 400, P.ink, land ? w * .4 : w - u * 62, { ltr: true, align: land ? "center" : "left" });
+    const cy = land ? h * .52 : h * (h > w * 1.2 ? .46 : .5);
+    words(g, F.name, w / 2, cy, u * (land ? 28 : 19), F.face || CARD_FONT.ar, 700, P.ink, w * (land ? .44 : .7));
+    words(g, F.line, w / 2, cy + u * (land ? 26 : 15), u * (land ? 9 : 6), CARD_FONT.naskh, 400, P.ink, w * (land ? .42 : .7));
+    if (F.extra) words(g, F.extra, w / 2, cy + u * (land ? 38 : 23), u * (land ? 7 : 4.6), CARD_FONT.naskh, 400, P.ink, w * (land ? .42 : .7));
+  },
+  emboss(g, w, h, P, F, seed) {
+    const u = Math.min(w, h) / 100, land = w > h * 1.2, cx = w / 2, cy = h / 2, fh = land ? h * .86 : Math.min(h * .72, w * 1.2), fw = land ? Math.min(w * .5, fh * 1.7) : Math.min(w * .8, fh * .78), x0 = cx - fw / 2, y0 = cy - fh / 2, lw = Math.max(1.2, u * .55);
+    g.fillStyle = P.paper; g.fillRect(0, 0, w, h); grain(g, w, h, P.paper, seed);
+    const ts = fw / 300, edge = () => {
+      const side = (ax, ay, bx, by, nx, ny) => { g.beginPath(); const n = 6; g.moveTo(ax, ay); for (let i = 0; i < n; i++) { const t0 = (i + .5) / n, t1 = (i + 1) / n, d = (i % 2 ? 1 : -1) * ts * 14; g.quadraticCurveTo(ax + (bx - ax) * t0 + nx * d, ay + (by - ay) * t0 + ny * d, ax + (bx - ax) * t1, ay + (by - ay) * t1); } g.stroke(); };
+      side(x0, y0, x0 + fw, y0, 0, 1); side(x0 + fw, y0, x0 + fw, y0 + fh, 1, 0); side(x0 + fw, y0 + fh, x0, y0 + fh, 0, 1); side(x0, y0 + fh, x0, y0, 1, 0);
+      [[x0, y0, -Math.PI / 4], [x0 + fw, y0, Math.PI / 4], [x0 + fw, y0 + fh, Math.PI * .75], [x0, y0 + fh, -Math.PI * .75]].forEach(([x, y, a]) => tulip(g, x, y, ts * 1.5, a));
+      [[cx, y0, 0], [cx, y0 + fh, Math.PI], [x0, cy, -Math.PI / 2], [x0 + fw, cy, Math.PI / 2]].forEach(([x, y, a]) => tulip(g, x, y, ts * 1.15, a));
+      for (const k of [1, .93]) { g.beginPath(); g.ellipse(cx, cy, fw * .4 * k, fh * .41 * k, 0, 0, 7); g.stroke(); }
+    };
+    emboss(g, edge, lw, P.paper);
+    const grad = F.occ === "grad", year = ar(new Date().getFullYear());
+    words(g, F.cap[0].toUpperCase(), cx, cy - fh * .22, fh * .05, CARD_FONT.latin, 700, P.ink, fw * .6, { ltr: true, space: fh * .008 });
+    words(g, stretch(F.name, [...F.name].length <= 5 ? 4 : 1), cx, cy - fh * .02, fh * (land ? .26 : .17), F.face || CARD_FONT.naskh, 700, P.ink, Math.min(w * .9, fw * 1.16));
+    words(g, F.line, cx, cy + fh * .15, fh * (land ? .075 : .05), CARD_FONT.naskh, 400, mix(P.ink, P.paper, .15), fw * .62);
+    if (F.extra) words(g, F.extra, cx, cy + fh * .26, fh * .042, CARD_FONT.naskh, 400, mix(P.ink, P.paper, .15), fw * .62); else words(g, grad ? `CLASS OF ${new Date().getFullYear()}` : year, cx, cy + fh * .26, fh * .04, grad ? CARD_FONT.latin : CARD_FONT.naskh, 500, mix(P.ink, P.paper, .15), fw * .5, { ltr: grad, space: grad ? fh * .006 : 0 });
+  },
+};
+function drawDesign(w, h, item, occ) {
+  const key = OCC[occ] ? occ : "eid", P = { ...OCC[key], ...(item.pal || {}) }, canvas = document.createElement("canvas"); canvas.width = w; canvas.height = h;
+  const F = { occ: key, name: item.text || "الاسم", line: item.tagline !== undefined && item.tagline !== null ? item.tagline : P.line, cap: CAPTION[key], face: { ruqaa: CARD_FONT.ar, naskh: CARD_FONT.naskh, modern: FONT_NAME[S.choices.font] }[item.font] || null, extra: [item.date ? fmtDay(item.date) : "", item.place || ""].filter(Boolean).join("، ") };
+  CARD_STYLE[CARD_STYLE[item.style] ? item.style : styleOf(key, item.pal)](canvas.getContext("2d"), w, h, P, F, hashOf(P.paper + P.ink + key));
+  return canvas;
+}
+let cardFontsReady = 0, cardFontsPromise = null;
+function cardFonts() {
+  if (cardFontsPromise) return cardFontsPromise;
+  const specs = [`700 40px "${CARD_FONT.ar}"`, `400 40px "${CARD_FONT.naskh}"`, `700 40px "${CARD_FONT.naskh}"`, `500 40px "${CARD_FONT.latin}"`, `700 40px "${CARD_FONT.latin}"`, `400 40px "${CARD_FONT.script}"`];
+  const known = () => Object.values(CARD_FONT).every((name) => [...document.fonts].some((face) => face.family.replace(/["']/g, "") === name));
+  cardFontsPromise = (async () => {
+    // The font stylesheet can arrive after this script. Loading before it is known resolves at once with nothing.
+    for (let i = 0; i < 40 && !known(); i++) await wait(250);
+    await Promise.all(specs.map((spec) => document.fonts.load(spec, "سعود Happy"))).catch(() => null);
+    cardFontsReady = 1; THUMBS.clear();
+  })();
+  return cardFontsPromise;
+}
+const THUMBS = new Map();
+function designThumb(item, occ, w = 270, h = 360) {
+  const o = item.occ || occ || S.occ, key = [cardFontsReady, o, item.pal ? item.pal.paper + item.pal.ink : "", item.text, item.tagline, item.style, item.font, item.date, item.place, w, h].join("|");
+  if (!THUMBS.has(key)) { if (THUMBS.size > 160) THUMBS.clear(); THUMBS.set(key, drawDesign(w, h, item, o).toDataURL("image/jpeg", .88)); MOCKS.clear(); }
+  return THUMBS.get(key);
+}
+const designImg = (item, occ) => `<img class="dimg" alt="" src="${designThumb(item, occ)}">`;
+
+/* Mockup: the design wrapped in the product's own silhouette for the pack picker. */
+const PROD_THUMB = { cup: [360, 300], bottle: [280, 360], sticker: [340, 340], box: [360, 300], invite: [260, 360] };
+function productMockup(item, occ) {
+  const pid = item.pid, [w, h] = PROD_THUMB[pid] || [320, 360], o = item.occ || occ || S.occ, P = { ...OCC[o], ...(item.pal || {}) };
+  const c = document.createElement("canvas"); c.width = w; c.height = h;
+  const g = c.getContext("2d"); g.clearRect(0, 0, w, h);
+  g.fillStyle = "rgba(0,0,0,0)"; g.fillRect(0, 0, w, h);
+  const shadow = (fn) => { g.save(); g.shadowColor = "rgba(42,22,32,.18)"; g.shadowBlur = 12; g.shadowOffsetY = 6; fn(); g.restore(); };
+  if (pid === "cup") {
+    // Paper cup from the side, with the design wrapped around its wall.
+    const cx = w / 2, topY = h * .18, botY = h * .9, topR = w * .33, botR = w * .22;
+    const wall = drawDesign(540, 220, item, o), wrap = document.createElement("canvas"); wrap.width = 540; wrap.height = 220;
+    wrap.getContext("2d").drawImage(wall, 0, 0);
+    shadow(() => { g.beginPath(); g.moveTo(cx - topR, topY); g.lineTo(cx + topR, topY); g.lineTo(cx + botR, botY); g.lineTo(cx - botR, botY); g.closePath(); g.fillStyle = "#fff"; g.fill(); });
+    g.save(); g.beginPath(); g.moveTo(cx - topR, topY); g.lineTo(cx + topR, topY); g.lineTo(cx + botR, botY); g.lineTo(cx - botR, botY); g.closePath(); g.clip();
+    const rows = 60; for (let i = 0; i < rows; i++) { const t0 = i / rows, t1 = (i + 1) / rows, xL = cx - (topR + (botR - topR) * t0), xR = cx + (topR + (botR - topR) * t0), xL2 = cx - (topR + (botR - topR) * t1), xR2 = cx + (topR + (botR - topR) * t1), y0 = topY + (botY - topY) * t0, y1 = topY + (botY - topY) * t1; g.drawImage(wrap, 0, 220 * t0, 540, 220 * (t1 - t0), xL, y0, xR - xL, y1 - y0); }
+    g.restore();
+    g.beginPath(); g.ellipse(cx, topY, topR, topR * .22, 0, 0, 7); g.fillStyle = mix(P.paper, "#000", .25); g.fill();
+    g.beginPath(); g.ellipse(cx, topY, topR * .9, topR * .17, 0, 0, 7); g.fillStyle = mix(P.paper, "#000", .5); g.fill();
+    g.strokeStyle = "rgba(42,22,32,.2)"; g.lineWidth = 1.5; g.beginPath(); g.moveTo(cx - topR, topY); g.lineTo(cx - botR, botY); g.moveTo(cx + topR, topY); g.lineTo(cx + botR, botY); g.stroke();
+    return c;
+  }
+  if (pid === "bottle") {
+    // Water bottle with the design as a wrapped label.
+    const cx = w / 2, bw = w * .42, body = [cx - bw / 2, h * .22, bw, h * .68];
+    shadow(() => { const [x, y, bW, bH] = body; g.beginPath(); g.moveTo(x, y + bH * .1); g.quadraticCurveTo(x, y, x + bW * .15, y); g.lineTo(x + bW * .3, y); g.quadraticCurveTo(x + bW * .35, y - h * .08, x + bW * .35, y - h * .14); g.lineTo(x + bW * .65, y - h * .14); g.quadraticCurveTo(x + bW * .65, y - h * .08, x + bW * .7, y); g.lineTo(x + bW * .85, y); g.quadraticCurveTo(x + bW, y, x + bW, y + bH * .1); g.lineTo(x + bW, y + bH * .9); g.quadraticCurveTo(x + bW, y + bH, x + bW * .85, y + bH); g.lineTo(x + bW * .15, y + bH); g.quadraticCurveTo(x, y + bH, x, y + bH * .9); g.closePath(); const grad = g.createLinearGradient(x, 0, x + bW, 0); grad.addColorStop(0, "rgba(220,230,240,.9)"); grad.addColorStop(.5, "rgba(245,250,255,.95)"); grad.addColorStop(1, "rgba(200,215,230,.85)"); g.fillStyle = grad; g.fill(); });
+    const [x, y, bW, bH] = body, label = drawDesign(540, 220, item, o);
+    const ly = y + bH * .3, lh = bH * .4;
+    g.save(); g.beginPath(); g.rect(x, ly, bW, lh); g.clip(); g.drawImage(label, x - bW * .15, ly, bW * 1.3, lh); g.restore();
+    g.strokeStyle = "rgba(42,22,32,.15)"; g.lineWidth = 1; g.beginPath(); g.moveTo(x, ly); g.lineTo(x + bW, ly); g.moveTo(x, ly + lh); g.lineTo(x + bW, ly + lh); g.stroke();
+    return c;
+  }
+  if (pid === "sticker") {
+    // A square sticker, tilted slightly, with the design flat.
+    const pad = w * .1, size = w - pad * 2, sx = pad, sy = (h - size) / 2;
+    shadow(() => { g.save(); g.translate(w / 2, h / 2); g.rotate(-.04); g.translate(-w / 2, -h / 2); g.beginPath(); g.roundRect(sx, sy, size, size, size * .08); g.fillStyle = "#fff"; g.fill(); g.restore(); });
+    g.save(); g.translate(w / 2, h / 2); g.rotate(-.04); g.translate(-w / 2, -h / 2); g.beginPath(); g.roundRect(sx, sy, size, size, size * .08); g.clip();
+    g.drawImage(drawDesign(size, size, item, o), sx, sy, size, size);
+    g.restore();
+    return c;
+  }
+  if (pid === "box") {
+    // A 3D box from the front-right, with the design on the front, the top and the side.
+    const cx = w / 2, cy = h * .58, fw = w * .5, fh = h * .5, depth = w * .22, tilt = depth * .55;
+    const fx = cx - fw / 2, fy = cy - fh / 2;
+    const outline = () => { g.beginPath(); g.moveTo(fx + depth, fy - tilt); g.lineTo(fx + fw + depth, fy - tilt); g.lineTo(fx + fw + depth, fy - tilt + fh); g.lineTo(fx + fw, fy + fh); g.lineTo(fx, fy + fh); g.lineTo(fx, fy); g.closePath(); };
+    shadow(() => { outline(); g.fillStyle = mix(P.paper, "#fff", .4); g.fill(); });
+    const front = drawDesign(fw * 2, fh * 2, item, o), top = drawDesign(fw * 2, depth * 4, item, o), side = drawDesign(depth * 4, fh * 2, item, o);
+    // top face
+    g.save(); g.beginPath(); g.moveTo(fx, fy); g.lineTo(fx + fw, fy); g.lineTo(fx + fw + depth, fy - tilt); g.lineTo(fx + depth, fy - tilt); g.closePath(); g.clip();
+    g.setTransform(1, 0, -1, tilt / depth, fx + depth, fy - tilt); g.drawImage(top, 0, 0, fw, depth); g.setTransform(1, 0, 0, 1, 0, 0);
+    g.fillStyle = "rgba(255,255,255,.2)"; g.fill(); g.restore();
+    // front face
+    g.save(); g.beginPath(); g.rect(fx, fy, fw, fh); g.clip(); g.drawImage(front, fx, fy, fw, fh); g.restore();
+    // right face
+    g.save(); g.beginPath(); g.moveTo(fx + fw, fy); g.lineTo(fx + fw + depth, fy - tilt); g.lineTo(fx + fw + depth, fy - tilt + fh); g.lineTo(fx + fw, fy + fh); g.closePath(); g.clip();
+    g.setTransform(1, -tilt / depth, 0, 1, fx + fw, fy); g.drawImage(side, 0, 0, depth, fh); g.setTransform(1, 0, 0, 1, 0, 0);
+    g.fillStyle = "rgba(0,0,0,.18)"; g.fill(); g.restore();
+    g.strokeStyle = "rgba(42,22,32,.4)"; g.lineWidth = 1.5; g.lineJoin = "round";
+    outline(); g.stroke();
+    g.beginPath(); g.moveTo(fx, fy); g.lineTo(fx + fw, fy); g.lineTo(fx + fw, fy + fh); g.moveTo(fx + fw, fy); g.lineTo(fx + fw + depth, fy - tilt); g.stroke();
+    return c;
+  }
+  if (pid === "invite") {
+    // A phone with the digital invitation on screen.
+    const pW = w * .55, pH = h * .82, px = (w - pW) / 2, py = (h - pH) / 2;
+    shadow(() => { g.beginPath(); g.roundRect(px, py, pW, pH, pW * .13); g.fillStyle = "#1A1A1C"; g.fill(); });
+    const sPad = pW * .055, sx = px + sPad, sy = py + sPad * 2, sW = pW - sPad * 2, sH = pH - sPad * 4;
+    g.beginPath(); g.roundRect(sx, sy, sW, sH, pW * .08); g.save(); g.clip();
+    g.drawImage(drawDesign(sW, sH, item, o), sx, sy, sW, sH);
+    g.restore();
+    g.fillStyle = "#333"; g.beginPath(); g.roundRect(px + pW * .4, py + sPad * .6, pW * .2, sPad * .5, sPad * .2); g.fill();
+    return c;
+  }
+  return drawDesign(w, h, item, o);
+}
+const MOCKS = new Map();
+function mockupThumb(item, occ) {
+  const pid = item.pid, o = item.occ || occ || S.occ, key = [cardFontsReady, pid, o, item.pal ? item.pal.paper + item.pal.ink : "", item.text, item.tagline, item.style, item.font, item.date, item.place].join("|");
+  if (!MOCKS.has(key)) { if (MOCKS.size > 80) MOCKS.clear(); MOCKS.set(key, productMockup(item, o).toDataURL("image/png")); }
+  return MOCKS.get(key);
+}
+const mockImg = (item, occ) => `<img class="pimg" alt="" src="${mockupThumb(item, occ)}">`;
+
+/* Sales. Ready templates have a fixed price and are downloaded right after checkout.
+   A custom design goes through a quote first. Orders are kept on the phone and, when the
+   page's database is available, sent to the owner's panel. */
+Object.assign(ICON, {
+  heart:[24,"M12 20s-7-4.6-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.4-7 10-7 10z"],
+  search:[24,"M11 18a7 7 0 1 0 0-14 7 7 0 0 0 0 14zM20 20l-4-4"],
+  cash:[24,"M3 7h18v10H3zM12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM6 10v4M18 10v4"],
+  card:[24,"M3 6h18v12H3zM3 10h18M7 15h4"],
+  down:[24,"M12 4v11M7 11l5 5 5-5M5 20h14"],
+  phone:[24,"M6 3h4l2 5-2.5 1.5a11 11 0 0 0 5 5L16 12l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 4 5a2 2 0 0 1 2-2z"],
+  tag:[24,"M3 12V4h8l10 10-8 8zM7.5 8.5h.01"],
+});
+
+const SHOP_DEFAULT = { tpl: { sticker: 19, invite: 29, bottle: 29, cup: 39, box: 49 }, coupons: { LAMMA10: 10 }, hidden: [] };
+const METHODS = [
+  ["cod", "الدفع عند الاستلام", "ما ينخصم منك شي الحين", "cash", true],
+  ["mada", "مدى", "", "card", false],
+  ["apple", "Apple Pay", "", "card", false],
+  ["stc", "STC Pay", "", "card", false],
+  ["tabby", "تابي", "قسّمها على ٤ دفعات", "card", false],
+];
+const METHOD_NAME = Object.fromEntries(METHODS.map((m) => [m[0], m[1]]));
+const DATA_KEY = "lamma-data-v1";
+const SETUP_FEE = 100;
+const plain = (value) => JSON.parse(JSON.stringify(value));
+Object.assign(S, { cust: { name: "", phone: "" }, fav: [], q: "", co: null, shop: plain(SHOP_DEFAULT) });
+
+const money = (n) => `${ar(n)} ر.س`;
+const toLatin = (s) => String(s).replace(/[٠-٩]/g, (d) => "٠١٢٣٤٥٦٧٨٩".indexOf(d)).replace(/[۰-۹]/g, (d) => "۰۱۲۳۴۵۶۷۸۹".indexOf(d));
+const cleanPhone = (s) => toLatin(s).replace(/\D/g, "").replace(/^(00966|966)/, "0").replace(/^5(\d{8})$/, "05$1");
+const validPhone = (s) => /^05\d{8}$/.test(cleanPhone(s));
+const norm = (s) => String(s).toLowerCase().replace(/[ً-ْـ]/g, "").replace(/[أإآ]/g, "ا").replace(/ة/g, "ه").replace(/ى/g, "ي");
+const tplPrice = (pid) => { const n = Number(S.shop.tpl[pid]); return n > 0 ? n : PROD[pid].price; };
+const itemName = (item) => item.name ? `${PROD[item.pid].name}، ${item.name}` : PROD[item.pid].name;
+const cartLine = (item) => [item.pack ? "من البكج" : null, item.size && item.size !== "ما أعرف" ? item.size : null, item.text ? `«${item.text}»` : null, item.tagline || null].filter(Boolean).map(esc).join("، ");
+const couponPct = (code) => { const n = code ? Number(S.shop.coupons[code]) : 0; return n > 0 && n <= 100 ? n : 0; };
+const fmtDay = (iso) => new Date(iso).toLocaleDateString(LOCALE, { day: "numeric", month: "long", year: "numeric" });
+
+/* Money. A ready template costs its product's price. Three or more pack pieces get the pack discount. */
+function cartBill(items, coupon) {
+  const lines = items.map((item) => [itemName(item), tplPrice(item.pid)]);
+  const sum = lines.reduce((total, line) => total + line[1], 0);
+  const packIdx = items.map((item, i) => item.pack ? i : -1).filter((i) => i >= 0);
+  const packOff = packIdx.length >= PACK_MIN ? Math.round(packIdx.reduce((total, i) => total + lines[i][1], 0) * PACK_OFF) : 0;
+  return withCoupon({ lines, sum, packOff }, coupon);
+}
+function quoteBill(quote, coupon) { return withCoupon({ lines: quote.lines, sum: quote.lines.reduce((total, line) => total + Number(line[1]), 0), packOff: 0 }, coupon); }
+function withCoupon(b, coupon) { const pct = couponPct(coupon), couponOff = Math.round((b.sum - b.packOff) * pct / 100); return { ...b, coupon: pct ? coupon : null, pct, couponOff, total: b.sum - b.packOff - couponOff }; }
+function defaultQuote(o) { const lines = [["تأسيس التصميم", SETUP_FEE], ...o.items.map((item) => [PROD[item.pid].name, PROD[item.pid].price])]; return { lines, total: lines.reduce((total, line) => total + line[1], 0) }; }
+function billHTML(b, totalId = "") {
+  return `<dl class="lines">${b.lines.map(([name, price]) => `<dt>${esc(name)}</dt><dd>${money(price)}</dd>`).join("")}${b.packOff ? `<dt>خصم البكج (${ar(PACK_OFF * 100)}٪)</dt><dd>− ${money(b.packOff)}</dd>` : ""}${b.couponOff ? `<dt>كود ${esc(b.coupon)} (${ar(b.pct)}٪)</dt><dd>− ${money(b.couponOff)}</dd>` : ""}<dt class="total">المجموع</dt><dd class="total"${totalId ? ` id="${totalId}"` : ""}>${money(b.total)}</dd></dl>`;
+}
+const checkoutBill = () => S.co.mode === "order" ? quoteBill(S.order.quote, S.co.coupon) : cartBill(S.cart, S.co.coupon);
+
+/* What is kept. Notes and drawings on a review stay in memory only. */
+const slimItem = (i) => ({ id: i.id, kind: i.kind || "tpl", pid: i.pid, tpl: i.tpl || null, name: i.name || null, size: i.size || null, text: i.text || "", tagline: i.tagline ?? null, pal: i.pal || null, occ: i.occ || null, idea: i.idea || "", pack: !!i.pack, style: i.style || null, font: i.font || null, date: i.date || null, place: i.place || null });
+const SYNC_KEYS = ["stage", "version", "quote", "pay", "bill", "total", "collected", "feedback", "cust", "rev", "chat", "rating"];
+const slimOrder = (o) => ({ no: o.no, kind: o.kind || "custom", stage: o.stage, version: o.version || 1, occ: o.occ, eventDate: o.eventDate || null, speed: o.speed || "عادي", at: o.at, items: o.items.map(slimItem), refs: o.refs || [], quote: o.quote || null, pay: o.pay || null, bill: o.bill || null, total: o.total ?? null, collected: !!o.collected, feedback: o.feedback || [], cust: o.cust || null, rev: o.rev || 0, chat: o.chat || [], rating: o.rating || null });
+const reviveOrder = (o) => ({ ...o, notes: {}, done: {} });
+function saveLocal() {
+  try { localStorage.setItem(DATA_KEY, JSON.stringify({ cart: S.cart.map(slimItem), orders: S.orders.map((o) => ({ ...slimOrder(o), synced: !!o.synced, seenChat: o.seenChat || 0 })), cust: S.cust, fav: S.fav, events: S.events, saved: S.saved, nextId })); } catch { /* the page works without it */ }
+}
+function loadLocal() {
+  try {
+    const d = JSON.parse(localStorage.getItem(DATA_KEY) || "null"); if (!d) return;
+    S.cart = (d.cart || []).filter((i) => PROD[i.pid]); S.orders = (d.orders || []).filter((o) => o.no && Array.isArray(o.items)).map(reviveOrder);
+    S.cust = { name: String(d.cust?.name || ""), phone: String(d.cust?.phone || "") }; S.fav = (d.fav || []).filter(ideaById); S.events = d.events || []; S.saved = d.saved || [];
+    nextId = Math.max(nextId, Number(d.nextId) || 1);
+  } catch { /* start empty */ }
+  S.signed = S.cust.name.trim().length > 1 && validPhone(S.cust.phone);
+}
+function orderNo() { let no; do { no = 100000 + Math.floor(Date.now() / 1000 + Math.random() * 50) % 900000; } while (S.orders.some((o) => o.no === no)); return no; }
+function newOrder(kind, items) { return { no: orderNo(), kind, items, stage: "pricing", version: 1, speed: S.speed, eventDate: S.eventDate, occ: items[0]?.occ || S.occ, notes: {}, done: {}, at: new Date().toISOString(), rev: 0, cust: { ...S.cust }, feedback: [] }; }
+const orderStage = (o) => o.kind === "tpl" ? "ملفاتك جاهزة" : STEPS[STAGE_INDEX[o.stage]];
+const feedbackOf = (o) => o.items.flatMap((item, i) => (o.notes[i] || []).map((note) => ({ item: PROD[item.pid].name, text: String(note.text || "") })));
+
+/* The page's database. Each customer writes under their own id. The owner and editors read every order. */
+const R = { db: null, uid: null, admin: false, dl: null, ready: false };
+const showOrder = (o) => { if (S.route === "order" && S.order === o && !S.busy && !sheet.classList.contains("on")) keepScroll(redraw); };
+async function pushOrder(o, fields = null) {
+  if (!R.db || !R.uid) return false;
+  o.pushing = true;
+  try {
+    const ref = R.db.doc(`orders/${R.uid}/list/${o.no}`);
+    if (fields && o.synced) await ref.update(plain(fields)); else await ref.set(plain(slimOrder(o)));
+    await R.db.doc(`orders/${R.uid}`).set({ at: new Date().toISOString(), last: o.no });
+    o.synced = true; o.pushing = false; saveLocal(); return true;
+  } catch { o.pushing = false; showOrder(o); return false; }
+}
+function commit(o, fields) { Object.assign(o, fields); o.rev = (o.rev || 0) + 1; saveLocal(); return pushOrder(o, { ...fields, rev: o.rev }); }
+function adopt(o, r) {
+  const from = o.stage, fromVersion = o.version;
+  for (const key of SYNC_KEYS) if (r[key] !== undefined) o[key] = plain(r[key]);
+  if (o.version > fromVersion) { o.items.forEach((_, i) => { o.done[i] = [...(o.done[i] || []), ...(o.notes[i] || [])]; o.notes[i] = []; }); if (S.order === o) S.viewVersion = o.version; }
+  return from;
+}
+function mergeMine(snap) {
+  let touched = false, shown = null;
+  for (const doc of snap.docs) {
+    const r = doc.data(); if (!r || !r.no || !Array.isArray(r.items)) continue;
+    let o = S.orders.find((entry) => entry.no === r.no);
+    if (!o) { o = reviveOrder(plain(r)); o.synced = true; S.orders.push(o); touched = true; continue; }
+    o.synced = true;
+    if ((r.rev || 0) <= (o.rev || 0)) continue;
+    const had = unread(o, "t"), from = adopt(o, r); touched = true;
+    if (unread(o, "t") > had) { if (S.route === "chat" && S.order === o) o.seenChat = chatOf(o).length; else { toast("رسالة جديدة من الفريق"); sfx("select"); } }
+    if (o.stage !== from) { if (o.stage === "quote") { toast("وصلك عرض السعر"); sfx("select"); } if (o.stage === "review") { toast("تصميمك جاهز للمراجعة"); sfx("success"); } if (S.order === o) shown = from; }
+  }
+  if (!touched) return;
+  S.orders.sort((a, b) => String(b.at || "").localeCompare(String(a.at || ""))); saveLocal();
+  if (S.busy || sheet.classList.contains("on")) return;
+  if (S.route === "order" && shown !== null) orderChanged(STAGE_INDEX[shown]); else if (["orders", "order", "chat"].includes(S.route)) keepScroll(redraw);
+}
+function applyShop(snap) {
+  const d = snap.exists ? snap.data() : null; if (!d) return;
+  const tpl = { ...SHOP_DEFAULT.tpl }, coupons = {};
+  for (const pid of Object.keys(tpl)) { const n = Number(d.tpl?.[pid]); if (n > 0) tpl[pid] = Math.round(n); }
+  for (const [code, pct] of Object.entries(d.coupons || {})) { const n = Number(pct); if (/^[A-Z0-9]{3,16}$/.test(code) && n > 0 && n <= 100) coupons[code] = n; }
+  S.shop = { tpl, coupons, hidden: (Array.isArray(d.hidden) ? d.hidden : []).filter((id) => typeof id === "string" && ideaById(id)) };
+  if (["home", "gallery", "cart", "catalog"].includes(S.route) && !S.busy && !sheet.classList.contains("on") && document.activeElement?.tagName !== "INPUT") keepScroll(redraw);
+}
+async function connect() {
+  try { await connectDb(); } catch { /* the page works on this phone alone */ }
+  R.ready = true; if (S.route === "order" && S.order) showOrder(S.order);
+}
+async function connectDb() {
+  if (!window.claude) return;
+  const use = (name) => window.claude.use(name).catch(() => null);
+  const [db, user, dl] = await Promise.all([database(), use("user"), use("downloads")]);
+  R.dl = dl; if (!db) return;
+  try { R.uid = user ? await user.id() : null; R.admin = user ? !!(await user.canEdit()) : false; } catch { /* stay a plain customer */ }
+  R.db = db;
+  db.doc("shop/config").onSnapshot(applyShop, () => {});
+  if (R.uid) { db.collection(`orders/${R.uid}/list`).onSnapshot(mergeMine, () => {}); for (const o of S.orders) if (!o.synced) await pushOrder(o); }
+  if (R.admin) db.collection("orders").onSnapshot(() => adminLoad(), () => {});
+  if (S.route === "account" && !S.busy && document.activeElement?.tagName !== "INPUT") redraw();
+}
+
+/* Files. The design is drawn on the phone, the same drawing the preview uses. */
+function itemCanvas(item, occ, version = 1) { const it = { text: item.text, pid: item.pid, pal: item.pal || undefined, tagline: item.tagline ?? undefined, style: item.style, font: item.font, date: item.date, place: item.place }; return item.pid === "cup" || !PRODUCT_CANVAS[item.pid] ? designCanvas(it, occ, version) : productCanvas(item.pid, it, occ); }
+const canvasBlob = (canvas, type) => new Promise((done) => canvas.toBlob(done, type, .92));
+function pdfBlob(canvas) {
+  if (!window.jspdf) return null;
+  const pdf = new window.jspdf.jsPDF({ unit: "mm", format: "a4", orientation: canvas.width >= canvas.height ? "landscape" : "portrait" });
+  const pageW = pdf.internal.pageSize.getWidth(), pageH = pdf.internal.pageSize.getHeight(), scale = Math.min((pageW - 20) / canvas.width, (pageH - 20) / canvas.height), w = canvas.width * scale, h = canvas.height * scale;
+  pdf.addImage(canvas.toDataURL("image/png"), "PNG", (pageW - w) / 2, (pageH - h) / 2, w, h, undefined, "FAST");
+  return pdf.output("blob");
+}
+async function saveFile(blob, filename) {
+  if (R.dl) { try { await R.dl.save({ filename, data: blob }); return true; } catch (e) { if (e && e.code === "declined") return false; } }
+  if (window.claude) { toast("التحميل غير متاح في هذا العرض، افتح الصفحة من تطبيق Claude أو المتصفح"); return false; }
+  const url = URL.createObjectURL(blob), link = document.createElement("a");
+  link.href = url; link.download = filename; document.body.appendChild(link); link.click(); link.remove(); setTimeout(() => URL.revokeObjectURL(url), 1500);
+  return true;
+}
+async function downloadFile(canvas, kind, base) {
+  let blob;
+  if (kind === "pdf") { if (!window.jspdf) { toast("نجهّز الـPDF…"); await wait(700); } blob = pdfBlob(canvas); if (!blob) { toast("ما قدرنا نجهّز الـPDF، جرّب PNG"); return; } }
+  else blob = await canvasBlob(canvas, kind === "jpg" ? "image/jpeg" : "image/png");
+  if (await saveFile(blob, `lamma-${base}.${kind}`)) { toast("انحمل الملف"); sfx("success"); }
+}
+function invoiceCanvas(o) {
+  const font = FONT_NAME[S.choices.font], w = 1240, pad = 90, b = o.bill, rows = b.lines.length + (b.packOff ? 1 : 0) + (b.couponOff ? 1 : 0);
+  const c = document.createElement("canvas"); c.width = w; c.height = 760 + rows * 64;
+  const g = c.getContext("2d"); g.fillStyle = "#fff"; g.fillRect(0, 0, w, c.height); g.direction = "rtl"; g.textBaseline = "middle";
+  const right = (text, y, size, weight = 500, color = "#2A1620") => { g.textAlign = "right"; g.fillStyle = color; g.font = `${weight} ${size}px "${font}"`; g.fillText(text, w - pad, y); };
+  const left = (text, y, size, weight = 700, color = "#2A1620") => { g.textAlign = "left"; g.fillStyle = color; g.font = `${weight} ${size}px "${font}"`; g.fillText(text, pad, y); };
+  const rule = (y) => { g.fillStyle = "#F0DEE6"; g.fillRect(pad, y, w - pad * 2, 3); };
+  right(S.choices.name, 120, 84, 800, cssVar("--primary") || "#8E1F4F"); left("فاتورة الطلب", 120, 40, 700, "#6B5560");
+  let y = 230;
+  for (const [k, v] of [["رقم الطلب", ar(o.no)], ["التاريخ", fmtDay(o.pay?.at || o.at)], ["العميل", o.cust?.name || ""], ["الجوال", ar(o.cust?.phone || "")], ["طريقة الدفع", METHOD_NAME[o.pay?.method] || ""], ["حالة الدفع", o.collected ? "تم التحصيل" : "بانتظار التحصيل"]]) { right(k, y, 32, 500, "#6B5560"); left(v, y, 32); y += 56; }
+  rule(y); y += 56;
+  for (const [name, price] of b.lines) { right(name, y, 34); left(money(price), y, 34); y += 64; }
+  if (b.packOff) { right(`خصم البكج (${ar(PACK_OFF * 100)}٪)`, y, 34); left(`− ${money(b.packOff)}`, y, 34); y += 64; }
+  if (b.couponOff) { right(`كود ${b.coupon} (${ar(b.pct)}٪)`, y, 34); left(`− ${money(b.couponOff)}`, y, 34); y += 64; }
+  rule(y - 14); y += 50; right("المجموع", y, 46, 800); left(money(b.total), y, 46, 800);
+  return c;
+}
+
+/* Ready designs: search, favourites and price on every card. */
+const heartBtn = (id, name) => `<button type="button" class="heart" aria-pressed="${S.fav.includes(id)}" aria-label="احفظ ${esc(name)} في المفضلة" data-act="fav" data-v="${id}">${I("heart", 22)}</button>`;
+const ideaCard = (idea) => `<div class="idea-wrap"><button type="button" class="idea-card" data-act="ideaOpen" data-v="${idea.id}">${mockImg(idea, idea.occ)}<b>${idea.name}</b><span class="tag">${PROD[idea.pid].short}، ${money(tplPrice(idea.pid))}</span></button>${heartBtn(idea.id, idea.name)}</div>`;
+function galleryList() { const q = norm(S.q.trim()); return IDEAS.filter((idea) => !S.shop.hidden.includes(idea.id) && (S.galOcc === "all" || (S.galOcc === "fav" ? S.fav.includes(idea.id) : idea.occ === S.galOcc)) && (S.galPid === "all" || idea.pid === S.galPid) && (!q || norm([idea.name, idea.desc, OCC[idea.occ].label, PROD[idea.pid].name, PROD[idea.pid].short].join(" ")).includes(q))); }
+const galleryCards = () => { const list = galleryList(); return list.length ? list.map(ideaCard).join("") : `<p class="small none">${S.galOcc === "fav" && !S.q.trim() ? "ما حفظت شي للحين. اضغط القلب على أي تصميم يعجبك." : "ما لقينا تصميم بهذا البحث."}</p>`; };
+
+const custFields = () => `<div class="field"><label for="f-cname">الاسم</label><input class="input" id="f-cname" data-bind="cName" value="${esc(S.cust.name)}" maxlength="40" autocomplete="name"></div><div class="field"><label for="f-cphone">رقم الجوال</label><input class="input" id="f-cphone" data-bind="cPhone" value="${esc(S.cust.phone)}" type="tel" inputmode="tel" dir="ltr" style="text-align:right" placeholder="05xxxxxxxx" maxlength="16" autocomplete="tel"></div>`;
+function custOk() {
+  const name = S.cust.name.trim();
+  if (name.length < 2) { toast("اكتب اسمك"); const f = el("f-cname"); if (f) { fxShake(f); f.focus(); } return false; }
+  if (!validPhone(S.cust.phone)) { toast("اكتب رقم جوال صحيح يبدأ بـ ٠٥"); const f = el("f-cphone"); if (f) { fxShake(f); f.focus(); } return false; }
+  S.cust = { name, phone: cleanPhone(S.cust.phone) }; S.signed = true; saveLocal(); return true;
+}
+const methodsHTML = () => `<div class="methods" role="radiogroup" aria-label="طريقة الدفع">${METHODS.map(([key, name, hint, icon, on]) => `<button type="button" class="method" role="radio" aria-checked="${S.co.method === key}" ${on ? `data-act="method" data-v="${key}"` : "disabled"}><i class="rd"></i>${I(icon, 26)}<span class="tx"><b>${name}</b>${hint ? `<small>${hint}</small>` : ""}</span>${on ? "" : '<span class="soon">قريبًا</span>'}</button>`).join("")}</div>`;
+async function shrinkImage(url) {
+  try {
+    const img = new Image(); img.src = url; await img.decode();
+    const k = Math.min(1, 480 / Math.max(img.width, img.height)), c = document.createElement("canvas"); c.width = Math.round(img.width * k); c.height = Math.round(img.height * k);
+    c.getContext("2d").drawImage(img, 0, 0, c.width, c.height); return c.toDataURL("image/jpeg", .7);
+  } catch { return null; }
+}
+
+Object.assign(SCREENS, {
+  invoice: () => { const o = S.order; return `${backBar("الفاتورة")}<div class="card"><dl class="lines kv"><dt>رقم الطلب</dt><dd>${ar(o.no)}</dd><dt>التاريخ</dt><dd>${fmtDay(o.pay.at)}</dd><dt>العميل</dt><dd>${esc(o.cust?.name || "")}</dd><dt>الجوال</dt><dd dir="ltr">${ar(esc(o.cust?.phone || ""))}</dd><dt>طريقة الدفع</dt><dd>${METHOD_NAME[o.pay.method]}</dd><dt>حالة الدفع</dt><dd>${o.collected ? "تم التحصيل" : "بانتظار التحصيل"}</dd></dl></div>${billHTML(o.bill)}<button type="button" class="btn" data-act="dlInvoice">${I("down")}حمّل الفاتورة PDF</button>`; },
+});
+
+Object.assign(ACT, {
+  fav(d, t) { const on = !S.fav.includes(d.v); S.fav = on ? [...S.fav, d.v] : S.fav.filter((id) => id !== d.v); document.querySelectorAll(`.heart[data-v="${d.v}"]`).forEach((b) => b.setAttribute("aria-pressed", String(on))); fxPop(t.querySelector("svg")); sfx("select"); saveLocal(); if (!on && S.galOcc === "fav" && S.route === "gallery") refreshGallery(false); if (S.route === "account") keepScroll(redraw); },
+  async addCart() { const stage = el("productStage") || el("pv"); const art0 = new Image(); art0.src = designThumb(S.draft, S.occ); art0.style.cssText = "width:100%;height:100%;object-fit:cover;border-radius:10px;display:block"; await flyToCart(stage || art0, { id: nextId++, kind: "tpl", occ: S.occ, ...S.draft }, stage ? art0 : null); },
+  async addPack() {
+    const list = packOn().map((pid) => { const sizes = PROD[pid].sizes; return { id: nextId++, kind: "tpl", occ: S.occ, pid, size: sizes[Math.min(1, sizes.length - 1)], text: S.pack.text, tagline: OCC[S.occ].line, idea: "", pack: true }; });
+    const cards = [...document.querySelectorAll('.pack-card[aria-pressed="true"] svg')];
+    await cartFlight(() => Promise.all(list.map((item, i) => wait(i * 130).then(() => fxAddCart(cards[i], () => el("bag"), () => { S.cart.push(item); renderNav(); fxBadge(el("badge")); })))));
+  },
+  toCheckout() { if (!S.cart.length) return; S.co = { mode: "cart", method: "cod", coupon: null, code: "" }; go("checkout"); },
+  toPay() { S.co = { mode: "order", method: "cod", coupon: null, code: "" }; go("checkout"); },
+  method(d, t) { S.co.method = d.v; t.parentElement.querySelectorAll(".method").forEach((b) => b.setAttribute("aria-checked", String(b === t))); sfx("select"); },
+  applyCode() {
+    const code = toLatin(S.co.code).trim().toUpperCase(), f = el("f-code");
+    if (!code) { S.co.coupon = null; } else if (!couponPct(code)) { toast("الكود غير صحيح"); fxShake(f); sfx("remove"); return; } else { S.co.coupon = code; toast(`انطبق خصم ${ar(couponPct(code))}٪`); sfx("success"); }
+    const b = checkoutBill(); el("billBox").innerHTML = billHTML(b); el("ctaV").textContent = money(b.total); fxPop(el("ctaV"));
+  },
+  async placeOrder() {
+    const c = S.co; if (!custOk()) return;
+    if (c.mode === "cart" && !S.cart.length) return;
+    const b = checkoutBill(), pay = { method: c.method, at: new Date().toISOString() };
+    S.busy = true;
+    const overlay = document.createElement("div"); overlay.id = "busy"; overlay.innerHTML = `${loaderHTML()}<p>نأكّد طلبك، لحظة.</p>`; el("app").appendChild(overlay);
+    A(overlay, [{ opacity: 0 }, { opacity: 1 }], { k: .6, ease: "ease-out" });
+    await wait(1100);
+    let o;
+    if (c.mode === "order") { o = S.order; commit(o, { stage: "designing", pay, bill: b, total: b.total, cust: { ...S.cust } }); }
+    else { o = newOrder("tpl", S.cart.map((item) => ({ ...item }))); Object.assign(o, { stage: "delivered", pay, bill: b, total: b.total, rev: 1 }); S.orders.unshift(o); S.cart = []; S.order = o; saveToLibrary(o); saveLocal(); pushOrder(o); }
+    overlay.innerHTML = `${successHTML()}<p>تم تأكيد طلبك</p>`; fxPayOk(overlay); sfx("success"); if (at("pay")) celebrate(1, o.occ);
+    await wait(Math.max(1000, M().ms * 2.6));
+    await A(overlay, [{ opacity: 1 }, { opacity: 0 }], { k: .6, ease: "ease-in", fill: "both" });
+    overlay.remove(); S.co = null; S.hist = [["orders", null]]; S.route = c.mode === "order" ? "order" : "done"; S.arg = null; S.busy = false; render("forward");
+  },
+  async sendIdea() {
+    if (!S.idea.trim()) { toast("اكتب فكرتك أول"); fxShake(el("f-free")); return; }
+    if (!S.signed) { openSheet(`<h2>وين نرسل لك عرض السعر؟</h2><p class="sub">اسمك ورقم جوالك عشان الفريق يتواصل معك.</p>${custFields()}<button type="button" class="btn" data-act="custThenIdea">أرسل طلبي</button>`); return; }
+    S.busy = true;
+    const refs = (await Promise.all(S.ideaImages.slice(0, 4).map((img) => shrinkImage(img.url)))).filter(Boolean);
+    const o = newOrder("custom", [{ id: nextId++, kind: "custom", pid: S.ideaPid, size: "ما أعرف", text: "", idea: S.idea.trim(), occ: S.occ }]); o.refs = refs;
+    S.orders.unshift(o); S.order = o; S.idea = ""; S.ideaPid = "custom"; S.ideaImages = []; saveLocal(); pushOrder(o);
+    S.busy = false; S.hist = [["orders", null]]; S.route = "order"; S.arg = null; render("forward"); toast("وصلنا طلبك"); sfx("success");
+  },
+  custThenIdea() { if (!custOk()) return; closeSheet(); ACT.sendIdea(); },
+  advance(d) { const o = S.order, from = STAGE_INDEX[o.stage]; if (d.v === "review") { commit(o, { stage: "review", version: 1 }); S.viewVersion = 1; toast("تصميمك جاهز للمراجعة"); if (at("ready")) celebrate(.8, o.occ); sfx("success"); } else { commit(o, { stage: "quote", quote: defaultQuote(o) }); toast("وصلك عرض السعر"); sfx("select"); } orderChanged(from); },
+  toInvoice() { go("invoice"); },
+  async dl(d) { const o = S.order, item = o.items[Number(d.i)]; S.busy = true; try { await downloadFile(itemCanvas(item, item.occ || o.occ, o.version), d.v, `${o.no}-${item.pid}-${Number(d.i) + 1}`); } finally { S.busy = false; } },
+  async dlInvoice() { const o = S.order; S.busy = true; try { await downloadFile(invoiceCanvas(o), "pdf", `invoice-${o.no}`); } finally { S.busy = false; } },
+  restart() { S.cart = []; S.orders = []; S.order = null; S.signed = false; S.cust = { name: "", phone: "" }; S.fav = []; S.q = ""; S.co = null; S.speed = "عادي"; S.eventDate = null; S.pack = null; S.galOcc = "all"; S.events = []; S.saved = []; S.occ = "baby"; S.idea = ""; S.ideaPid = "custom"; S.draft = null; S.hist = []; saveLocal(); tab("home"); toast("بدأت من جديد"); },
+});
+
+function salesInput(key, target) {
+  if (key === "q") { S.q = target.value; refreshGallery(false); return true; }
+  if (key === "cName") { S.cust.name = target.value; return true; }
+  if (key === "cPhone") { S.cust.phone = target.value; return true; }
+  if (key === "code") { S.co.code = target.value; return true; }
+  if (key === "msg") { S.msg = target.value; return true; }
+  if (key === "rateText") { S.rateText = target.value; return true; }
+  if (key === "packLine") { S.pack.line = target.value; packArts(false); return true; }
+  if (key === "dDate") { S.draft.date = target.value || null; refreshDesign(); return true; }
+  if (key === "dPlace") { S.draft.place = target.value; refreshDesign(); return true; }
+  return adminInput(key, target);
+}
+document.addEventListener("change", (event) => { const key = event.target?.dataset?.bind; if ((key === "cName" || key === "cPhone") && S.route === "account") { S.signed = S.cust.name.trim().length > 1 && validPhone(S.cust.phone); saveLocal(); } });
+document.addEventListener("keydown", (event) => { if (event.key === "Enter" && event.target.id === "f-code") { event.preventDefault(); ACT.applyCode(); } if (event.key === "Enter" && event.target.id === "f-msg") { event.preventDefault(); ACT.sendMsg(); } });
+
+/* The owner's panel. Only people who can edit this page see it, and the database rules enforce the same. */
+const AD = { list: [], filter: "all", loaded: false, busy: false, again: false, lines: null, shop: null, code: "", pct: "" };
+const needsAction = (o) => needsReply(o) || (o.kind === "custom" && ["pricing", "designing", "revising"].includes(o.stage)) || (o.pay && !o.collected);
+const adminRoutes = ["admin", "adminOrder"];
+async function adminLoad() {
+  if (!R.admin) return;
+  if (AD.busy) { AD.again = true; return; }
+  AD.busy = true;
+  try {
+    const users = await R.db.collection("orders").get(), all = [];
+    for (const u of users.docs) { const list = await R.db.collection(`orders/${u.id}/list`).get(); for (const doc of list.docs) { const r = doc.data(); if (r && r.no && Array.isArray(r.items)) all.push({ ...plain(r), owner: u.id }); } }
+    try { const notes = await R.db.collection("notes").get(); AD.notes = Object.fromEntries(notes.docs.map((doc) => [doc.id, String(doc.data()?.text || "")])); } catch { /* notes are optional */ }
+    AD.list = all.sort((a, b) => String(b.at || "").localeCompare(String(a.at || ""))); AD.loaded = true;
+    if (S.route === "adminOrder" && S.order) { const fresh = AD.list.find((o) => o.no === S.order.no && o.owner === S.order.owner); if (fresh) S.order = fresh; }
+    if (adminRoutes.includes(S.route) && !S.busy && !["INPUT", "TEXTAREA"].includes(document.activeElement?.tagName)) keepScroll(redraw);
+  } catch { if (S.route === "admin") toast("ما قدرنا نحمّل الطلبات"); }
+  AD.busy = false;
+  if (AD.again) { AD.again = false; adminLoad(); }
+}
+async function adminCommit(o, fields, done) {
+  S.busy = true;
+  try { const rev = (o.rev || 0) + 1; await R.db.doc(`orders/${o.owner}/list/${o.no}`).update(plain({ ...fields, rev })); Object.assign(o, fields, { rev }); await R.db.doc(`orders/${o.owner}`).update({ at: new Date().toISOString() }); toast(done); sfx("success"); }
+  catch { toast("ما انحفظ التغيير، جرّب مرة ثانية"); }
+  S.busy = false; AD.lines = null; keepScroll(redraw);
+}
+const adminFiltered = () => AD.list.filter((o) => AD.filter === "all" || (AD.filter === "todo" ? needsAction(o) : o.kind === AD.filter));
+const waLink = (phone) => `https://wa.me/966${String(phone).replace(/^0/, "")}`;
+function adminAction(o) {
+  const collect = o.pay && !o.collected ? `<button type="button" class="btn ghost" data-act="adCollect">سجّل تحصيل ${money(o.total)}</button>` : "";
+  if (o.kind === "tpl") return `<div class="act-card"><b>${o.collected ? "مكتمل" : "بانتظار تحصيل المبلغ"}</b><p class="sub">العميل حمّل ملفاته مباشرة بعد الطلب.</p>${collect}</div>`;
+  if (o.stage === "pricing") { const lines = AD.lines || (AD.lines = defaultQuote(o).lines.map((line) => [...line])); return `<div class="act-card"><b>أرسل عرض السعر</b>${lines.map(([name, price], i) => `<div class="field"><label for="f-aq${i}">${esc(name)}</label><input class="input" id="f-aq${i}" data-bind="aq" data-i="${i}" value="${price}" inputmode="numeric" dir="ltr" style="text-align:right"></div>`).join("")}<p class="total" id="aqTotal">المجموع ${money(lines.reduce((t, l) => t + (Number(l[1]) || 0), 0))}</p><button type="button" class="btn" data-act="adQuote">أرسل العرض للعميل</button></div>`; }
+  const notes = (o.feedback || []).length ? `<ol class="fb">${o.feedback.map((n) => `<li><b>${esc(n.item)}</b> ${esc(n.text)}</li>`).join("")}</ol>` : "";
+  const cards = {
+    quote: `<b>بانتظار موافقة العميل</b><p class="sub">العرض ${money(o.quote?.total ?? 0)}. يبدأ التصميم بعد ما يأكّد الطلب.</p>`,
+    designing: `<b>العميل أكّد الطلب</b><p class="sub">إذا جهز التصميم، انشره للعميل عشان يراجعه.</p><button type="button" class="btn" data-act="adPublish">انشر النسخة للمراجعة</button>`,
+    revising: `<b>العميل أرسل ملاحظاته</b>${notes}<button type="button" class="btn" data-act="adPublish">انشر النسخة الجديدة</button>`,
+    review: `<b>بانتظار مراجعة العميل</b><p class="sub">النسخة ${ar(o.version)} عند العميل.</p>`,
+    delivered: `<b>مكتمل</b><p class="sub">العميل اعتمد التصميم واستلم ملفاته.</p>`,
+  };
+  return `<div class="act-card">${cards[o.stage] || cards.review}${collect}</div>`;
+}
+Object.assign(SCREENS, {
+  admin: () => { const paid = AD.list.filter((o) => o.pay), sum = (list) => list.reduce((t, o) => t + (Number(o.total) || 0), 0), list = adminFiltered();
+    return `${backBar("لوحة الإدارة")}<div class="stats"><div><b>${ar(AD.list.length)}</b><span>طلب</span></div><div><b>${ar(sum(paid))}</b><span>مبيعات ر.س</span></div><div><b>${ar(sum(paid.filter((o) => !o.collected)))}</b><span>لم تُحصّل</span></div></div>
+    <div class="chips">${[["all", "الكل"], ["todo", "تحتاج إجراء"], ["custom", "تصميم خاص"], ["tpl", "جاهز"]].map(([key, label]) => `<button type="button" class="chip" aria-pressed="${AD.filter === key}" data-act="adFilter" data-v="${key}">${label}</button>`).join("")}</div>
+    ${!AD.loaded ? `<div class="loader-row">${loaderHTML()}</div>` : list.length ? list.map((o) => `<button type="button" class="item" style="border:0;width:100%;text-align:start" data-act="adOpen" data-v="${o.owner}/${o.no}"><span class="bub">${I(o.kind === "tpl" ? "down" : "pen", 28)}</span><span class="tx"><b>${esc(o.cust?.name || "عميل")}، طلب ${ar(o.no)}</b><span>${o.kind === "tpl" ? "جاهز" : `خاص، ${STEPS[STAGE_INDEX[o.stage]]}`}${o.pay ? `، ${money(o.total)}${o.collected ? "" : "، لم يُحصّل"}` : ""}</span></span>${needsAction(o) ? '<i class="dot-a" aria-label="يحتاج إجراء"></i>' : ""}</button>`).join("") : '<p class="small none">ما فيه طلبات هنا.</p>'}
+    <div class="row2"><button type="button" class="btn ghost" data-act="adRefresh">حدّث</button><button type="button" class="btn ghost" data-act="adShop">الأسعار والخصم</button></div>`; },
+  adminOrder: () => { const o = S.order, phone = o.cust?.phone || "";
+    return `${backBar(`طلب ${ar(o.no)}`)}<div class="card"><dl class="lines kv"><dt>العميل</dt><dd>${esc(o.cust?.name || "")}</dd><dt>الجوال</dt><dd dir="ltr" style="user-select:all;-webkit-user-select:all">${esc(phone)}</dd><dt>التاريخ</dt><dd>${fmtDay(o.at)}</dd><dt>النوع</dt><dd>${o.kind === "tpl" ? "تصميم جاهز" : "تصميم خاص"}</dd>${o.pay ? `<dt>الدفع</dt><dd>${METHOD_NAME[o.pay.method]}، ${o.collected ? "تم التحصيل" : "لم يُحصّل"}</dd>` : ""}</dl>${phone ? `<div class="row2"><button type="button" class="btn ghost" data-act="copyPhone" data-v="${esc(phone)}">انسخ الرقم</button><a class="btn ghost" href="${waLink(phone)}" target="_blank" rel="noopener">واتساب</a></div>` : ""}</div>
+    ${adminAction(o)}<h2>المنتجات</h2>${itemRows(o)}${(o.refs || []).length ? `<h2>صور العميل</h2><div class="idea-images">${o.refs.map((url) => `<div class="idea-img big"><img src="${esc(url)}" alt="صورة مرجعية"></div>`).join("")}</div>` : ""}${o.bill ? `<h2>الحساب</h2>${billHTML(o.bill)}` : ""}`; },
+  adminShop: () => { const s = AD.shop;
+    return `${backBar("الأسعار والخصم")}<h2>سعر التصميم الجاهز</h2>${Object.keys(SHOP_DEFAULT.tpl).map((pid) => `<div class="field"><label for="f-ap-${pid}">${PROD[pid].name}</label><input class="input" id="f-ap-${pid}" data-bind="ap" data-i="${pid}" value="${s.tpl[pid]}" inputmode="numeric" dir="ltr" style="text-align:right"></div>`).join("")}
+    <h2>أكواد الخصم</h2>${Object.entries(s.coupons).map(([code, pct]) => `<div class="item"><span class="bub">${I("tag", 26)}</span><span class="tx"><b dir="ltr">${esc(code)}</b><span>خصم ${ar(pct)}٪</span></span><button type="button" class="x-btn" aria-label="احذف ${esc(code)}" data-act="adCodeDel" data-v="${esc(code)}">${I("x")}</button></div>`).join("") || '<p class="small">ما فيه أكواد.</p>'}
+    <div class="coupon three"><input class="input" id="f-acode" data-bind="acode" value="${esc(AD.code)}" placeholder="الكود" maxlength="16" autocomplete="off" autocapitalize="characters" dir="ltr" style="text-align:right" aria-label="كود جديد"><input class="input" id="f-apct" data-bind="apct" value="${esc(AD.pct)}" placeholder="٪" inputmode="numeric" maxlength="3" dir="ltr" style="text-align:right" aria-label="نسبة الخصم"><button type="button" class="btn ghost" data-act="adCodeAdd">أضف</button></div>
+    <button type="button" class="btn" data-act="adShopSave">احفظ</button>`; },
+});
+function adminInput(key, target) {
+  if (key === "aq") { const n = Number(toLatin(target.value).replace(/[^\d]/g, "")); AD.lines[Number(target.dataset.i)][1] = n; el("aqTotal").textContent = `المجموع ${money(AD.lines.reduce((t, l) => t + (Number(l[1]) || 0), 0))}`; return true; }
+  if (key === "ap") { AD.shop.tpl[target.dataset.i] = Number(toLatin(target.value).replace(/[^\d]/g, "")); return true; }
+  if (key === "acode") { AD.code = target.value; return true; }
+  if (key === "adq") { AD.q = target.value; el("adList").innerHTML = adminRows(); return true; }
+  if (key === "anote") { AD.note = target.value; return true; }
+  if (key === "apct") { AD.pct = target.value; return true; }
+  return false;
+}
+Object.assign(ACT, {
+  openAdmin() { if (!R.admin) return; go("admin"); adminLoad(); },
+  adRefresh() { adminLoad(); toast("نحدّث الطلبات"); },
+  adFilter(d, t) { AD.filter = d.v; pickChip(t); keepScroll(redraw); },
+  adOpen(d) { const [owner, no] = d.v.split("/"); S.order = AD.list.find((o) => o.owner === owner && String(o.no) === no); AD.lines = null; if (S.order) go("adminOrder"); },
+  adQuote() { const o = S.order, lines = AD.lines.map(([name, price]) => [name, Math.round(Number(price) || 0)]), total = lines.reduce((t, l) => t + l[1], 0); if (total <= 0) { toast("اكتب السعر"); return; } adminCommit(o, { quote: { lines, total }, stage: "quote" }, "انرسل العرض للعميل"); },
+  adPublish() { const o = S.order; adminCommit(o, { stage: "review", version: o.stage === "revising" ? (o.version || 1) + 1 : 1 }, "انتشرت النسخة للعميل"); },
+  adCollect() { adminCommit(S.order, { collected: true }, "تسجّل التحصيل"); },
+  adShop() { AD.shop = plain(S.shop); AD.code = ""; AD.pct = ""; go("adminShop"); },
+  adCodeDel(d) { delete AD.shop.coupons[d.v]; keepScroll(redraw); },
+  adCodeAdd() { const code = toLatin(AD.code).trim().toUpperCase(), pct = Number(toLatin(AD.pct)); if (!/^[A-Z0-9]{3,16}$/.test(code)) { toast("الكود حروف إنجليزية وأرقام، من ٣ إلى ١٦"); fxShake(el("f-acode")); return; } if (!(pct > 0 && pct <= 100)) { toast("النسبة من ١ إلى ١٠٠"); fxShake(el("f-apct")); return; } AD.shop.coupons[code] = Math.round(pct); AD.code = ""; AD.pct = ""; keepScroll(redraw); },
+  async adShopSave() {
+    for (const pid of Object.keys(SHOP_DEFAULT.tpl)) if (!(AD.shop.tpl[pid] > 0)) { toast("كل سعر لازم يكون أكبر من صفر"); fxShake(el(`f-ap-${pid}`)); return; }
+    S.busy = true;
+    try { await R.db.doc("shop/config").set(plain({ tpl: AD.shop.tpl, coupons: AD.shop.coupons, hidden: AD.shop.hidden || [], at: new Date().toISOString() })); S.shop = plain(AD.shop); S.busy = false; toast("انحفظت الأسعار"); sfx("success"); back(); }
+    catch { S.busy = false; toast("ما انحفظت، جرّب مرة ثانية"); }
+  },
+});
+
+/* Layout: one way in. Every design opens on the same page, and the cart, payment and files share one visible sequence. */
+Object.assign(S, { galPid: "all" });
+const thumb = (item, occ) => item.kind === "custom" || (item.idea && !item.text) ? `<span class="bub">${I(PROD[item.pid].icon, 30)}</span>` : `<span class="th">${mockImg(item, occ)}</span>`;
+const flow = (now) => `<ol class="flow" aria-label="خطوات الطلب">${["السلة", "الدفع", "ملفاتك"].map((name, i) => `<li class="${i < now ? "done" : i === now ? "now" : ""}"${i === now ? ' aria-current="step"' : ""}><i>${i < now ? I("check", 14) : ar(i + 1)}</i>${name}</li>`).join("")}</ol>`;
+const ctaBar = (label, value, button) => `<div class="cta-bar"><div class="cta-price"><small>${label}</small><b id="ctaV">${value}</b></div>${button}</div>`;
+const orderPill = (o) => o.kind === "tpl" || o.stage === "delivered" ? '<span class="pill-s ok">جاهز</span>' : `<span class="pill-s${["quote", "review"].includes(o.stage) ? " act" : ""}">${{ pricing: "نسعّر", quote: "العرض وصل", designing: "نصمم", revising: "نعدّل", review: "راجِعه", qa: "نفحص" }[o.stage]}</span>`;
+const itemRows = (o) => o.items.map((item) => `<div class="item">${thumb(item, o.occ)}<span class="tx"><b>${esc(itemName(item))}</b><span>${item.idea ? esc(item.idea) : cartLine(item)}</span></span></div>`).join("");
+const galCount = () => { const n = galleryList().length; return n ? `${ar(n)} تصميم. اكتب الاسم، وحمّله بعد الطلب.` : "غيّر البحث أو الفلتر."; };
+function refreshGallery(enter) { const grid = el("galGrid"); if (!grid) return; grid.innerHTML = galleryCards(); el("galCount").textContent = galCount(); if (enter) fxEnter(grid, ".idea-card"); }
+function openDesign(id) { const idea = ideaById(id), sizes = PROD[idea.pid].sizes; S.templateId = id; S.occ = idea.occ; S.draft = { tpl: idea.id, name: idea.name, pid: idea.pid, size: sizes[Math.min(1, sizes.length - 1)], text: idea.text, idea: "", tagline: OCC[idea.occ].line, pal: idea.pal }; S.previewMode = "3d"; go("product"); }
+const popular = () => Object.keys(OCC).map((occ) => IDEAS.find((idea) => idea.occ === occ && !S.shop.hidden.includes(idea.id))).filter(Boolean);
+
+Object.assign(SCREENS, {
+  home: () => `<div class="amb"><i></i><i></i><i></i><i></i></div>${topBar()}<button type="button" class="search-go" data-act="goSearch">${I("search", 22)}<span>ابحث عن تصميم</span></button>${nextEventBanner()}
+    <div><h1>وش مناسبتك؟</h1><p class="sub">اختر تصميمك، اكتب الاسم، وحمّله</p></div>
+    <div class="tiles">${Object.entries(OCC).map(([key, o], i) => `<button type="button" class="tile" style="--i:${i};background:${o.bg};color:${o.fg}" data-act="pickOcc" data-v="${key}">${I(o.icon, 40)}<span>${o.label}</span></button>`).join("")}<button type="button" class="tile tile-idea" style="--i:5" data-act="idea">${I("plus", 40)}<span>تصميم خاص</span></button></div>
+    <div class="row-head"><h2>الأكثر طلبًا</h2><button type="button" class="link" data-act="openGallery">شوف الكل</button></div><div class="strip">${popular().map(ideaCard).join("")}</div>
+    <h2>حسب المنتج</h2><div class="circles">${PACK.map(productCircle).join("")}</div>
+    ${packBanner()}`,
+  gallery: () => `${topBar()}<div><h1>التصاميم</h1><p class="sub" id="galCount">${galCount()}</p></div><div class="search">${I("search", 22)}<input class="input" id="f-q" data-bind="q" value="${esc(S.q)}" placeholder="ابحث: مولود، كوب، ذهبي" autocomplete="off" enterkeyhint="search" aria-label="ابحث في التصاميم"></div>
+    <div class="chips scroll">${[["all", "كل المناسبات"], ["fav", "مفضلتي"], ...Object.entries(OCC).map(([key, o]) => [key, o.label])].map(([key, label]) => `<button type="button" class="chip" aria-pressed="${S.galOcc === key}" data-act="galOcc" data-v="${key}">${label}</button>`).join("")}</div>
+    <div class="chips scroll minor">${[["all", "كل المنتجات"], ...PACK.map((pid) => [pid, PROD[pid].short])].map(([key, label]) => `<button type="button" class="chip" aria-pressed="${S.galPid === key}" data-act="galPid" data-v="${key}">${label}</button>`).join("")}</div>
+    <div class="grid-p" id="galGrid">${galleryCards()}</div>`,
+  product: () => { const d = S.draft, p = PROD[d.pid];
+    return `<header class="bar"><button type="button" class="icon-btn" data-act="back" aria-label="رجوع">${I("back")}</button><h1 style="flex:1">${esc(d.name || p.name)}</h1>${d.tpl ? heartBtn(d.tpl, d.name) : ""}</header>
+    <div class="stage product-stage" id="productStage"><canvas id="productGl"></canvas><div id="productStatus"><div class="spin"></div><span>جارٍ تجهيز المنتج…</span></div></div>
+    <div class="seg" data-i="${S.previewMode === "2d" ? 1 : 0}"><i class="thumb"></i>${[["3d", "ثلاثي الأبعاد"], ["2d", "صور"]].map(([v, l]) => `<button type="button" aria-pressed="${(S.previewMode || "3d") === v}" data-act="previewMode" data-v="${v}">${l}</button>`).join("")}</div>
+    <p class="tag">${OCC[S.occ].label}، ${p.name}</p>
+    <div class="field"><label for="f-text">الاسم على التصميم</label><input class="input" id="f-text" data-bind="text" value="${esc(d.text)}" maxlength="24" autocomplete="off"></div>
+    <div class="field"><label for="f-sub">السطر اللي تحته (اختياري)</label><input class="input" id="f-sub" data-bind="sub" value="${esc(d.tagline || "")}" maxlength="30" autocomplete="off" placeholder="مثل: ${esc(OCC[S.occ].line)}"></div>
+    ${p.sizes.length > 1 ? `<div class="group"><span class="label">المقاس</span><div class="chips">${p.sizes.map((size) => `<button type="button" class="chip" aria-pressed="${d.size === size}" data-act="size" data-v="${esc(size)}">${size}</button>`).join("")}</div></div>` : ""}
+    <button type="button" class="custom-cta" data-act="goCustom">${I("pen", 28)}<span><b>تبغاه تصميم خاص فيك؟</b><small>فريقنا يصممه لك من فكرتك</small></span>${I("next")}</button>
+    ${ctaBar("السعر", money(tplPrice(d.pid)), '<button type="button" class="btn" data-act="addCart">أضف للسلة</button>')}`; },
+  cart: () => { if (!S.cart.length) return `${topBar()}<div class="empty"><span class="bub">${I("bag", 44)}</span><h2>سلتك فاضية</h2><p class="sub">اختر تصميم، اكتب الاسم، وحمّله بعد الطلب</p><button type="button" class="btn" data-act="openGallery">شوف التصاميم</button></div>`;
+    const b = cartBill(S.cart, null);
+    return `${topBar()}${flow(0)}<div><h1>سلتك</h1><p class="sub">${countLabel(S.cart.length)}</p></div>
+    ${S.cart.map((item) => `<div class="item">${thumb(item)}<span class="tx"><b>${esc(itemName(item))}</b><span>${cartLine(item)}</span></span><b class="pr">${money(tplPrice(item.pid))}</b><button type="button" class="x-btn" aria-label="احذف ${PROD[item.pid].name}" data-act="removeCart" data-v="${item.id}">${I("x")}</button></div>`).join("")}
+    <button type="button" class="dashed" data-act="openGallery">أضف تصميم ثاني</button>
+    ${b.packOff ? billHTML(b) : ""}
+    ${ctaBar("المجموع", money(b.total), '<button type="button" class="btn" data-act="toCheckout">أكمل الطلب</button>')}`; },
+  checkout: () => { const b = checkoutBill();
+    return `${backBar("إتمام الطلب")}${S.co.mode === "cart" ? flow(1) : ""}<h2>بياناتك</h2>${custFields()}<h2>طريقة الدفع</h2>${methodsHTML()}
+    <h2>كود الخصم</h2><div class="coupon"><input class="input" id="f-code" data-bind="code" value="${esc(S.co.code)}" placeholder="اكتب الكود" maxlength="16" autocomplete="off" autocapitalize="characters" dir="ltr" style="text-align:right" aria-label="كود الخصم"><button type="button" class="btn ghost" data-act="applyCode">طبّق</button></div>
+    <h2>ملخص الطلب</h2><div id="billBox">${billHTML(b)}</div>
+    ${ctaBar("المجموع", money(b.total), '<button type="button" class="btn" data-act="placeOrder">أكّد الطلب</button>')}`; },
+  done: () => { const o = S.order; return `${flow(2)}<div class="empty done"><div class="ok-wrap"><svg viewBox="0 0 96 96" aria-hidden="true"><circle class="ok-c" cx="48" cy="48" r="44"/><path class="ok-p" d="M28 50l14 14 26-30"/></svg></div><h1>تم طلبك</h1><p class="sub">طلب ${ar(o.no)}، ${METHOD_NAME[o.pay.method]}، ${money(o.total)}</p><div class="done-arts">${o.items.slice(0, 5).map((item) => thumb(item, o.occ)).join("")}</div></div><button type="button" class="btn" data-act="toFiles">${I("down")}حمّل ملفاتك</button><div class="row2"><button type="button" class="btn ghost" data-act="toInvoice">الفاتورة</button><button type="button" class="btn ghost" data-tab="home">الرئيسية</button></div>`; },
+  orders: () => { if (!S.orders.length) return `${topBar()}<div class="empty"><span class="bub">${I("list", 44)}</span><h2>ما عندك طلبات للحين</h2><p class="sub">مشترياتك وطلبات التصميم الخاص تظهر هنا</p><button type="button" class="btn" data-act="openGallery">شوف التصاميم</button></div>`;
+    return `${topBar()}<h1>طلباتي</h1>${S.orders.map((o) => `<button type="button" class="item" style="border:0;width:100%;text-align:start" data-act="openOrder" data-v="${o.no}">${thumb(o.items[0], o.occ)}<span class="tx"><b>طلب ${ar(o.no)}</b><span>${o.kind === "tpl" ? `تصميم جاهز، ${countLabel(o.items.length)}` : `تصميم خاص، ${orderStage(o)}`}${o.total != null && o.pay ? `، ${money(o.total)}` : ""}</span></span>${orderPill(o)}</button>`).join("")}`; },
+  files: () => { const o = S.order; return `${backBar("ملفاتك")}<p class="sub">اضغط على الملف عشان ينزل على جوالك.</p>${o.items.map((item, i) => `<div class="card"><div class="item" style="padding:0">${thumb(item, o.occ)}<span class="tx"><b>${esc(itemName(item))}</b><span>${cartLine(item)}</span></span></div><div class="row3">${[["pdf", "PDF"], ["png", "PNG"], ["jpg", "JPG"]].map(([kind, name]) => `<button type="button" class="btn ghost" data-act="dl" data-i="${i}" data-v="${kind}" aria-label="حمّل ${name}">${I("down", 20)}${name}</button>`).join("")}</div></div>`).join("")}<p class="small">PDF للطباعة، وPNG وJPG للمعاينة والمشاركة.</p>${o.pay ? '<button type="button" class="btn ghost" data-act="toInvoice">الفاتورة</button>' : ""}`; },
+  account: () => { const name = S.cust.name.trim();
+    return `${topBar()}<div class="me"><span class="av">${name ? esc([...name][0]) : I("user", 30)}</span><span class="tx"><b>${name ? esc(name) : "أهلًا فيك"}</b><span dir="${S.cust.phone ? "ltr" : "rtl"}">${S.cust.phone ? esc(S.cust.phone) : "أضف اسمك وجوالك عشان نجهز طلبك أسرع"}</span></span></div>
+    <div class="stats"><button type="button" class="stat" data-tab="orders"><b>${ar(S.orders.length)}</b><span>طلباتي</span></button><button type="button" class="stat" data-act="openFav"><b>${ar(S.fav.length)}</b><span>مفضلتي</span></button><button type="button" class="stat" data-act="openLib"><b>${ar(S.events.length)}</b><span>مناسباتي</span></button></div>
+    ${R.admin ? '<button type="button" class="btn gold" data-act="openAdmin">لوحة الإدارة</button>' : ""}
+    <h2>بياناتي</h2>${custFields()}<p class="small">نستخدمها لطلباتك فقط.</p><button type="button" class="link" data-act="restart">ابدأ من جديد على هذا الجوال</button>`; },
+});
+Object.assign(ACT, {
+  idea() { go("idea"); },
+  ideaOpen(d) { openDesign(d.v); },
+  goCustom() { S.ideaPid = PROD[S.draft.pid] && S.draft.pid !== "invite" ? S.draft.pid : "custom"; go("idea"); },
+  openGallery() { if (S.galOcc === "fav") S.galOcc = "all"; tab("gallery"); },
+  openFav() { S.galOcc = "fav"; S.galPid = "all"; S.q = ""; tab("gallery"); },
+  goSearch() { S.galOcc = "all"; S.galPid = "all"; tab("gallery"); setTimeout(() => el("f-q")?.focus(), M().ms + 80); },
+  pickOcc(d) { S.occ = d.v; S.galOcc = d.v; S.galPid = "all"; S.q = ""; tab("gallery"); },
+  openProduct(d) { S.galPid = d.v; S.galOcc = "all"; S.q = ""; tab("gallery"); },
+  galOcc(d, t) { S.galOcc = d.v; pickChip(t); refreshGallery(true); },
+  galPid(d, t) { S.galPid = d.v; pickChip(t); refreshGallery(true); },
+  async copyPhone(d, t) { try { await navigator.clipboard.writeText(d.v); toast("انتسخ الرقم"); } catch { const node = t.parentElement.querySelector("b"); if (node) getSelection().selectAllChildren(node); toast("حدّدنا الرقم، انسخه"); } },
+});
+Object.assign(SCREENS, {
+  order: () => { const o = S.order, now = STAGE_INDEX[o.stage], demo = (act, v, label) => o.synced || o.pushing || !R.ready ? "" : `<button type="button" class="demo-btn" data-act="${act}"${v ? ` data-v="${v}"` : ""}>${label}</button>`;
+    const wait0 = `<div class="loader-row">${loaderHTML()}</div>`, bill = o.pay ? '<button type="button" class="btn ghost" data-act="toInvoice">الفاتورة</button>' : "";
+    if (o.kind === "tpl") return `${backBar(`طلب ${ar(o.no)}`)}<div class="act-card"><b>ملفاتك جاهزة</b><p class="sub">PDF للطباعة وPNG وJPG للمعاينة. تقدر تحمّلها أي وقت.</p><button type="button" class="btn" data-act="toFiles">${I("down")}حمّل ملفاتك</button>${bill}</div>${itemRows(o)}`;
+    const cards = {
+      pricing:`<b>وصلنا طلبك</b><p class="sub">نراجع فكرتك ونرسل لك عرض السعر هنا.</p>${wait0}${demo("advance", "quote", "في التجربة: خلّ الفريق يرسل العرض الحين")}`,
+      quote:`<b>عرض السعر جاهز</b><p class="sub">راجع التفاصيل قبل الموافقة. يبدأ التصميم بعد تأكيد الطلب.</p><button type="button" class="btn" data-act="toQuote">شوف العرض</button>`,
+      designing:`<b>فريقنا يصمم لك</b><p class="sub">نعلمك أول ما تكون النسخة جاهزة لمراجعتك.</p>${wait0}${demo("advance", "review", "في التجربة: خلّ المصمم ينشر النسخة الحين")}`,
+      revising:`<b>المصمم يشتغل على ملاحظاتك</b><p class="sub">النسخة الجديدة توصلك هنا.</p>${wait0}${demo("newVersion", "", "في التجربة: خلّ المصمم ينشر النسخة الجديدة")}`,
+      review:`<b>تصميمك جاهز للمراجعة</b><p class="sub">دوّره، وحط ملاحظاتك عليه بإصبعك.</p><button type="button" class="btn" data-act="toReview">عاين التصميم</button>`,
+      qa:`<b>يتم الآن فحص ملف الطباعة وتجهيز الصور</b><div class="scan"><i></i></div><p class="sub">ثواني ويوصلك.</p>`,
+      delivered:`<b>ملفاتك جاهزة</b><p class="sub">PDF للطباعة وPNG وJPG للمعاينة. وانحفظ تصميمك في مناسباتي.</p><button type="button" class="btn" data-act="toFiles">${I("down")}حمّل ملفاتك</button><button type="button" class="btn ghost" data-act="openLib">افتح مناسباتي</button>`,
+    };
+    return `${backBar(`طلب ${ar(o.no)}`)}${realDate(o.eventDate) && daysTo(o.eventDate) >= 0 ? `<p class="count-line">${I("cal", 20)}${leftText(daysTo(o.eventDate))} على مناسبتك، ${fmtDate(o.eventDate)}</p>` : ""}<div class="act-card">${cards[o.stage]}</div><ol class="steps">${STEPS.map((step, i) => stepRow(step, i, now, STEPS.length)).join("")}</ol>${bill}`; },
+  quote: () => { const o = S.order; if (!o.quote) o.quote = defaultQuote(o); const b = quoteBill(o.quote, null); o.total = b.total;
+    return `${backBar("عرض السعر")}${billHTML(b, "totalV")}
+    <p class="sub">يشمل التصميم وملفات PDF وPNG وJPG، والتعديلات ضمن فكرة الطلب.</p>
+    <button type="button" class="btn" data-act="toPay">قبول العرض</button>`; },
+});
+/* Customer control, the pack, chat, cart editing, rating and sharing, and a fuller owner's panel. */
+ICON.star = [24, "M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"];
+const STYLE_NAME = { floral: "زخرفة", announce: "بشارة", ribbon: "فيونكة", emboss: "إطار بارز" };
+const FACE_NAME = { "": "خط النمط", ruqaa: "رقعة", naskh: "نسخ", modern: "عصري" };
+const sameTone = (pal, tone) => pal && pal.paper === tone.paper && pal.ink === tone.ink;
+const swatches = (pal, act) => `<div class="sws" role="group" aria-label="اللون">${TONES.map(([name, tone], i) => `<button type="button" class="sw" style="background:${tone.paper}" aria-pressed="${sameTone(pal, tone)}" aria-label="${name}" data-act="${act}" data-v="${i}"><i style="background:${tone.ink}"></i></button>`).join("")}</div>`;
+const styleChips = (style, act) => `<div class="chips">${Object.entries(STYLE_NAME).map(([key, label]) => `<button type="button" class="chip" aria-pressed="${style === key}" data-act="${act}" data-v="${key}">${label}</button>`).join("")}</div>`;
+function refreshDesign() { updateProductTexture(); if (S.previewMode === "2d") applyProductPreviewMode(); }
+const packItem = (pid) => { const p = S.pack, sizes = PROD[pid].sizes, pal = TONES[p.tone][1]; return { kind: "tpl", occ: S.occ, pid, size: sizes[Math.min(1, sizes.length - 1)], text: p.text, tagline: p.line ?? OCC[S.occ].line, pal, style: p.style || styleOf(S.occ, pal), idea: "", pack: true }; };
+function packArts(pop) { document.querySelectorAll(".pack-card").forEach((card, i) => { const holder = card.querySelector(".pa"); holder.innerHTML = mockImg(packItem(card.dataset.v), S.occ); if (pop) fxPop(holder.firstElementChild, i * 55); }); const total = el("ctaV"); if (total) total.textContent = money(cartBill(packOn().map(packItem), null).total); }
+const packLine = () => `${countLabel(packOn().length)} بتصميم واحد، وخصم ${ar(PACK_OFF * 100)}٪ على البكج.`;
+const chatOf = (o) => Array.isArray(o.chat) ? o.chat : [];
+const unread = (o, by) => chatOf(o).slice(o.seenChat || 0).filter((m) => m.by === by).length;
+const thread = (o, me) => chatOf(o).length ? `<div class="msgs">${chatOf(o).map((m) => `<div class="msg${m.by === me ? " me" : ""}">${esc(m.text)}<small>${m.by === "t" ? "الفريق" : "العميل"}، ${fmtDay(m.at)}</small></div>`).join("")}</div>` : '<p class="small none">ما فيه رسائل للحين.</p>';
+const sayBar = (cls = "") => `<div class="say ${cls}"><input class="input" id="f-msg" data-bind="msg" value="${esc(S.msg || "")}" placeholder="اكتب رسالتك" maxlength="400" autocomplete="off" enterkeyhint="send" aria-label="رسالتك"><button type="button" class="btn" data-act="sendMsg">أرسل</button></div>`;
+const starsHTML = (n, act) => `<div class="stars${act ? "" : " sm"}"${act ? ' role="group" aria-label="التقييم"' : ` aria-label="${ar(n)} من ٥"`}>${[1, 2, 3, 4, 5].map((i) => act ? `<button type="button" class="star" aria-pressed="${i <= n}" aria-label="${ar(i)} من ٥" data-act="${act}" data-v="${i}">${I("star", 34)}</button>` : `<span class="star" aria-pressed="${i <= n}">${I("star", 20)}</span>`).join("")}</div>`;
+function orderExtras(o) {
+  const n = unread(o, "t"), done = o.kind === "tpl" || o.stage === "delivered";
+  const rate = !done ? "" : o.rating ? `<div class="card"><b>تقييمك</b>${starsHTML(o.rating.stars)}${o.rating.text ? `<p class="sub">${esc(o.rating.text)}</p>` : ""}</div>` : `<div class="card"><b>كيف كانت تجربتك؟</b>${starsHTML(0, "rate")}</div>`;
+  return `${rate}<button type="button" class="btn ghost" data-act="openChat">محادثة الفريق${n ? ` <span class="n-badge">${ar(n)}</span>` : ""}</button>`;
+}
+const baseOrder = SCREENS.order, baseFiles = SCREENS.files;
+Object.assign(SCREENS, {
+  order: () => baseOrder() + orderExtras(S.order),
+  files: () => baseFiles() + '<button type="button" class="btn ghost" data-act="share">شارك تصميمك</button>',
+  chat: () => `${backBar("محادثة الفريق")}<p class="sub">طلب ${ar(S.order.no)}. نرد عليك هنا.</p>${thread(S.order, "c")}${sayBar("cta-bar")}`,
+  product: () => { const d = S.draft, p = PROD[d.pid], style = d.style || styleOf(S.occ, d.pal);
+    return `<header class="bar"><button type="button" class="icon-btn" data-act="back" aria-label="رجوع">${I("back")}</button><h1 style="flex:1">${esc(d.name || p.name)}</h1>${d.tpl ? heartBtn(d.tpl, d.name) : ""}</header>
+    <div class="stage product-stage" id="productStage"><canvas id="productGl"></canvas><div id="productStatus"><div class="spin"></div><span>جارٍ تجهيز المنتج…</span></div></div>
+    <div class="seg" data-i="${S.previewMode === "2d" ? 1 : 0}"><i class="thumb"></i>${[["3d", "ثلاثي الأبعاد"], ["2d", "صور"]].map(([v, l]) => `<button type="button" aria-pressed="${(S.previewMode || "3d") === v}" data-act="previewMode" data-v="${v}">${l}</button>`).join("")}</div>
+    <p class="tag">${OCC[S.occ].label}، ${p.name}</p>
+    <div class="field"><label for="f-text">الاسم على التصميم</label><input class="input" id="f-text" data-bind="text" value="${esc(d.text)}" maxlength="24" autocomplete="off"></div>
+    <div class="field"><label for="f-sub">السطر اللي تحته (اختياري)</label><input class="input" id="f-sub" data-bind="sub" value="${esc(d.tagline || "")}" maxlength="30" autocomplete="off" placeholder="مثل: ${esc(OCC[S.occ].line)}"></div>
+    <div class="group"><span class="label">اللون</span>${swatches(d.pal, "pickTone")}</div>
+    <div class="group"><span class="label">النمط</span>${styleChips(style, "pickStyle")}</div>
+    <div class="group"><span class="label">خط الاسم</span><div class="chips">${Object.entries(FACE_NAME).map(([key, label]) => `<button type="button" class="chip" aria-pressed="${(d.font || "") === key}" data-act="pickFace" data-v="${key}">${label}</button>`).join("")}</div></div>
+    <div class="row2"><div class="field"><label for="f-date">التاريخ (اختياري)</label><input class="input" id="f-date" data-bind="dDate" type="date" value="${esc(d.date || "")}"></div><div class="field"><label for="f-place">المكان (اختياري)</label><input class="input" id="f-place" data-bind="dPlace" value="${esc(d.place || "")}" maxlength="28" autocomplete="off" placeholder="مثل: الرياض"></div></div>
+    ${p.sizes.length > 1 ? `<div class="group"><span class="label">المقاس</span><div class="chips">${p.sizes.map((size) => `<button type="button" class="chip" aria-pressed="${d.size === size}" data-act="size" data-v="${esc(size)}">${size}</button>`).join("")}</div></div>` : ""}
+    ${S.editId ? "" : `<button type="button" class="custom-cta" data-act="goCustom">${I("pen", 28)}<span><b>تبغاه تصميم خاص فيك؟</b><small>فريقنا يصممه لك من فكرتك</small></span>${I("next")}</button>`}
+    ${ctaBar("السعر", money(tplPrice(d.pid)), S.editId ? '<button type="button" class="btn" data-act="saveItem">احفظ التعديل</button>' : '<button type="button" class="btn" data-act="addCart">أضف للسلة</button>')}`; },
+  package: () => { const p = S.pack, pal = TONES[p.tone][1];
+    return `${backBar("بكج مناسبتك كامل")}
+    <div class="chips scroll">${Object.entries(OCC).map(([key, o]) => `<button type="button" class="chip" aria-pressed="${S.occ === key}" data-act="packOcc" data-v="${key}">${o.label}</button>`).join("")}</div>
+    <div class="field"><label for="f-pack">الاسم على التصاميم</label><input class="input" id="f-pack" data-bind="packText" value="${esc(p.text)}" maxlength="24" autocomplete="off"></div>
+    <div class="field"><label for="f-packline">السطر اللي تحته (اختياري)</label><input class="input" id="f-packline" data-bind="packLine" value="${esc(p.line ?? OCC[S.occ].line)}" maxlength="30" autocomplete="off"></div>
+    <div class="group"><span class="label">اللون</span>${swatches(pal, "packTone")}</div>
+    <div class="group"><span class="label">النمط</span>${styleChips(p.style || styleOf(S.occ, pal), "packStyle")}</div>
+    <h2>القطع</h2><div class="pack-grid">${PACK.map((pid) => `<button type="button" class="pack-card" aria-pressed="${!p.off[pid]}" data-act="packToggle" data-v="${pid}"><span class="pa">${mockImg(packItem(pid), S.occ)}</span><b>${PROD[pid].name}</b><small>${money(tplPrice(pid))}</small><i class="pk">${I("check", 16)}</i></button>`).join("")}</div>
+    ${ctaBar("بعد الخصم", money(cartBill(packOn().map(packItem), null).total), '<button type="button" class="btn" data-act="addPack">أضف البكج للسلة</button>')}`; },
+  cart: () => { if (!S.cart.length) return `${topBar()}<div class="empty"><span class="bub">${I("bag", 44)}</span><h2>سلتك فاضية</h2><p class="sub">اختر تصميم، اكتب الاسم، وحمّله بعد الطلب</p><button type="button" class="btn" data-act="openGallery">شوف التصاميم</button></div>`;
+    const b = cartBill(S.cart, null);
+    return `${topBar()}${flow(0)}<div><h1>سلتك</h1><p class="sub">${countLabel(S.cart.length)}. اضغط على التصميم عشان تعدّله.</p></div>
+    ${S.cart.map((item) => `<div class="item"><button type="button" class="edit" data-act="editItem" data-v="${item.id}" aria-label="عدّل ${esc(itemName(item))}">${thumb(item)}<span class="tx"><b>${esc(itemName(item))}</b><span>${cartLine(item)}</span></span></button><b class="pr">${money(tplPrice(item.pid))}</b><button type="button" class="x-btn" aria-label="احذف ${PROD[item.pid].name}" data-act="removeCart" data-v="${item.id}">${I("x")}</button></div>`).join("")}
+    <button type="button" class="dashed" data-act="openGallery">أضف تصميم ثاني</button>
+    ${b.packOff ? billHTML(b) : ""}
+    ${ctaBar("المجموع", money(b.total), '<button type="button" class="btn" data-act="toCheckout">أكمل الطلب</button>')}`; },
+});
+Object.assign(ACT, {
+  ideaOpen(d) { S.editId = null; openDesign(d.v); S.draft.style = styleOf(S.occ, S.draft.pal); },
+  pickTone(d, t) { S.draft.pal = TONES[Number(d.v)][1]; t.parentElement.querySelectorAll(".sw").forEach((b) => b.setAttribute("aria-pressed", String(b === t))); fxPop(t); sfx("select"); refreshDesign(); },
+  pickStyle(d, t) { S.draft.style = d.v; pickChip(t); refreshDesign(); },
+  pickFace(d, t) { S.draft.font = d.v || null; pickChip(t); refreshDesign(); },
+  editItem(d) { const item = S.cart.find((entry) => String(entry.id) === d.v); if (!item) return; S.editId = item.id; S.occ = item.occ || S.occ; S.draft = { ...item }; S.previewMode = "2d"; go("product"); },
+  saveItem() { const i = S.cart.findIndex((entry) => entry.id === S.editId); if (i >= 0) S.cart[i] = { ...S.draft, text: S.draft.text.trim() || S.cart[i].text }; S.editId = null; tab("cart"); toast("انحفظ التعديل"); sfx("success"); },
+  openPack() { S.pack = { text: "سعود", off: {}, tone: 0, style: null, line: null, ...(S.pack || {}) }; go("package"); },
+  packOcc(d, t) { S.occ = d.v; S.pack.line = null; S.pack.style = null; pickChip(t); keepScroll(redraw); },
+  packTone(d, t) { S.pack.tone = Number(d.v); t.parentElement.querySelectorAll(".sw").forEach((b) => b.setAttribute("aria-pressed", String(b === t))); sfx("select"); packArts(true); },
+  packStyle(d, t) { S.pack.style = d.v; pickChip(t); packArts(true); },
+  packToggle(d, t) { const on = !S.pack.off[d.v]; if (on && packOn().length <= PACK_MIN) { fxShake(t); toast(`البكج أقل شي ${ar(PACK_MIN)} قطع`); return; } S.pack.off[d.v] = on; t.setAttribute("aria-pressed", String(!on)); fxPop(t.querySelector(".pa")); sfx("select"); packArts(false); },
+  async addPack() {
+    const list = packOn().map((pid) => ({ id: nextId++, ...packItem(pid) })), cards = [...document.querySelectorAll('.pack-card[aria-pressed="true"] img')];
+    await cartFlight(() => Promise.all(list.map((item, i) => wait(i * 130).then(() => fxAddCart(cards[i], () => el("bag"), () => { S.cart.push(item); renderNav(); fxBadge(el("badge")); })))));
+  },
+  openChat() { const o = S.order; o.seenChat = chatOf(o).length; S.msg = ""; saveLocal(); go("chat"); },
+  sendMsg() {
+    const text = (S.msg || "").trim(), o = S.order; if (!text) { fxShake(el("f-msg")); return; }
+    const team = S.route === "adminOrder", chat = [...chatOf(o), { by: team ? "t" : "c", text, at: new Date().toISOString() }]; S.msg = "";
+    if (team) { adminCommit(o, { chat }, "انرسلت رسالتك"); return; }
+    commit(o, { chat }); o.seenChat = chat.length; saveLocal(); keepScroll(redraw); const box = view.querySelector(".screen:not(.leaving)"); box.scrollTop = box.scrollHeight; sfx("select");
+  },
+  rate(d) { S.rateN = Number(d.v); S.rateText = ""; openSheet(`<h2>شكرًا لتقييمك</h2>${starsHTML(S.rateN, "rateSet")}<div class="field"><label for="f-rate">وش رأيك؟ (اختياري)</label><textarea class="input" id="f-rate" data-bind="rateText" rows="3" maxlength="300"></textarea></div><button type="button" class="btn" data-act="rateSend">أرسل التقييم</button>`); },
+  rateSet(d, t) { S.rateN = Number(d.v); t.parentElement.querySelectorAll(".star").forEach((b, i) => b.setAttribute("aria-pressed", String(i < S.rateN))); sfx("select"); },
+  rateSend() { const o = S.order; commit(o, { rating: { stars: S.rateN, text: (S.rateText || "").trim(), at: new Date().toISOString() } }); closeSheet(); keepScroll(redraw); toast("وصل تقييمك، شكرًا"); sfx("success"); },
+  share() { const item = S.order.items[0]; S.shareText = `صممت ${PROD[item.pid].name}${item.text ? ` باسم «${item.text}»` : ""} من ${S.choices.name}`; openSheet(`<h2>شارك تصميمك</h2><p class="sub">احفظ الصورة ثم أرسلها من الصور، أو انسخ رسالة جاهزة.</p><button type="button" class="btn" data-act="dl" data-i="0" data-v="png">${I("down")}احفظ الصورة</button><div class="card"><p id="shareText" style="user-select:all;-webkit-user-select:all">${esc(S.shareText)}</p></div><button type="button" class="btn ghost" data-act="copyShare">انسخ الرسالة</button>`); },
+  async copyShare() { try { await navigator.clipboard.writeText(S.shareText); toast("انتسخت الرسالة"); } catch { getSelection().selectAllChildren(el("shareText")); toast("حدّدنا الرسالة، انسخها"); } },
+});
+
+/* Owner's panel, second round: search, reports, export, design visibility, notes kept away from customers. */
+Object.assign(AD, { q: "", notes: {}, note: "" });
+const adMatch = (o) => { const q = norm(toLatin(AD.q).trim()); return !q || norm(`${o.cust?.name || ""} ${o.cust?.phone || ""} ${o.no}`).includes(q); };
+const adminRows = () => { const list = adminFiltered().filter(adMatch); return !AD.loaded ? `<div class="loader-row">${loaderHTML()}</div>` : list.length ? list.map((o) => `<button type="button" class="item" style="border:0;width:100%;text-align:start" data-act="adOpen" data-v="${o.owner}/${o.no}">${thumb(o.items[0], o.occ)}<span class="tx"><b>${esc(o.cust?.name || "عميل")}، طلب ${ar(o.no)}</b><span>${o.kind === "tpl" ? "جاهز" : `خاص، ${STEPS[STAGE_INDEX[o.stage]]}`}${o.pay ? `، ${money(o.total)}${o.collected ? "" : "، لم يُحصّل"}` : ""}${o.rating ? `، ${ar(o.rating.stars)}★` : ""}</span></span>${needsAction(o) ? '<i class="dot-a" aria-label="يحتاج إجراء"></i>' : ""}</button>`).join("") : '<p class="small none">ما فيه طلبات هنا.</p>'; };
+const baseNeeds = needsAction;
+const needsReply = (o) => { const c = chatOf(o); return c.length > 0 && c[c.length - 1].by === "c"; };
+function tally(list, keyOf, valueOf = () => 1) { const m = new Map(); for (const x of list) for (const k of [].concat(keyOf(x))) if (k) m.set(k, (m.get(k) || 0) + valueOf(x)); return [...m.entries()].sort((a, b) => b[1] - a[1]); }
+const rankHTML = (rows, unit = "") => rows.length ? `<dl class="rank">${rows.map(([k, v]) => `<dt>${esc(k)}</dt><dd>${ar(v)}${unit}</dd>`).join("")}</dl>` : '<p class="small">ما فيه بيانات للحين.</p>';
+function csvOf(list) { const cell = (v) => `"${String(v ?? "").replace(/"/g, '""')}"`; return "﻿" + [["رقم الطلب", "التاريخ", "العميل", "الجوال", "النوع", "الحالة", "المجموع", "الدفع", "التحصيل", "الكود", "التقييم", "المنتجات"], ...list.map((o) => [o.no, String(o.at || "").slice(0, 10), o.cust?.name, o.cust?.phone, o.kind === "tpl" ? "جاهز" : "خاص", o.kind === "tpl" ? "مكتمل" : STEPS[STAGE_INDEX[o.stage]], o.total ?? "", o.pay ? METHOD_NAME[o.pay.method] : "", o.pay ? (o.collected ? "تم" : "لا") : "", o.bill?.coupon || "", o.rating?.stars || "", o.items.map((item) => `${itemName(item)}${item.text ? ` (${item.text})` : ""}`).join(" | ")])].map((row) => row.map(cell).join(",")).join("\r\n"); }
+const baseAdminOrder = SCREENS.adminOrder;
+Object.assign(SCREENS, {
+  admin: () => { const paid = AD.list.filter((o) => o.pay), sum = (list) => list.reduce((t, o) => t + (Number(o.total) || 0), 0);
+    return `${backBar("لوحة الإدارة")}<div class="stats"><div><b>${ar(AD.list.length)}</b><span>طلب</span></div><div><b>${ar(sum(paid))}</b><span>مبيعات ر.س</span></div><div><b>${ar(sum(paid.filter((o) => !o.collected)))}</b><span>لم تُحصّل</span></div></div>
+    <div class="search">${I("search", 22)}<input class="input" id="f-adq" data-bind="adq" value="${esc(AD.q)}" placeholder="ابحث باسم العميل أو الجوال أو رقم الطلب" autocomplete="off" aria-label="ابحث في الطلبات"></div>
+    <div class="chips scroll">${[["all", "الكل"], ["todo", "تحتاج إجراء"], ["custom", "تصميم خاص"], ["tpl", "جاهز"]].map(([key, label]) => `<button type="button" class="chip" aria-pressed="${AD.filter === key}" data-act="adFilter" data-v="${key}">${label}</button>`).join("")}</div>
+    <div id="adList" style="display:flex;flex-direction:column;gap:14px">${adminRows()}</div>
+    <div class="row2"><button type="button" class="btn ghost" data-act="adStats">التقارير</button><button type="button" class="btn ghost" data-act="adShop">الأسعار والخصم</button></div>
+    <div class="row2"><button type="button" class="btn ghost" data-act="adDesigns">إظهار التصاميم</button><button type="button" class="btn ghost" data-act="adExport">${I("down", 20)}ملف الطلبات</button></div>
+    <button type="button" class="link" data-act="adRefresh">حدّث الطلبات</button>`; },
+  adminOrder: () => { const o = S.order;
+    return `${baseAdminOrder()}${o.rating ? `<h2>تقييم العميل</h2><div class="card">${starsHTML(o.rating.stars)}${o.rating.text ? `<p class="sub">${esc(o.rating.text)}</p>` : ""}</div>` : ""}
+    <h2>المحادثة</h2>${thread(o, "t")}${sayBar()}
+    <h2>ملاحظة داخلية</h2><p class="small">للفريق فقط، العميل ما يشوفها.</p><div class="field"><textarea class="input" id="f-anote" data-bind="anote" rows="2" maxlength="500" aria-label="ملاحظة داخلية">${esc(AD.note)}</textarea></div><button type="button" class="btn ghost" data-act="adNote">احفظ الملاحظة</button>`; },
+  adminStats: () => { const paid = AD.list.filter((o) => o.pay), rated = AD.list.filter((o) => o.rating), day = (o) => String(o.pay?.at || o.at || "").slice(0, 10);
+    const days = tally(paid, day, (o) => Number(o.total) || 0).sort((a, b) => b[0].localeCompare(a[0])).slice(0, 7).map(([k, v]) => [fmtDay(k), v]);
+    const top = tally(AD.list.filter((o) => o.kind === "tpl"), (o) => o.items.map((item) => `${PROD[item.pid].name}${item.name ? `، ${item.name}` : ""}`)).slice(0, 8);
+    const avg = rated.length ? (rated.reduce((t, o) => t + o.rating.stars, 0) / rated.length).toFixed(1) : null;
+    return `${backBar("التقارير")}<div class="stats"><div><b>${ar(paid.length)}</b><span>طلب مؤكد</span></div><div><b>${paid.length ? ar(Math.round(paid.reduce((t, o) => t + (Number(o.total) || 0), 0) / paid.length)) : "٠"}</b><span>متوسط الطلب ر.س</span></div><div><b>${avg ? ar(avg) : "—"}</b><span>التقييم من ٥</span></div></div>
+    <h2>المبيعات آخر الأيام</h2>${rankHTML(days, " ر.س")}<h2>الأكثر مبيعًا</h2>${rankHTML(top)}<h2>المناسبات</h2>${rankHTML(tally(AD.list, (o) => OCC[o.occ]?.label))}<h2>أكواد الخصم</h2>${rankHTML(tally(paid, (o) => o.bill?.coupon))}
+    <h2>آخر التقييمات</h2>${rated.length ? rated.slice(0, 6).map((o) => `<div class="card"><b>${esc(o.cust?.name || "عميل")}</b>${starsHTML(o.rating.stars)}${o.rating.text ? `<p class="sub">${esc(o.rating.text)}</p>` : ""}</div>`).join("") : '<p class="small">ما فيه تقييمات للحين.</p>'}`; },
+  adminDesigns: () => `${backBar("إظهار التصاميم")}<p class="sub">اضغط على التصميم عشان تخفيه من المعرض أو ترجّعه. ${ar(AD.shop.hidden.length)} مخفي.</p><div class="grid-p">${IDEAS.map((idea) => `<button type="button" class="idea-card${AD.shop.hidden.includes(idea.id) ? " hid" : ""}" aria-pressed="${!AD.shop.hidden.includes(idea.id)}" data-act="adHide" data-v="${idea.id}">${designImg(idea, idea.occ)}<b>${idea.name}</b><span class="tag">${OCC[idea.occ].label}، ${PROD[idea.pid].short}</span></button>`).join("")}</div>${ctaBar("الظاهر", ar(IDEAS.length - AD.shop.hidden.length), '<button type="button" class="btn" data-act="adShopSave">احفظ</button>')}`,
+});
+Object.assign(ACT, {
+  adOpen(d) { const [owner, no] = d.v.split("/"); S.order = AD.list.find((o) => o.owner === owner && String(o.no) === no); AD.lines = null; S.msg = ""; if (!S.order) return; AD.note = AD.notes[`${owner}-${no}`] || ""; go("adminOrder"); },
+  adFilter(d, t) { AD.filter = d.v; pickChip(t); el("adList").innerHTML = adminRows(); },
+  adStats() { go("adminStats"); },
+  adDesigns() { AD.shop = plain(S.shop); go("adminDesigns"); },
+  adHide(d, t) { const list = AD.shop.hidden, on = list.includes(d.v); AD.shop.hidden = on ? list.filter((id) => id !== d.v) : [...list, d.v]; t.classList.toggle("hid", !on); t.setAttribute("aria-pressed", String(on)); el("ctaV").textContent = ar(IDEAS.length - AD.shop.hidden.length); sfx("select"); },
+  async adNote() { const o = S.order, key = `${o.owner}-${o.no}`; S.busy = true; try { await R.db.doc(`notes/${key}`).set({ text: AD.note, at: new Date().toISOString() }); AD.notes[key] = AD.note; toast("انحفظت الملاحظة"); sfx("success"); } catch { toast("ما انحفظت، جرّب مرة ثانية"); } S.busy = false; },
+  async adExport() { if (!AD.list.length) { toast("ما فيه طلبات"); return; } S.busy = true; try { if (await saveFile(new Blob([csvOf(AD.list)], { type: "text/csv" }), `lamma-orders-${new Date().toISOString().slice(0, 10)}.csv`)) toast("انحفظ ملف الطلبات"); } finally { S.busy = false; } },
+});
+
+loadLocal();
+connect();
+cardFonts().then(() => { if (["home", "gallery", "cart", "orders"].includes(S.route) && !S.busy && !sheet.classList.contains("on") && document.activeElement?.tagName !== "INPUT") keepScroll(redraw); });
 
 document.addEventListener("pointerdown", (event) => {
   if (fxv("sound") !== "none") audio();
@@ -1492,9 +2321,10 @@ document.addEventListener("change", (event) => {
 document.addEventListener("input", (event) => {
   const key = event.target.dataset.bind;
   if (!key) return;
+  if (salesInput(key, event.target)) return;
   if (key === "free") { S.idea = event.target.value; return; }
-  if (key === "sub") { if (S.draft) S.draft.tagline = event.target.value; updateProductTexture(); return; }
-  if (key === "text" && S.route === "product") { if (S.draft) S.draft.text = event.target.value; updateProductTexture(); const pv = el("pv"); if (pv) { pv.innerHTML = art(S.draft.pid, S.draft.text, S.draft.pal || S.occ); fxType(pv); } sfx("tap"); return; }
+  if (key === "sub") { if (S.draft) S.draft.tagline = event.target.value; updateProductTexture(); if (S.previewMode === "2d") applyProductPreviewMode(); return; }
+  if (key === "text" && S.route === "product") { if (S.draft) S.draft.text = event.target.value; updateProductTexture(); if (S.previewMode === "2d") applyProductPreviewMode(); const pv = el("pv"); if (pv) { pv.innerHTML = art(S.draft.pid, S.draft.text, S.draft.pal || S.occ); fxType(pv); } sfx("tap"); return; }
 
   if (key === "tname") { S.draft.text = event.target.value; const pv = el("tpv"); if (pv) { pv.innerHTML = art(S.draft.pid, S.draft.text, S.draft.pal); fxType(pv); } sfx("tap"); return; }
   if (key === "tsub") { S.draft.tagline = event.target.value; const tag = el("ttag"); if (tag) tag.textContent = event.target.value; return; }
@@ -1553,24 +2383,7 @@ function stepViewer(now) {
   });
 }
 const PRODUCT_CANVAS = { bottle: {w:1024,h:512}, sticker:{w:768,h:768}, box:{w:1024,h:768}, invite:{w:640,h:960} };
-function productCanvas(pid, item, occ) {
-  const o = { ...OCC[occ], ...(item.pal || {}) }, font = FONT_NAME[S.choices.font];
-  const size = PRODUCT_CANVAS[pid] || PRODUCT_CANVAS.bottle;
-  const c = document.createElement("canvas"); c.width = size.w; c.height = size.h;
-  const g = c.getContext("2d");
-  g.fillStyle = o.paper; g.fillRect(0, 0, size.w, size.h);
-  for (const [cx, cy, cr, col] of [[.18,.2,.1,o.a],[.84,.78,.09,o.b],[.3,.82,.05,o.c],[.75,.18,.06,o.a]]) {
-    g.fillStyle = col; g.beginPath(); g.arc(size.w * cx, size.h * cy, size.h * cr, 0, 6.29); g.fill();
-  }
-  g.direction = "rtl"; g.textAlign = "center"; g.textBaseline = "middle"; g.fillStyle = o.ink;
-  g.font = `700 ${Math.round(size.h * .07)}px "${font}"`;
-  g.fillText(item.tagline !== undefined ? item.tagline : o.line, size.w / 2, size.h * .18);
-  let nameSize = size.h * .22; g.font = `800 ${nameSize}px "${font}"`;
-  const label = item.text || "تصميمك", width = g.measureText(label).width, cap = size.w * .78;
-  if (width > cap) { nameSize *= cap / width; g.font = `800 ${Math.round(nameSize)}px "${font}"`; }
-  g.fillText(label, size.w / 2, size.h * .5);
-  return c;
-}
+function productCanvas(pid, item, occ) { const size = PRODUCT_CANVAS[pid] || PRODUCT_CANVAS.bottle; return drawDesign(size.w, size.h, item, occ); }
 function makeProductMesh(THREE, pid, texture) {
   const body = new THREE.MeshStandardMaterial({ map: texture, metalness: .05, roughness: .55 });
   const white = new THREE.MeshStandardMaterial({ color: 0xf6f3ee, metalness: .05, roughness: .6 });
@@ -1593,8 +2406,7 @@ function makeProductMesh(THREE, pid, texture) {
     return { group, framing: { radius: 0.07, center: new THREE.Vector3(0, 0, 0) } };
   }
   if (pid === "box") {
-    const plain = white, face = body;
-    const box = new THREE.Mesh(new THREE.BoxGeometry(0.11, 0.09, 0.075), [plain, plain, plain, plain, face, plain]);
+    const box = new THREE.Mesh(new THREE.BoxGeometry(0.11, 0.09, 0.075), [body, body, body, body, body, body]);
     group.add(box);
     return { group, framing: { radius: 0.09, center: new THREE.Vector3(0, 0, 0) } };
   }
@@ -1607,7 +2419,7 @@ async function mountProcedural({ canvasId, stageId, statusId, item, occ, version
   const token = ++viewerToken, status = el(statusId);
   try {
     const font = FONT_NAME[S.choices.font];
-    await Promise.all([document.fonts.load(`800 100px "${font}"`, "سعود"), document.fonts.load(`700 100px "${font}"`, "مرحبا")]);
+    await Promise.all([document.fonts.load(`800 100px "${font}"`, "سعود"), document.fonts.load(`700 100px "${font}"`, "مرحبا"), cardFonts()]);
     const { THREE, OrbitControls } = await loadThree();
     if (token !== viewerToken) return false;
     const canvas = el(canvasId), stage = el(stageId);
@@ -1644,6 +2456,7 @@ async function mountProcedural({ canvasId, stageId, statusId, item, occ, version
   } catch (error) {
     if (token !== viewerToken) return false;
     if (status) status.textContent = "المعاينة ثلاثية الأبعاد ما اشتغلت هنا.";
+    if (canvasId === "productGl" && S.route === "product" && S.previewMode !== "2d") { S.previewMode = "2d"; const seg = document.querySelector(".seg"); if (seg) { seg.dataset.i = 1; seg.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.v === "2d"))); } if (status) status.hidden = true; applyProductPreviewMode(); }
     return false;
   }
 }
@@ -1653,7 +2466,7 @@ async function mountProduct(opts) {
 function updateProductTexture() {
   if (!V) return;
   const draft = S.draft; if (!draft) return;
-  const item = { text: draft.text, pid: draft.pid, pal: draft.pal, tagline: draft.tagline };
+  const item = { ...draft };
   if (V.kind === "procedural") {
     const fresh = productCanvas(V.pid, item, V.occ || S.occ);
     V.sourceCanvas.width = fresh.width; V.sourceCanvas.height = fresh.height;
@@ -1677,7 +2490,7 @@ async function mountCup({ canvasId, stageId, statusId, item, occ, version, intro
   const token = ++viewerToken, status = el(statusId);
   try {
     const font = FONT_NAME[S.choices.font];
-    await Promise.all([document.fonts.load(`800 100px "${font}"`, "سعود"), document.fonts.load(`700 100px "${font}"`, "مرحبا")]);
+    await Promise.all([document.fonts.load(`800 100px "${font}"`, "سعود"), document.fonts.load(`700 100px "${font}"`, "مرحبا"), cardFonts()]);
     const { THREE, GLTFLoader, OrbitControls } = await loadThree();
     if (token !== viewerToken) return false;
     const canvas = el(canvasId), stage = el(stageId);
@@ -1718,6 +2531,7 @@ async function mountCup({ canvasId, stageId, statusId, item, occ, version, intro
   } catch (error) {
     if (token !== viewerToken) return false;
     if (status) status.textContent = "المعاينة ثلاثية الأبعاد ما اشتغلت هنا. تقدر تراجعه بالصور.";
+    if (canvasId === "productGl" && S.route === "product" && S.previewMode !== "2d") { S.previewMode = "2d"; const seg = document.querySelector(".seg"); if (seg) { seg.dataset.i = 1; seg.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.v === "2d"))); } if (status) status.hidden = true; applyProductPreviewMode(); }
     return false;
   }
 }
@@ -1864,45 +2678,14 @@ fxSplash(() => fxEnter(firstScreen));
 
 async function startProductViewer() {
   const stage = el("productStage"); if (!stage || !S.draft) return;
-  const item = { text: S.draft.text, pid: S.draft.pid, pal: S.draft.pal, tagline: S.draft.tagline };
+  const item = { ...S.draft };
   await mountProduct({ canvasId: "productGl", stageId: "productStage", statusId: "productStatus", item, occ: S.occ, version: 1 });
 }
 function applyProductPreviewMode() {
   const stage = el("productStage"); if (!stage || !S.draft) return;
-  const flat = (S.previewMode === "2d");
+  const flat = S.previewMode === "2d";
   stage.classList.toggle("flat", flat);
-  if (flat) { const node = document.createElement("div"); node.innerHTML = art(S.draft.pid, S.draft.text, S.draft.pal || S.occ); const svgEl = node.firstElementChild; svgEl.setAttribute("xmlns", "http://www.w3.org/2000/svg"); const svg = svgEl.outerHTML.replace(/var\(--font\)/g, "'Baloo Bhaijaan 2','Cairo',sans-serif"); const b64 = btoa(unescape(encodeURIComponent(svg))); stage.style.setProperty("--flatArt", `url("data:image/svg+xml;base64,${b64}")`); }
-}
-async function downloadDraftNow(kind) {
-  if (!S.draft) return;
-  const occ = S.occ, item = { text: S.draft.text, pid: S.draft.pid, pal: S.draft.pal, tagline: S.draft.tagline };
-  const canvas = (item.pid === "cup") ? designCanvas(item, occ, 1) : productCanvas(item.pid, item, occ);
-  const safe = (S.draft.text || "lamma").replace(/[\\/:*?"<>|]/g, "");
-  if (kind === "pdf") {
-    const run = async () => {
-      if (!window.jspdf) { toast("جاري تحضير الـPDF…"); await new Promise((r) => setTimeout(r, 400)); if (!window.jspdf) { toast("ما قدرت أجهّز الـPDF، جرّب PNG"); return; } }
-      const { jsPDF } = window.jspdf;
-      const landscape = canvas.width >= canvas.height;
-      const pdf = new jsPDF({ unit: "mm", format: "a4", orientation: landscape ? "landscape" : "portrait" });
-      const pageW = pdf.internal.pageSize.getWidth(), pageH = pdf.internal.pageSize.getHeight();
-      const scale = Math.min((pageW - 20) / canvas.width, (pageH - 20) / canvas.height);
-      const w = canvas.width * scale, h = canvas.height * scale;
-      pdf.addImage(canvas.toDataURL("image/png"), "PNG", (pageW - w) / 2, (pageH - h) / 2, w, h);
-      pdf.save(`لمّة-${safe}.pdf`);
-      toast("انحمل الـPDF"); sfx("success");
-    };
-    run();
-    return;
-  }
-  canvas.toBlob((blob) => {
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement("a");
-    link.href = url; link.download = `لمّة-${safe}.png`;
-    document.body.appendChild(link); link.click(); link.remove();
-    setTimeout(() => URL.revokeObjectURL(url), 1000);
-    toast("انحمل تصميمك"); celebrate(.7, occ); sfx("success");
-  }, "image/png");
+  if (flat) stage.style.setProperty("--flatArt", `url("${itemCanvas(S.draft, S.occ).toDataURL("image/jpeg", .9)}")`);
 }
 
 </script>
-</body></html>
