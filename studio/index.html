@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html dir="rtl" lang="ar"><head><meta charset="utf-8"/><meta name="lahza-home" content="../"/><meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/><meta content="#FFFBFC" name="theme-color"/><meta content="yes" name="apple-mobile-web-app-capable"/><meta content="default" name="apple-mobile-web-app-status-bar-style"/><meta content="yes" name="mobile-web-app-capable"/><meta content="لحظة — صممي ثيم مناسبتك، شوفيه على المنتج، ووزّعي نسخه على ورق الطباعة." name="description"/><title>استوديو لحظة</title><link href="./favicon.svg" rel="icon" type="image/svg+xml"/><link href="./styles.css?v=202611131157" rel="stylesheet"/><link href="./enhancements.css?v=202611131157" rel="stylesheet"/><link href="./theme.css?v=202611131157" rel="stylesheet"/><link href="./customize.css?v=202611131157" rel="stylesheet"/><link href="./layout.css?v=202611131157" rel="stylesheet"/></head><body>
+<html dir="rtl" lang="ar"><head><meta charset="utf-8"/><meta name="lahza-home" content="../"/><meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/><meta content="#FFFBFC" name="theme-color"/><meta content="yes" name="apple-mobile-web-app-capable"/><meta content="default" name="apple-mobile-web-app-status-bar-style"/><meta content="yes" name="mobile-web-app-capable"/><meta content="لحظة — تصميم ثيم المناسبة ومعاينته على المنتج وتوزيع نسخه على ورق الطباعة." name="description"/><title>استوديو لحظة</title><link href="./favicon.svg" rel="icon" type="image/svg+xml"/><link href="./styles.css?v=202611131206" rel="stylesheet"/><link href="./enhancements.css?v=202611131206" rel="stylesheet"/><link href="./theme.css?v=202611131206" rel="stylesheet"/><link href="./customize.css?v=202611131206" rel="stylesheet"/><link href="./layout.css?v=202611131206" rel="stylesheet"/></head><body>
 <div aria-live="polite" class="toast" id="toast" role="status"></div>
 <div class="site-shell" id="siteShell" hidden="">
 <!-- The studio is for designing only (Record 18). These hidden lists keep the ids app.js fills. -->
@@ -35,16 +35,8 @@
 <button class="wsb-tool" id="moreBtn" type="button" aria-label="المزيد"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="12" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="19" cy="12" r="1.5"/></svg></button>
 </nav>
 <div class="stage-controls wsb-3d" id="stageControls">
-<div class="wsb-3d-row">
-<button class="wsb-round wsb-small" id="rotateLeft" type="button" aria-label="لف"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 14l-4-4 4-4M5 10h9a5 5 0 0 1 0 10h-3"/></svg></button>
-<button class="wsb-round wsb-small" id="rotateRight" type="button" aria-label="لف للجهة الثانية"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 14l4-4-4-4M19 10h-9a5 5 0 0 0 0 10h3"/></svg></button>
-<button class="wsb-round wsb-small" id="zoomOut" type="button" aria-label="تصغير"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/></svg></button>
-<button class="wsb-round wsb-small" id="zoomIn" type="button" aria-label="تكبير"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
-</div>
-<div class="wsb-mode">
-<button class="mode-btn active" id="editOnBottle" type="button">حرّكي التصميم</button>
-<button class="mode-btn" id="spinBottle" type="button"><span id="spinLabel">لفّي المنتج</span></button>
-</div>
+<p class="wsb-hint3d">السحب يلف المنتج · السحب على العنصر يحرّكه · إصبعين للتكبير</p>
+<div hidden=""><button id="rotateLeft" type="button">↶</button><button id="rotateRight" type="button">↷</button><button id="zoomOut" type="button">−</button><button id="zoomIn" type="button">+</button><button class="mode-btn active" id="editOnBottle" type="button">تحريك</button><button class="mode-btn" id="spinBottle" type="button"><span id="spinLabel">لف المنتج</span></button></div>
 </div>
 <div class="wsb-bottom">
 <div aria-label="العنصر المحدد" class="selection-quickbar wsb-pill" hidden="" id="selectionQuickbar">
@@ -93,6 +85,6 @@
 </section>
 <div class="modal-backdrop" hidden="" id="modalBackdrop"><div aria-modal="true" class="modal" id="modal" role="dialog"><button aria-label="إغلاق" class="modal-close icon-button" id="closeModal">×</button><div id="modalContent"></div></div></div>
 <input accept="image/*,.heic,.heif" hidden="" id="imageInput" multiple="" type="file"/>
-<script defer="" src="./app.js?v=202611131157"></script><script defer="" src="./customize.js?v=202611131157"></script><script defer="" src="./layout.js?v=202611131157"></script>
+<script defer="" src="./app.js?v=202611131206"></script><script defer="" src="./customize.js?v=202611131206"></script><script defer="" src="./layout.js?v=202611131206"></script>
 </body>
 </html>
