@@ -1,0 +1,55 @@
+/* Lahza Studio customization panel (Record 16). Fonts are open-licence faces from Google Fonts. */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;700&family=Cairo:wght@400;700&family=Tajawal:wght@400;700&family=Almarai:wght@400;700&family=Readex+Pro:wght@400;700&family=Mada:wght@400;700&family=Lemonada:wght@400;700&family=Marhey:wght@400;700&family=Changa:wght@400;700&family=Lalezar&family=Rakkas&family=Jomhuria&family=Katibeh&family=Blaka&family=Amiri:wght@400;700&family=Noto+Naskh+Arabic:wght@400;700&family=Scheherazade+New:wght@400;700&family=Harmattan:wght@400;700&family=Gulzar&family=Noto+Kufi+Arabic:wght@400;700&family=Reem+Kufi:wght@400;700&family=El+Messiri:wght@400;700&family=Aref+Ruqaa:wght@400;700&family=Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Montserrat:wght@400;700&family=Josefin+Sans:wght@400;700&family=Bebas+Neue&family=Abril+Fatface&family=Lobster&family=Pacifico&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Garamond:wght@400;700&family=Great+Vibes&family=Dancing+Script:wght@400;700&family=Caveat:wght@400;700&display=swap');
+.cx-tabs{position:sticky;top:0;z-index:2;display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:2px;padding:3px;margin:0 0 12px;background:var(--cream);border-radius:var(--pill)}
+.cx-tabs button{min-width:0;border:0;background:transparent;color:var(--muted);font-weight:700;font-size:12px;padding:7px 2px;border-radius:var(--pill);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cx-tabs button.on{background:#fff;color:var(--primary);box-shadow:0 2px 10px rgba(142,31,79,.12)}
+.cx-group{display:grid;gap:10px}
+.cx-title{font-size:12.5px;font-weight:800;color:var(--ink)}
+.cx-sub{font-size:11px;color:var(--muted);margin-top:4px}
+.cx-field{display:grid;gap:6px}
+.cx-seg{display:flex;gap:4px;padding:3px;background:var(--cream);border-radius:var(--pill);flex-wrap:wrap}
+.cx-seg button{flex:1 1 auto;border:0;background:transparent;color:var(--muted);font-weight:700;font-size:12.5px;padding:7px 10px;border-radius:var(--pill)}
+.cx-seg button.on{background:#fff;color:var(--primary);box-shadow:0 2px 8px rgba(142,31,79,.12)}
+.cx-seg-wrap button{flex:1 0 30%}
+.cx-chips{display:flex;flex-wrap:wrap;gap:6px}
+.cx-chips button{border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:var(--pill);padding:5px 12px;font-size:12px;font-weight:600}
+.cx-chips button.on{background:var(--primary);border-color:var(--primary);color:#fff}
+.cx-swatches{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px}
+.cx-swatch{aspect-ratio:1;max-width:100%;border-radius:50%;border:1px solid rgba(42,22,32,.14);padding:0;min-width:0}
+.cx-swatch.on{outline:2.5px solid var(--primary);outline-offset:2px}
+.cx-color-row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.cx-color-row input[type=color]{width:44px;height:36px;padding:2px;border:1px solid var(--line);border-radius:12px;background:#fff}
+.cx-hex{width:96px;border:1px solid var(--line);border-radius:12px;padding:7px 10px;font-family:ui-monospace,Menlo,monospace;font-size:13px;color:var(--ink);background:#fff}
+.cx-mini{border:1px solid var(--line);background:#fff;color:var(--primary);border-radius:var(--pill);padding:6px 12px;font-size:12px;font-weight:700}
+.cx-fonts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;max-height:360px;overflow-y:auto;padding:2px}
+.cx-font{display:grid;gap:0;justify-items:center;border:1.5px solid var(--line);background:#fff;border-radius:16px;padding:8px 6px;color:var(--ink);min-width:0}
+.cx-font span{font-size:24px;line-height:1.5}
+.cx-font small{font-family:var(--font);font-size:11px;color:var(--muted)}
+.cx-font.on{border-color:var(--primary);background:var(--primary-soft)}
+.cx-styles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+.cx-style{display:grid;justify-items:center;border:1.5px solid var(--line);background:#fff;border-radius:14px;padding:6px 4px;min-width:0}
+.cx-style span{font-size:19px;line-height:1.5}
+.cx-style small{font-family:var(--font);font-size:10.5px;color:var(--muted);-webkit-text-stroke:0}
+.cx-shapes{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+.cx-shapes button{display:grid;justify-items:center;gap:2px;border:1.5px solid var(--line);background:#fff;border-radius:14px;padding:6px 2px;min-width:0}
+.cx-shapes button.on{border-color:var(--primary);background:var(--primary-soft)}
+.cx-shapes canvas{width:30px;height:30px}
+.cx-shapes small{font-size:10.5px;color:var(--muted);line-height:1.2}
+.cx-themes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.cx-theme{display:flex;align-items:center;gap:8px;border:1.5px solid var(--line);background:#fff;border-radius:14px;padding:8px 10px;color:var(--ink);font-weight:700;min-width:0}
+.cx-theme-dots{display:flex}
+.cx-theme-dots i{width:16px;height:16px;border-radius:50%;border:1.5px solid #fff;margin-inline-start:-5px;box-shadow:0 0 0 1px rgba(42,22,32,.1)}
+.cx-theme-dots i:first-child{margin-inline-start:0}
+.cx-theme small{font-size:12px}
+.cx-toggle{display:flex;align-items:center;gap:10px;font-size:13px;font-weight:600;cursor:pointer}
+.cx-toggle input{position:absolute;opacity:0;width:1px;height:1px}
+.cx-switch{width:38px;height:22px;border-radius:var(--pill);background:var(--line);position:relative;transition:background .3s var(--ease);flex:none}
+.cx-switch::after{content:"";position:absolute;top:3px;inset-inline-start:3px;width:16px;height:16px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.2);transition:transform .3s var(--ease)}
+.cx-toggle input:checked+.cx-switch{background:var(--primary)}
+.cx-toggle input:checked+.cx-switch::after{transform:translateX(-16px)}
+[dir=ltr] .cx-toggle input:checked+.cx-switch::after{transform:translateX(16px)}
+.cx-toggle input:focus-visible+.cx-switch{outline:3px solid rgba(142,31,79,.35);outline-offset:2px}
+.cx-align-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+.cx-wide{width:100%;margin-top:6px}
+.prop-action.is-on{background:var(--primary-soft);border-color:var(--primary);color:var(--primary)}

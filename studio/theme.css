@@ -1,0 +1,66 @@
+/* لحظة — the owner-approved look (docs/design/approved_trial/approved_choices.json, renamed in Record 15).
+   Direction فرحة, color توتي #8E1F4F, font Baloo Bhaijaan 2, round corners, soft motion.
+   Loaded after styles.css and enhancements.css; it only overrides tokens and shared shapes. */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400;500;600;700;800&display=swap');
+
+:root{
+  --green:#8E1F4F;            /* primary: توتي */
+  --green2:#6F1239;           /* primary, pressed */
+  --primary:#8E1F4F;
+  --primary-soft:#F7E9EF;
+  --ink:#2A1620;
+  --muted:#6B5560;
+  --line:#F0DEE6;
+  --outside:#F3E6EC;
+  --gold:#FFB627;
+  --bg:#FFFBFC;
+  --cream:#FBF3F6;
+  --shadow:0 18px 55px rgba(142,31,79,.08);
+  --font:"Baloo Bhaijaan 2","IBM Plex Sans Arabic",Tahoma,Arial,sans-serif;
+  --pill:999px;
+  --r:22px;
+  --ease:cubic-bezier(.2,.8,.2,1);
+  color-scheme:light;
+}
+body{background:var(--bg);color:var(--ink);font-family:var(--font)}
+
+/* Round corners */
+.button,.studio-chip,.filter-chip,.view-tab,.mode-btn,.language-button,.section-count,.size-chip{border-radius:var(--pill)}
+.product-card,.template-card,.occasion-card,.project-card,.step-card,.modal,.readiness-box,.print-preview,.preview-frame,.tool-item,.modal-option,.print-mode,.clone-product,.tip-card,.product-summary{border-radius:var(--r)}
+.button-primary{background:var(--primary)}
+.button-primary:hover:not(:disabled){background:var(--green2)}
+button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid rgba(142,31,79,.35);outline-offset:2px;box-shadow:0 0 18px rgba(142,31,79,.25)}
+
+/* Soft motion: one base duration and curve */
+.button,.product-card,.template-card,.studio-chip,.tool-item,.modal-option,.clone-product{transition-duration:300ms;transition-timing-function:var(--ease)}
+.button:active:not(:disabled),.studio-chip:active,.tool-item:active{transform:scale(.934)}
+
+/* Brand mark */
+.brand-name{font-weight:800;letter-spacing:0}
+.brand-name small{letter-spacing:2.4px}
+.brand-symbol,.mini-brand{color:var(--primary)}
+.preview-watermark{color:rgba(142,31,79,.18)}
+
+/* Multi-product copy */
+.clone-products{display:grid;grid-template-columns:repeat(auto-fill,minmax(112px,1fr));gap:10px;margin-bottom:14px}
+.clone-product{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:6px;min-height:132px;padding:12px 8px 10px;border:1.5px solid var(--line);border-radius:18px;background:#fff;color:var(--ink);text-align:center}
+.clone-product:hover{border-color:rgba(142,31,79,.45)}
+.clone-product.selected{border-color:var(--primary);background:var(--primary-soft)}
+.clone-product svg{width:auto;height:66px;max-width:100%}
+.clone-product strong{font-size:12.5px;line-height:1.35}
+.clone-product small{font-size:11px;color:var(--muted);line-height:1.2}
+.clone-products.multi .clone-product{position:relative}
+.clone-products.multi .clone-product .clone-tick{position:absolute;top:8px;inset-inline-start:8px;width:22px;height:22px;border-radius:50%;border:2px solid var(--line);background:#fff;display:grid;place-items:center;font-size:12px;color:#fff;line-height:1}
+.clone-products.multi .clone-product.selected .clone-tick{background:var(--primary);border-color:var(--primary)}
+.clone-product.is-source{opacity:.55}
+.clone-plan{display:grid;gap:10px;margin-top:6px}
+.clone-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:10px;align-items:center;padding:10px 12px;border:1px solid var(--line);border-radius:16px;background:#fff}
+.clone-row strong{font-size:13px}
+.clone-row select{width:100%;border:1px solid var(--line);border-radius:12px;padding:8px 10px;background:#fff;color:var(--ink);font:inherit;font-size:13px}
+.clone-row .fit-note{grid-column:1/-1;font-size:11.5px;color:var(--muted)}
+.clone-result{display:grid;gap:8px;margin-top:10px}
+.clone-result-item{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 12px;border:1px solid var(--line);border-radius:16px;background:var(--primary-soft)}
+.clone-result-item span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.theme-tag{display:inline-flex;align-items:center;gap:4px;margin-top:4px;padding:2px 9px;border-radius:var(--pill);background:var(--primary-soft);color:var(--primary);font-size:11px;font-weight:700}
+.cup-template-note{font-size:12px;color:var(--muted);margin-top:8px}
+@media(max-width:520px){.clone-row{grid-template-columns:1fr}}
