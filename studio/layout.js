@@ -3,9 +3,13 @@
    drawing, printing and saving stay in app.js and customize.js. */
 'use strict';
 
-/* Style أ: bold occasion tiles like the لحظة shop. */
-const TILE_COLORS = { baby: ['#8E1F4F', '#FFFFFF'], wedding: ['#0F7C7C', '#FFFFFF'], graduation: ['#FFB627', '#2A1620'], birthday: ['#5B3FA8', '#FFFFFF'] };
-occasions.forEach(o => { const c = TILE_COLORS[o.id]; if (c) { o.bg = c[0]; o.fg = c[1]; } });
+/* Record 18: the studio is Arabic only and for designing only. */
+lang = 'ar'; storeSet('lahza-lang', 'ar');
+const birthday = occasions.find(o => o.id === 'birthday'); if (birthday) birthday.ar = 'يوم ميلاد';
+templates.forEach(t => { if (t.ar === 'عيد ميلاد سعيد') t.ar = 'يوم ميلاد سعيد'; });
+/* Where "الرئيسية" goes: the shop's home page when the studio is served beside it (a meta tag says so). */
+const HOME_URL = document.querySelector('meta[name="lahza-home"]')?.content || '';
+if (!HOME_URL) $('#homeLabel').textContent = 'تصاميمي';
 
 /* Style ب: the design sits between the top bar, the side rail and the bottom bar. */
 getFlatFrame = function (canvas) {
@@ -75,3 +79,25 @@ refreshSelectionBar = function () {
 };
 
 window.addEventListener('resize', syncScrim);
+
+/* No home page of its own: the studio opens on the last design, or asks what to design. */
+function openProjectsModal() {
+  state.modal = 'projects';
+  openModal(`<div class="modal-kicker">محفوظة على هذا الجهاز</div><h2>تصاميمي</h2><div class="projects-top"><button class="button button-primary" type="button" data-new-design>＋ تصميم جديد</button><label class="button button-outline file-label" for="importProjectInput">استيراد مشروع</label></div><div class="projects-grid" id="projectsGrid"></div>`);
+  renderProjects();
+}
+async function startStudio() {
+  let last = null; try { last = (await dbAll())[0] || null; } catch (e) { /* storage blocked: start fresh */ }
+  if (last) openEditor(last); else startWizard('water');
+}
+showPage = function (page) {
+  if (!state.project) { startStudio(); return; }
+  if (page === 'home' && HOME_URL) { location.href = HOME_URL; return; }
+  openProjectsModal();
+};
+/* Closing the first question without choosing still gives a bottle to design on. */
+const baseCloseModal = closeModal;
+closeModal = function () { baseCloseModal(); setTimeout(() => { if (!state.project && $('#modalBackdrop').hidden) openEditor(createProject('water')); }); };
+$('#newDesignBtn').addEventListener('click', () => { closeMore(); startWizard(state.project?.productId || 'water'); });
+$('#myDesignsBtn').addEventListener('click', () => { closeMore(); openProjectsModal(); });
+document.addEventListener('click', e => { if (e.target.closest('[data-new-design]')) startWizard('water'); });

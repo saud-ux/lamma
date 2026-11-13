@@ -1,58 +1,4 @@
-/* Lahza Studio layout (Record 17). Home in style أ, studio in style ب. Loaded last. */
-
-/* ===================== Home: style أ ===================== */
-.ha{min-height:100vh;background:var(--bg);padding-bottom:110px;position:relative;overflow-x:hidden}
-.ha-header{position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;width:min(640px,100%);margin:0 auto;box-sizing:border-box;padding:22px max(20px,env(safe-area-inset-right,0px)) 6px max(20px,env(safe-area-inset-left,0px))}
-.ha-brand{border:0;background:none;padding:0;display:flex;flex-direction:column;align-items:flex-start;font-size:38px;font-weight:800;color:var(--primary);line-height:1.1}
-.ha-brand small{font-size:10px;letter-spacing:3px;color:var(--muted);font-weight:700}
-.ha-round{min-width:46px;height:46px;padding:0 14px;gap:6px;border-radius:999px;grid-auto-flow:column;border:0;background:var(--primary-soft);color:var(--primary);font-weight:800;font-size:13px;display:grid;place-items:center}
-.ha main>section{width:min(640px,100%);margin:0 auto;box-sizing:border-box;padding-inline:max(20px,env(safe-area-inset-left,0px))}
-.ha-home{position:relative;display:flex;flex-direction:column;gap:16px;padding-top:6px}
-.ha-blob{position:absolute;border-radius:50%;z-index:0;pointer-events:none}
-.ha-blob-1{width:220px;height:220px;background:var(--primary-soft);top:-130px;left:-90px}
-.ha-blob-2{width:130px;height:130px;background:#FFF1CF;top:160px;right:-60px}
-.ha-home>*:not(.ha-blob){position:relative;z-index:1}
-.ha-hello h1{margin:0;font-size:31px;font-weight:800;line-height:1.3;color:var(--ink)}
-.ha-hello p{margin:2px 0 0;font-size:16px;color:var(--muted)}
-.ha-cta{display:flex;align-items:center;gap:14px;width:100%;padding:16px 18px;border:0;border-radius:26px;background:var(--primary);color:#fff;text-align:start;box-shadow:0 14px 30px rgba(142,31,79,.28);transition:transform .3s var(--ease)}
-.ha-cta span{flex:1;display:flex;flex-direction:column}
-.ha-cta strong{font-size:21px;font-weight:800;line-height:1.3}
-.ha-cta small{font-size:14px;opacity:.85}
-.ha-cta:active{transform:scale(.97)}
-.ha-tiles{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px!important}
-.ha-tiles .occasion-card{height:132px;border:0;border-radius:26px;background:var(--occ-bg);color:var(--occ-fg);padding:14px 16px;display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start;box-shadow:none}
-.ha-tiles .occasion-card:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(42,22,32,.15)}
-.ha-tiles .occasion-art{height:auto;margin:0;color:inherit;justify-content:flex-start}
-.ha-tiles .occ-decoration{display:none}
-.ha-tiles .occ-mark{font-family:inherit;font-size:34px;line-height:1}
-.ha-tiles .occasion-card strong{font-size:22px;font-weight:800;color:inherit}
-.ha-tiles .occasion-card small{display:none}
-.ha-row-head{display:flex;align-items:center;justify-content:space-between;margin-top:6px}
-.ha-row-head h2{margin:0;font-size:20px;font-weight:800}
-.ha-link{border:0;background:none;color:var(--primary);font-weight:700;font-size:15px}
-.ha-strip{display:flex!important;gap:10px!important;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:4px;margin-inline:-4px;padding-inline:4px;scrollbar-width:none}
-.ha-strip::-webkit-scrollbar{display:none}
-.ha-strip .template-card{flex:0 0 46%;scroll-snap-align:start;border-radius:22px}
-.ha-strip .template-preview{height:110px}
-.ha-strip .template-label{height:70px}
-.ha-strip .template-label strong{font-size:12px}
-.ha-strip .template-info{padding:10px 12px}
-.ha-products{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}
-.ha-products .product-card{border-radius:22px}
-.ha-products .product-visual{height:120px}
-.ha-products .product-visual svg{height:96px!important;width:auto}
-.ha-products .product-card-content{padding:10px 12px}
-.ha-products .product-card-content strong{font-size:14px}
-.ha-foot{text-align:center;color:var(--muted);font-size:12px;padding:20px 0 0}
-.ha .inner-view{padding-top:18px;min-height:0}
-.ha .inner-header h1{font-size:30px}
-.ha .template-grid.all-templates,.ha .projects-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-.ha-nav{position:fixed;left:0;right:0;bottom:0;z-index:20;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));align-items:end;padding:8px max(8px,env(safe-area-inset-left,0px)) calc(14px + env(safe-area-inset-bottom,0px));background:#fff;border-top:1px solid var(--line)}
-.ha-nav button{border:0;background:none;display:flex;flex-direction:column;align-items:center;gap:2px;color:var(--muted);font-size:12.5px;padding:4px 0}
-.ha-nav button small{font-size:12.5px}
-.ha-nav .ha-nav-main{justify-self:center;width:60px;height:60px;margin-top:-30px;border-radius:50%;background:var(--primary);color:#fff;display:grid;place-items:center;box-shadow:0 8px 20px rgba(142,31,79,.35)}
-@media(min-width:900px){.ha-nav{width:min(640px,100%);left:50%;transform:translateX(-50%);border-radius:26px 26px 0 0;border:1px solid var(--line)}}
-body.editor-open .ha-nav{display:none}
+/* Lahza Studio layout (Records 17 and 18). The studio in style ب, for designing only. Loaded last. */
 
 /* ===================== Studio: style ب ===================== */
 .wsb{position:fixed;inset:0;z-index:30;background:#EFE9EC;color:var(--ink);overflow:hidden;font-family:var(--font)}
@@ -134,3 +80,11 @@ body.editor-open .toast.visible{transform:translate(-50%,0)}
 .wsb.sheet-open #bottleCanvas{height:calc(100% - var(--sheet-h) - 90px)!important}
 .wsb.sheet-open .wsb-3d,.wsb.sheet-open .wsb-bottom{visibility:hidden}
 .ha-round .language-circle{font-size:15px}
+.wsb-home{height:44px;padding:0 16px 0 14px;border:0;border-radius:999px;background:rgba(255,255,255,.92);color:var(--ink);display:flex;align-items:center;gap:6px;font-size:15px;font-weight:800;box-shadow:0 2px 10px rgba(42,22,32,.08);flex:none}
+.wsb-home:active{transform:scale(.934)}
+#siteShell{display:none!important}
+body{background:#EFE9EC}
+.modal .projects-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.modal .projects-top{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+@media(max-width:520px){.modal .projects-grid{grid-template-columns:1fr}}
+.modal-step{direction:rtl!important;font:700 13px var(--font)!important;letter-spacing:0!important;color:var(--muted)!important}

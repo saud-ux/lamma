@@ -1,38 +1,12 @@
 <!DOCTYPE html>
-<html dir="rtl" lang="ar"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/><meta content="#FFFBFC" name="theme-color"/><meta content="yes" name="apple-mobile-web-app-capable"/><meta content="default" name="apple-mobile-web-app-status-bar-style"/><meta content="yes" name="mobile-web-app-capable"/><meta content="لحظة — صممي ثيم مناسبتك، شوفيه على المنتج، ووزّعي نسخه على ورق الطباعة." name="description"/><title>استوديو لحظة</title><link href="./favicon.svg" rel="icon" type="image/svg+xml"/><link href="./styles.css?v=202611131151" rel="stylesheet"/><link href="./enhancements.css?v=202611131151" rel="stylesheet"/><link href="./theme.css?v=202611131151" rel="stylesheet"/><link href="./customize.css?v=202611131151" rel="stylesheet"/><link href="./layout.css?v=202611131151" rel="stylesheet"/></head><body>
+<html dir="rtl" lang="ar"><head><meta charset="utf-8"/><meta name="lahza-home" content="../"/><meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/><meta content="#FFFBFC" name="theme-color"/><meta content="yes" name="apple-mobile-web-app-capable"/><meta content="default" name="apple-mobile-web-app-status-bar-style"/><meta content="yes" name="mobile-web-app-capable"/><meta content="لحظة — صممي ثيم مناسبتك، شوفيه على المنتج، ووزّعي نسخه على ورق الطباعة." name="description"/><title>استوديو لحظة</title><link href="./favicon.svg" rel="icon" type="image/svg+xml"/><link href="./styles.css?v=202611131157" rel="stylesheet"/><link href="./enhancements.css?v=202611131157" rel="stylesheet"/><link href="./theme.css?v=202611131157" rel="stylesheet"/><link href="./customize.css?v=202611131157" rel="stylesheet"/><link href="./layout.css?v=202611131157" rel="stylesheet"/></head><body>
 <div aria-live="polite" class="toast" id="toast" role="status"></div>
-<div class="site-shell ha" id="siteShell">
-<header class="ha-header">
-<button class="ha-brand" data-go="home" type="button" aria-label="لحظة، الرئيسية">لحظة<small>LAHZA</small></button>
-<button class="ha-round" id="languageBtn" type="button">EN</button>
-</header>
-<main>
-<section id="homeView" class="ha-home">
-<div class="ha-blob ha-blob-1" aria-hidden="true"></div><div class="ha-blob ha-blob-2" aria-hidden="true"></div>
-<div class="ha-hello"><h1>وش مناسبتك؟</h1><p>اختاري قالب، أو صممي من الصفر</p></div>
-<button class="ha-cta" data-start="water" type="button">
-<svg width="58" height="70" viewBox="0 0 58 70" aria-hidden="true"><path d="M8 8h42l-6 58H14z" fill="#FFFFFF"></path><ellipse cx="29" cy="8" rx="22" ry="5" fill="#F7E9EF"></ellipse><text x="29" y="40" text-anchor="middle" font-size="11" font-weight="800" fill="#8E1F4F" font-family="Baloo Bhaijaan 2">لحظة</text></svg>
-<span><strong>صممي بنفسك</strong><small>خطوط وألوان، وشوفيه على الكوب والقارورة</small></span>
-<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
-</button>
-<div class="occasion-grid ha-tiles" id="occasionGrid"></div>
-<div class="ha-row-head"><h2>الأكثر طلبًا</h2><button class="ha-link" data-go="templates" type="button">شوف الكل</button></div>
-<div class="template-grid ha-strip" id="featuredTemplates"></div>
-<div class="ha-row-head" id="products"><h2>حسب المنتج</h2></div>
-<div class="product-grid ha-products" id="productsGrid"></div>
-<div class="hero-showcase" hidden=""><canvas id="heroBottleCanvas" width="10" height="10"></canvas></div>
-<footer class="ha-foot">© <span id="footerYear">2026</span> لحظة</footer>
-</section>
-<section class="container inner-view" hidden="" id="templatesView"><div class="inner-header"><button class="back-link" data-go="home">→ <span data-i18n="goHome">الرئيسية</span></button><div class="section-kicker" data-i18n="templatesKicker">اختياراتنا لك</div><h1 data-i18n="allTemplatesTitle">قوالب لحظة</h1><p data-i18n="allTemplatesDesc">كل قالب قابل للتعديل بالكامل. اختاري اللي يعجبك وابدئي.</p></div><div class="filter-chips" id="templateFilters"></div><div class="template-grid all-templates" id="allTemplatesGrid"></div></section>
-<section class="container inner-view" hidden="" id="projectsView"><div class="inner-header"><button class="back-link" data-go="home">→ <span data-i18n="goHome">الرئيسية</span></button><div class="section-kicker" data-i18n="myDesignsKick">مساحتك الإبداعية</div><h1 data-i18n="myDesigns">تصاميمي</h1><p data-i18n="myDesignsDesc">تصاميمك محفوظة على هذا الجهاز فقط. احفظي نسخة لنقلها لجهاز آخر.</p></div><div class="projects-top"><input aria-label="البحث في تصاميمي" class="projects-search" id="projectsSearch" placeholder="ابحثي في تصاميمك..." type="search"/><button class="button button-primary" data-i18n="newDesign" data-start="water">+ تصميم جديد</button><label class="button button-outline file-label"><span data-i18n="importProject">استيراد مشروع JSON</span><input accept="application/json,.json" hidden="" id="importProjectInput" type="file"/></label></div><div class="projects-grid" id="projectsGrid"></div></section>
-</main>
-<nav aria-label="القائمة الرئيسية" class="ha-nav">
-<button data-go="home" type="button"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg><small>الرئيسية</small></button>
-<button data-go="templates" type="button"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"/></svg><small>القوالب</small></button>
-<button class="ha-nav-main" data-start="water" type="button" aria-label="تصميم جديد"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
-<button data-go="projects" type="button"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2zM9 8h6M9 12h6"/></svg><small>تصاميمي</small></button>
-<button data-scroll="products" type="button"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8h12l1 12H5zM9 8V6a3 3 0 0 1 6 0v2"/></svg><small>المنتجات</small></button>
-</nav>
+<div class="site-shell" id="siteShell" hidden="">
+<!-- The studio is for designing only (Record 18). These hidden lists keep the ids app.js fills. -->
+<button id="languageBtn" type="button" hidden="">EN</button>
+<section id="homeView"><div id="occasionGrid"></div><div id="featuredTemplates"></div><div id="productsGrid"></div><div class="hero-showcase"><canvas id="heroBottleCanvas" width="10" height="10"></canvas></div><span id="footerYear"></span></section>
+<section id="templatesView"><div id="templateFilters"></div><div id="allTemplatesGrid"></div></section>
+<section id="projectsView"><input id="importProjectInput" type="file" accept="application/json,.json" hidden=""/></section>
 </div>
 
 <section class="wsb" hidden="" id="workspace">
@@ -41,7 +15,7 @@
 <canvas aria-label="لوحة التصميم" hidden="" id="flatCanvas"></canvas>
 </div>
 <header class="wsb-top">
-<button class="wsb-round" id="exitEditor" type="button" aria-label="رجوع للرئيسية"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+<button class="wsb-home" id="exitEditor" type="button"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg><span id="homeLabel">الرئيسية</span></button>
 <div class="wsb-toggle" role="group" aria-label="طريقة العرض">
 <button class="view-tab active" data-view="3d" id="show3DBtn" type="button">3D</button>
 <button class="view-tab" data-view="flat" id="showFlatBtn" type="button">مسطح</button>
@@ -91,6 +65,8 @@
 <div class="wsb-meta"><strong id="stageTitle">قارورة مياه</strong><span class="size-chip" id="sizeChip">190 × 50 مم</span></div>
 <div class="wsb-grid">
 <button class="wsb-item" id="cloneDesignBtn" type="button">▣ نسخ التصميم لمنتجات أخرى</button>
+<button class="wsb-item" id="newDesignBtn" type="button">＋ تصميم جديد</button>
+<button class="wsb-item" id="myDesignsBtn" type="button">◷ تصاميمي</button>
 <button class="wsb-item" id="changeProductBtn" type="button">⇄ تغيير المنتج أو المقاس</button>
 <button class="wsb-item" id="sizeSettingsBtn" type="button">↔ ضبط المقاس</button>
 <button class="wsb-item" id="downloadMockupBtn" type="button">↓ <span>تنزيل صورة المنتج</span></button>
@@ -117,6 +93,6 @@
 </section>
 <div class="modal-backdrop" hidden="" id="modalBackdrop"><div aria-modal="true" class="modal" id="modal" role="dialog"><button aria-label="إغلاق" class="modal-close icon-button" id="closeModal">×</button><div id="modalContent"></div></div></div>
 <input accept="image/*,.heic,.heif" hidden="" id="imageInput" multiple="" type="file"/>
-<script defer="" src="./app.js?v=202611131151"></script><script defer="" src="./customize.js?v=202611131151"></script><script defer="" src="./layout.js?v=202611131151"></script>
+<script defer="" src="./app.js?v=202611131157"></script><script defer="" src="./customize.js?v=202611131157"></script><script defer="" src="./layout.js?v=202611131157"></script>
 </body>
 </html>
