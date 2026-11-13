@@ -2089,7 +2089,7 @@ const popular = () => Object.keys(OCC).map((occ) => IDEAS.find((idea) => idea.oc
 Object.assign(SCREENS, {
   home: () => `<div class="amb"><i></i><i></i><i></i><i></i></div>${topBar()}<button type="button" class="search-go" data-act="goSearch">${I("search", 22)}<span>ابحث عن تصميم</span></button>${nextEventBanner()}
     <div><h1>وش مناسبتك؟</h1><p class="sub">اختر تصميمك، اكتب الاسم، وحمّله</p></div>
-    <a class="studio-go" href="./studio/">${I("pen", 26)}<span><b>صمّم بنفسك في الاستديو</b><small>خطوط وألوان وأشكال، وشوفه على الكوب والقارورة</small></span>${I("next", 22)}</a>
+    <a class="studio-go" href="./studio/?v=202611131151">${I("pen", 26)}<span><b>صمّم بنفسك في الاستديو</b><small>خطوط وألوان وأشكال، وشوفه على الكوب والقارورة</small></span>${I("next", 22)}</a>
     <div class="tiles">${Object.entries(OCC).map(([key, o], i) => `<button type="button" class="tile" style="--i:${i};background:${o.bg};color:${o.fg}" data-act="pickOcc" data-v="${key}">${I(o.icon, 40)}<span>${o.label}</span></button>`).join("")}<button type="button" class="tile tile-idea" style="--i:5" data-act="idea">${I("plus", 40)}<span>تصميم خاص</span></button></div>
     <div class="row-head"><h2>الأكثر طلبًا</h2><button type="button" class="link" data-act="openGallery">شوف الكل</button></div><div class="strip">${popular().map(ideaCard).join("")}</div>
     <h2>حسب المنتج</h2><div class="circles">${PACK.map(productCircle).join("")}</div>
