@@ -94,18 +94,42 @@ function openProjectsModal() {
   openModal(`<div class="modal-kicker">محفوظة على هذا الجهاز</div><h2>تصاميمي</h2><div class="projects-top"><button class="button button-primary" type="button" data-new-design>＋ تصميم جديد</button><label class="button button-outline file-label" for="importProjectInput">استيراد مشروع</label></div><div class="projects-grid" id="projectsGrid"></div>`);
   renderProjects();
 }
-async function startStudio() {
-  let last = null; try { last = (await dbAll())[0] || null; } catch (e) { /* storage blocked: start fresh */ }
-  if (last) openEditor(last); else startWizard('water');
+/* Record 20: the studio opens on a start screen (option ١): new design, ready templates, my designs, latest designs. */
+const startEl = $('#startScreen');
+function hideStart() { startEl.hidden = true; }
+async function showStart() {
+  closeProps(); closeMore();
+  $('#workspace').hidden = true; document.body.classList.remove('editor-open'); startEl.hidden = false; startEl.scrollTop = 0;
+  $('#startTemplatesCount').textContent = `${templates.length} قوالب للمناسبات`;
+  let list = []; try { list = await dbAll(); } catch (e) { /* storage blocked */ }
+  $('#startMineCount').textContent = list.length ? `${list.length} محفوظة على هذا الجهاز` : 'ما فيه تصاميم بعد';
+  $('#startRecent').innerHTML = list.length ? list.slice(0, 3).map(p => {
+    const product = productCatalog.find(x => x.id === p.productId) || productCatalog[0];
+    const text = p.elements.find(x => x.type === 'text')?.text || p.title;
+    return `<button class="st-item" type="button" data-open-project="${p.id}"><span class="st-item-art" style="background:${htmlEscape(p.bg || '#F8F4E9')};color:${htmlEscape(p.accent || '#8E1F4F')}">${htmlEscape(String(text).split('\n')[0].slice(0, 10))}</span><span class="st-item-text"><strong>${htmlEscape(p.title)}</strong><small>${product.ar} · ${new Date(p.updatedAt).toLocaleDateString('ar-SA')}</small></span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8E1F4F" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button>`;
+  }).join('') : '<p class="st-empty">أول تصميم ينحفظ هنا تلقائيًا.</p>';
 }
+function startStudio() { showStart(); }
+function openTemplatesModal() {
+  state.modal = 'templates';
+  openModal(`<div class="modal-kicker">نقطة بداية جاهزة</div><h2>قوالب جاهزة</h2><p class="modal-sub">كل قالب يتعدّل بالكامل بعد اختياره.</p><div class="template-grid st-templates">${templates.map(templateCard).join('')}</div>`);
+}
+const baseOpenEditor = openEditor;
+openEditor = function (project) { hideStart(); baseOpenEditor(project); };
+$('#startHomeBtn').addEventListener('click', () => goHome());
+$('#startNewBtn').addEventListener('click', () => startWizard('water'));
+$('#startTemplatesBtn').addEventListener('click', openTemplatesModal);
+$('#startMineBtn').addEventListener('click', openProjectsModal);
+$('#startAllBtn').addEventListener('click', openProjectsModal);
+$('#startScreenBtn').addEventListener('click', async () => { await saveNow(false); showStart(); });
 showPage = function (page) {
   if (!state.project) { startStudio(); return; }
   if (page === 'home') { goHome(); return; }
   openProjectsModal();
 };
-/* Closing the first question without choosing still gives a bottle to design on. */
+/* Closing a window with no design open goes back to the start screen. */
 const baseCloseModal = closeModal;
-closeModal = function () { baseCloseModal(); setTimeout(() => { if (!state.project && $('#modalBackdrop').hidden) openEditor(createProject('water')); }); };
+closeModal = function () { baseCloseModal(); setTimeout(() => { if ($('#modalBackdrop').hidden && $('#workspace').hidden && startEl.hidden) showStart(); }); };
 $('#newDesignBtn').addEventListener('click', () => { closeMore(); startWizard(state.project?.productId || 'water'); });
 $('#myDesignsBtn').addEventListener('click', () => { closeMore(); openProjectsModal(); });
 document.addEventListener('click', e => { if (e.target.closest('[data-new-design]')) startWizard('water'); });
@@ -275,7 +299,7 @@ onBottlePointerUp = function (e) {
 
 /* Never a blank screen: whenever no window is open and no design is showing, open one. */
 setInterval(() => {
-  if (!$('#modalBackdrop').hidden || !$('#workspace').hidden) return;
+  if (!$('#modalBackdrop').hidden || !$('#workspace').hidden || !startEl.hidden) return;
   if (state.project) { $('#workspace').hidden = false; document.body.classList.add('editor-open'); renderWorkspace(); refreshPreview(); }
   else startStudio();
 }, 600);

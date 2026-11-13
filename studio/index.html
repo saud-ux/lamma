@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html dir="rtl" lang="ar"><head><meta charset="utf-8"/><meta name="lahza-home" content="../"/><meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/><meta content="#FFFBFC" name="theme-color"/><meta content="yes" name="apple-mobile-web-app-capable"/><meta content="default" name="apple-mobile-web-app-status-bar-style"/><meta content="yes" name="mobile-web-app-capable"/><meta content="لحظة — تصميم ثيم المناسبة ومعاينته على المنتج وتوزيع نسخه على ورق الطباعة." name="description"/><title>استوديو لحظة</title><link href="./favicon.svg" rel="icon" type="image/svg+xml"/><link href="./styles.css?v=202611131206" rel="stylesheet"/><link href="./enhancements.css?v=202611131206" rel="stylesheet"/><link href="./theme.css?v=202611131206" rel="stylesheet"/><link href="./customize.css?v=202611131206" rel="stylesheet"/><link href="./layout.css?v=202611131206" rel="stylesheet"/></head><body>
+<html dir="rtl" lang="ar"><head><meta charset="utf-8"/><meta name="lahza-home" content="../"/><meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/><meta content="#FFFBFC" name="theme-color"/><meta content="yes" name="apple-mobile-web-app-capable"/><meta content="default" name="apple-mobile-web-app-status-bar-style"/><meta content="yes" name="mobile-web-app-capable"/><meta content="لحظة — تصميم ثيم المناسبة ومعاينته على المنتج وتوزيع نسخه على ورق الطباعة." name="description"/><title>استوديو لحظة</title><link href="./favicon.svg" rel="icon" type="image/svg+xml"/><link href="./styles.css?v=202611131215" rel="stylesheet"/><link href="./enhancements.css?v=202611131215" rel="stylesheet"/><link href="./theme.css?v=202611131215" rel="stylesheet"/><link href="./customize.css?v=202611131215" rel="stylesheet"/><link href="./layout.css?v=202611131215" rel="stylesheet"/></head><body>
 <div aria-live="polite" class="toast" id="toast" role="status"></div>
 <div class="site-shell" id="siteShell" hidden="">
 <!-- The studio is for designing only (Record 18). These hidden lists keep the ids app.js fills. -->
@@ -8,6 +8,24 @@
 <section id="templatesView"><div id="templateFilters"></div><div id="allTemplatesGrid"></div></section>
 <section id="projectsView"><input id="importProjectInput" type="file" accept="application/json,.json" hidden=""/></section>
 </div>
+
+<section class="st" id="startScreen" hidden="" aria-label="بداية الاستديو">
+<header class="st-head">
+<button class="wsb-home" id="startHomeBtn" type="button"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg><span>الرئيسية</span></button>
+<span class="st-brand">استوديو لحظة</span>
+</header>
+<h1 class="st-title">من وين نبدأ؟</h1>
+<button class="st-new" id="startNewBtn" type="button">
+<span class="st-new-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span>
+<span class="st-new-text"><strong>تصميم جديد</strong><small>صفحة فاضية على المنتج المختار</small></span>
+</button>
+<div class="st-pair">
+<button class="st-card" id="startTemplatesBtn" type="button"><span class="st-thumbs" aria-hidden="true"><i style="background:#F9F4E6"></i><i style="background:#FFFAF4"></i><i style="background:#FEF8FC"></i></span><span class="st-card-text"><strong>قوالب جاهزة</strong><small id="startTemplatesCount">قوالب للمناسبات</small></span></button>
+<button class="st-card" id="startMineBtn" type="button"><span class="st-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2zM9 8h6M9 12h6"/></svg></span><span class="st-card-text"><strong>تصاميمي</strong><small id="startMineCount">محفوظة على هذا الجهاز</small></span></button>
+</div>
+<div class="st-row-head"><h2>آخر التصاميم</h2><button class="st-link" id="startAllBtn" type="button">الكل</button></div>
+<div class="st-recent" id="startRecent"></div>
+</section>
 
 <section class="wsb" hidden="" id="workspace">
 <div class="preview-frame wsb-stage" id="previewFrame">
@@ -58,6 +76,7 @@
 <div class="wsb-grid">
 <button class="wsb-item" id="cloneDesignBtn" type="button">▣ نسخ التصميم لمنتجات أخرى</button>
 <button class="wsb-item" id="newDesignBtn" type="button">＋ تصميم جديد</button>
+<button class="wsb-item" id="startScreenBtn" type="button">⌂ شاشة البداية</button>
 <button class="wsb-item" id="myDesignsBtn" type="button">◷ تصاميمي</button>
 <button class="wsb-item" id="changeProductBtn" type="button">⇄ تغيير المنتج أو المقاس</button>
 <button class="wsb-item" id="sizeSettingsBtn" type="button">↔ ضبط المقاس</button>
@@ -85,6 +104,6 @@
 </section>
 <div class="modal-backdrop" hidden="" id="modalBackdrop"><div aria-modal="true" class="modal" id="modal" role="dialog"><button aria-label="إغلاق" class="modal-close icon-button" id="closeModal">×</button><div id="modalContent"></div></div></div>
 <input accept="image/*,.heic,.heif" hidden="" id="imageInput" multiple="" type="file"/>
-<script defer="" src="./app.js?v=202611131206"></script><script defer="" src="./customize.js?v=202611131206"></script><script defer="" src="./layout.js?v=202611131206"></script>
+<script defer="" src="./app.js?v=202611131215"></script><script defer="" src="./customize.js?v=202611131215"></script><script defer="" src="./layout.js?v=202611131215"></script>
 </body>
 </html>
