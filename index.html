@@ -241,8 +241,8 @@ h2{font-size:19px;line-height:1.3;font-weight:700}
 #splash span{position:absolute;left:50%;top:50%;margin:-20px 0 0 -20px;color:var(--gold)}
 #splash .brandlock{position:relative;display:flex;flex-direction:column;align-items:center;gap:0}
 #splash .brandlock b{font-size:64px}
-#splash .logowrap{overflow:hidden;line-height:0;padding-top:10px}
-#splash .moment{width:min(210px,58vw);height:auto;fill:#fff;transform:translateY(-135%);opacity:1}
+#splash .logowrap{line-height:0;padding-top:12px}
+#splash .moment{width:min(210px,58vw);height:auto;fill:#fff;opacity:1;clip-path:inset(0 100% 0 0)}
 
 .spin{width:52px;height:52px;border-radius:50%;border:6px solid var(--primary-soft);border-top-color:var(--primary);animation:spin .9s linear infinite}
 .dots{display:flex;gap:9px;padding-top:14px}
@@ -899,15 +899,15 @@ async function fxSplash(onLeave) {
   el("app").appendChild(node);
   const logo = node.querySelector("b");
   /* Brand intro (لمعة ناعمة): «لحظة» تظهر وتلمع، ثم تنزل منها كلمة MOMENT. الأيقونات تظهر بعدها داخل الصفحة. */
-  let hold = 1850;
+  let hold = 2050;
   const moment = node.querySelector(".moment");
   if (calm()) {
-    moment.style.opacity = "1"; moment.style.transform = "none"; hold = 650;
+    moment.style.clipPath = "inset(0 0 0 0)"; hold = 650;
   } else {
     logo.classList.add("shine");
-    A(logo, [{ opacity: 0, transform: "translateY(10px) scale(.96)" }, { opacity: 1, transform: "none" }], { k: .9 });
-    A(logo, [{ backgroundPosition: "120% 0" }, { backgroundPosition: "-20% 0" }], { k: 1000 / M().ms, delay: 180, ease: "ease-in-out", fill: "both" });
-    A(moment, [{ transform: "translateY(-135%)" }, { transform: "translateY(0)" }], { delay: 980, k: 640 / M().ms, ease: "cubic-bezier(.2,.8,.3,1)", fill: "both" });
+    A(logo, [{ opacity: 0, transform: "translateY(-90px)" }, { opacity: 1, transform: "none" }], { k: 700 / M().ms, ease: "cubic-bezier(.3,1.5,.5,1)", fill: "both" });
+    A(logo, [{ backgroundPosition: "120% 0" }, { backgroundPosition: "-20% 0" }], { k: 1000 / M().ms, delay: 450, ease: "ease-in-out", fill: "both" });
+    A(moment, [{ clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0 0 0)" }], { delay: 1080, k: 680 / M().ms, ease: "cubic-bezier(.4,0,.2,1)", fill: "both" });
   }
   /* The hold is counted from when the animations really start, because a heavy first paint delays them. */
   await Promise.race([Promise.all(node.getAnimations({ subtree: true }).map((a) => a.ready)).catch(() => {}), wait(500)]);
