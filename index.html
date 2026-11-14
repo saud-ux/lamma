@@ -206,8 +206,11 @@ h2{font-size:19px;line-height:1.3;font-weight:700}
 #nav.peek{position:absolute;inset-inline:0;bottom:0;z-index:15}
 #nav button{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;border:0;background:none;color:var(--muted);font-size:13px;line-height:1.3}
 #nav button[aria-current="page"]{color:var(--primary);font-weight:700}
-#nav .bag{justify-content:flex-start;color:var(--primary);font-weight:700}
-#nav .bag i{width:56px;height:56px;margin-top:-18px;display:flex;align-items:center;justify-content:center;background:var(--primary);color:var(--on-primary);border-radius:var(--pill);font-style:normal;position:relative}
+#nav .plus{justify-content:flex-start;color:var(--primary);font-weight:700;white-space:nowrap;font-size:12px}
+#nav .plus i{width:56px;height:56px;margin-top:-18px;display:flex;align-items:center;justify-content:center;background:var(--primary);color:var(--on-primary);border-radius:var(--pill);font-style:normal;box-shadow:0 0 0 5px var(--bg)}
+#nav .plus .ic{stroke-width:3}
+#nav .bag i{display:flex;font-style:normal;position:relative}
+#nav .bag #badge{top:-9px;inset-inline-end:-12px}
 #badge,.lab-badge{position:absolute;top:-2px;inset-inline-end:-2px;min-width:22px;height:22px;display:flex;align-items:center;justify-content:center;background:var(--gold);color:var(--ink);border-radius:11px;font-size:13px;font-weight:800}
 .nav-bub{position:absolute;top:10px;left:0;width:60px;height:34px;border-radius:17px;background:var(--primary-soft);opacity:0;pointer-events:none}
 :root[data-navfx="bubble"] .nav-bub{opacity:1}
@@ -379,6 +382,42 @@ a.btn{text-decoration:none}
 .circles{grid-template-columns:repeat(5,minmax(0,1fr))}
 .circle{font-size:14px}
 .studio-go{display:flex;align-items:center;gap:12px;min-height:64px;box-sizing:border-box;padding:10px 18px;border-radius:22px;background:var(--primary);color:var(--on-primary);text-decoration:none;flex:none}.studio-go span{flex:1;display:grid;gap:2px;text-align:start}.studio-go b{font-size:18px}.studio-go small{font-size:13px;opacity:.85}.studio-go:active{transform:scale(.97)}
+.home-hero{position:relative;overflow:hidden;flex:none;margin:-12px -18px 0;padding:14px 18px 22px;background:var(--primary);color:var(--on-primary);border-radius:0 0 32px 32px;display:flex;flex-direction:column;gap:14px}
+.home-hero>i{position:absolute;border-radius:50%}
+.home-hero>i:nth-of-type(1){width:150px;height:150px;background:var(--logo);opacity:.22;top:-50px;left:-40px;animation:drift1 8s ease-in-out infinite}
+.home-hero>i:nth-of-type(2){width:70px;height:70px;background:var(--gold);opacity:.3;top:96px;left:34px;animation:drift2 9s ease-in-out infinite}
+.home-hero>div{position:relative}
+.home-hero h1{font-size:32px}
+.home-hero p{font-size:16px;opacity:.92}
+.hero-logo{width:132px;height:auto;fill:#fff;display:block}
+.hero-round{width:44px;height:44px;flex:none;display:flex;align-items:center;justify-content:center;border:0;border-radius:var(--pill);background:rgba(255,255,255,.18);color:#fff}
+.hero-cta{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.hero-cta .btn{font-size:17px;text-decoration:none;padding:0 8px}
+.hero-cta .hero-main{grid-column:1 / -1;background:#fff;color:var(--primary);font-size:19px}
+.hero-cta .hero-alt{background:var(--logo);color:var(--ink)}
+.hero-cta .hero-ghost{background:transparent;color:#fff;border:2px solid #fff}
+.tiles.deco .tile{position:relative;overflow:hidden}
+.tiles.deco .tile::before{content:"";position:absolute;width:96px;height:96px;border-radius:50%;background:rgba(255,255,255,.16);left:-26px;top:-26px;pointer-events:none}
+.home-order{display:flex;flex-direction:column;gap:10px;padding:14px 16px;border-radius:var(--r);background:var(--primary-soft);flex:none}
+.ho-row{display:flex;align-items:center;gap:12px}
+.ho-row .bub{width:48px;height:48px;flex:none;display:flex;align-items:center;justify-content:center;background:var(--primary);color:var(--on-primary);border-radius:var(--pill)}
+.ho-row .tx{flex:1;min-width:0;display:flex;flex-direction:column;line-height:1.3}
+.ho-row .tx b{font-size:18px;font-weight:700}
+.ho-row .tx span{font-size:15px;color:var(--muted)}
+.ho-row .pill-btn{background:var(--primary);color:var(--on-primary)}
+.ho-bar{height:8px;border-radius:4px;background:var(--bg);overflow:hidden}
+.ho-bar i{display:block;height:100%;border-radius:4px;background:var(--primary)}
+.steps3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;flex:none}
+.steps3 li{min-height:96px;box-sizing:border-box;padding:8px 4px;border-radius:var(--r);background:var(--primary-soft);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-size:15px;font-weight:700;text-align:center;line-height:1.2}
+.steps3 b{width:34px;height:34px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:var(--primary);color:var(--on-primary);font-size:18px;font-weight:800}
+.way{position:relative;overflow:hidden;width:100%;min-height:92px;box-sizing:border-box;border:0;border-radius:var(--r);padding:14px 16px;display:flex;align-items:center;gap:14px;text-align:start;text-decoration:none;flex:none}
+.way::before{content:"";position:absolute;width:110px;height:110px;border-radius:50%;background:rgba(255,255,255,.18);left:-30px;top:-36px}
+.way .wi{position:relative;width:54px;height:54px;flex:none;border-radius:50%;background:rgba(255,255,255,.26);display:flex;align-items:center;justify-content:center}
+.way .wt{position:relative;flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
+.way .wt b{font-size:21px;font-weight:800;line-height:1.2}
+.way .wt span{font-size:14px;line-height:1.35}
+.way>.ic{position:relative}
+@media (prefers-reduced-motion:reduce){.home-hero>i{animation:none}}
 .search-go{display:flex;align-items:center;gap:10px;width:100%;min-height:52px;box-sizing:border-box;padding:0 16px;border:0;border-radius:var(--pill);background:var(--primary-soft);color:var(--muted);font-size:17px;text-align:start;flex:none}
 .bar h1{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .bar .heart{position:static;background:var(--primary-soft)}
@@ -817,7 +856,7 @@ function fxSwap(old, neu, dir, origin) {
   neu.style.transformOrigin = at0;
   return Promise.all([A(old, [{ transform: "none", opacity: 1 }, { transform: "scale(.92)", opacity: 0 }], { fill: "both", k: .8, ease: "ease-out" }), A(neu, [{ transform: "scale(.25)", opacity: 0 }, { transform: "none", opacity: 1 }], { ease })]);
 }
-const ENTER_SEL = ".brand,.pill-btn,h1,h2,.sub,.tile,.circle,.card-p,.hero-art,.field,.group,.btn,.dashed,.item,.act-card,.lines,.warn,.small,.note-demo,.empty .bub,.tool,.lab-row,.chips,.banner,.row-head,.strip,.idea-card,.pack-card,.when,.when-pick,.count-line,.lib-designs,.demo-btn";
+const ENTER_SEL = ".home-order,.steps3,.brand,.pill-btn,h1,h2,.sub,.tile,.circle,.card-p,.hero-art,.field,.group,.btn,.dashed,.item,.act-card,.lines,.warn,.small,.note-demo,.empty .bub,.tool,.lab-row,.chips,.banner,.row-head,.strip,.idea-card,.pack-card,.when,.when-pick,.count-line,.lib-designs,.demo-btn";
 function fxEnter(root, selector = ENTER_SEL) {
   const opt = fxv("enter"), m = M(), step = 42 * (m.ms / 440), base = m.ms * .22;
   const nodes = [...root.querySelectorAll(selector)].filter((n) => !n.parentElement.closest(selector)).slice(0, 26);
@@ -1203,7 +1242,7 @@ let toastTimer = 0, sheetToken = 0, navLast = null, bubLast = null;
 function toast(text) { toastEl.textContent = text; toastEl.classList.add("on"); fxToastIn(toastEl); clearTimeout(toastTimer); toastTimer = setTimeout(() => toastEl.classList.remove("on"), 2600); }
 function openSheet(html) {
   sheetToken++; sheet.innerHTML = html; sheet.scrollTop = 0; sheet.classList.add("on"); scrim.classList.add("on");
-  fxSheetIn(sheet); fxEnter(sheet, "h2,.sub,.small,.group,.field,.item,.warn,.lab-row,.btn,.row2,.sheet-foot,.idea-big,#cal,.legend"); sfx("whoosh");
+  fxSheetIn(sheet); fxEnter(sheet, "h2,.way,.sub,.small,.group,.field,.item,.warn,.lab-row,.btn,.row2,.sheet-foot,.idea-big,#cal,.legend"); sfx("whoosh");
 }
 function closeSheet() {
   if (!sheet.classList.contains("on")) return;
@@ -1213,12 +1252,12 @@ function closeSheet() {
   if (a) a.finished.then(done, done); else done();
 }
 
-const TABS = ["home", "gallery", "cart", "orders", "account"];
+const TABS = ["home", "gallery", "orders", "cart", "account"];
 function renderNav() {
   nav.hidden = !TABS.includes(S.route) && !nav.classList.contains("peek");
   const count = S.cart.length;
   const b = (route, icon, label) => `<button type="button" data-tab="${route}" ${S.route === route ? 'aria-current="page"' : ""}>${I(icon)}${label}</button>`;
-  nav.innerHTML = '<span class="nav-bub"></span>' + b("home","home","الرئيسية") + b("gallery","grid","التصاميم") + `<button type="button" class="bag" data-tab="cart" aria-label="السلة، ${countLabel(count)}" ${S.route === "cart" ? 'aria-current="page"' : ""}><i id="bag">${I("bag",26)}${count ? `<span id="badge">${ar(count)}</span>` : ""}</i>السلة</button>` + b("orders","list","طلباتي") + b("account","user","حسابي");
+  nav.innerHTML = '<span class="nav-bub"></span>' + b("home","home","الرئيسية") + b("orders","list","طلباتي") + `<button type="button" class="plus" data-act="startSheet" aria-label="اطلب تصميم"><i>${I("plus",30)}</i>اطلب تصميم</button>` + `<button type="button" class="bag" data-tab="cart" aria-label="السلة، ${countLabel(count)}" ${S.route === "cart" ? 'aria-current="page"' : ""}><i id="bag">${I("bag")}${count ? `<span id="badge">${ar(count)}</span>` : ""}</i>السلة</button>` + b("account","user","حسابي");
   if (nav.hidden) return;
   const active = nav.querySelector('[aria-current="page"]');
   if (!active) { placeBubble(nav); return; }
@@ -1266,6 +1305,11 @@ const productCircle = (pid) => `<button type="button" class="circle" data-act="o
 
 const packBanner = () => `<button type="button" class="banner" data-act="openPack">${I("gift", 36)}<span><b>بكج مناسبتك كامل</b><small>كوب وقارورة وستيكر وعلبة ودعوة بتصميم واحد</small></span>${I("next")}</button>`;
 const eventsInOrder = () => [...S.events].sort((a, b) => a.date.localeCompare(b.date));
+function homeOrderCard() {
+  const o = S.orders.find((x) => x.kind !== "tpl" && x.stage !== "delivered" && STAGE_INDEX[x.stage] != null); if (!o) return "";
+  const at = STAGE_INDEX[o.stage];
+  return `<section class="home-order" aria-label="طلبك الحالي"><div class="ho-row"><span class="bub">${I("pen", 26)}</span><span class="tx"><b>طلب ${ar(o.no)}</b><span>تصميم خاص، ${STEPS[at]}</span></span><button type="button" class="pill-btn" data-act="openOrder" data-v="${o.no}">${o.stage === "review" ? "راجعه" : "تابع"}</button></div><div class="ho-bar"><i style="width:${Math.round((at + 1) / STEPS.length * 100)}%"></i></div><span class="small">الخطوة ${ar(at + 1)} من ${ar(STEPS.length)}</span></section>`;
+}
 function nextEventBanner() {
   const ev = eventsInOrder().find((item) => daysTo(item.date) >= 0 && daysTo(item.date) <= 90);
   return ev ? `<button type="button" class="banner soft" data-act="openLib">${I("bell", 30)}<span><b>${esc(ev.name)}</b><small>${leftText(daysTo(ev.date))}. نجهز لها تصميم؟</small></span>${I("next")}</button>` : "";
@@ -2085,13 +2129,17 @@ function openDesign(id) { const idea = ideaById(id), sizes = PROD[idea.pid].size
 const popular = () => Object.keys(OCC).map((occ) => IDEAS.find((idea) => idea.occ === occ && !S.shop.hidden.includes(idea.id))).filter(Boolean);
 
 Object.assign(SCREENS, {
-  home: () => `<div class="amb"><i></i><i></i><i></i><i></i></div>${topBar()}<button type="button" class="search-go" data-act="goSearch">${I("search", 22)}<span>ابحث عن تصميم</span></button>${nextEventBanner()}
-    <div><h1>وش مناسبتك؟</h1><p class="sub">اختر تصميمك، اكتب الاسم، وحمّله</p></div>
-    <a class="studio-go" href="./studio/?v=202611131215">${I("pen", 26)}<span><b>صمّم بنفسك في الاستديو</b><small>خطوط وألوان وأشكال، وشوفه على الكوب والقارورة</small></span>${I("next", 22)}</a>
-    <div class="tiles">${Object.entries(OCC).map(([key, o], i) => `<button type="button" class="tile" style="--i:${i};background:${o.bg};color:${o.fg}" data-act="pickOcc" data-v="${key}">${I(o.icon, 40)}<span>${o.label}</span></button>`).join("")}<button type="button" class="tile tile-idea" style="--i:5" data-act="idea">${I("plus", 40)}<span>تصميم خاص</span></button></div>
+  home: () => `<div class="amb"><i></i><i></i><i></i><i></i></div>
+    <header class="home-hero"><i></i><i></i><div class="top"><svg class="hero-logo" viewBox="0 0 455.9 72.4" role="img" aria-label="MOMENT"><path d="M316.3,0h15.9l30.7,46.7L346.3,0h37v70h-28.6l-27.4-38.4,15.2,38.4h-26.2V0Z"/><path d="M390.1,0h65.8v38.4l-22.1-21.1,8.1,52.7h-37.8l8.1-52.7-22.1,21.1V0Z"/><path d="M250.4,0h58v15.1l-36.3,12.4h0c0,0,36.3-8.6,36.3-8.6v22.8l-36.3,12.3h0l37.3-8.9v24.8h-59V0Z"/><path d="M0,0h37.9l2.1,44.2L41.7,0h37v70h-21.8v-35l-4.9,35h-25l-6.4-35,.2,35H0V0Z"/><path d="M164.9,0h37.9l2.1,44.2,1.7-44.2h37v70h-21.8v-35l-4.9,35h-25l-6.4-35,.2,35h-20.8V0h0Z"/><path d="M85.5,0v72.4h72.5V0h-72.5ZM151.4,54.3c-2.5,4.8-6.2,8.6-11,11.2-4.8,2.7-10.7,4.1-18,4.1s-13.3-1.2-18.1-3.5c-4.8-2.3-8.7-6-11.6-11-3-5.1-4.4-8.4-4.4-18.9s2.9-18.8,8.8-24.6c5.9-5.8,13.8-8.8,24.5-8.8s19,2.9,24.8,8.7c5.8,5.8,8.8,16.8,8.8,24.2s-1.2,13.7-3.8,18.5Z"/><rect x="110.9" y="21.7" width="21.5" height="29.2"/></svg><button type="button" class="hero-round" data-act="goSearch" aria-label="ابحث عن تصميم">${I("search", 22)}</button></div>
+      <div><h1>وش مناسبتك اليوم؟</h1><p>عدّل تصميمًا جاهزًا، صمّم من الصفر، أو خلّنا نصمم لك.</p></div>
+      <div class="hero-cta"><button type="button" class="btn hero-main" data-act="openGallery">${I("grid", 22)}تصفح التصاميم الجاهزة</button><a class="btn hero-alt" href="./studio/?v=202611131215">صمّم من الصفر</a><button type="button" class="btn hero-ghost" data-act="idea">نصمم لك</button></div></header>
+    ${nextEventBanner()}${homeOrderCard()}
+    <div class="row-head"><h2>المناسبات</h2><button type="button" class="link" data-act="openGallery">شوف الكل</button></div>
+    <div class="tiles deco">${Object.entries(OCC).map(([key, o], i) => `<button type="button" class="tile" style="--i:${i};background:${o.bg};color:${o.fg}" data-act="pickOcc" data-v="${key}">${I(o.icon, 40)}<span>${o.label}</span></button>`).join("")}<button type="button" class="tile tile-idea" style="--i:5" data-act="idea">${I("plus", 40)}<span>تصميم خاص</span></button></div>
     <div class="row-head"><h2>الأكثر طلبًا</h2><button type="button" class="link" data-act="openGallery">شوف الكل</button></div><div class="strip">${popular().map(ideaCard).join("")}</div>
     <h2>حسب المنتج</h2><div class="circles">${PACK.map(productCircle).join("")}</div>
-    ${packBanner()}`,
+    ${packBanner()}
+    <h2>كيف نشتغل؟</h2><ol class="steps3"><li><b>١</b>تختار طريقتك</li><li><b>٢</b>تعدّل وتشوف المعاينة</li><li><b>٣</b>تستلم ملفاتك</li></ol>`,
   gallery: () => `${topBar()}<div><h1>التصاميم</h1><p class="sub" id="galCount">${galCount()}</p></div><div class="search">${I("search", 22)}<input class="input" id="f-q" data-bind="q" value="${esc(S.q)}" placeholder="ابحث: مولود، كوب، ذهبي" autocomplete="off" enterkeyhint="search" aria-label="ابحث في التصاميم"></div>
     <div class="chips scroll">${[["all", "كل المناسبات"], ["fav", "مفضلتي"], ...Object.entries(OCC).map(([key, o]) => [key, o.label])].map(([key, label]) => `<button type="button" class="chip" aria-pressed="${S.galOcc === key}" data-act="galOcc" data-v="${key}">${label}</button>`).join("")}</div>
     <div class="chips scroll minor">${[["all", "كل المنتجات"], ...PACK.map((pid) => [pid, PROD[pid].short])].map(([key, label]) => `<button type="button" class="chip" aria-pressed="${S.galPid === key}" data-act="galPid" data-v="${key}">${label}</button>`).join("")}</div>
@@ -2130,6 +2178,9 @@ Object.assign(SCREENS, {
 });
 Object.assign(ACT, {
   idea() { go("idea"); },
+  startSheet() { openSheet(`<h2>كيف تبغى تبدأ؟</h2><button type="button" class="way" style="background:var(--primary);color:var(--on-primary)" data-act="wayGallery"><span class="wi">${I("grid", 28)}</span><span class="wt"><b>تصاميم جاهزة</b><span>اختر تصميمًا واكتب الاسم وحمّله</span></span>${I("next", 22)}</button><a class="way" style="background:var(--teal);color:var(--ink)" href="./studio/?v=202611131215"><span class="wi">${I("pen", 28)}</span><span class="wt"><b>صمّم من الصفر</b><span>خطوط وألوان وأشكال في الاستديو</span></span>${I("next", 22)}</a><button type="button" class="way" style="background:var(--gold);color:var(--ink)" data-act="wayIdea"><span class="wi">${I("plus", 28)}</span><span class="wt"><b>نصمم لك</b><span>اكتب لنا أو أرسل صورًا، وفريقنا ينفذ</span></span>${I("next", 22)}</button><p class="small" style="text-align:center">في كل الطرق تشوف المعاينة قبل ما تعتمد.</p>`); },
+  wayGallery() { closeSheet(); ACT.openGallery(); },
+  wayIdea() { closeSheet(); go("idea"); },
   ideaOpen(d) { openDesign(d.v); },
   goCustom() { S.ideaPid = PROD[S.draft.pid] && S.draft.pid !== "invite" ? S.draft.pid : "custom"; go("idea"); },
   openGallery() { if (S.galOcc === "fav") S.galOcc = "all"; tab("gallery"); },
