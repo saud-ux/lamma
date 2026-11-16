@@ -1302,6 +1302,7 @@ const redraw = () => render("still");
 const topBar = () => `<header class="top"><span class="brand">${esc(S.choices.name)}</span></header>`;
 const backBar = (title) => `<header class="bar"><button type="button" class="icon-btn" data-act="back" aria-label="رجوع">${I("back")}</button><h1>${title}</h1></header>`;
 const productCircle = (pid) => `<button type="button" class="circle" data-act="openProduct" data-v="${pid}"><span>${I(PROD[pid].icon, 28)}</span>${PROD[pid].short}</button>`;
+const productTile = (pid, i) => `<button type="button" class="tile" style="--i:${i};background:var(--primary-soft);color:var(--primary)" data-act="openProduct" data-v="${pid}">${I(PROD[pid].icon, 40)}<span>${PROD[pid].short}</span></button>`;
 
 const packBanner = () => `<button type="button" class="banner" data-act="openPack">${I("gift", 36)}<span><b>بكج مناسبتك كامل</b><small>كوب وقارورة وستيكر وعلبة ودعوة بتصميم واحد</small></span>${I("next")}</button>`;
 const eventsInOrder = () => [...S.events].sort((a, b) => a.date.localeCompare(b.date));
@@ -2134,9 +2135,7 @@ Object.assign(SCREENS, {
       <div><h1>وش لحظتك اليوم؟</h1><p>صمّم من الصفر، أو خلّنا نصمم لك.</p></div>
       <div class="hero-cta"><a class="btn hero-alt" href="./studio/?v=202611131215">صمّم من الصفر</a><button type="button" class="btn hero-ghost" data-act="idea">نصمم لك</button></div></header>
     ${nextEventBanner()}${homeOrderCard()}
-    <div class="row-head"><h2>المناسبات</h2><button type="button" class="link" data-act="openGallery">شوف الكل</button></div>
-    <div class="tiles deco">${Object.entries(OCC).map(([key, o], i) => `<button type="button" class="tile" style="--i:${i};background:${o.bg};color:${o.fg}" data-act="pickOcc" data-v="${key}">${I(o.icon, 40)}<span>${o.label}</span></button>`).join("")}<button type="button" class="tile tile-idea" style="--i:5" data-act="idea">${I("plus", 40)}<span>تصميم خاص</span></button></div>
-    <h2>حسب المنتج</h2><div class="circles">${PACK.map(productCircle).join("")}</div>
+    <h2>اختر منتجك</h2><div class="tiles deco">${PACK.map((pid, i) => productTile(pid, i)).join("")}</div>
     ${packBanner()}
     <h2>كيف نشتغل؟</h2><ol class="steps3"><li><b>١</b>تختار طريقتك</li><li><b>٢</b>تعدّل وتشوف المعاينة</li><li><b>٣</b>تستلم ملفاتك</li></ol>`,
   gallery: () => `${topBar()}<div><h1>التصاميم</h1><p class="sub" id="galCount">${galCount()}</p></div><div class="search">${I("search", 22)}<input class="input" id="f-q" data-bind="q" value="${esc(S.q)}" placeholder="ابحث: مولود، كوب، ذهبي" autocomplete="off" enterkeyhint="search" aria-label="ابحث في التصاميم"></div>
