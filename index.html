@@ -2134,9 +2134,7 @@ Object.assign(SCREENS, {
       <div><h1>وش لحظتك اليوم؟</h1><p>صمّم من الصفر، أو خلّنا نصمم لك.</p></div>
       <div class="hero-cta"><a class="btn hero-alt" href="./studio/?v=202611131215">صمّم من الصفر</a><button type="button" class="btn hero-ghost" data-act="idea">نصمم لك</button></div></header>
     ${nextEventBanner()}${homeOrderCard()}
-    <div class="row-head"><h2>المناسبات</h2><button type="button" class="link" data-act="openGallery">شوف الكل</button></div>
-    <div class="tiles deco">${Object.entries(OCC).map(([key, o], i) => `<button type="button" class="tile" style="--i:${i};background:${o.bg};color:${o.fg}" data-act="pickOcc" data-v="${key}">${I(o.icon, 40)}<span>${o.label}</span></button>`).join("")}<button type="button" class="tile tile-idea" style="--i:5" data-act="idea">${I("plus", 40)}<span>تصميم خاص</span></button></div>
-    <h2>حسب المنتج</h2><div class="circles">${PACK.map(productCircle).join("")}</div>
+    <h2>اختر منتجك</h2><div class="circles">${PACK.map(productCircle).join("")}</div>
     ${packBanner()}
     <h2>كيف نشتغل؟</h2><ol class="steps3"><li><b>١</b>تختار طريقتك</li><li><b>٢</b>تعدّل وتشوف المعاينة</li><li><b>٣</b>تستلم ملفاتك</li></ol>`,
   gallery: () => `${topBar()}<div><h1>التصاميم</h1><p class="sub" id="galCount">${galCount()}</p></div><div class="search">${I("search", 22)}<input class="input" id="f-q" data-bind="q" value="${esc(S.q)}" placeholder="ابحث: مولود، كوب، ذهبي" autocomplete="off" enterkeyhint="search" aria-label="ابحث في التصاميم"></div>
