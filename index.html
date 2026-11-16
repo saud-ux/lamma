@@ -2138,8 +2138,7 @@ Object.assign(SCREENS, {
     ${nextEventBanner()}${homeOrderCard()}
     <div class="row-head"><h2>المنتجات</h2><button type="button" class="link" data-act="openGallery">شوف الكل</button></div>
     <div class="tiles deco">${PACK.map((pid, i) => productTile(pid, i)).join("")}<button type="button" class="tile tile-idea" style="--i:5" data-act="idea">${I("plus", 40)}<span>تصميم خاص</span></button></div>
-    ${packBanner()}
-    <h2>كيف نشتغل؟</h2><ol class="steps3"><li><b>١</b>تختار طريقتك</li><li><b>٢</b>تعدّل وتشوف المعاينة</li><li><b>٣</b>تستلم ملفاتك</li></ol>`,
+    ${packBanner()}`,
   gallery: () => `${topBar()}<div><h1>التصاميم</h1><p class="sub" id="galCount">${galCount()}</p></div><div class="search">${I("search", 22)}<input class="input" id="f-q" data-bind="q" value="${esc(S.q)}" placeholder="ابحث: مولود، كوب، ذهبي" autocomplete="off" enterkeyhint="search" aria-label="ابحث في التصاميم"></div>
     <div class="chips scroll">${[["all", "كل المناسبات"], ["fav", "مفضلتي"], ...Object.entries(OCC).map(([key, o]) => [key, o.label])].map(([key, label]) => `<button type="button" class="chip" aria-pressed="${S.galOcc === key}" data-act="galOcc" data-v="${key}">${label}</button>`).join("")}</div>
     <div class="chips scroll minor">${[["all", "كل المنتجات"], ...PACK.map((pid) => [pid, PROD[pid].short])].map(([key, label]) => `<button type="button" class="chip" aria-pressed="${S.galPid === key}" data-act="galPid" data-v="${key}">${label}</button>`).join("")}</div>
