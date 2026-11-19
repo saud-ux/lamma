@@ -32,18 +32,35 @@ jobs:
           SUPABASE_PUBLISHABLE_KEY: ${{ secrets.SUPABASE_PUBLISHABLE_KEY }}
         run: |
           set -euo pipefail
-          if [ -z "${SUPABASE_URL:-}" ]; then
+          # A value pasted into the settings can arrive with a newline or spaces
+          # around it. One newline inside a JavaScript string is a syntax error,
+          # and the whole file is then skipped in silence: the page falls back to
+          # the phone and nothing says why. So both are trimmed first.
+          url=$(printf '%s' "${SUPABASE_URL:-}" | tr -d '\r\n' | sed 's/^[[:space:]]*//; s/[[:space:]]*$//')
+          key=$(printf '%s' "${SUPABASE_PUBLISHABLE_KEY:-}" | tr -d '\r\n' | sed 's/^[[:space:]]*//; s/[[:space:]]*$//')
+
+          if [ -z "$url" ]; then
             echo "::error::SUPABASE_URL is not set. Add it under Settings, Secrets and variables, Actions, Variables."
             exit 1
           fi
-          if [ -z "${SUPABASE_PUBLISHABLE_KEY:-}" ]; then
+          if [ -z "$key" ]; then
             echo "::error::SUPABASE_PUBLISHABLE_KEY is not set. Add it under Settings, Secrets and variables, Actions, Secrets."
             exit 1
           fi
-          printf 'window.MONASABATAK = {url: "%s", key: "%s"};\n' \
-            "$SUPABASE_URL" "$SUPABASE_PUBLISHABLE_KEY" > config.js
-          # The key itself is never printed, only that the file was written.
-          echo "wrote config.js ($(wc -c < config.js) bytes) for $SUPABASE_URL"
+          case "$url" in
+            https://*) : ;;
+            *) echo "::error::SUPABASE_URL should begin with https://"; exit 1 ;;
+          esac
+          case "$key" in
+            sb_secret_*|service_role*) echo "::error::that is a secret key. Use the publishable one."; exit 1 ;;
+          esac
+
+          printf 'window.MONASABATAK = {url: "%s", key: "%s"};\n' "$url" "$key" > config.js
+
+          # And read back what was written, so a file the browser cannot parse
+          # never reaches the site. The key itself is never printed.
+          node --check config.js
+          echo "wrote config.js ($(wc -c < config.js) bytes, one line) for $url"
 
       - name: Stamp the scripts with this commit
         run: |
