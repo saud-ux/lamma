@@ -1,0 +1,67 @@
+# Publishing لحظة, with the project's settings written at build time.
+#
+# The key never enters this repository. It lives in the repository's own
+# secrets, and this job writes config.js from it just before publishing, the
+# same way tools/render_build.sh does for the real link. The owner's rule is
+# that no key is in a repository or in a conversation, and this keeps it.
+name: Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Write the project's settings
+        env:
+          SUPABASE_URL: ${{ vars.SUPABASE_URL }}
+          SUPABASE_PUBLISHABLE_KEY: ${{ secrets.SUPABASE_PUBLISHABLE_KEY }}
+        run: |
+          set -euo pipefail
+          if [ -z "${SUPABASE_URL:-}" ]; then
+            echo "::error::SUPABASE_URL is not set. Add it under Settings, Secrets and variables, Actions, Variables."
+            exit 1
+          fi
+          if [ -z "${SUPABASE_PUBLISHABLE_KEY:-}" ]; then
+            echo "::error::SUPABASE_PUBLISHABLE_KEY is not set. Add it under Settings, Secrets and variables, Actions, Secrets."
+            exit 1
+          fi
+          printf 'window.MONASABATAK = {url: "%s", key: "%s"};\n' \
+            "$SUPABASE_URL" "$SUPABASE_PUBLISHABLE_KEY" > config.js
+          # The key itself is never printed, only that the file was written.
+          echo "wrote config.js ($(wc -c < config.js) bytes) for $SUPABASE_URL"
+
+      - name: Stamp the scripts with this commit
+        run: |
+          set -euo pipefail
+          sed -i "s/?v=DEV\"/?v=${GITHUB_SHA::12}\"/g" index.html
+          echo "stamped ${GITHUB_SHA::12}"
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
