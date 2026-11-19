@@ -188,7 +188,7 @@ function onBottlePointerUp(event){if(state.drag?.pointer===event.pointerId)state
 function setRotationMode(mode){state.mode=mode;$('#editOnBottle').classList.toggle('active',mode==='edit');$('#spinBottle').classList.toggle('active',mode==='spin');$('#bottleCanvas').style.cursor=mode==='spin'?'grab':'move'}
 function zoomBottle(delta){state.zoom=clamp(state.zoom+delta,.68,1.4);if(state.bottle){state.bottle.zoom=state.zoom;state.bottle.draw()}}
 function rotateBottle(delta){state.angle+=delta;if(state.bottle){state.bottle.angle=state.angle;state.bottle.draw()}}
-let downloadsCap=null;try{window.claude?.use?.('downloads').then(d=>{downloadsCap=d}).catch(()=>{})}catch(e){}
+let downloadsCap=null;try{window.store?.use?.('downloads').then(d=>{downloadsCap=d}).catch(()=>{})}catch(e){}
 async function downloadBlob(blob,filename){if(downloadsCap){try{await downloadsCap.save({filename,data:blob})}catch(err){if(err?.code!=='declined')toast(trans('ما قدرنا نحفظ الملف هنا. المحاولة مرة ثانية ممكنة.','The file could not be saved here. Try again.'),true)}return}const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=filename;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),5000)}
 function downloadDataUrl(url,filename){if(downloadsCap){fetch(url).then(r=>r.blob()).then(b=>downloadBlob(b,filename));return}const a=document.createElement('a');a.href=url;a.download=filename;document.body.append(a);a.click();a.remove()}
 function renderFallbackMockupCanvas(){

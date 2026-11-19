@@ -1,12 +1,19 @@
 <!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#C8306E"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Ccircle cx=%2216%22 cy=%2216%22 r=%2214%22 fill=%22%23C8306E%22/%3E%3Ctext x=%2216%22 y=%2222%22 text-anchor=%22middle%22 font-size=%2218%22 font-weight=%22800%22 fill=%22white%22 font-family=%22Tahoma%22%3Eل%3C/text%3E%3C/svg%3E"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <style>:root{color-scheme:light}body{margin:0}[hidden]{display:none!important}#app{box-sizing:border-box}</style>
-<style>.demo-btn{display:none!important}.warn,.note-demo{display:none!important}.strip .idea-wrap{flex:0 0 150px}.idea-big{height:220px}.editor-head{display:flex;align-items:center;justify-content:space-between;gap:10px}.editor-head h2{flex:1;min-width:0}.editor-tagline{font-size:14px;color:var(--muted);font-weight:500}.custom-cta{display:flex;align-items:center;gap:12px;width:100%;min-height:80px;padding:12px 14px;box-sizing:border-box;border:2px solid var(--primary);background:var(--bg);color:var(--primary);border-radius:var(--r);text-align:start}.custom-cta>svg:first-child{animation:nudge 1.1s ease-in-out infinite}.custom-cta span{flex:1;min-width:0;display:flex;flex-direction:column;line-height:1.3}.custom-cta b{font-size:18px;font-weight:800;color:var(--ink)}.custom-cta small{font-size:13px;color:var(--muted)}</style><script>addEventListener('DOMContentLoaded',()=>{let t=0;new MutationObserver(()=>{const b=document.querySelector('.act-card .demo-btn:not([data-auto])');if(!b)return;b.dataset.auto='1';clearTimeout(t);t=setTimeout(()=>{if(document.body.contains(b))b.click();},2400);}).observe(document.body,{childList:true,subtree:true});});</script><script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script><title>لحظة تجربة البيع</title>
+<style>.demo-btn{display:none!important}.warn,.note-demo{display:none!important}.strip .idea-wrap{flex:0 0 150px}.idea-big{height:220px}.editor-head{display:flex;align-items:center;justify-content:space-between;gap:10px}.editor-head h2{flex:1;min-width:0}.editor-tagline{font-size:14px;color:var(--muted);font-weight:500}.custom-cta{display:flex;align-items:center;gap:12px;width:100%;min-height:80px;padding:12px 14px;box-sizing:border-box;border:2px solid var(--primary);background:var(--bg);color:var(--primary);border-radius:var(--r);text-align:start}.custom-cta>svg:first-child{animation:nudge 1.1s ease-in-out infinite}.custom-cta span{flex:1;min-width:0;display:flex;flex-direction:column;line-height:1.3}.custom-cta b{font-size:18px;font-weight:800;color:var(--ink)}.custom-cta small{font-size:13px;color:var(--muted)}</style><script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script><title>لحظة</title>
+
+
+
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@500;700;800&family=Cairo:wght@500;700;900&family=Tajawal:wght@500;700;800&family=Aref+Ruqaa:wght@400;700&family=Amiri:wght@400;700&family=Cormorant+Garamond:wght@500;700&family=Pinyon+Script&display=swap">
 <style>
 /* Layout: a phone-width app. One scrolling screen above a bottom bar, with sheets that rise over it and an effects layer on top. */
+/* The Saudi Riyal sign, U+20C1 in Unicode 17.0. Phones do not carry it yet, so
+   the site carries it: 644 bytes, and unicode-range keeps it to that one
+   character. From the MIT-licensed "riyal" package; its licence is beside it. */
+@font-face{font-family:"Riyal";src:url("fonts/riyal.woff2") format("woff2"),url("fonts/riyal.woff") format("woff");font-display:swap;unicode-range:U+20C1}
 :root{
   color-scheme:light;
   --bg:#FFFFFF; --outside:#FBEAF1; --ink:#2A1620; --muted:#6B5560; --line:#F6DEE8;
@@ -15,8 +22,8 @@
   --logo:#F2ADC3; --mint:#6DC9BE; --blue:#465AE0; --pink:#FF86EA; --lime:#D2D642; --orange:#F75B32; --rose:#FDA8C3; --yellow:#FDD316;
   --gold:#FDD316; --teal:#6DC9BE; --violet:#465AE0; --coral:#F75B32; --stage:#6DC9BE; --stage-2:#4FB3A7;
   --r:22px; --pill:999px;
-  --font-ar:"GE SS Two Light Light","GE SS Two Light","GE SS Two","Tajawal",Tahoma,sans-serif;
-  --font-en:"Gurmukhi MN","GE SS Two Light Light","Tajawal",Tahoma,sans-serif;
+  --font-ar:"Riyal","GE SS Two Light Light","GE SS Two Light","GE SS Two","Tajawal",Tahoma,sans-serif;
+  --font-en:"Riyal","Gurmukhi MN","GE SS Two Light Light","Tajawal",Tahoma,sans-serif;
   --font:var(--font-ar);
   --dur:440ms; --ease:cubic-bezier(.34,1.56,.64,1);
 }
@@ -392,6 +399,7 @@ a.btn{text-decoration:none}
 .hero-logo{width:132px;height:auto;display:block}
 .hero-round{width:44px;height:44px;flex:none;display:flex;align-items:center;justify-content:center;border:0;border-radius:var(--pill);background:rgba(255,255,255,.18);color:#fff}
 .hero-cta{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.hero-cta.one{grid-template-columns:1fr}
 .hero-cta .btn{font-size:17px;text-decoration:none;padding:0 8px}
 .hero-cta .hero-main{grid-column:1 / -1;background:#fff;color:var(--primary);font-size:19px}
 .hero-cta .hero-alt{background:var(--logo);color:var(--ink)}
@@ -485,6 +493,39 @@ button.stat{border:0;font:inherit;color:inherit}
 .rank{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 14px;font-size:16px}
 .rank dd{font-weight:700;font-variant-numeric:tabular-nums}
 .hid{opacity:.4;filter:grayscale(1)}
+.figs{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:6px}
+.fig{background:var(--bg);border:1px solid var(--line);border-radius:var(--r);padding:14px}
+.fig b{display:block;font-size:24px;font-weight:800;line-height:1.2}
+.fig b small{font-size:14px;font-weight:700;color:var(--muted)}
+.fig span{color:var(--muted);font-size:13px}
+.chart{background:var(--bg);border:1px solid var(--line);border-radius:var(--r);padding:14px 10px 8px}
+.bars{display:flex;align-items:flex-end;gap:3px;height:var(--h)}
+.bars.wide{gap:8px}
+.bar{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;min-width:0}
+.bar i{display:block;width:100%;max-width:26px;background:var(--primary);border-radius:6px 6px 0 0;min-height:2px}
+.bar b{font-size:10px;font-weight:700;color:var(--muted);margin-bottom:3px;white-space:nowrap}
+.bar span{font-size:11px;color:var(--muted);margin-top:5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+.hbars{background:var(--bg);border:1px solid var(--line);border-radius:var(--r);padding:12px 14px}
+.hbar{display:flex;align-items:center;gap:10px;padding:6px 0}
+.hbar .nm{flex:0 0 32%;font-size:14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.hbar .tr{flex:1;height:10px;background:var(--primary-soft);border-radius:999px;overflow:hidden}
+.hbar .tr i{display:block;height:100%;background:var(--primary);border-radius:999px}
+.hbar .vl{flex:none;font-weight:800;font-size:14px;font-variant-numeric:tabular-nums}
+.ring-wrap{display:flex;align-items:center;gap:16px;background:var(--bg);border:1px solid var(--line);border-radius:var(--r);padding:14px}
+.ring{width:124px;height:124px;flex:none}
+.ring .arc{fill:none;stroke-width:18}
+.ring-n{font-size:26px;font-weight:800;fill:var(--ink)}
+.ring-s{font-size:12px;fill:var(--muted)}
+.keys{flex:1;margin:0;display:grid;grid-template-columns:1fr auto;gap:3px 10px;font-size:14px}
+.keys dt{display:flex;align-items:center;gap:7px;color:var(--muted)}
+.keys dd{margin:0;font-weight:800;font-variant-numeric:tabular-nums}
+.k{width:11px;height:11px;border-radius:3px;flex:none}
+.a0{stroke:var(--primary);background:var(--primary)}
+.a1{stroke:var(--mint);background:var(--mint)}
+.a2{stroke:var(--blue);background:var(--blue)}
+.a3{stroke:var(--yellow);background:var(--yellow)}
+.a4{stroke:var(--orange);background:var(--orange)}
+.a5{stroke:var(--rose);background:var(--rose)}
 .n-badge{min-width:22px;height:22px;padding:0 6px;display:inline-flex;align-items:center;justify-content:center;border-radius:11px;background:var(--gold);color:var(--ink);font-size:13px;font-weight:800}</style><div id="app" dir="rtl" lang="ar">
   <main id="view"></main>
   <nav id="nav" aria-label="التنقل"></nav>
@@ -535,7 +576,11 @@ const PROD = {
   invite:{name:"دعوة رقمية",short:"دعوات",icon:"file",sizes:["للجوال"],has3d:true,price:80},
   custom:{name:"منتج نساعدك تختاره",short:"غيرها",icon:"box",sizes:["ما أعرف"],has3d:false,price:150},
 };
-const PACK = ["cup", "bottle", "sticker", "box", "invite"];
+/* What the page is born knowing. shop/config may change the four fields the
+   dashboard offers; anything it does not say keeps the value here. */
+const PROD_BORN = JSON.parse(JSON.stringify(PROD));
+const PACK_BORN = ["cup", "bottle", "sticker", "box", "invite"];
+let PACK = PACK_BORN.slice();
 const PACK_MIN = 3, PACK_OFF = .15;
 const IDEAS = [
 {id:"b4",occ:"baby",name:"زهري هادي",pid:"invite",text:"سعود",desc:"زهري هادي مع ذهبي خفيف للدعوات.",pal:{paper:"#FCEFF4",ink:"#8E1F4F",a:"#F7CFDD",b:"#FBE6D4",c:"#EFD9A7"}},
@@ -632,7 +677,7 @@ const LAB = [
   {k:"focus",title:"لما تضغط على خانة كتابة",help:"",try:"اضغط الخانة",opts:[["glow","إطار يضوي",1],["lift","ترتفع"],["line","خط يمتد"]],scene:() => `<div style="width:250px"><input class="input" id="labInput" autocomplete="off" placeholder="اكتب هنا" aria-label="مثال" style="background-color:var(--bg)"></div>`,run:async () => { const n = el("labInput"); n.classList.remove("focused"); await wait(240); if (el("labInput")) n.classList.add("focused"); }},
   {k:"timeline",title:"خطوات الطلب",help:"",try:"اضغط «الخطوة الجاية»",opts:[["draw","الخط ينرسم",1],["pop","كل خطوة تقفز"],["pulse","الحالية تنبض"]],scene:() => `<div style="display:flex;align-items:center;gap:14px"><ol class="steps" id="labSteps" style="width:120px">${labStepsHTML()}</ol><button type="button" class="btn" style="width:116px;min-height:50px;font-size:15px" data-act="labStepNext">الخطوة الجاية</button></div>`,run:() => fxTimeline(el("labSteps"), 0)},
   {k:"stage",title:"لما تتغير حالة الطلب",help:"البطاقة اللي تعلمك وش صار.",try:"اضغط البطاقة",opts:[["flip","البطاقة تنقلب",1],["slide","تنزلق"],["glow","تومض"]],scene:() => `<div class="act-card" id="labCard" data-act="labReplay" style="width:260px;background:var(--bg)"><b>فريقنا يصمم لك</b><p class="small">اضغط هنا</p></div>`,run:() => { const c = el("labCard"); labStageI = (labStageI + 1) % 3; c.querySelector("b").textContent = ["فريقنا يصمم لك", "تصميمك جاهز للمراجعة", "ملفاتك جاهزة"][labStageI]; fxStage(c); sfx("success"); }},
-  {k:"total",title:"رقم المجموع في عرض السعر",help:"",try:"غيّر بين عادي ومستعجل",opts:[["count","الرقم يعد",1],["slot","يدور ويوقف"],["pop","ينبثق"]],scene:() => `<div class="lab-stack" style="width:250px"><dl class="lines" style="width:100%"><dt>تصميم الكوب</dt><dd>٣٧٠ ر.س</dd><dt class="total">المجموع</dt><dd class="total" id="labTotal">٣٧٠ ر.س</dd></dl><div class="chips">${[["عادي",370],["مستعجل",481]].map(([t, v], i) => `<button type="button" class="chip" aria-pressed="${i === 0}" data-act="labRush" data-v="${v}">${t}</button>`).join("")}</div></div>`,run:() => fxTotal(el("labTotal"), Number(document.querySelector('[data-act="labRush"][aria-pressed="true"]').dataset.v))},
+  {k:"total",title:"رقم المجموع في عرض السعر",help:"",try:"غيّر بين عادي ومستعجل",opts:[["count","الرقم يعد",1],["slot","يدور ويوقف"],["pop","ينبثق"]],scene:() => `<div class="lab-stack" style="width:250px"><dl class="lines" style="width:100%"><dt>تصميم الكوب</dt><dd>٣٧٠ ⃁</dd><dt class="total">المجموع</dt><dd class="total" id="labTotal">٣٧٠ ⃁</dd></dl><div class="chips">${[["عادي",370],["مستعجل",481]].map(([t, v], i) => `<button type="button" class="chip" aria-pressed="${i === 0}" data-act="labRush" data-v="${v}">${t}</button>`).join("")}</div></div>`,run:() => fxTotal(el("labTotal"), Number(document.querySelector('[data-act="labRush"][aria-pressed="true"]').dataset.v))},
   {k:"loading",title:"وقت الانتظار",help:"مثل التحقق من الدفع وتجهيز الكوب.",try:"اضغط الزر",opts:[["dots","نقاط تقفز",1],["spin","دائرة تلف"],["logo","الاسم ينبض"],["bar","شريط يتحرك"]],scene:() => `<div class="lab-stack"><div id="labLoad" style="min-height:66px;display:flex;align-items:center"></div><button type="button" class="btn" style="width:190px;min-height:48px" data-act="labReplay">أرسل الطلب</button></div>`,run:demoLoad},
   {k:"payOk",title:"لما ينجح الدفع",help:"في التجربة الدفع وهمي.",try:"اضغط الزر",opts:[["check","علامة صح تنرسم",1],["rings","دوائر تنفتح"],["stamp","ختم"]],scene:() => `<div class="lab-stack"><div id="labOk" style="min-height:124px;display:flex;align-items:center"></div><button type="button" class="btn" style="width:190px;min-height:44px" data-act="labReplay">ادفع (تجربة)</button></div>`,run:demoPay},
   {k:"productIn",title:"لما يفتح الكوب للمراجعة",help:"هذا الكوب الحقيقي.",try:"دوّره بإصبعك",dark:1,opts:[["spin","يلف لفة كاملة",1],["rise","يطلع ويكبر"],["sway","يتمايل"]],scene:cupScene,mount:(id) => labCup(id),run:() => { if (V) V.intro = newIntro(); sfx("whoosh"); }},
@@ -904,7 +949,7 @@ function fxStage(card) {
 }
 function fxTotal(node, value) {
   if (!node || calm()) return;
-  const o = fxv("total"), suffix = " ر.س", text = String(value);
+  const o = fxv("total"), suffix = " ⃁", text = String(value);
   if (o === "pop") { A(node, [{ transform: "scale(.3)", opacity: 0 }, { transform: "none", opacity: 1 }], { delay: M().ms * .8 }); return; }
   const ms = Math.max(500, M().ms * 3), start = performance.now();
   const step = (now) => {
@@ -1383,7 +1428,7 @@ function labListSheet() {
   return `<h2>كل الحركات</h2>${LAB.map((m, i) => `<button type="button" class="lab-row" data-act="labJump" data-v="${i}"><b>${m.title}</b><span>${labLabel(m)}</span></button>`).join("")}<button type="button" class="btn ghost" data-act="choices">الألوان والخط والاسم</button><div class="sheet-foot"><button type="button" class="btn ghost" data-act="labRecommend">رجّع اللي أنصح فيه</button><button type="button" class="btn" data-act="saveChoices">اعتمد اختياراتي</button></div>`;
 }
 let dbPromise = null;
-function database() { if (!dbPromise) dbPromise = window.claude ? window.claude.use("db").catch(() => null) : Promise.resolve(null); return dbPromise; }
+function database() { if (!dbPromise) dbPromise = window.store ? window.store.use("db").catch(() => null) : Promise.resolve(null); return dbPromise; }
 async function saveChoices() {
   try {
     const db = await database();
@@ -1778,7 +1823,7 @@ Object.assign(ICON, {
   tag:[24,"M3 12V4h8l10 10-8 8zM7.5 8.5h.01"],
 });
 
-const SHOP_DEFAULT = { tpl: { sticker: 19, invite: 29, bottle: 29, cup: 39, box: 49 }, coupons: { LAMMA10: 10 }, hidden: [] };
+const SHOP_DEFAULT = { tpl: { sticker: 19, invite: 29, bottle: 29, cup: 39, box: 49 }, coupons: { LAMMA10: 10 }, hidden: [], prod: {} };
 const METHODS = [
   ["cod", "الدفع عند الاستلام", "ما ينخصم منك شي الحين", "cash", true],
   ["mada", "مدى", "", "card", false],
@@ -1792,7 +1837,7 @@ const SETUP_FEE = 100;
 const plain = (value) => JSON.parse(JSON.stringify(value));
 Object.assign(S, { cust: { name: "", phone: "" }, fav: [], q: "", co: null, shop: plain(SHOP_DEFAULT) });
 
-const money = (n) => `${ar(n)} ر.س`;
+const money = (n) => `${ar(n)} ⃁`;
 const toLatin = (s) => String(s).replace(/[٠-٩]/g, (d) => "٠١٢٣٤٥٦٧٨٩".indexOf(d)).replace(/[۰-۹]/g, (d) => "۰۱۲۳۴۵۶۷۸۹".indexOf(d));
 const cleanPhone = (s) => toLatin(s).replace(/\D/g, "").replace(/^(00966|966)/, "0").replace(/^5(\d{8})$/, "05$1");
 const validPhone = (s) => /^05\d{8}$/.test(cleanPhone(s));
@@ -1878,12 +1923,44 @@ function mergeMine(snap) {
   if (S.busy || sheet.classList.contains("on")) return;
   if (S.route === "order" && shown !== null) orderChanged(STAGE_INDEX[shown]); else if (["orders", "order", "chat"].includes(S.route)) keepScroll(redraw);
 }
+/* One product's four fields, as the dashboard may set them. Anything outside its
+   limits is dropped, and what the page was born with stands in its place. */
+function readProduct(pid, given) {
+  const born = PROD_BORN[pid], out = { ...born };
+  if (!given || typeof given !== "object") return out;
+  const name = typeof given.name === "string" ? given.name.trim() : "";
+  if (name && [...name].length <= 40) out.name = name;
+  const short = typeof given.short === "string" ? given.short.trim() : "";
+  if (short && [...short].length <= 14) out.short = short;
+  const price = Number(given.price);
+  if (Number.isFinite(price) && price >= 0 && price <= 100000) out.price = Math.round(price);
+  if (Array.isArray(given.sizes)) {
+    const sizes = given.sizes.filter((one) => typeof one === "string" && one.trim() && [...one.trim()].length <= 20).map((one) => one.trim());
+    if (sizes.length && sizes.length <= 8) out.sizes = sizes;
+  }
+  out.off = given.off === true;
+  return out;
+}
+
+/* The catalogue a shop shows, from what it saved. The last visible product cannot
+   be hidden: a shop with nothing in it is not a shop. */
+function readCatalogue(given) {
+  const prod = {}, order = [];
+  for (const pid of Object.keys(PROD_BORN)) prod[pid] = readProduct(pid, given && given[pid]);
+  for (const pid of PACK_BORN) if (!prod[pid].off) order.push(pid);
+  if (!order.length) { for (const pid of PACK_BORN) prod[pid].off = false; order.push(...PACK_BORN); }
+  return { prod, order };
+}
+
 function applyShop(snap) {
   const d = snap.exists ? snap.data() : null; if (!d) return;
+  const read = readCatalogue(d.prod);
+  for (const pid of Object.keys(PROD_BORN)) Object.assign(PROD[pid], read.prod[pid]);
+  PACK = read.order;
   const tpl = { ...SHOP_DEFAULT.tpl }, coupons = {};
   for (const pid of Object.keys(tpl)) { const n = Number(d.tpl?.[pid]); if (n > 0) tpl[pid] = Math.round(n); }
   for (const [code, pct] of Object.entries(d.coupons || {})) { const n = Number(pct); if (/^[A-Z0-9]{3,16}$/.test(code) && n > 0 && n <= 100) coupons[code] = n; }
-  S.shop = { tpl, coupons, hidden: (Array.isArray(d.hidden) ? d.hidden : []).filter((id) => typeof id === "string" && ideaById(id)) };
+  S.shop = { tpl, coupons, hidden: (Array.isArray(d.hidden) ? d.hidden : []).filter((id) => typeof id === "string" && ideaById(id)), prod: d.prod || {} };
   if (["home", "gallery", "cart", "catalog"].includes(S.route) && !S.busy && !sheet.classList.contains("on") && document.activeElement?.tagName !== "INPUT") keepScroll(redraw);
 }
 async function connect() {
@@ -1891,16 +1968,42 @@ async function connect() {
   R.ready = true; if (S.route === "order" && S.order) showOrder(S.order);
 }
 async function connectDb() {
-  if (!window.claude) return;
-  const use = (name) => window.claude.use(name).catch(() => null);
+  if (!window.store) return;
+  const use = (name) => window.store.use(name).catch(() => null);
   const [db, user, dl] = await Promise.all([database(), use("user"), use("downloads")]);
   R.dl = dl; if (!db) return;
   try { R.uid = user ? await user.id() : null; R.admin = user ? !!(await user.canEdit()) : false; } catch { /* stay a plain customer */ }
   R.db = db;
   db.doc("shop/config").onSnapshot(applyShop, () => {});
-  if (R.uid) { db.collection(`orders/${R.uid}/list`).onSnapshot(mergeMine, () => {}); for (const o of S.orders) if (!o.synced) await pushOrder(o); }
+  if (R.uid) {
+    await loadMine();
+    db.collection(`orders/${R.uid}/list`).onSnapshot(mergeMine, () => {});
+    for (const o of S.orders) if (!o.synced) await pushOrder(o);
+  }
   if (R.admin) db.collection("orders").onSnapshot(() => adminLoad(), () => {});
   if (S.route === "account" && !S.busy && document.activeElement?.tagName !== "INPUT") redraw();
+}
+
+/* The person's own details, kept with them rather than with the phone they used.
+   What the phone holds stands in only while there is nothing saved, so a first
+   sign-in does not wipe what was typed before it. */
+async function loadMine() {
+  try {
+    const snap = await R.db.doc(`orders/${R.uid}`).get();
+    const saved = snap.exists ? snap.data()?.cust : null;
+    if (saved && typeof saved === "object") {
+      const name = String(saved.name || "").slice(0, 40), phone = String(saved.phone || "").slice(0, 16);
+      if (name || phone) { S.cust = { name, phone }; S.signed = name.trim().length > 1 && validPhone(phone); saveLocal(); }
+    } else if (S.cust.name || S.cust.phone) {
+      await saveMine();
+    }
+  } catch { /* the page works on this phone alone */ }
+}
+
+async function saveMine() {
+  if (!R.db || !R.uid) return false;
+  try { await R.db.doc(`orders/${R.uid}`).update({ cust: plain(S.cust), at: new Date().toISOString() }); return true; }
+  catch { return false; }
 }
 
 /* Files. The design is drawn on the phone, the same drawing the preview uses. */
@@ -1913,25 +2016,44 @@ function pdfBlob(canvas) {
   pdf.addImage(canvas.toDataURL("image/png"), "PNG", (pageW - w) / 2, (pageH - h) / 2, w, h, undefined, "FAST");
   return pdf.output("blob");
 }
+/* Saving on a phone. Safari on iPhone ignores a link's download attribute for a
+   blob, so nothing happened and the page said it had. The share sheet is tried
+   first where the phone has one: it offers Save to Files and Save to Photos. A
+   link is the fallback, and the last resort opens the file so it can be saved by
+   hand. Each path says whether it really did something. */
 async function saveFile(blob, filename) {
   if (R.dl) { try { await R.dl.save({ filename, data: blob }); return true; } catch (e) { if (e && e.code === "declined") return false; } }
-  if (window.claude) { toast("التحميل غير متاح في هذا العرض، افتح الصفحة من تطبيق Claude أو المتصفح"); return false; }
+  if (window.File && navigator.canShare) {
+    try {
+      const file = new File([blob], filename, { type: blob.type || "application/octet-stream" });
+      if (navigator.canShare({ files: [file] })) { await navigator.share({ files: [file], title: filename }); return true; }
+    } catch (e) { if (e && (e.name === "AbortError" || e.name === "NotAllowedError")) return false; }
+  }
   const url = URL.createObjectURL(blob), link = document.createElement("a");
-  link.href = url; link.download = filename; document.body.appendChild(link); link.click(); link.remove(); setTimeout(() => URL.revokeObjectURL(url), 1500);
-  return true;
+  const canLink = "download" in link && !/iPad|iPhone|iPod/.test(navigator.userAgent);
+  if (canLink) {
+    link.href = url; link.download = filename; document.body.appendChild(link); link.click(); link.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1500);
+    return true;
+  }
+  const opened = window.open(url, "_blank");
+  setTimeout(() => URL.revokeObjectURL(url), 60000);
+  if (!opened) { toast("افتح الملف من المتصفح عشان تحفظه"); return false; }
+  toast("افتح القائمة واحفظ الملف");
+  return false;
 }
 async function downloadFile(canvas, kind, base) {
   let blob;
   if (kind === "pdf") { if (!window.jspdf) { toast("نجهّز الـPDF…"); await wait(700); } blob = pdfBlob(canvas); if (!blob) { toast("ما قدرنا نجهّز الـPDF، جرّب PNG"); return; } }
   else blob = await canvasBlob(canvas, kind === "jpg" ? "image/jpeg" : "image/png");
-  if (await saveFile(blob, `lamma-${base}.${kind}`)) { toast("انحمل الملف"); sfx("success"); }
+  if (await saveFile(blob, `moment-${base}.${kind}`)) { toast("انحفظ الملف"); sfx("success"); }
 }
 function invoiceCanvas(o) {
   const font = FONT_NAME[S.choices.font], w = 1240, pad = 90, b = o.bill, rows = b.lines.length + (b.packOff ? 1 : 0) + (b.couponOff ? 1 : 0);
   const c = document.createElement("canvas"); c.width = w; c.height = 760 + rows * 64;
   const g = c.getContext("2d"); g.fillStyle = "#fff"; g.fillRect(0, 0, w, c.height); g.direction = "rtl"; g.textBaseline = "middle";
-  const right = (text, y, size, weight = 500, color = "#2A1620") => { g.textAlign = "right"; g.fillStyle = color; g.font = `${weight} ${size}px "${font}"`; g.fillText(text, w - pad, y); };
-  const left = (text, y, size, weight = 700, color = "#2A1620") => { g.textAlign = "left"; g.fillStyle = color; g.font = `${weight} ${size}px "${font}"`; g.fillText(text, pad, y); };
+  const right = (text, y, size, weight = 500, color = "#2A1620") => { g.textAlign = "right"; g.fillStyle = color; g.font = `${weight} ${size}px "Riyal","${font}"`; g.fillText(text, w - pad, y); };
+  const left = (text, y, size, weight = 700, color = "#2A1620") => { g.textAlign = "left"; g.fillStyle = color; g.font = `${weight} ${size}px "Riyal","${font}"`; g.fillText(text, pad, y); };
   const rule = (y) => { g.fillStyle = "#F0DEE6"; g.fillRect(pad, y, w - pad * 2, 3); };
   right(S.choices.name, 120, 84, 800, cssVar("--primary") || "#C8306E"); left("فاتورة الطلب", 120, 40, 700, "#6B5560");
   let y = 230;
@@ -1955,7 +2077,7 @@ function custOk() {
   const name = S.cust.name.trim();
   if (name.length < 2) { toast("اكتب اسمك"); const f = el("f-cname"); if (f) { fxShake(f); f.focus(); } return false; }
   if (!validPhone(S.cust.phone)) { toast("اكتب رقم جوال صحيح يبدأ بـ ٠٥"); const f = el("f-cphone"); if (f) { fxShake(f); f.focus(); } return false; }
-  S.cust = { name, phone: cleanPhone(S.cust.phone) }; S.signed = true; saveLocal(); return true;
+  S.cust = { name, phone: cleanPhone(S.cust.phone) }; S.signed = true; saveLocal(); saveMine(); return true;
 }
 const methodsHTML = () => `<div class="methods" role="radiogroup" aria-label="طريقة الدفع">${METHODS.map(([key, name, hint, icon, on]) => `<button type="button" class="method" role="radio" aria-checked="${S.co.method === key}" ${on ? `data-act="method" data-v="${key}"` : "disabled"}><i class="rd"></i>${I(icon, 26)}<span class="tx"><b>${name}</b>${hint ? `<small>${hint}</small>` : ""}</span>${on ? "" : '<span class="soon">قريبًا</span>'}</button>`).join("")}</div>`;
 async function shrinkImage(url) {
@@ -2027,11 +2149,9 @@ function salesInput(key, target) {
   if (key === "msg") { S.msg = target.value; return true; }
   if (key === "rateText") { S.rateText = target.value; return true; }
   if (key === "packLine") { S.pack.line = target.value; packArts(false); return true; }
-  if (key === "dDate") { S.draft.date = target.value || null; refreshDesign(); return true; }
-  if (key === "dPlace") { S.draft.place = target.value; refreshDesign(); return true; }
   return adminInput(key, target);
 }
-document.addEventListener("change", (event) => { const key = event.target?.dataset?.bind; if ((key === "cName" || key === "cPhone") && S.route === "account") { S.signed = S.cust.name.trim().length > 1 && validPhone(S.cust.phone); saveLocal(); } });
+document.addEventListener("change", (event) => { const key = event.target?.dataset?.bind; if ((key === "cName" || key === "cPhone") && S.route === "account") { S.signed = S.cust.name.trim().length > 1 && validPhone(S.cust.phone); saveLocal(); saveMine(); } });
 document.addEventListener("keydown", (event) => { if (event.key === "Enter" && event.target.id === "f-code") { event.preventDefault(); ACT.applyCode(); } if (event.key === "Enter" && event.target.id === "f-msg") { event.preventDefault(); ACT.sendMsg(); } });
 
 /* The owner's panel. Only people who can edit this page see it, and the database rules enforce the same. */
@@ -2077,7 +2197,7 @@ function adminAction(o) {
 }
 Object.assign(SCREENS, {
   admin: () => { const paid = AD.list.filter((o) => o.pay), sum = (list) => list.reduce((t, o) => t + (Number(o.total) || 0), 0), list = adminFiltered();
-    return `${backBar("لوحة الإدارة")}<div class="stats"><div><b>${ar(AD.list.length)}</b><span>طلب</span></div><div><b>${ar(sum(paid))}</b><span>مبيعات ر.س</span></div><div><b>${ar(sum(paid.filter((o) => !o.collected)))}</b><span>لم تُحصّل</span></div></div>
+    return `${backBar("لوحة الإدارة")}<div class="stats"><div><b>${ar(AD.list.length)}</b><span>طلب</span></div><div><b>${ar(sum(paid))}</b><span>مبيعات ⃁</span></div><div><b>${ar(sum(paid.filter((o) => !o.collected)))}</b><span>لم تُحصّل</span></div></div>
     <div class="chips">${[["all", "الكل"], ["todo", "تحتاج إجراء"], ["custom", "تصميم خاص"], ["tpl", "جاهز"]].map(([key, label]) => `<button type="button" class="chip" aria-pressed="${AD.filter === key}" data-act="adFilter" data-v="${key}">${label}</button>`).join("")}</div>
     ${!AD.loaded ? `<div class="loader-row">${loaderHTML()}</div>` : list.length ? list.map((o) => `<button type="button" class="item" style="border:0;width:100%;text-align:start" data-act="adOpen" data-v="${o.owner}/${o.no}"><span class="bub">${I(o.kind === "tpl" ? "down" : "pen", 28)}</span><span class="tx"><b>${esc(o.cust?.name || "عميل")}، طلب ${ar(o.no)}</b><span>${o.kind === "tpl" ? "جاهز" : `خاص، ${STEPS[STAGE_INDEX[o.stage]]}`}${o.pay ? `، ${money(o.total)}${o.collected ? "" : "، لم يُحصّل"}` : ""}</span></span>${needsAction(o) ? '<i class="dot-a" aria-label="يحتاج إجراء"></i>' : ""}</button>`).join("") : '<p class="small none">ما فيه طلبات هنا.</p>'}
     <div class="row2"><button type="button" class="btn ghost" data-act="adRefresh">حدّث</button><button type="button" class="btn ghost" data-act="adShop">الأسعار والخصم</button></div>`; },
@@ -2089,10 +2209,31 @@ Object.assign(SCREENS, {
     <h2>أكواد الخصم</h2>${Object.entries(s.coupons).map(([code, pct]) => `<div class="item"><span class="bub">${I("tag", 26)}</span><span class="tx"><b dir="ltr">${esc(code)}</b><span>خصم ${ar(pct)}٪</span></span><button type="button" class="x-btn" aria-label="احذف ${esc(code)}" data-act="adCodeDel" data-v="${esc(code)}">${I("x")}</button></div>`).join("") || '<p class="small">ما فيه أكواد.</p>'}
     <div class="coupon three"><input class="input" id="f-acode" data-bind="acode" value="${esc(AD.code)}" placeholder="الكود" maxlength="16" autocomplete="off" autocapitalize="characters" dir="ltr" style="text-align:right" aria-label="كود جديد"><input class="input" id="f-apct" data-bind="apct" value="${esc(AD.pct)}" placeholder="٪" inputmode="numeric" maxlength="3" dir="ltr" style="text-align:right" aria-label="نسبة الخصم"><button type="button" class="btn ghost" data-act="adCodeAdd">أضف</button></div>
     <button type="button" class="btn" data-act="adShopSave">احفظ</button>`; },
+
+  adminCatalog: () => { const c = AD.cat;
+    return `${backBar("الأصناف")}<p class="small">غيّر الاسم والسعر والمقاسات، أو أخفِ صنفًا من المتجر. إضافة صنف جديد تحتاج رسمًا وشكلًا ثلاثي الأبعاد، فما تنفع من هنا.</p>
+    ${PACK_BORN.map((pid) => `<div class="group"><div class="editor-head"><h2>${esc(PROD_BORN[pid].short)}</h2>
+      <button type="button" class="link" data-act="adCatOff" data-v="${pid}">${c[pid].off ? "أظهره" : "أخفِه"}</button></div>
+      ${c[pid].off ? '<p class="small">مخفي من المتجر.</p>' : `
+      <div class="field"><label for="f-cn-${pid}">الاسم</label><input class="input" id="f-cn-${pid}" data-bind="cn" data-i="${pid}" value="${esc(c[pid].name)}" maxlength="40"></div>
+      <div class="row2"><div class="field"><label for="f-cs-${pid}">على المربّع</label><input class="input" id="f-cs-${pid}" data-bind="cs" data-i="${pid}" value="${esc(c[pid].short)}" maxlength="14"></div>
+      <div class="field"><label for="f-cp-${pid}">سعر التصميم الخاص</label><input class="input" id="f-cp-${pid}" data-bind="cp" data-i="${pid}" value="${esc(String(c[pid].price))}" inputmode="numeric" dir="ltr" style="text-align:right"></div></div>
+      <div class="field"><label for="f-cz-${pid}">المقاسات، بينها فاصلة</label><input class="input" id="f-cz-${pid}" data-bind="cz" data-i="${pid}" value="${esc(c[pid].sizes.join("، "))}" maxlength="180"></div>`}</div>`).join("")}
+    <button type="button" class="btn" data-act="adCatSave">احفظ</button>`; },
 });
 function adminInput(key, target) {
   if (key === "aq") { const n = Number(toLatin(target.value).replace(/[^\d]/g, "")); AD.lines[Number(target.dataset.i)][1] = n; el("aqTotal").textContent = `المجموع ${money(AD.lines.reduce((t, l) => t + (Number(l[1]) || 0), 0))}`; return true; }
   if (key === "ap") { AD.shop.tpl[target.dataset.i] = Number(toLatin(target.value).replace(/[^\d]/g, "")); return true; }
+  if (key === "cn") { AD.cat[target.dataset.i].name = target.value; return true; }
+  if (key === "cs") { AD.cat[target.dataset.i].short = target.value; return true; }
+  if (key === "cp") {
+    /* Keeping only the digits turns "كثير" into "" and "" into 0, which would be a
+       free product nobody asked for. Nothing written means nothing, not nought. */
+    const digits = toLatin(target.value).replace(/[^\d]/g, "");
+    AD.cat[target.dataset.i].price = digits === "" ? null : Number(digits);
+    return true;
+  }
+  if (key === "cz") { AD.cat[target.dataset.i].sizes = target.value.split(/[،,]/).map((one) => one.trim()).filter(Boolean); return true; }
   if (key === "acode") { AD.code = target.value; return true; }
   if (key === "adq") { AD.q = target.value; el("adList").innerHTML = adminRows(); return true; }
   if (key === "anote") { AD.note = target.value; return true; }
@@ -2108,12 +2249,43 @@ Object.assign(ACT, {
   adPublish() { const o = S.order; adminCommit(o, { stage: "review", version: o.stage === "revising" ? (o.version || 1) + 1 : 1 }, "انتشرت النسخة للعميل"); },
   adCollect() { adminCommit(S.order, { collected: true }, "تسجّل التحصيل"); },
   adShop() { AD.shop = plain(S.shop); AD.code = ""; AD.pct = ""; go("adminShop"); },
+  adCatalog() {
+    AD.cat = {};
+    for (const pid of PACK_BORN) {
+      const now = PROD[pid];
+      AD.cat[pid] = { name: now.name, short: now.short, price: now.price, sizes: now.sizes.slice(), off: !PACK.includes(pid) };
+    }
+    go("adminCatalog");
+  },
+  adCatOff(d) { const one = AD.cat[d.v]; if (!one) return; one.off = !one.off; keepScroll(redraw); },
   adCodeDel(d) { delete AD.shop.coupons[d.v]; keepScroll(redraw); },
   adCodeAdd() { const code = toLatin(AD.code).trim().toUpperCase(), pct = Number(toLatin(AD.pct)); if (!/^[A-Z0-9]{3,16}$/.test(code)) { toast("الكود حروف إنجليزية وأرقام، من ٣ إلى ١٦"); fxShake(el("f-acode")); return; } if (!(pct > 0 && pct <= 100)) { toast("النسبة من ١ إلى ١٠٠"); fxShake(el("f-apct")); return; } AD.shop.coupons[code] = Math.round(pct); AD.code = ""; AD.pct = ""; keepScroll(redraw); },
+  async adCatSave() {
+    const out = {};
+    for (const pid of PACK_BORN) {
+      const one = AD.cat[pid];
+      if (one.off) { out[pid] = { off: true }; continue; }
+      const name = String(one.name || "").trim(), short = String(one.short || "").trim();
+      if (!name || [...name].length > 40) { toast("اكتب اسمًا للصنف، ٤٠ حرفًا على الأكثر"); fxShake(el(`f-cn-${pid}`)); return; }
+      if (!short || [...short].length > 14) { toast("اكتب اسمًا قصيرًا للمربّع، ١٤ حرفًا على الأكثر"); fxShake(el(`f-cs-${pid}`)); return; }
+      if (typeof one.price !== "number" || !Number.isFinite(one.price) || one.price < 0 || one.price > 100000) {
+        toast("اكتب سعرًا بالأرقام"); fxShake(el(`f-cp-${pid}`)); return;
+      }
+      const sizes = (one.sizes || []).map((x) => String(x).trim()).filter(Boolean);
+      if (!sizes.length || sizes.length > 8 || sizes.some((x) => [...x].length > 20)) { toast("من مقاس واحد إلى ثمانية، كل واحد ٢٠ حرفًا على الأكثر"); fxShake(el(`f-cz-${pid}`)); return; }
+      out[pid] = { name, short, price: Math.round(one.price), sizes, off: false };
+    }
+    if (!PACK_BORN.some((pid) => !out[pid].off)) { toast("لازم يبقى صنف واحد ظاهر على الأقل"); return; }
+    S.busy = true;
+    try {
+      await R.db.doc("shop/config").set(plain({ tpl: S.shop.tpl, coupons: S.shop.coupons, hidden: S.shop.hidden || [], prod: out, at: new Date().toISOString() }));
+      S.busy = false; toast("انحفظت الأصناف"); sfx("success"); back();
+    } catch { S.busy = false; toast("ما انحفظت، جرّب مرة ثانية"); }
+  },
   async adShopSave() {
     for (const pid of Object.keys(SHOP_DEFAULT.tpl)) if (!(AD.shop.tpl[pid] > 0)) { toast("كل سعر لازم يكون أكبر من صفر"); fxShake(el(`f-ap-${pid}`)); return; }
     S.busy = true;
-    try { await R.db.doc("shop/config").set(plain({ tpl: AD.shop.tpl, coupons: AD.shop.coupons, hidden: AD.shop.hidden || [], at: new Date().toISOString() })); S.shop = plain(AD.shop); S.busy = false; toast("انحفظت الأسعار"); sfx("success"); back(); }
+    try { await R.db.doc("shop/config").set(plain({ tpl: AD.shop.tpl, coupons: AD.shop.coupons, hidden: AD.shop.hidden || [], prod: S.shop.prod || {}, at: new Date().toISOString() })); S.shop = plain(AD.shop); S.busy = false; toast("انحفظت الأسعار"); sfx("success"); back(); }
     catch { S.busy = false; toast("ما انحفظت، جرّب مرة ثانية"); }
   },
 });
@@ -2134,7 +2306,7 @@ Object.assign(SCREENS, {
   home: () => `<div class="amb"><i></i><i></i><i></i><i></i></div>
     <header class="home-hero"><i></i><i></i><div class="top"><svg class="hero-logo" viewBox="0 0 104 18.1" role="img" aria-label="Moment"><g><path fill="#f4efe2" d="M99.1,15.3V5.2h-.5c.2,0,.4-.2.5-.3V1.5l-1.5,1.8c-.3.9-.8,1.4-1.5,1.7v10.3c0,2.4,1.9,2.9,3.3,2.9s1.6-.2,1.6-.2v-.6s-1.9.4-1.9-2.1Z"/><path fill="#f4efe2" d="M104,5.2v2.9h-10.9v-2.9h1.8c.4,0,.8,0,1.2-.2.7-.3,1.2-.9,1.5-1.7.2-.5.2-1.1.2-1.8h3.2c0,1.5-.7,2.6-1.9,3.4-.2,0-.3.2-.5.3h5.4Z"/><g><path fill="none" d="M26.2,6.8c-.7,0-1.4.2-1.8.7-1.3,1.3-.6,4.2,1.6,6.4,1.5,1.5,3.2,2.3,4.7,2.3s1.3-.2,1.8-.7c1.3-1.3.6-4.2-1.6-6.4-1.5-1.4-3.2-2.3-4.6-2.3Z"/><path fill="#f4efe2" d="M28.5,4.9c-5,0-7.6,3-7.6,6.6s2.6,6.6,7.6,6.6,7.6-3,7.6-6.6-2.6-6.6-7.6-6.6ZM32.5,15.6c-.5.5-1.1.7-1.8.7-1.4,0-3.2-.8-4.7-2.3-2.2-2.2-2.9-5.1-1.6-6.4.5-.5,1.1-.7,1.8-.7,1.4,0,3.2.8,4.6,2.3,2.2,2.2,2.9,5.1,1.6,6.4Z"/><path fill="#f4efe2" d="M56.1,4.9c-2,0-4.2,1.1-5.5,3.6-.3-2.3-2.2-3.5-4.4-3.5s-4.2,1.1-5.5,3.5v-3.2h-3.2v12.7h3.2v-4.9c0-3.7,2.2-5.2,4.1-5.2s2.6.8,2.6,2.3v7.8h3.2v-4.9c0-3.7,2.2-5.2,4.1-5.2s2.6.8,2.6,2.3v7.8h3.2v-8.9c0-2.6-2.1-4.1-4.4-4.1Z"/><path fill="#f4efe2" d="M87.3,4.9c-2,0-4.2,1.1-5.5,3.5v-3.2h-3.2v12.7h3.2v-4.9c0-3.7,2.2-5.2,4.1-5.2s2.6.8,2.6,2.3v7.8h3.2v-8.9c0-2.6-2.1-4.1-4.4-4.1Z"/><polygon fill="#f4efe2" points="15.4 4.4 15.4 15.7 15.4 17.9 19.1 17.9 19.1 0 15.4 0 15.4 4.4"/><polygon fill="#f4efe2" points="3.7 4.4 3.7 0 0 0 0 17.9 3.7 17.9 3.7 15.7 3.7 4.4"/><path fill="#F2ADC3" d="M15.4,4.4c-4,0-.8,10.3-5.8,10.3S7.7,4.4,3.7,4.4v13.4h11.7V4.4Z"/><path fill="#F2ADC3" d="M9.5,10.8c3.8,0,.6-10.8,5.8-10.8H3.7c5.3,0,2.1,10.8,5.9,10.8Z"/><path fill="#f4efe2" d="M9.5,14.7c5,0,1.8-10.3,5.8-10.3V0c-5.3,0-2.1,10.8-5.8,10.8S9,0,3.7,0v4.4c4,0,.9,10.3,5.9,10.3Z"/></g></g><path fill="#f4efe2" d="M76.4,11.3s-.3,3.9-4.7,4.2-6.5-2.3-6.9-5.4h12.1c0-.3-.1-.9-.2-1.2-.9-2.5-3.3-4.2-7.2-4.2s-7.6,3-7.6,6.6,3.7,6.6,7.7,6.6,7.7-2.2,7.7-6.6h-.8ZM68.3,6.2c4.6-.1,5.6,2.2,6,2.8h-9.5c0-1.4,1.8-2.7,3.5-2.8Z"/></svg><button type="button" class="hero-round" data-act="goSearch" aria-label="ابحث عن تصميم">${I("search", 22)}</button></div>
       <div><h1>وش لحظتك اليوم؟</h1><p>صمّم من الصفر، أو خلّنا نصمم لك.</p></div>
-      <div class="hero-cta"><a class="btn hero-alt" href="./studio/?v=202611131215">صمّم من الصفر</a><button type="button" class="btn hero-ghost" data-act="idea">نصمم لك</button></div></header>
+      <div class="hero-cta one"><a class="btn hero-alt" href="./studio/?v=3d3e9edc9079">صمّم من الصفر</a></div></header>
     ${nextEventBanner()}${homeOrderCard()}
     <div class="row-head"><h2>المنتجات</h2><button type="button" class="link" data-act="openGallery">شوف الكل</button></div>
     <div class="tiles deco">${PACK.map((pid, i) => productTile(pid, i)).join("")}<button type="button" class="tile tile-idea" style="--i:5" data-act="idea">${I("plus", 40)}<span>تصميم خاص</span></button></div>
@@ -2165,19 +2337,21 @@ Object.assign(SCREENS, {
     <h2>كود الخصم</h2><div class="coupon"><input class="input" id="f-code" data-bind="code" value="${esc(S.co.code)}" placeholder="اكتب الكود" maxlength="16" autocomplete="off" autocapitalize="characters" dir="ltr" style="text-align:right" aria-label="كود الخصم"><button type="button" class="btn ghost" data-act="applyCode">طبّق</button></div>
     <h2>ملخص الطلب</h2><div id="billBox">${billHTML(b)}</div>
     ${ctaBar("المجموع", money(b.total), '<button type="button" class="btn" data-act="placeOrder">أكّد الطلب</button>')}`; },
-  done: () => { const o = S.order; return `${flow(2)}<div class="empty done"><div class="ok-wrap"><svg viewBox="0 0 96 96" aria-hidden="true"><circle class="ok-c" cx="48" cy="48" r="44"/><path class="ok-p" d="M28 50l14 14 26-30"/></svg></div><h1>تم طلبك</h1><p class="sub">طلب ${ar(o.no)}، ${METHOD_NAME[o.pay.method]}، ${money(o.total)}</p><div class="done-arts">${o.items.slice(0, 5).map((item) => thumb(item, o.occ)).join("")}</div></div><button type="button" class="btn" data-act="toFiles">${I("down")}حمّل ملفاتك</button><div class="row2"><button type="button" class="btn ghost" data-act="toInvoice">الفاتورة</button><button type="button" class="btn ghost" data-tab="home">الرئيسية</button></div>`; },
+  done: () => { const o = S.order; return `${flow(2)}<div class="empty done"><div class="ok-wrap"><svg viewBox="0 0 96 96" aria-hidden="true"><circle class="ok-c" cx="48" cy="48" r="44"/><path class="ok-p" d="M28 50l14 14 26-30"/></svg></div><h1>تم طلبك</h1><p class="sub">طلب ${ar(o.no)}، ${METHOD_NAME[o.pay.method]}، ${money(o.total)}</p><div class="done-arts">${o.items.slice(0, 5).map((item) => thumb(item, o.occ)).join("")}</div></div>${collected(o) ? `<button type="button" class="btn" data-act="toFiles">${I("down")}حمّل ملفاتك</button>` : `<p class="sub" style="margin:0 0 12px">${WAITING}</p><button type="button" class="btn" data-tab="orders">تابع طلبك</button>`}<div class="row2"><button type="button" class="btn ghost" data-act="toInvoice">الفاتورة</button><button type="button" class="btn ghost" data-tab="home">الرئيسية</button></div>`; },
   orders: () => { if (!S.orders.length) return `${topBar()}<div class="empty"><span class="bub">${I("list", 44)}</span><h2>ما عندك طلبات للحين</h2><p class="sub">مشترياتك وطلبات التصميم الخاص تظهر هنا</p><button type="button" class="btn" data-act="openGallery">شوف التصاميم</button></div>`;
     return `${topBar()}<h1>طلباتي</h1>${S.orders.map((o) => `<button type="button" class="item" style="border:0;width:100%;text-align:start" data-act="openOrder" data-v="${o.no}">${thumb(o.items[0], o.occ)}<span class="tx"><b>طلب ${ar(o.no)}</b><span>${o.kind === "tpl" ? `تصميم جاهز، ${countLabel(o.items.length)}` : `تصميم خاص، ${orderStage(o)}`}${o.total != null && o.pay ? `، ${money(o.total)}` : ""}</span></span>${orderPill(o)}</button>`).join("")}`; },
   files: () => { const o = S.order; return `${backBar("ملفاتك")}<p class="sub">اضغط على الملف عشان ينزل على جوالك.</p>${o.items.map((item, i) => `<div class="card"><div class="item" style="padding:0">${thumb(item, o.occ)}<span class="tx"><b>${esc(itemName(item))}</b><span>${cartLine(item)}</span></span></div><div class="row3">${[["pdf", "PDF"], ["png", "PNG"], ["jpg", "JPG"]].map(([kind, name]) => `<button type="button" class="btn ghost" data-act="dl" data-i="${i}" data-v="${kind}" aria-label="حمّل ${name}">${I("down", 20)}${name}</button>`).join("")}</div></div>`).join("")}<p class="small">PDF للطباعة، وPNG وJPG للمعاينة والمشاركة.</p>${o.pay ? '<button type="button" class="btn ghost" data-act="toInvoice">الفاتورة</button>' : ""}`; },
   account: () => { const name = S.cust.name.trim();
-    return `${topBar()}<div class="me"><span class="av">${name ? esc([...name][0]) : I("user", 30)}</span><span class="tx"><b>${name ? esc(name) : "أهلًا فيك"}</b><span dir="${S.cust.phone ? "ltr" : "rtl"}">${S.cust.phone ? esc(S.cust.phone) : "أضف اسمك وجوالك عشان نجهز طلبك أسرع"}</span></span></div>
+    const who = (window.MOMENT_ACCOUNT && window.MOMENT_ACCOUNT.signedIn() && window.MOMENT_ACCOUNT.email()) || "";
+    const under = who ? esc(who) : (S.cust.phone ? esc(S.cust.phone) : "أضف اسمك وجوالك عشان نجهز طلبك أسرع");
+    return `${topBar()}<div class="me"><span class="av">${name ? esc([...name][0]) : I("user", 30)}</span><span class="tx"><b>${name ? esc(name) : (who ? "أهلًا بك" : "أهلًا فيك")}</b><span dir="${who || S.cust.phone ? "ltr" : "rtl"}">${under}</span></span></div>
     <div class="stats"><button type="button" class="stat" data-tab="orders"><b>${ar(S.orders.length)}</b><span>طلباتي</span></button><button type="button" class="stat" data-act="openFav"><b>${ar(S.fav.length)}</b><span>مفضلتي</span></button><button type="button" class="stat" data-act="openLib"><b>${ar(S.events.length)}</b><span>مناسباتي</span></button></div>
     ${R.admin ? '<button type="button" class="btn gold" data-act="openAdmin">لوحة الإدارة</button>' : ""}
-    <h2>بياناتي</h2>${custFields()}<p class="small">نستخدمها لطلباتك فقط.</p><button type="button" class="link" data-act="restart">ابدأ من جديد على هذا الجوال</button>`; },
+    <h2>بياناتي</h2>${custFields()}<p class="small">نستخدمها لطلباتك فقط.</p>`; },
 });
 Object.assign(ACT, {
   idea() { go("idea"); },
-  startSheet() { openSheet(`<h2>كيف تبغى تبدأ؟</h2><button type="button" class="way" style="background:var(--primary);color:var(--on-primary)" data-act="wayGallery"><span class="wi">${I("grid", 28)}</span><span class="wt"><b>تصاميم جاهزة</b><span>اختر تصميمًا واكتب الاسم وحمّله</span></span>${I("next", 22)}</button><a class="way" style="background:var(--teal);color:var(--ink)" href="./studio/?v=202611131215"><span class="wi">${I("pen", 28)}</span><span class="wt"><b>صمّم من الصفر</b><span>خطوط وألوان وأشكال في الاستديو</span></span>${I("next", 22)}</a><button type="button" class="way" style="background:var(--gold);color:var(--ink)" data-act="wayIdea"><span class="wi">${I("plus", 28)}</span><span class="wt"><b>نصمم لك</b><span>اكتب لنا أو أرسل صورًا، وفريقنا ينفذ</span></span>${I("next", 22)}</button><p class="small" style="text-align:center">في كل الطرق تشوف المعاينة قبل ما تعتمد.</p>`); },
+  startSheet() { openSheet(`<h2>كيف تبغى تبدأ؟</h2><button type="button" class="way" style="background:var(--primary);color:var(--on-primary)" data-act="wayGallery"><span class="wi">${I("grid", 28)}</span><span class="wt"><b>تصاميم جاهزة</b><span>اختر تصميمًا واكتب الاسم وحمّله</span></span>${I("next", 22)}</button><a class="way" style="background:var(--teal);color:var(--ink)" href="./studio/?v=3d3e9edc9079"><span class="wi">${I("pen", 28)}</span><span class="wt"><b>صمّم من الصفر</b><span>خطوط وألوان وأشكال في الاستديو</span></span>${I("next", 22)}</a><button type="button" class="way" style="background:var(--gold);color:var(--ink)" data-act="wayIdea"><span class="wi">${I("plus", 28)}</span><span class="wt"><b>نصمم لك</b><span>اكتب لنا أو أرسل صورًا، وفريقنا ينفذ</span></span>${I("next", 22)}</button><p class="small" style="text-align:center">في كل الطرق تشوف المعاينة قبل ما تعتمد.</p>`); },
   wayGallery() { closeSheet(); ACT.openGallery(); },
   wayIdea() { closeSheet(); go("idea"); },
   ideaOpen(d) { openDesign(d.v); },
@@ -2194,6 +2368,7 @@ Object.assign(ACT, {
 Object.assign(SCREENS, {
   order: () => { const o = S.order, now = STAGE_INDEX[o.stage], demo = (act, v, label) => o.synced || o.pushing || !R.ready ? "" : `<button type="button" class="demo-btn" data-act="${act}"${v ? ` data-v="${v}"` : ""}>${label}</button>`;
     const wait0 = `<div class="loader-row">${loaderHTML()}</div>`, bill = o.pay ? '<button type="button" class="btn ghost" data-act="toInvoice">الفاتورة</button>' : "";
+    if (o.kind === "tpl" && !collected(o)) return `${backBar(`طلب ${ar(o.no)}`)}<div class="act-card"><b>ملفاتك جاهزة</b><p class="sub">${WAITING}</p></div>${bill}`;
     if (o.kind === "tpl") return `${backBar(`طلب ${ar(o.no)}`)}<div class="act-card"><b>ملفاتك جاهزة</b><p class="sub">PDF للطباعة وPNG وJPG للمعاينة. تقدر تحمّلها أي وقت.</p><button type="button" class="btn" data-act="toFiles">${I("down")}حمّل ملفاتك</button>${bill}</div>${itemRows(o)}`;
     const cards = {
       pricing:`<b>وصلنا طلبك</b><p class="sub">نراجع فكرتك ونرسل لك عرض السعر هنا.</p>${wait0}${demo("advance", "quote", "في التجربة: خلّ الفريق يرسل العرض الحين")}`,
@@ -2202,7 +2377,9 @@ Object.assign(SCREENS, {
       revising:`<b>المصمم يشتغل على ملاحظاتك</b><p class="sub">النسخة الجديدة توصلك هنا.</p>${wait0}${demo("newVersion", "", "في التجربة: خلّ المصمم ينشر النسخة الجديدة")}`,
       review:`<b>تصميمك جاهز للمراجعة</b><p class="sub">دوّره، وحط ملاحظاتك عليه بإصبعك.</p><button type="button" class="btn" data-act="toReview">عاين التصميم</button>`,
       qa:`<b>يتم الآن فحص ملف الطباعة وتجهيز الصور</b><div class="scan"><i></i></div><p class="sub">ثواني ويوصلك.</p>`,
-      delivered:`<b>ملفاتك جاهزة</b><p class="sub">PDF للطباعة وPNG وJPG للمعاينة. وانحفظ تصميمك في مناسباتي.</p><button type="button" class="btn" data-act="toFiles">${I("down")}حمّل ملفاتك</button><button type="button" class="btn ghost" data-act="openLib">افتح مناسباتي</button>`,
+      delivered: collected(o)
+        ? `<b>ملفاتك جاهزة</b><p class="sub">PDF للطباعة وPNG وJPG للمعاينة. وانحفظ تصميمك في مناسباتي.</p><button type="button" class="btn" data-act="toFiles">${I("down")}حمّل ملفاتك</button><button type="button" class="btn ghost" data-act="openLib">افتح مناسباتي</button>`
+        : `<b>ملفاتك جاهزة</b><p class="sub">${WAITING}</p>`,
     };
     return `${backBar(`طلب ${ar(o.no)}`)}${realDate(o.eventDate) && daysTo(o.eventDate) >= 0 ? `<p class="count-line">${I("cal", 20)}${leftText(daysTo(o.eventDate))} على مناسبتك، ${fmtDate(o.eventDate)}</p>` : ""}<div class="act-card">${cards[o.stage]}</div><ol class="steps">${STEPS.map((step, i) => stepRow(step, i, now, STEPS.length)).join("")}</ol>${bill}`; },
   quote: () => { const o = S.order; if (!o.quote) o.quote = defaultQuote(o); const b = quoteBill(o.quote, null); o.total = b.total;
@@ -2231,10 +2408,19 @@ function orderExtras(o) {
   const rate = !done ? "" : o.rating ? `<div class="card"><b>تقييمك</b>${starsHTML(o.rating.stars)}${o.rating.text ? `<p class="sub">${esc(o.rating.text)}</p>` : ""}</div>` : `<div class="card"><b>كيف كانت تجربتك؟</b>${starsHTML(0, "rate")}</div>`;
   return `${rate}<button type="button" class="btn ghost" data-act="openChat">محادثة الفريق${n ? ` <span class="n-badge">${ar(n)}</span>` : ""}</button>`;
 }
+/* The files are what the shop sells. They come down once the money has been
+   collected, which the dashboard's سجّل التحصيل records, and not before. Cash on
+   delivery cannot work for a file: once it is downloaded there is nothing left
+   to collect. docs/b12/FILES_WHEN_PAID.md says the rest. */
+const collected = (o) => Boolean(o && o.pay && o.collected);
+const WAITING = "بانتظار تأكيد الدفع. نتواصل معك على جوالك، وأول ما يتأكد تنزل ملفاتك من هنا.";
+
 const baseOrder = SCREENS.order, baseFiles = SCREENS.files;
 Object.assign(SCREENS, {
   order: () => baseOrder() + orderExtras(S.order),
-  files: () => baseFiles() + '<button type="button" class="btn ghost" data-act="share">شارك تصميمك</button>',
+  files: () => (collected(S.order)
+    ? baseFiles() + '<button type="button" class="btn ghost" data-act="share">شارك تصميمك</button>'
+    : `${backBar("ملفاتك")}<div class="act-card"><b>ملفاتك جاهزة</b><p class="sub">${WAITING}</p></div>`),
   chat: () => `${backBar("محادثة الفريق")}<p class="sub">طلب ${ar(S.order.no)}. نرد عليك هنا.</p>${thread(S.order, "c")}${sayBar("cta-bar")}`,
   product: () => { const d = S.draft, p = PROD[d.pid], style = d.style || styleOf(S.occ, d.pal);
     return `<header class="bar"><button type="button" class="icon-btn" data-act="back" aria-label="رجوع">${I("back")}</button><h1 style="flex:1">${esc(d.name || p.name)}</h1>${d.tpl ? heartBtn(d.tpl, d.name) : ""}</header>
@@ -2246,7 +2432,7 @@ Object.assign(SCREENS, {
     <div class="group"><span class="label">اللون</span>${swatches(d.pal, "pickTone")}</div>
     <div class="group"><span class="label">النمط</span>${styleChips(style, "pickStyle")}</div>
     <div class="group"><span class="label">خط الاسم</span><div class="chips">${Object.entries(FACE_NAME).map(([key, label]) => `<button type="button" class="chip" aria-pressed="${(d.font || "") === key}" data-act="pickFace" data-v="${key}">${label}</button>`).join("")}</div></div>
-    <div class="row2"><div class="field"><label for="f-date">التاريخ (اختياري)</label><input class="input" id="f-date" data-bind="dDate" type="date" value="${esc(d.date || "")}"></div><div class="field"><label for="f-place">المكان (اختياري)</label><input class="input" id="f-place" data-bind="dPlace" value="${esc(d.place || "")}" maxlength="28" autocomplete="off" placeholder="مثل: الرياض"></div></div>
+    
     ${p.sizes.length > 1 ? `<div class="group"><span class="label">المقاس</span><div class="chips">${p.sizes.map((size) => `<button type="button" class="chip" aria-pressed="${d.size === size}" data-act="size" data-v="${esc(size)}">${size}</button>`).join("")}</div></div>` : ""}
     ${S.editId ? "" : `<button type="button" class="custom-cta" data-act="goCustom">${I("pen", 28)}<span><b>تبغاه تصميم خاص فيك؟</b><small>فريقنا يصممه لك من فكرتك</small></span>${I("next")}</button>`}
     ${ctaBar("السعر", money(tplPrice(d.pid)), S.editId ? '<button type="button" class="btn" data-act="saveItem">احفظ التعديل</button>' : '<button type="button" class="btn" data-act="addCart">أضف للسلة</button>')}`; },
@@ -2305,27 +2491,123 @@ const baseNeeds = needsAction;
 const needsReply = (o) => { const c = chatOf(o); return c.length > 0 && c[c.length - 1].by === "c"; };
 function tally(list, keyOf, valueOf = () => 1) { const m = new Map(); for (const x of list) for (const k of [].concat(keyOf(x))) if (k) m.set(k, (m.get(k) || 0) + valueOf(x)); return [...m.entries()].sort((a, b) => b[1] - a[1]); }
 const rankHTML = (rows, unit = "") => rows.length ? `<dl class="rank">${rows.map(([k, v]) => `<dt>${esc(k)}</dt><dd>${ar(v)}${unit}</dd>`).join("")}</dl>` : '<p class="small">ما فيه بيانات للحين.</p>';
+/* Charts, drawn by the page. No library is added: a bar, a line and a ring are a
+   few lines of geometry, and docs/b12/ADMIN_CHARTS.md says why that matters here.
+   Every drawing writes its numbers as text too, so a chart nobody can see still
+   says what it knows. */
+const chartNone = (said) => `<p class="small">${esc(said)}</p>`;
+
+/* One bar per value, standing. The tallest fills the box; a lone value fills it
+   too, rather than dividing by itself and vanishing. */
+function barsHTML(rows, { unit = "", height = 132, wide = false } = {}) {
+  const top = Math.max(...rows.map(([, v]) => Number(v) || 0), 0);
+  /* Fourteen empty columns read as a fault. Nothing at all is said in words. */
+  if (!rows.length || top <= 0) return chartNone("ما فيه بيانات للحين.");
+  const each = 100 / rows.length;
+  return `<div class="chart" style="--h:${height}px" role="img" aria-label="${esc(rows.map(([k, v]) => `${k}: ${v}${unit}`).join("، "))}">
+    <div class="bars${wide ? " wide" : ""}">${rows.map(([name, value]) => {
+      const n = Number(value) || 0, part = top > 0 ? Math.max(n / top, n > 0 ? 0.04 : 0) : 0;
+      return `<div class="bar" style="flex-basis:${each}%">
+        <b>${n ? ar(n) : ""}</b>
+        <i style="height:${Math.round(part * 100)}%"></i>
+        <span>${esc(String(name))}</span></div>`;
+    }).join("")}</div></div>`;
+}
+
+/* One bar per value, lying down, for names too long to stand under a column. */
+function rowsHTML(rows, unit = "") {
+  if (!rows.length) return chartNone("ما فيه بيانات للحين.");
+  const top = Math.max(...rows.map(([, v]) => Number(v) || 0), 0);
+  return `<div class="hbars" role="img" aria-label="${esc(rows.map(([k, v]) => `${k}: ${v}${unit}`).join("، "))}">
+    ${rows.map(([name, value]) => {
+      const n = Number(value) || 0, part = top > 0 ? Math.max(n / top, n > 0 ? 0.06 : 0) : 0;
+      return `<div class="hbar"><span class="nm">${esc(String(name))}</span>
+        <span class="tr"><i style="width:${Math.round(part * 100)}%"></i></span>
+        <span class="vl">${ar(n)}${unit}</span></div>`;
+    }).join("")}</div>`;
+}
+
+/* A ring. Each arc is a stroke on one circle, moved round by what came before. */
+function ringHTML(rows) {
+  if (!rows.length) return chartNone("ما فيه بيانات للحين.");
+  const total = rows.reduce((t, [, v]) => t + (Number(v) || 0), 0);
+  if (!total) return chartNone("ما فيه بيانات للحين.");
+  const R = 54, C = 2 * Math.PI * R;
+  let done = 0;
+  const arcs = rows.map(([, value], i) => {
+    const part = (Number(value) || 0) / total, len = part * C;
+    const at = `stroke-dasharray:${len} ${C - len};stroke-dashoffset:${-done}`;
+    done += len;
+    return `<circle class="arc a${i % 6}" cx="70" cy="70" r="${R}" style="${at}"></circle>`;
+  }).join("");
+  return `<div class="ring-wrap" role="img" aria-label="${esc(rows.map(([k, v]) => `${k}: ${v}`).join("، "))}">
+    <svg viewBox="0 0 140 140" class="ring" aria-hidden="true"><g transform="rotate(-90 70 70)">${arcs}</g>
+      <text x="70" y="66" text-anchor="middle" class="ring-n">${ar(total)}</text>
+      <text x="70" y="86" text-anchor="middle" class="ring-s">طلب</text></svg>
+    <dl class="keys">${rows.map(([name, value], i) => `<dt><i class="k a${i % 6}"></i>${esc(String(name))}</dt><dd>${ar(value)}</dd>`).join("")}</dl></div>`;
+}
+
+/* The last fourteen days, named shortly, whether or not anything happened on one. */
+function lastDays(list, howMany = 14) {
+  const byDay = new Map();
+  for (const o of list) {
+    const when = String(o.pay?.at || o.at || "").slice(0, 10);
+    const money = Number(o.total);
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(when) || !Number.isFinite(money)) continue;
+    byDay.set(when, (byDay.get(when) || 0) + money);
+  }
+  const out = [], now = new Date();
+  for (let back = howMany - 1; back >= 0; back -= 1) {
+    const d = new Date(now.getFullYear(), now.getMonth(), now.getDate() - back);
+    const key = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+    out.push([ar(d.getDate()), byDay.get(key) || 0]);
+  }
+  return out;
+}
+
+const moneyIn = (list, days) => {
+  const edge = Date.now() - days * 86400000;
+  return list.reduce((t, o) => {
+    const when = Date.parse(o.pay?.at || o.at || ""), money = Number(o.total);
+    return Number.isFinite(when) && when >= edge && when <= Date.now() + 86400000 && Number.isFinite(money) ? t + money : t;
+  }, 0);
+};
+
 function csvOf(list) { const cell = (v) => `"${String(v ?? "").replace(/"/g, '""')}"`; return "﻿" + [["رقم الطلب", "التاريخ", "العميل", "الجوال", "النوع", "الحالة", "المجموع", "الدفع", "التحصيل", "الكود", "التقييم", "المنتجات"], ...list.map((o) => [o.no, String(o.at || "").slice(0, 10), o.cust?.name, o.cust?.phone, o.kind === "tpl" ? "جاهز" : "خاص", o.kind === "tpl" ? "مكتمل" : STEPS[STAGE_INDEX[o.stage]], o.total ?? "", o.pay ? METHOD_NAME[o.pay.method] : "", o.pay ? (o.collected ? "تم" : "لا") : "", o.bill?.coupon || "", o.rating?.stars || "", o.items.map((item) => `${itemName(item)}${item.text ? ` (${item.text})` : ""}`).join(" | ")])].map((row) => row.map(cell).join(",")).join("\r\n"); }
 const baseAdminOrder = SCREENS.adminOrder;
 Object.assign(SCREENS, {
   admin: () => { const paid = AD.list.filter((o) => o.pay), sum = (list) => list.reduce((t, o) => t + (Number(o.total) || 0), 0);
-    return `${backBar("لوحة الإدارة")}<div class="stats"><div><b>${ar(AD.list.length)}</b><span>طلب</span></div><div><b>${ar(sum(paid))}</b><span>مبيعات ر.س</span></div><div><b>${ar(sum(paid.filter((o) => !o.collected)))}</b><span>لم تُحصّل</span></div></div>
+    return `${backBar("لوحة الإدارة")}<div class="stats"><div><b>${ar(AD.list.length)}</b><span>طلب</span></div><div><b>${ar(sum(paid))}</b><span>مبيعات ⃁</span></div><div><b>${ar(sum(paid.filter((o) => !o.collected)))}</b><span>لم تُحصّل</span></div></div>
     <div class="search">${I("search", 22)}<input class="input" id="f-adq" data-bind="adq" value="${esc(AD.q)}" placeholder="ابحث باسم العميل أو الجوال أو رقم الطلب" autocomplete="off" aria-label="ابحث في الطلبات"></div>
     <div class="chips scroll">${[["all", "الكل"], ["todo", "تحتاج إجراء"], ["custom", "تصميم خاص"], ["tpl", "جاهز"]].map(([key, label]) => `<button type="button" class="chip" aria-pressed="${AD.filter === key}" data-act="adFilter" data-v="${key}">${label}</button>`).join("")}</div>
     <div id="adList" style="display:flex;flex-direction:column;gap:14px">${adminRows()}</div>
     <div class="row2"><button type="button" class="btn ghost" data-act="adStats">التقارير</button><button type="button" class="btn ghost" data-act="adShop">الأسعار والخصم</button></div>
-    <div class="row2"><button type="button" class="btn ghost" data-act="adDesigns">إظهار التصاميم</button><button type="button" class="btn ghost" data-act="adExport">${I("down", 20)}ملف الطلبات</button></div>
+    <div class="row2"><button type="button" class="btn ghost" data-act="adCatalog">الأصناف</button><button type="button" class="btn ghost" data-act="adDesigns">إظهار التصاميم</button><button type="button" class="btn ghost" data-act="adExport">${I("down", 20)}ملف الطلبات</button></div>
     <button type="button" class="link" data-act="adRefresh">حدّث الطلبات</button>`; },
   adminOrder: () => { const o = S.order;
     return `${baseAdminOrder()}${o.rating ? `<h2>تقييم العميل</h2><div class="card">${starsHTML(o.rating.stars)}${o.rating.text ? `<p class="sub">${esc(o.rating.text)}</p>` : ""}</div>` : ""}
     <h2>المحادثة</h2>${thread(o, "t")}${sayBar()}
     <h2>ملاحظة داخلية</h2><p class="small">للفريق فقط، العميل ما يشوفها.</p><div class="field"><textarea class="input" id="f-anote" data-bind="anote" rows="2" maxlength="500" aria-label="ملاحظة داخلية">${esc(AD.note)}</textarea></div><button type="button" class="btn ghost" data-act="adNote">احفظ الملاحظة</button>`; },
-  adminStats: () => { const paid = AD.list.filter((o) => o.pay), rated = AD.list.filter((o) => o.rating), day = (o) => String(o.pay?.at || o.at || "").slice(0, 10);
-    const days = tally(paid, day, (o) => Number(o.total) || 0).sort((a, b) => b[0].localeCompare(a[0])).slice(0, 7).map(([k, v]) => [fmtDay(k), v]);
-    const top = tally(AD.list.filter((o) => o.kind === "tpl"), (o) => o.items.map((item) => `${PROD[item.pid].name}${item.name ? `، ${item.name}` : ""}`)).slice(0, 8);
+  adminStats: () => { const paid = AD.list.filter((o) => o.pay), rated = AD.list.filter((o) => o.rating);
+    const month = moneyIn(paid, 30);
+    const open = AD.list.filter((o) => o.stage !== "delivered").length;
+    const owed = paid.filter((o) => !o.collected).reduce((t, o) => t + (Number(o.total) || 0), 0);
+    const avgOrder = paid.length ? Math.round(paid.reduce((t, o) => t + (Number(o.total) || 0), 0) / paid.length) : 0;
     const avg = rated.length ? (rated.reduce((t, o) => t + o.rating.stars, 0) / rated.length).toFixed(1) : null;
-    return `${backBar("التقارير")}<div class="stats"><div><b>${ar(paid.length)}</b><span>طلب مؤكد</span></div><div><b>${paid.length ? ar(Math.round(paid.reduce((t, o) => t + (Number(o.total) || 0), 0) / paid.length)) : "٠"}</b><span>متوسط الطلب ر.س</span></div><div><b>${avg ? ar(avg) : "—"}</b><span>التقييم من ٥</span></div></div>
-    <h2>المبيعات آخر الأيام</h2>${rankHTML(days, " ر.س")}<h2>الأكثر مبيعًا</h2>${rankHTML(top)}<h2>المناسبات</h2>${rankHTML(tally(AD.list, (o) => OCC[o.occ]?.label))}<h2>أكواد الخصم</h2>${rankHTML(tally(paid, (o) => o.bill?.coupon))}
+    const byStage = STEPS.map((label, i) => [label, AD.list.filter((o) => STAGE_INDEX[o.stage] === i).length]).filter(([, n]) => n > 0);
+    const byProduct = tally(AD.list, (o) => (o.items || []).map((item) => PROD[item.pid]?.short || item.pid)).slice(0, 6);
+    const byOccasion = tally(AD.list, (o) => OCC[o.occ]?.label).slice(0, 6);
+    return `${backBar("التقارير")}
+    <div class="figs"><div class="fig"><b>${ar(month)}<small> ⃁</small></b><span>مبيعات ٣٠ يومًا</span></div>
+      <div class="fig"><b>${ar(open)}</b><span>طلب تحت التنفيذ</span></div>
+      <div class="fig"><b>${ar(owed)}<small> ⃁</small></b><span>لم تُحصّل</span></div>
+      <div class="fig"><b>${ar(avgOrder)}<small> ⃁</small></b><span>متوسط الطلب</span></div></div>
+    <h2>المبيعات، آخر ١٤ يومًا</h2>${barsHTML(lastDays(paid), { unit: " ⃁" })}
+    <h2>أين الطلبات الآن</h2>${rowsHTML(byStage)}
+    <h2>الأكثر طلبًا</h2>${rowsHTML(byProduct)}
+    <h2>المناسبات</h2>${ringHTML(byOccasion)}
+    <h2>أكواد الخصم</h2>${rankHTML(tally(paid, (o) => o.bill?.coupon))}
+    <h2>التقييم</h2><p class="small">${avg ? `${ar(avg)} من ٥، من ${ar(rated.length)} تقييمًا.` : "ما فيه تقييمات للحين."}</p>
     <h2>آخر التقييمات</h2>${rated.length ? rated.slice(0, 6).map((o) => `<div class="card"><b>${esc(o.cust?.name || "عميل")}</b>${starsHTML(o.rating.stars)}${o.rating.text ? `<p class="sub">${esc(o.rating.text)}</p>` : ""}</div>`).join("") : '<p class="small">ما فيه تقييمات للحين.</p>'}`; },
   adminDesigns: () => `${backBar("إظهار التصاميم")}<p class="sub">اضغط على التصميم عشان تخفيه من المعرض أو ترجّعه. ${ar(AD.shop.hidden.length)} مخفي.</p><div class="grid-p">${IDEAS.map((idea) => `<button type="button" class="idea-card${AD.shop.hidden.includes(idea.id) ? " hid" : ""}" aria-pressed="${!AD.shop.hidden.includes(idea.id)}" data-act="adHide" data-v="${idea.id}">${designImg(idea, idea.occ)}<b>${idea.name}</b><span class="tag">${OCC[idea.occ].label}، ${PROD[idea.pid].short}</span></button>`).join("")}</div>${ctaBar("الظاهر", ar(IDEAS.length - AD.shop.hidden.length), '<button type="button" class="btn" data-act="adShopSave">احفظ</button>')}`,
 });
